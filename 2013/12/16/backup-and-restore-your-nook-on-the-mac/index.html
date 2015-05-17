@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Backup And Restore Your Nook On The Mac | Q小帝的折腾笔记</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="转眼之间的手头上这台 Nook 已经到手两年了。虽然与 Kindle 相比这玩意名气的确小了不少，而且自带的系统限制不少，对中文支持得也不太到位。不过在经过自己 Root 并精心配置过后，这玩意的阅读体验可以得到很大的提升，实在是物超所值（虽然当年入手不久后这货就跟着 Kindle 狠狠滴降了价-_-）。趁着昨天在知乎挖了个老帖《图书资源和阅读感觉上，Kindle 4 和 nook 2 哪个较好？">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Backup And Restore Your Nook On The Mac">
+<meta property="og:url" content="http://imcoddy.github.io/2013/12/16/backup-and-restore-your-nook-on-the-mac/index.html">
+<meta property="og:site_name" content="Q小帝的折腾笔记">
+<meta property="og:description" content="转眼之间的手头上这台 Nook 已经到手两年了。虽然与 Kindle 相比这玩意名气的确小了不少，而且自带的系统限制不少，对中文支持得也不太到位。不过在经过自己 Root 并精心配置过后，这玩意的阅读体验可以得到很大的提升，实在是物超所值（虽然当年入手不久后这货就跟着 Kindle 狠狠滴降了价-_-）。趁着昨天在知乎挖了个老帖《图书资源和阅读感觉上，Kindle 4 和 nook 2 哪个较好？">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Backup And Restore Your Nook On The Mac">
+<meta name="twitter:description" content="转眼之间的手头上这台 Nook 已经到手两年了。虽然与 Kindle 相比这玩意名气的确小了不少，而且自带的系统限制不少，对中文支持得也不太到位。不过在经过自己 Root 并精心配置过后，这玩意的阅读体验可以得到很大的提升，实在是物超所值（虽然当年入手不久后这货就跟着 Kindle 狠狠滴降了价-_-）。趁着昨天在知乎挖了个老帖《图书资源和阅读感觉上，Kindle 4 和 nook 2 哪个较好？">
+  
+    <link rel="alternative" href="/atom.xml" title="Q小帝的折腾笔记" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Q小帝的折腾笔记</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">记录下那些折腾过的岁月。</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="q" value="site:http://imcoddy.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-backup-and-restore-your-nook-on-the-mac" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/12/16/backup-and-restore-your-nook-on-the-mac/" class="article-date">
+  <time datetime="2013-12-16T12:36:45.000Z" itemprop="datePublished">2013/12/16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Backup And Restore Your Nook On The Mac
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>转眼之间的手头上这台 Nook 已经到手两年了。虽然与 Kindle 相比这玩意名气的确小了不少，而且自带的系统限制不少，对中文支持得也不太到位。不过在经过自己 Root 并精心配置过后，这玩意的阅读体验可以得到很大的提升，实在是物超所值（虽然当年入手不久后这货就跟着 Kindle 狠狠滴降了价-_-）。趁着昨天在知乎挖了个老帖《<a href="http://www.zhihu.com/question/20109608/answer/20869162?group_id=132318107#answer-3543341" target="_blank" rel="external">图书资源和阅读感觉上，Kindle 4 和 nook 2 哪个较好？</a>》，记录一下昨天刷机的过程吧。<br><a id="more"></a><br>其实一直在用着并没有出什么问题，只是有一次不小心，插电脑上充电时没有被其弹出就直接拔出，造成了磁盘的权限出了点问题。虽然不影响平时看书，不过这样一来就没有办法安装新软件或做其它系统修改了。直到昨天想安装点东西失败后，终于决定：还是把它刷回来吧！</p>
+<p>不过在准备刷机的过程中，遇到了一个很尴尬的问题：现有的刷机教程都是基于 Windows 下用 DiskGenius 来操作的，其它系统下的操作指南几乎没有，而我已经摒弃 Windows 好多天……没办法，在某个说明不详的“Linux/Mac users can use dd”这一个模糊不清的提示下，我便开始了在 Mac 下恢复 Nook 的折腾史。</p>
+<h2 id="准备">准备</h2><p>首先需要调整好心态，充分意识到「刷机有风险，操作要谨慎，后果需自负」 的正确折腾心态，并预备好以下几样东西：</p>
+<ol>
+<li>Nook 用 512M 以上大小的 SD 卡及 USB 读卡器，建议用闲置的卡，方便以后使用。</li>
+<li>Nook 机器及数据线。</li>
+<li>引导所需的 Noogie 镜像文件。（点<a href="https://code.google.com/p/nst-recovery/downloads/detail?name=noogie.img.gz" target="_blank" rel="external">这里</a>下载）</li>
+<li>具有管理员权限的 Mac 一台。（ Linux 的操作大致相同，不过我没有验证。）</li>
+</ol>
+<h2 id="制作引导镜像">制作引导镜像</h2><p>（声明：这一步我并没有做，因为之前这个 Noogie 引导镜像已经做好了，不过理论上是可行的。如果有人实践发现有问题请告诉我。）</p>
+<ol>
+<li>将准备中所下载的 Noogie 镜像解压（2.6MB 的文件解压后达到 79.7MB，这个压缩率真心赞啊。），打开一个 Terminal 并将当前目录转至镜像的目录下。</li>
+<li>将 SD 卡通过读卡器连接至 Mac 上。</li>
+<li>在 Terminal 中输入<code>diskutil list</code>获得当前 SD 卡的盘符。（一般来说是 /dev/disk# ，其中 # 号所对应的数字可能不同）</li>
+<li><p>仔细确认了 SD 卡的位置后，输入以下的命令（以 /dev/disk1 为例）。<strong>一定要注意不要选到系统盘，否则整个系统就挂了。</strong></p>
+<pre><code>sudo diskutil unmountDisk <span class="regexp">/dev/</span>disk1
+</code></pre></li>
+<li><p>用 dd 命令将镜像写入到 SD 卡中。</p>
+<pre><code>sudo <span class="tag">dd</span> <span class="keyword">if</span>=/path/to/noogie<span class="class">.img</span> of=/dev/disk1 bs=<span class="number">1</span>m
+</code></pre></li>
+</ol>
+<p>经过一阵等待后，该镜像应该会成功地写入到 SD 卡中。</p>
+<h2 id="备份/刷机">备份/刷机</h2><ol>
+<li>长按背后的 N 键将 Nook 完成关机。</li>
+<li>插入刚才制作好的 SD 卡并开机，稍后会出现”Rooted Forever”的字样。</li>
+<li>将 Nook 插上数据线连接到电脑上，一会会在电脑上加载了名为 boot 和 Nook 的两个磁盘卷。</li>
+<li>通过 DiskUtil 将这两个磁盘卸下。在 Terminal 中获得 Nook 的盘符。</li>
+<li><p>仔细确认了 Nook 的位置后，输入以下的命令将现有的系统备份（以 /dev/disk1 为例）</p>
+<pre><code>sudo <span class="tag">dd</span> <span class="keyword">if</span>=/dev/disk1 of=/path/to/my_nook_backup<span class="class">.img</span> bs=<span class="number">1</span>m
+</code></pre></li>
+<li>经过一阵漫长的等待后，确认生成的镜像大小是 1962934272 bytes。（也有可能大小是 1958739968，似乎不同的版本稍有差别。）</li>
+<li><p>将生成的镜像妥善保管，在需要还原的时候，只需要将 if 和 of 的内容反过来即可</p>
+<pre><code>sudo <span class="tag">dd</span> <span class="keyword">if</span>=/path/to/my_nook_backup<span class="class">.img</span> of=/dev/disk1 bs=<span class="number">1</span>m
+</code></pre></li>
+</ol>
+<h2 id="总结">总结</h2><p>从上面的命令也可以看出，在 Mac 上要备份或者恢复 Nook 实在是太简单了，基本上只需要一个 dd 命令，以至于让我怀疑相关资料这么少的原因是因为这简单得别人不屑于写-_-。而 dd 命令其实使用也并不难，指定输入的文件 input file 以及输入的文件 output file，同时设置一下缓冲区 buffer size 的大小即可，但在使用中，需要注意不要误操作以破坏系统。</p>
+<p>另外，由于我本次刷机用的是自己之前所保存的镜像，并没有涉及到刷他人镜像需要恢复 pmf 分区信息的问题。不过理论上这个也可以通过 DiskUtil 来写入，如果有认证实践了，分享一下经验吧。</p>
+<p>总之，只要把自己的镜像备份了，Nook 这机器基本上就是不怕刷坏的不死之身了。 Happy Reading, And Long Live The Nook :P</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://imcoddy.github.io/2013/12/16/backup-and-restore-your-nook-on-the-mac/" data-id="ci9rq4m9f00301jrl4fsk1lwk" class="article-share-link">Share</a>
+      
+        <a href="http://imcoddy.github.io/2013/12/16/backup-and-restore-your-nook-on-the-mac/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hack/">Hack</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mac/">Mac</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Nook/">Nook</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Reading/">Reading</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2014/01/10/bitcoin's-journey/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Bitcoin&#39;s Five Year Journey
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2013/11/24/ipad-mini-retina-review-mini-but-powerful/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">iPad Mini Retina Review: Mini But Powerful</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Bitcoin/">Bitcoin</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/">Diary</a><span class="category-list-count">4</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/App/">App</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bitcoin/">Bitcoin</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bitoin/">Bitoin</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Brainwallet/">Brainwallet</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Config/">Config</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Dev/">Dev</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Diary/">Diary</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Finder/">Finder</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Game/">Game</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HHKB/">HHKB</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hack/">Hack</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Japan/">Japan</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Life/">Life</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac/">Mac</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mobile/">Mobile</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Music/">Music</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MySQL/">MySQL</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Nook/">Nook</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OSX/">OSX</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PHP/">PHP</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Reading/">Reading</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Review/">Review</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Security/">Security</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Software/">Software</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Translation/">Translation</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tweak/">Tweak</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Unix/">Unix</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Upgrade/">Upgrade</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Webclip/">Webclip</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/">iOS</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iPad/">iPad</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iTunes/">iTunes</a><span class="tag-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/App/" style="font-size: 10px;">App</a><a href="/tags/Bitcoin/" style="font-size: 17.5px;">Bitcoin</a><a href="/tags/Bitoin/" style="font-size: 10px;">Bitoin</a><a href="/tags/Brainwallet/" style="font-size: 10px;">Brainwallet</a><a href="/tags/Config/" style="font-size: 10px;">Config</a><a href="/tags/Dev/" style="font-size: 15px;">Dev</a><a href="/tags/Diary/" style="font-size: 20px;">Diary</a><a href="/tags/Finder/" style="font-size: 10px;">Finder</a><a href="/tags/Game/" style="font-size: 10px;">Game</a><a href="/tags/HHKB/" style="font-size: 10px;">HHKB</a><a href="/tags/Hack/" style="font-size: 10px;">Hack</a><a href="/tags/Japan/" style="font-size: 10px;">Japan</a><a href="/tags/Life/" style="font-size: 12.5px;">Life</a><a href="/tags/Linux/" style="font-size: 10px;">Linux</a><a href="/tags/Mac/" style="font-size: 17.5px;">Mac</a><a href="/tags/Mobile/" style="font-size: 10px;">Mobile</a><a href="/tags/Music/" style="font-size: 10px;">Music</a><a href="/tags/MySQL/" style="font-size: 10px;">MySQL</a><a href="/tags/Nook/" style="font-size: 10px;">Nook</a><a href="/tags/OSX/" style="font-size: 10px;">OSX</a><a href="/tags/PHP/" style="font-size: 10px;">PHP</a><a href="/tags/Reading/" style="font-size: 12.5px;">Reading</a><a href="/tags/Review/" style="font-size: 10px;">Review</a><a href="/tags/Security/" style="font-size: 10px;">Security</a><a href="/tags/Software/" style="font-size: 15px;">Software</a><a href="/tags/Translation/" style="font-size: 15px;">Translation</a><a href="/tags/Tweak/" style="font-size: 10px;">Tweak</a><a href="/tags/Unix/" style="font-size: 12.5px;">Unix</a><a href="/tags/Upgrade/" style="font-size: 10px;">Upgrade</a><a href="/tags/Webclip/" style="font-size: 10px;">Webclip</a><a href="/tags/iOS/" style="font-size: 15px;">iOS</a><a href="/tags/iPad/" style="font-size: 10px;">iPad</a><a href="/tags/iTunes/" style="font-size: 12.5px;">iTunes</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/01/">January 2014</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/11/">November 2013</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/09/">September 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/06/">June 2013</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/05/">May 2013</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2015/01/10/what-sarutobi-app-means-to-bitcoin/">What Sarutobi App Means to Bitcoin</a>
+          </li>
+        
+          <li>
+            <a href="/2014/06/21/their-bit-zone/">他们的 Bitzone</a>
+          </li>
+        
+          <li>
+            <a href="/2014/01/25/network-miner-fee-policy-migration-plan/">Network/Miner Fee Policy Migration Plan</a>
+          </li>
+        
+          <li>
+            <a href="/2014/01/18/do-not-use-a-brainwallet/">Do Not Use A Brainwallet! You Are Likely To Lose Your Coins!</a>
+          </li>
+        
+          <li>
+            <a href="/2014/01/10/bitcoin's-journey/">Bitcoin&#39;s Five Year Journey</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2015 Qiu Di<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'imcoddy';
+  
+  var disqus_url = 'http://imcoddy.github.io/2013/12/16/backup-and-restore-your-nook-on-the-mac/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>

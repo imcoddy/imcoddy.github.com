@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Network/Miner Fee Policy Migration Plan | Q小帝的折腾笔记</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="译者前言：据比特币核心开发人员 Mike Hearn 透露，比特币协议在今年将会迎来四大改动，其中一项就是转账所需要的交易费（transaction fee）将会浮动。实际上，Gavin Andresen 在几个月前就在一篇笔记中为大家勾画了交易费的变更计划。下面就让我们来看看它的详细情况吧。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Network/Miner Fee Policy Migration Plan">
+<meta property="og:url" content="http://imcoddy.github.io/2014/01/25/network-miner-fee-policy-migration-plan/index.html">
+<meta property="og:site_name" content="Q小帝的折腾笔记">
+<meta property="og:description" content="译者前言：据比特币核心开发人员 Mike Hearn 透露，比特币协议在今年将会迎来四大改动，其中一项就是转账所需要的交易费（transaction fee）将会浮动。实际上，Gavin Andresen 在几个月前就在一篇笔记中为大家勾画了交易费的变更计划。下面就让我们来看看它的详细情况吧。">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Network/Miner Fee Policy Migration Plan">
+<meta name="twitter:description" content="译者前言：据比特币核心开发人员 Mike Hearn 透露，比特币协议在今年将会迎来四大改动，其中一项就是转账所需要的交易费（transaction fee）将会浮动。实际上，Gavin Andresen 在几个月前就在一篇笔记中为大家勾画了交易费的变更计划。下面就让我们来看看它的详细情况吧。">
+  
+    <link rel="alternative" href="/atom.xml" title="Q小帝的折腾笔记" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Q小帝的折腾笔记</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">记录下那些折腾过的岁月。</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="q" value="site:http://imcoddy.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-network-miner-fee-policy-migration-plan" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/01/25/network-miner-fee-policy-migration-plan/" class="article-date">
+  <time datetime="2014-01-25T02:38:35.000Z" itemprop="datePublished">2014/01/25</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Bitcoin/">Bitcoin</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Network/Miner Fee Policy Migration Plan
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="译者前言：">译者前言：</h2><p>据比特币核心开发人员 Mike Hearn 透露，比特币协议在<a href="http://www.8btc.com/4-new-bitcoin-features" target="_blank" rel="external">今年将会迎来四大改动</a>，其中一项就是转账所需要的交易费（transaction fee）将会浮动。实际上，Gavin Andresen 在几个月前就在一篇笔记中为大家勾画了交易费的变更计划。下面就让我们来看看它的详细情况吧。<br><a id="more"></a></p>
+<h1 id="网络/矿工收费政策的迁移计划">网络/矿工收费政策的迁移计划</h1><p>要想改变交易在网络中传递以及矿工将其保存到区块链中所需的交易费用，是需要花一些心思的。政策不匹配可能会导致用户的交易无法得到确认，这要么是交易无法到达矿工那里（它们没有被传递过去），要么就是交易被矿工直接拒绝了。</p>
+<p>我一直在努力简化 0.9 版本的交易费规则。这篇帖子的目的是说明所有使这一转变尽可能顺利执行所需要的细节。</p>
+<p>总体的思路是，交易生成部分的代码将会比较保守，从而保证生成与以前版本的规则相一致的交易。 而交易传递和挖矿确认的代码被会变得更加主动，以满足未来可能发生的变化。</p>
+<h2 id="0-8-5_版规则">0.8.5 版规则</h2><h3 id="0-8-5_传递规则">0.8.5 传递规则</h3><p>基本费用：每 1000 字节 10000 聪（satoshis），交易的大小将向上取整至最接近的 1000 字节（例如 1001 字节的交易需要 20000 聪）。这个值可以通过 minrelaytxfee 参数来进行更改。</p>
+<p>如果交易符合下列条件的话：</p>
+<ul>
+<li>支付的成本低于收费的基本费用</li>
+<li>小于 10000 字节</li>
+<li>没有任何一个输出小于0.01 XBT</li>
+</ul>
+<p>那么它们将被认为是“免费交易”。他们将会被限速，然后（在合适的时候）传递出去。</p>
+<p>这里还有另一个相关的规则：如果交易的输出非常小的话（大概在 5000 聪左右，我们称为“尘土交易”）将被认为是不合标准的从而不会被转发。</p>
+<h3 id="0-8-5_纳入规则">0.8.5 纳入规则</h3><p>所有的传递规则依然适用，因为节点不会去挖掘交易，除非他们将其传递出去（以及接受并纳入自己的内存池里）。</p>
+<p>包含着大量免费交易、大小为 27000 字节的块（通过 blockprioritysize 参数可以改变）所具有的优先级大于 57600000 的块（这等于一个 250 个字节的交易其输入为 1XBT，并且超过了一天时间）。</p>
+<p>块（默认 blockmaxsize：250000 字节）的其余部分则包含着至少 10000 聪每 1000 字节的交易（可以通过 mintxfee 参数改变）。注意，这里没有对字节数进行取整。</p>
+<h2 id="0-8-6_版规则变更提议">0.8.6 版规则变更提议</h2><h3 id="0-8-6_传递规则">0.8.6 传递规则</h3><p>除去了“所有输出必须大于 100 聪”的规则。（这是为了简化事务创建/处理逻辑。）</p>
+<h3 id="0-8-6_纳入规则">0.8.6 纳入规则</h3><p>将默认的 maxblocksize 增加至 350000 字节。 将高优先级事务的默认空间增加至 30000 字节。（这是为了适应更高的交易量，并用来衡量默认的算力占了多大的比例。）</p>
+<h3 id="0-8-6_钱包">0.8.6 钱包</h3><p>超过 1000 字节的交易必须支持交易费。（这是为了给免费交易预留空间。）</p>
+<h2 id="0-9_版规则变更提议">0.9 版规则变更提议</h2><p>优先级计算方式将被修改，使得花费中额外的输入不会降低优先级。（这是为了鼓励清理灰尘交易造成的 UTXO 设置。）</p>
+<h3 id="0-9_传递规则">0.9 传递规则</h3><p>当计算传递所需的最小交易费时，不再四舍五入到下一个 1000 字节。 （这是为了与控矿代码匹配）</p>
+<p>新的“拒绝”消息将被实现，告诉其它结点他们的交易由于费用不足而不会被传递下去。（这只是一个临时的解决办法，我们会努力想出一个对 SPV 更友好的解决方案。）</p>
+<h3 id="0-9_纳入规则">0.9 纳入规则</h3><p>要求矿工必须设置 mintxfee 和 minblocksize 等参数，如果他们不这样做将被拒绝开采。 （这是为了让交易费/块大小等在评估时决策非中心化。​​）</p>
+<h3 id="0-9_钱包">0.9 钱包</h3><p>使用新的“聪明费用（smartfee）​​”代码，来确定交易是否具有足够高的优先级将在不久的几个块区块中得到开采。 如果优先级够高，并且旧规则下的优先级也大于旧阈值，则传递时不需要交易费。</p>
+<p>如果交易被判定为不应该免费：将按 0.8.6 的传递规则计算最低费用，并与使用新的“聪明费用”代码计算出来的费用比较，选择二者中较大的数值来当作交易费。</p>
+<h2 id="0-9_版后期的变更">0.9 版后期的变更</h2><p>长远的目标是摆脱计算交易费的相关常数的所有的硬编码，让矿工来决定他们要处理的交易，并让钱包找出矿工以及矿工所处理的内容。</p>
+<h3 id="0-9+_传递规则">0.9+ 传递规则</h3><p>剔除 minrelaytxfee 参数，实现一个有优先级，内存有限的内存池。传递过来的交易如果适用的话将马上放入池中，不合适的将被拒绝。（具体实现还有待决定，也许会拒绝那些虽然具有优先级但权值小于当前池中最小权值的交易，并驱逐时间最长的交易以保持池的空余容量。）</p>
+<h3 id="0-9+_钱包">0.9+ 钱包</h3><p>剔除旧规则下的计算代码，只需使用新的交易费估算代码。（因为完整性检查的原因，将拒绝我们的内存池不会传递的交易。）</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://imcoddy.github.io/2014/01/25/network-miner-fee-policy-migration-plan/" data-id="ci9rq4m8e001o1jrljwnl257c" class="article-share-link">Share</a>
+      
+        <a href="http://imcoddy.github.io/2014/01/25/network-miner-fee-policy-migration-plan/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bitcoin/">Bitcoin</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Translation/">Translation</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2014/06/21/their-bit-zone/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          他们的 Bitzone
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2014/01/18/do-not-use-a-brainwallet/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Do Not Use A Brainwallet! You Are Likely To Lose Your Coins!</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Bitcoin/">Bitcoin</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/">Diary</a><span class="category-list-count">4</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/App/">App</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bitcoin/">Bitcoin</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bitoin/">Bitoin</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Brainwallet/">Brainwallet</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Config/">Config</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Dev/">Dev</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Diary/">Diary</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Finder/">Finder</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Game/">Game</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HHKB/">HHKB</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hack/">Hack</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Japan/">Japan</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Life/">Life</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac/">Mac</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mobile/">Mobile</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Music/">Music</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MySQL/">MySQL</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Nook/">Nook</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OSX/">OSX</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PHP/">PHP</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Reading/">Reading</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Review/">Review</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Security/">Security</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Software/">Software</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Translation/">Translation</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tweak/">Tweak</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Unix/">Unix</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Upgrade/">Upgrade</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Webclip/">Webclip</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/">iOS</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iPad/">iPad</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iTunes/">iTunes</a><span class="tag-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/App/" style="font-size: 10px;">App</a><a href="/tags/Bitcoin/" style="font-size: 17.5px;">Bitcoin</a><a href="/tags/Bitoin/" style="font-size: 10px;">Bitoin</a><a href="/tags/Brainwallet/" style="font-size: 10px;">Brainwallet</a><a href="/tags/Config/" style="font-size: 10px;">Config</a><a href="/tags/Dev/" style="font-size: 15px;">Dev</a><a href="/tags/Diary/" style="font-size: 20px;">Diary</a><a href="/tags/Finder/" style="font-size: 10px;">Finder</a><a href="/tags/Game/" style="font-size: 10px;">Game</a><a href="/tags/HHKB/" style="font-size: 10px;">HHKB</a><a href="/tags/Hack/" style="font-size: 10px;">Hack</a><a href="/tags/Japan/" style="font-size: 10px;">Japan</a><a href="/tags/Life/" style="font-size: 12.5px;">Life</a><a href="/tags/Linux/" style="font-size: 10px;">Linux</a><a href="/tags/Mac/" style="font-size: 17.5px;">Mac</a><a href="/tags/Mobile/" style="font-size: 10px;">Mobile</a><a href="/tags/Music/" style="font-size: 10px;">Music</a><a href="/tags/MySQL/" style="font-size: 10px;">MySQL</a><a href="/tags/Nook/" style="font-size: 10px;">Nook</a><a href="/tags/OSX/" style="font-size: 10px;">OSX</a><a href="/tags/PHP/" style="font-size: 10px;">PHP</a><a href="/tags/Reading/" style="font-size: 12.5px;">Reading</a><a href="/tags/Review/" style="font-size: 10px;">Review</a><a href="/tags/Security/" style="font-size: 10px;">Security</a><a href="/tags/Software/" style="font-size: 15px;">Software</a><a href="/tags/Translation/" style="font-size: 15px;">Translation</a><a href="/tags/Tweak/" style="font-size: 10px;">Tweak</a><a href="/tags/Unix/" style="font-size: 12.5px;">Unix</a><a href="/tags/Upgrade/" style="font-size: 10px;">Upgrade</a><a href="/tags/Webclip/" style="font-size: 10px;">Webclip</a><a href="/tags/iOS/" style="font-size: 15px;">iOS</a><a href="/tags/iPad/" style="font-size: 10px;">iPad</a><a href="/tags/iTunes/" style="font-size: 12.5px;">iTunes</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/01/">January 2014</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/11/">November 2013</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/09/">September 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/06/">June 2013</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/05/">May 2013</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2015/01/10/what-sarutobi-app-means-to-bitcoin/">What Sarutobi App Means to Bitcoin</a>
+          </li>
+        
+          <li>
+            <a href="/2014/06/21/their-bit-zone/">他们的 Bitzone</a>
+          </li>
+        
+          <li>
+            <a href="/2014/01/25/network-miner-fee-policy-migration-plan/">Network/Miner Fee Policy Migration Plan</a>
+          </li>
+        
+          <li>
+            <a href="/2014/01/18/do-not-use-a-brainwallet/">Do Not Use A Brainwallet! You Are Likely To Lose Your Coins!</a>
+          </li>
+        
+          <li>
+            <a href="/2014/01/10/bitcoin's-journey/">Bitcoin&#39;s Five Year Journey</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2015 Qiu Di<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'imcoddy';
+  
+  var disqus_url = 'http://imcoddy.github.io/2014/01/25/network-miner-fee-policy-migration-plan/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>
