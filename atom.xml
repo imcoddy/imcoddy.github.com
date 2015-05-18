@@ -1,0 +1,1061 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[Q小帝的折腾笔记]]></title>
+  <subtitle><![CDATA[记录下那些折腾过的岁月。]]></subtitle>
+  <link href="/atom.xml" rel="self"/>
+  <link href="http://imcoddy.github.io/"/>
+  <updated>2015-05-17T01:21:47.000Z</updated>
+  <id>http://imcoddy.github.io/</id>
+  
+  <author>
+    <name><![CDATA[Qiu Di]]></name>
+    <email><![CDATA[imcoddy[#]gmail.com]]></email>
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Upgrade to Hexo 3]]></title>
+    <link href="http://imcoddy.github.io/2015/05/17/upgrade-to-hexo-3/"/>
+    <id>http://imcoddy.github.io/2015/05/17/upgrade-to-hexo-3/</id>
+    <published>2015-05-17T00:45:42.000Z</published>
+    <updated>2015-05-17T01:21:47.000Z</updated>
+    <content type="html"><![CDATA[<p>转眼之间，又一晃半年多都没有打理博客了。 前一阵子，似乎进入了一个低潮。倒不是没有了感触，只是有时却又不知道如何说起。这样的状态的确不太好，是时候把这里重新拾起来了。</p>
+<a id="more"></a>
+<p>最近重新翻了一下李笑来的<a href="http://zhibimo.com/explore/ba-shi-jian-dang-zuo-peng-you" target="_blank" rel="external">《把时间当朋友》</a>，原因是看到他在推荐斯坦福公开课<a href="https://startupclass.co/courses/how-to-start-a-startup" target="_blank" rel="external">《How To Start A Startup》</a>之余，还几乎每天坚持更新自己的学习笔记整理成文并分享出来。有意思的是，这份学习笔记名为<a href="http://zhibimo.com/explore/growth" target="_blank" rel="external">《成长》</a>，而这种学习的成长心态，与《把时间当朋友》是一脉相承的。</p>
+<p>是以再看这本书时，深深地感受到，坚持是多么的不容易。正如书中所说：</p>
+<blockquote>
+<p>在 ClipMine上，2015年3月18日，这套课程中的第一课，数字是这样的：<br>324K views | 2.4K likes<br>而第二十课的数字是这样的：<br>19.1K views | 113 likes<br>也就是说，仅有百分之六不到的人看完所有课程……要是用最终第二十课点赞的人数作为分子，用最初看第一课的人数作为分母，得出来的比例是万分之三……<br>想起来我过去讲课时常说的话，每期班第一课我都会说：<br>我看到你们目光炯炯，我知道你们刚刚决心重新做人……我倒是想知道你们能坚持多久？</p>
+</blockquote>
+<p>因此，空谈误国，实干兴邦。雄心壮志的话还是少说，静心做事才是王道。今天趁着把 Hexo 更新到 3 ，今后也坚持把自己的所思所想多用文字记录下来吧。</p>
+<p>更新的方法其实没有太多好说的，参考<a href="https://github.com/hexojs/hexo/wiki/Migrating-from-2.x-to-3.0" target="_blank" rel="external">官方文档</a>就好了。比较可惜的是之前用的主题不能用了，现在默认的 langscape 主题不是太符合自己的口味。不过这个，改天再换了。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>转眼之间，又一晃半年多都没有打理博客了。 前一阵子，似乎进入了一个低潮。倒不是没有了感触，只是有时却又不知道如何说起。这样的状态的确不太好，是时候把这里重新拾起来了。</p>]]>
+    
+    </summary>
+    
+      <category term="Blog" scheme="http://imcoddy.github.io/tags/Blog/"/>
+    
+      <category term="Hexo" scheme="http://imcoddy.github.io/tags/Hexo/"/>
+    
+      <category term="Diary" scheme="http://imcoddy.github.io/categories/Diary/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[What Sarutobi App Means to Bitcoin]]></title>
+    <link href="http://imcoddy.github.io/2015/01/10/what-sarutobi-app-means-to-bitcoin/"/>
+    <id>http://imcoddy.github.io/2015/01/10/what-sarutobi-app-means-to-bitcoin/</id>
+    <published>2015-01-10T00:46:43.000Z</published>
+    <updated>2015-05-16T23:43:52.000Z</updated>
+    <content type="html"><![CDATA[<p><img src="http://media.coindesk.com/2015/01/sarutobi-630x263.png" alt="SaruTori" title="SaruTori"></p>
+<h2 id="背景">背景</h2><p>不久前的圣诞节前夕，苹果公司通过了一款名为「<a href="https://itunes.apple.com/us/app/sarutobi/id932194840?ls=1&amp;mt=8" target="_blank" rel="external">SaruTobi</a>」的游戏应用。这个名字来源于日语的「さるとび（猿飛）」，在此笔者将其译为「顽猴狂舞」。游戏的玩法很简单，玩家通过晃动一只在树上荡秋千的猴子，收集游戏中的道具和金币，并让猴子尽可能的飞得更远。<br><a id="more"></a></p>
+<p>在上线的短短两周，这款游戏受到了比特币社区的热烈关注。不仅 Coindesk 专门为其<a href="https://www.coindesk.com/apple-approves-ios-game-tips-players-bitcoin/" target="_blank" rel="external">撰文</a>，Reddit 社区里大家也是<a href="http://www.reddit.com/r/Bitcoin/comments/2rqlj6/apple_approves_ios_game_that_tips_players_in/" target="_blank" rel="external">纷纷点赞</a>。原因很简单，1、游戏里采用的虚拟货币的名称就叫比特币，对还没有接触过比特币的用户而言是一个不错的宣传方式；2、刚进入游戏时会提示玩家输入自己的真实比特币地址，当玩家累计游戏时间达到一定数量时，将会得到这款游戏所赠送的实实在在的比特币！（还没有下载这款游戏的 iOS 用户还在等什么？快去点上面的链接下载再回来看文章吧！）</p>
+<h2 id="意义">意义</h2><p>单纯从游戏的娱乐角度而言，这一款游戏其实并不算出众。复古的画风掩盖了界面上的粗糙，游戏的操作方面也有不少瑕疵。但纵使如此，在笔者看来，其历史意义却可谓重大。</p>
+<p>首先，这是第一款 iOS 上可以给用户打赏比特币的游戏应用。之前上线的比特币模拟游戏「<a href="https://itunes.apple.com/us/app/bitcoin-billionaire/id911117141?mt=8" target="_blank" rel="external">比特币大亨</a>」虽然让不少玩家感受了一把当年轻松挖矿成土豪的比特币发家史，但当玩家退出该游戏后，纵使在里面挖了千金万贯，现实里还是一无所获。而「顽猴狂舞」的上线，改变了这一状况。</p>
+<p>要知道，苹果公司之前对比特币应用的态度可是十分苛刻的，甚至曾经一度将 Blockchain 的官方应用下架，使得在比特币币价高位之时，许多 iOS 用户却无法享用一个顺手的手机钱包应用。所幸之后苹果的态度稍显开放，才使得情况有所好转。</p>
+<p>另一方面，App Store 在经历了若干年的发展后已然是一座金矿，它积累了许多优质的应用，极大地丰富了智能手机的使用场景，同时培养了用户小额消费的意识，推动了电子交易的发展。（对于老美而言一两美刀的应用就跟买一瓶水似的，前阵子中国区的 1 元定价事件也证明了在价格低于人们心理价位的情况下，用户也会选择正版消费而放弃折腾盗版。）而随着 ApplePay 的功能的逐步推广，将进一步促进苹果公司构建的消费生态圈的发展。</p>
+<p>在这样的背景下，苹果的 App Store 对涉及到金钱交易的应用审核也十分严厉。理论上而言，应用里不允许用户使用非苹果内购之外的消费行为，甚至在诱导用户消费时也不能过于明目张胆，以至于「顽猴狂舞」在应用介绍里不得不加上一句</p>
+<pre><code>*Apple is <span class="operator">not</span> <span class="operator">a</span> sponsor nor is involved <span class="operator">in</span> <span class="keyword">any</span> way <span class="keyword">for</span> <span class="operator">the</span> tip.
+*苹果并不是本应用打赏的赞助商，它和打赏毫无关系。
+</code></pre><p>这又引出了新的问题，作者为何要进行比特币打赏？以及这个打赏如何持续下去？</p>
+<p>至于为何打赏比特币，原因自然是应用的作者本身是比特币爱好者，希望能向更多的人宣传而推广比特币。另一方面，与比特币相关的应用，也很容易得到比特币社区的积极响应而增加曝光率。实际上，在游戏刚上线时<a href="http://www.reddit.com/r/indiegames/comments/2q24fv/my_new_game_sarutobi_on_ios_tips_the_player_in/" target="_blank" rel="external">作者发帖</a>响应寥寥，笔者下载时该应用甚至还没有一个评论，但在 Coindesk 的宣传后，游戏的评价迅速达到了四星半。没办法，在这个娱乐至死的年代，没有宣传就没有名气，君不见《刺杀金正恩》也是在黑客事件后才让观众热情满满的么？</p>
+<p>另一方面，虽然这个游戏本身是免费的，但游戏中提供了广告和内购功能能让作者获得一定收入，而作者选择了将其中的部分收入转换成比特币并回馈用户。实际上，「顽猴狂舞」中的打赏来自于游戏中一个共享的比特币钱包。用户玩了一定时间游戏后，应用就会从该地址向用户设置的比特币地址进行打赏以示奖励。同时，由于该打赏地址是公开的，热情满满的比特币土豪也可以大方地打赏几个比特币到该地址，真正做到独乐乐不若众乐乐。</p>
+<p>「顽猴狂舞」这种看似免费的打赏回馈玩家的方式，其实已经不算少见。例如在 iOS 上有大名鼎鼎的 <a href="https://m.freemyapps.com/share/url/dfc97c1e" target="_blank" rel="external">FreeMyApp</a>，用户在上面下载应用后可以获得一定积分，然后换取 iTunes Gift Card 以购买 App Store 的应用。由于用户众多，不少大的应用公司都愿意通过这个渠道推广自家应用，这也使得 FreeMyApp 有充足的资金回馈用户。</p>
+<p>而打赏比特币的网站也不少，其中大部分以广告点击为主。例如国外的 <a href="http://freebitco.in/?r=169263" target="_blank" rel="external">Freebitco.in</a> 和 <a href="https://coinad.com/?r=B1FHY7X6B1HHQJ6" target="_blank" rel="external">CoinAd</a>，以及国内最近开始做现货的<a href="https://www.kipcoin.com/signup/10431" target="_blank" rel="external">比特多</a>。但广告点击本身就是一个薄利的事情，在比特币发展初期回报还不错，现在这样的活动回报率其实很低很低。</p>
+<p>相比之下，<a href="https://wallet.la/wallet" target="_blank" rel="external">Wallet.la</a> 及<a href="https://bitui.io/" target="_blank" rel="external">币推</a>在 2014 年的发展更值得可圈可点，前者引入了不少游戏，让用户在娱乐之余还能赚取比特币，而后者通过与微博账号绑定，让用户在不需要了解钱包相关知识即可接受打赏。在币价低迷的非常时期，这两家网站对活跃国内比特业氛围所做出的贡献功不可没。</p>
+<p>「顽猴狂舞」虽然没能像币推帮助用户生成比特币地址，但它成功地将比特币的概念引入到游戏当中，并让玩家能够获取到真实的比特币。毕竟，游戏的重点是玩耍之余，让玩家习惯于接受比特币打赏，并更好地鼓励玩家继续玩下去。</p>
+<p>或许这在接触比特币已久的用户看来似乎没什么大不了的，但这样的做法，相当于在 App Store 这金矿上开了一扇窗，让资金转换成比特币，并让比特币在游戏中流行起来。而这，或许能给不少后来的游戏开发者带来新的思路：毕竟，还有什么货币比比特币更适合用于虚拟的游戏世界里面呢？</p>
+<h2 id="展望">展望</h2><p>平心而论，「顽猴狂舞」这款游戏还远未达到让人乐不释手的程度，无论游戏方式还是界面引导，其实都可以有更大的改进。但当它开始向用户的比特币地址打赏开始的那一时刻起，这场比特币与游戏结合的游戏，又向前进化了一步。或许在不久的将来，我们会看到以下情景的出现：</p>
+<ol>
+<li>地址自动生成化。应用可以在默认情况下，根据用户的设备 ID 生成唯一的比特币私钥和地址，使得用户不仅可以接受打赏，也可以自行向该地址充值进行充值。</li>
+<li>应用内比特币消费。用户可以通过从该地址发送比特币至某个地址，从而实现道具购买或者解锁关卡的功能。由于上面生成的地址与用户的设备是绑定的，用户的认证并不成问题，而小额交易的情况下，可以认为大部分的用户都是可信的，即使零确认也问题不大。</li>
+<li>形成游戏联盟。随着游戏打赏比特币的流行，利用游戏积分或等级来换取比特币的情况也将出现。目前，在游戏 A 中的所得能用到游戏 B 里面这样的情况，在现在还十分鲜见。而随着支持使用比特币的应用越来越多，用户也将体会到游戏中资产转移所带来的便利性。</li>
+</ol>
+<p>或许这一天的到来还仍需时日，但我相信，我们并不需要再等太久。</p>
+<p>最后，让我以这一句话作为结尾，共同展望比特币与游戏结合的新世界。</p>
+<pre><code>Gaming <span class="keyword">and</span> Bitcoin, a land still unexplored but rich <span class="keyword">with</span> opportunities, <span class="keyword">and</span> the digital world <span class="keyword">is</span> Bitcoin<span class="attribute">'s</span> <span class="typename">natural</span> environment.
+</code></pre><p>打赏链接：1MzziGBa7tNNzMwVJMPEjAfM1wRcvSGZu5    </p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><img src="http://media.coindesk.com/2015/01/sarutobi-630x263.png" alt="SaruTori" title="SaruTori"></p>
+<h2 id="背景">背景</h2><p>不久前的圣诞节前夕，苹果公司通过了一款名为「<a href="https://itunes.apple.com/us/app/sarutobi/id932194840?ls=1&amp;mt=8">SaruTobi</a>」的游戏应用。这个名字来源于日语的「さるとび（猿飛）」，在此笔者将其译为「顽猴狂舞」。游戏的玩法很简单，玩家通过晃动一只在树上荡秋千的猴子，收集游戏中的道具和金币，并让猴子尽可能的飞得更远。<br>]]>
+    
+    </summary>
+    
+      <category term="App" scheme="http://imcoddy.github.io/tags/App/"/>
+    
+      <category term="Bitcoin" scheme="http://imcoddy.github.io/tags/Bitcoin/"/>
+    
+      <category term="Game" scheme="http://imcoddy.github.io/tags/Game/"/>
+    
+      <category term="iOS" scheme="http://imcoddy.github.io/tags/iOS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[他们的 Bitzone]]></title>
+    <link href="http://imcoddy.github.io/2014/06/21/their-bit-zone/"/>
+    <id>http://imcoddy.github.io/2014/06/21/their-bit-zone/</id>
+    <published>2014-06-21T00:28:35.000Z</published>
+    <updated>2015-05-17T00:32:29.000Z</updated>
+    <content type="html"><![CDATA[<p>我已经很久很久没有写关于比特币的文字了。准确的说，距离上一篇文章已经有 35 天 7 时 21 分。这段时间看起来的确不长，不过要知道，在比特币这个 7＊24 不间断的世界里，这已经足以让你有恍然隔世之感。</p>
+<p>事实的确如此，在比特币的圈子里，每一天都不会平淡无奇令人乏味。不过，当我将自己抽身于外后，试图将周围的人发展成下线时，我忽然发现这居然是如此艰难。因为在一个人诚心接纳比特币变成一个意志坚定的比特忠之前，他需要先越过一大片遍布荆棘的Bitzone。</p>
+<a id="more"></a>
+<h2 id="观念Zone">观念Zone</h2><p>对于那些刚开始接触比特币的人而言，观念的转变其实已经是一道巨大的鸿沟。虽然比特忠会对以下问题笑而不语，但这样的言论在新人里总是屡见不鲜：</p>
+<p>“货币怎么可能没有国家来进行担保？币值这样大的波动怎么能在日常中使用嘛！”</p>
+<p>“想让我花这么高的价钱买一串虚无的数字？这不就是典型的庞氏骗局吗!”</p>
+<p>“互联网上的货币？全球停电断网了我看你们怎么用！”</p>
+<p>“通缩货币怎么能满足社会发展的需求？金本位不是已经崩溃了吗？？”</p>
+<p>……</p>
+<p>诚然，对于自己不了解的新事物表示怀疑是很正常的，而上面的问题，其实相关的讨论解答也很容易找到。这方面的问题可以参看一下火星人的洗脑教程，或者《货币的秘密》系列视频。但即使如此，许多人依旧是难以接受的。而要改变自己的观念，保持这一份开放的心态去学习了解，是通往比特忠的必备因素。</p>
+<h2 id="学习Zone">学习Zone</h2><p>当你能对以上的问题产生自我怀疑，并且愿意去了解比特币的运作机制时，继续做好学习新知识的准备吧！因为你将会接触到一大堆新概念：钱包、公钥、私钥、去中心化、收款地址、区块链、签名、离线存储、非对称加密、哈希计算、挖矿、矿机、智能契约……</p>
+<p>当遇到不明白的概念时，人们会很自然地用已有的事物来进行类比。而对于比特币这样的伟大创新，用以往的经验来解释有时难免出现偏差。不过比特币的好处在于共白皮书是公开的，代码也是公开的。任何不了解、甚至不信任比特币的运作机制的人都可以自行检阅，而随着你对这个系统的了解越深入，你会更体会到其设计的精妙。</p>
+<p>不过话说回来，要了解比特币的使用方式，最好的办法还是自己下个钱包软件生成个地址然后自己转帐玩一玩。只可惜在比特币价格掉到几千元的今天，已经很少有免费送币的情况了。虽然不知道 Coinbase 这样把默认单位换成 bit 让比特币的价格看起来“低廉”一些后会不会又兴起一轮打赏热潮，不过如果只是单纯想体验一把的话，下个狗狗币钱包然后到微博上讨几千个币来玩玩吧:P</p>
+<h2 id="守币Zone">守币Zone</h2><p>守币比守寡难。在比特币这个遍地是坑的世界里，学会守币躲坑大法才是保命之计。</p>
+<p>随着对比特币逐渐了解，自己也入手了一些比特币之后，如何储存比特币其实也是一个值得思考的问题。因为稍不小心，你就有可能将其失去。</p>
+<p>Blockchain 之类的线上钱包虽然使用起来比较方便，不过也可能由于密码泄漏而被他人窃取，因此只适合存储小额的比特币供日常使用。</p>
+<p>而使用本地钱包的话，本地加密以及将钱包文件备份至 U 盘是必不可少的一步，否则当你某天用 Ghost 还原系统时发现没有备份的话，就真的只能欲哭无泪了，因为你能再“猜”对之前地址对应的私钥的概率几乎为零。</p>
+<p>当然，使用脑钱包的话能一定程度上减少备份的烦恼，不过当你将其私钥导入时，先确认一下你对那坑爹的找零机制是不是已经足够了解，否则到时又不知道找回的零钱被发到什么鬼地方去了。</p>
+<p>此外，日常做好防范安全意识自然不用多说，尽量避免使用相同的密码，不要下载来历不明的文件，及时更新杀毒软件病毒库。嗯，最近刚出的 OKCoin 钓鱼邮件就是一个提醒的例子。</p>
+<h2 id="中国特色Zone">中国特色Zone</h2><p>去年比特币价格达到历史新高，很大程度上由是中国人推起来的。也在那段时间里，比特币交易所犹如雨后春笋一般涌现出来。这其中鱼龙混杂，圈钱跑路的情况时有发生。而由于国人普遍投机贪财的心态，火币网打着“零手续费”的口号招揽了不少人心，一跃跻身前列，使得不少其它交易所也采取了相同策略。</p>
+<p>交易所不是慈善机构，自然也需要营利赚钱。当交易所久久无法提供 100% 准备金证明时，实在不得不让人怀疑交易所有挪用客户资金来操纵市场的嫌疑。虽然有 MtGox 这样的前车之鉴，不过国内的交易所似乎还是乐此不疲。</p>
+<p>而由于不少交易所提供了杠杆交易，也让一大波空军呼啸而来。这一点在今年四月份里表现得尤其明显，随着各大银行依次表态禁止为比特币交易所进行充值之后，空军们也是举报得不亦乐乎，一度让比特币成为消息币。虽然这种情况在几大交易所发布联合公约声明后有所缓解，不过随着近期火币和 OKCoin 重新上线融资融币的功能，目测又将有一大波空军来临。</p>
+<p>诚然，在一个成熟的证券市场里，出现为了追逐更高利益而乐意承受更大风险的杠杆交易其实也是合情合理的事情，只是某些人恶意做空的手段实在是让人无法直视。不过对于比特忠来说，这也没什么不好的，至少可以以更便宜的价钱去多买些币了。</p>
+<p>至于火币网和 OKCoin 相继上线以币赚币的活动，个人意见是比特币这种用了就没的东西放在自己手上都不觉得安全，你如果能相信交易所还能放一些进去，不过在有人爆料的 OKCoin 钓鱼邮件事件是竞争对手恶意所为的情况下，大家还是当“买买提”交易完立马提币放到自己的冷钱包地址里面吧。</p>
+<h2 id="应用Zone">应用Zone</h2><p>如果你成功避免了以上种种，那么你离成为一名合格的比特忠已经不远了。不过很可惜的是，当你走到这里时，通常会有高处不胜寒的冷清之感。没办法，比特币的用户现在还是太少太少了。尽管现在能够使用比特币的场景已经增长了不少，这场才进行五年的社会实践，其实还处于非常初始的阶段。这一点其实在国内相关网站上的用户活跃度上也有所体现。经历过这几次价格腰斩之后，许多贸然入场的小白早已割肉黯然退场。虽然不少人将比特币当作炒币用的期货，但由于相关法律的缺失以及消息影响严重，单纯的炒币往往成为一个庆家掠夺散户的零和游戏。</p>
+<p>比特币要想获得大范围的商用，更重要的是相关的应用得以发展，使得大众直接能够享用到比特币所带来的便利。这一方面需要更多的科普教育，让民众能对虚拟货币形成正确的概念而不是谈币色变，另一方面也需要扩大比特币的可使用场景，让比特币真正地在实际生活中流通起来。而这，还需要许许多多的比特忠们共同努力。</p>
+<p>与君共勉。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>我已经很久很久没有写关于比特币的文字了。准确的说，距离上一篇文章已经有 35 天 7 时 21 分。这段时间看起来的确不长，不过要知道，在比特币这个 7＊24 不间断的世界里，这已经足以让你有恍然隔世之感。</p>
+<p>事实的确如此，在比特币的圈子里，每一天都不会平淡无奇令人乏味。不过，当我将自己抽身于外后，试图将周围的人发展成下线时，我忽然发现这居然是如此艰难。因为在一个人诚心接纳比特币变成一个意志坚定的比特忠之前，他需要先越过一大片遍布荆棘的Bitzone。</p>]]>
+    
+    </summary>
+    
+      <category term="Bitoin" scheme="http://imcoddy.github.io/tags/Bitoin/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Network/Miner Fee Policy Migration Plan]]></title>
+    <link href="http://imcoddy.github.io/2014/01/25/network-miner-fee-policy-migration-plan/"/>
+    <id>http://imcoddy.github.io/2014/01/25/network-miner-fee-policy-migration-plan/</id>
+    <published>2014-01-25T02:38:35.000Z</published>
+    <updated>2015-05-16T23:43:04.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="译者前言：">译者前言：</h2><p>据比特币核心开发人员 Mike Hearn 透露，比特币协议在<a href="http://www.8btc.com/4-new-bitcoin-features" target="_blank" rel="external">今年将会迎来四大改动</a>，其中一项就是转账所需要的交易费（transaction fee）将会浮动。实际上，Gavin Andresen 在几个月前就在一篇笔记中为大家勾画了交易费的变更计划。下面就让我们来看看它的详细情况吧。<br><a id="more"></a></p>
+<h1 id="网络/矿工收费政策的迁移计划">网络/矿工收费政策的迁移计划</h1><p>要想改变交易在网络中传递以及矿工将其保存到区块链中所需的交易费用，是需要花一些心思的。政策不匹配可能会导致用户的交易无法得到确认，这要么是交易无法到达矿工那里（它们没有被传递过去），要么就是交易被矿工直接拒绝了。</p>
+<p>我一直在努力简化 0.9 版本的交易费规则。这篇帖子的目的是说明所有使这一转变尽可能顺利执行所需要的细节。</p>
+<p>总体的思路是，交易生成部分的代码将会比较保守，从而保证生成与以前版本的规则相一致的交易。 而交易传递和挖矿确认的代码被会变得更加主动，以满足未来可能发生的变化。</p>
+<h2 id="0-8-5_版规则">0.8.5 版规则</h2><h3 id="0-8-5_传递规则">0.8.5 传递规则</h3><p>基本费用：每 1000 字节 10000 聪（satoshis），交易的大小将向上取整至最接近的 1000 字节（例如 1001 字节的交易需要 20000 聪）。这个值可以通过 minrelaytxfee 参数来进行更改。</p>
+<p>如果交易符合下列条件的话：</p>
+<ul>
+<li>支付的成本低于收费的基本费用</li>
+<li>小于 10000 字节</li>
+<li>没有任何一个输出小于0.01 XBT</li>
+</ul>
+<p>那么它们将被认为是“免费交易”。他们将会被限速，然后（在合适的时候）传递出去。</p>
+<p>这里还有另一个相关的规则：如果交易的输出非常小的话（大概在 5000 聪左右，我们称为“尘土交易”）将被认为是不合标准的从而不会被转发。</p>
+<h3 id="0-8-5_纳入规则">0.8.5 纳入规则</h3><p>所有的传递规则依然适用，因为节点不会去挖掘交易，除非他们将其传递出去（以及接受并纳入自己的内存池里）。</p>
+<p>包含着大量免费交易、大小为 27000 字节的块（通过 blockprioritysize 参数可以改变）所具有的优先级大于 57600000 的块（这等于一个 250 个字节的交易其输入为 1XBT，并且超过了一天时间）。</p>
+<p>块（默认 blockmaxsize：250000 字节）的其余部分则包含着至少 10000 聪每 1000 字节的交易（可以通过 mintxfee 参数改变）。注意，这里没有对字节数进行取整。</p>
+<h2 id="0-8-6_版规则变更提议">0.8.6 版规则变更提议</h2><h3 id="0-8-6_传递规则">0.8.6 传递规则</h3><p>除去了“所有输出必须大于 100 聪”的规则。（这是为了简化事务创建/处理逻辑。）</p>
+<h3 id="0-8-6_纳入规则">0.8.6 纳入规则</h3><p>将默认的 maxblocksize 增加至 350000 字节。 将高优先级事务的默认空间增加至 30000 字节。（这是为了适应更高的交易量，并用来衡量默认的算力占了多大的比例。）</p>
+<h3 id="0-8-6_钱包">0.8.6 钱包</h3><p>超过 1000 字节的交易必须支持交易费。（这是为了给免费交易预留空间。）</p>
+<h2 id="0-9_版规则变更提议">0.9 版规则变更提议</h2><p>优先级计算方式将被修改，使得花费中额外的输入不会降低优先级。（这是为了鼓励清理灰尘交易造成的 UTXO 设置。）</p>
+<h3 id="0-9_传递规则">0.9 传递规则</h3><p>当计算传递所需的最小交易费时，不再四舍五入到下一个 1000 字节。 （这是为了与控矿代码匹配）</p>
+<p>新的“拒绝”消息将被实现，告诉其它结点他们的交易由于费用不足而不会被传递下去。（这只是一个临时的解决办法，我们会努力想出一个对 SPV 更友好的解决方案。）</p>
+<h3 id="0-9_纳入规则">0.9 纳入规则</h3><p>要求矿工必须设置 mintxfee 和 minblocksize 等参数，如果他们不这样做将被拒绝开采。 （这是为了让交易费/块大小等在评估时决策非中心化。​​）</p>
+<h3 id="0-9_钱包">0.9 钱包</h3><p>使用新的“聪明费用（smartfee）​​”代码，来确定交易是否具有足够高的优先级将在不久的几个块区块中得到开采。 如果优先级够高，并且旧规则下的优先级也大于旧阈值，则传递时不需要交易费。</p>
+<p>如果交易被判定为不应该免费：将按 0.8.6 的传递规则计算最低费用，并与使用新的“聪明费用”代码计算出来的费用比较，选择二者中较大的数值来当作交易费。</p>
+<h2 id="0-9_版后期的变更">0.9 版后期的变更</h2><p>长远的目标是摆脱计算交易费的相关常数的所有的硬编码，让矿工来决定他们要处理的交易，并让钱包找出矿工以及矿工所处理的内容。</p>
+<h3 id="0-9+_传递规则">0.9+ 传递规则</h3><p>剔除 minrelaytxfee 参数，实现一个有优先级，内存有限的内存池。传递过来的交易如果适用的话将马上放入池中，不合适的将被拒绝。（具体实现还有待决定，也许会拒绝那些虽然具有优先级但权值小于当前池中最小权值的交易，并驱逐时间最长的交易以保持池的空余容量。）</p>
+<h3 id="0-9+_钱包">0.9+ 钱包</h3><p>剔除旧规则下的计算代码，只需使用新的交易费估算代码。（因为完整性检查的原因，将拒绝我们的内存池不会传递的交易。）</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="译者前言：">译者前言：</h2><p>据比特币核心开发人员 Mike Hearn 透露，比特币协议在<a href="http://www.8btc.com/4-new-bitcoin-features">今年将会迎来四大改动</a>，其中一项就是转账所需要的交易费（transaction fee）将会浮动。实际上，Gavin Andresen 在几个月前就在一篇笔记中为大家勾画了交易费的变更计划。下面就让我们来看看它的详细情况吧。<br>]]>
+    
+    </summary>
+    
+      <category term="Bitcoin" scheme="http://imcoddy.github.io/tags/Bitcoin/"/>
+    
+      <category term="Translation" scheme="http://imcoddy.github.io/tags/Translation/"/>
+    
+      <category term="Bitcoin" scheme="http://imcoddy.github.io/categories/Bitcoin/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Do Not Use A Brainwallet! You Are Likely To Lose Your Coins!]]></title>
+    <link href="http://imcoddy.github.io/2014/01/18/do-not-use-a-brainwallet/"/>
+    <id>http://imcoddy.github.io/2014/01/18/do-not-use-a-brainwallet/</id>
+    <published>2014-01-18T00:55:31.000Z</published>
+    <updated>2015-05-16T23:43:04.000Z</updated>
+    <content type="html"><![CDATA[<p><img src="http://1.bp.blogspot.com/-CMGT-QTUSdM/UQW0_xXLM5I/AAAAAAAAAgk/EEVWxus9XTw/s320/brain_money_2.jpg" alt="brain-wallet"></p>
+<p>好吧，这个有些标题党了。不过作者原意就是如此。不同意这观点的话，可以先把文章看完再来反驳:)<br><a id="more"></a></p>
+<p>本文翻译自 <a href="http://en.wikipedia.org/wiki/Gavin_Andresen" target="_blank" rel="external">Gavin Andresen</a> 几个月前的一篇笔记（玩比特币只听说过中本聪却不知道 Nakamoto Satoshi 和 Gavin Andresen 的话，说明还得加强学习一下比特币知识:P）。比特币脑钱包因其使用方便成为不少初学者的选择，不过在设置脑钱包口令（passphrases）时经常出现过于简单以至被人将币转走的情况。因此，虽然已是旧文，不过现在看来，这篇文章依旧具有不少教育意义。如果觉得这篇文章对您有帮助的话，欢迎往文章末尾的地址打赏;)</p>
+<h1 id="脑钱包的脑风暴">脑钱包的脑风暴</h1><h2 id="脑钱包的风险">脑钱包的风险</h2><p>人类其实并不擅长原创，更不善于选择与众不同。而且我们在理解数量级这一方面非常的糟糕。 </p>
+<p>所以，如果你让一个人创建一个安全的口令，他们很可能会选出一个会被拥有强大计算能力的“死嗑攻击者”破解的密码。 </p>
+<p>如果你要保护的东西是像你的非死不可（Facebook，原谅我这样翻译吧:P）帐户之类的玩意的话，这并不是什么大问题，因为一个典型的非死不可帐户大概也就只值得这么几毛钱（当然，如果你是明星的话那么你的账号会更值钱一些，你也应该在它的安全性上操心多一点）。而攻击者必须首先以某种方式获取你的非死不可密码的数据库，然后才能开始试图猜测你的密码。 </p>
+<p>但使用比特币脑钱包的麻烦是，他们是有（不菲）价值的，而攻击者已经拥有了破解专用的“密码数据库”。</p>
+<h2 id="脑钱包的破解步骤">脑钱包的破解步骤</h2><p>要想破解一个脑钱包口令，攻击者会：</p>
+<ol>
+<li>找出所有金额不为零的比特币地址并创建一个列表保存下来。</li>
+<li>通过重复猜测可能的脑钱包口令来生成地址，并看是否能与以上列表中所得到的地址对上号。</li>
+</ol>
+<p>第一步非常简单，而且攻击者正在对第二步操作越来越熟练。他们可能有每秒能猜上亿次的硬件，而且也有用来处理设置密码时常用的例如「I &lt;3 butterflies and rainbows」这类模式的软件。</p>
+<p>我们在理解庞大的数字时真的非常糟糕，我们低估了密码被破解的可能性，并不了解攻击者在能以每秒尝试数亿次猜测的情况下，它可以多么轻而易举地就猜到我们的密码。</p>
+<p>而在使用了脑钱包之后，我们就像是成了明星一样，即使你只有半个比特币放在你的脑钱包里面，如果你用的是一个弱口令，攻击者将会得到它（里面的比特币），因为他们的口令猜测算法会对每个人的脑钱包进行检查。 </p>
+<p>所以，人们有可能创造一个安全的脑钱包吗？密码/口令其实是没有用的，因为我们分享了这么多（例如流行文化，语言，教育）的内容，即使当别人说“我想到的东西没有其它人会想到”时，很可能他们想的东西与其他很多人所选的类似。</p>
+<h2 id="一个可行的脑钱包模式">一个可行的脑钱包模式</h2><p>以下是一个我认为可能安全的脑钱包设计模式提案。</p>
+<p>将以下的几项组合起来建一个安全的脑钱包：</p>
+<ul>
+<li>你的全名</li>
+<li>口令1</li>
+<li>口令2</li>
+</ul>
+<p>所以，我的口令可能是这个样子： “Gavin Anthony Andresen I have eleven hovercraft full of eels! Okey dokey: patches welcome.”。</p>
+<p>这个模式的安全性取决于它究竟有多难猜。如果可以花钱让别人来告诉我们是不是选择了一个差的口令，而又不必告诉他们真实的口令是什么就好了。</p>
+<p>好吧，其实这是可以实现的！</p>
+<p>首先用上面的口令创建仅由口令生成的两个“哨兵” 脑钱包，并用上面的组合生成一个安全的脑钱包，然后将大部分的比特币存放到安全的脑钱包上，并将一些零钱存到“哨兵” 脑钱包里面。 </p>
+<p>如果某天我发现在“哨兵”钱包里的比特币被转走了，我就知道在某个地方有黑客成功地猜出我的口令，这时我就应该选择一个新的口令，创建新的“哨兵”和安全脑钱包并将我的比特币转移过去。</p>
+<h2 id="以上模式的破解难度">以上模式的破解难度</h2><p>有没有可能攻击者对我一点也不了解，但他知道我的口令生成模式（全名/口令1/口令2）并可以破解我的安全钱包？</p>
+<p>我们可以算算这大约有多少组合的可能：</p>
+<ul>
+<li>名字：攻击者试图在1000万个最常见的名字中尝试。</li>
+<li>口令：假设攻击者需要尝试10亿次后才碰巧猜对你的口令。</li>
+</ul>
+<p>我们假设攻击者在提高算力上投资了不少，可以尝试每秒十亿次组合（一块高端的显卡可以做到这样的事情） 。</p>
+<p>算了一下，它平均需要超过1000万年才能破解，听起来绝对足够安全了！</p>
+<p>但是，如果攻击者知道你有1000个比特币安静地待在脑钱包里，并且决定只是针对你进行攻击的时候，这将变得容易了1000万倍（译者注：因为名字已经确定，不再需要盲目地猜测），所以要得到你的1000枚比特币平均需要一年多的时间。这其实并不值得，因为这样的话他们需要在破解的硬件上花费更多，并且还要花上一年的时间，仅仅只是为了破解你的钱包而已。（译者注：要知道这文章可是写在九个月前，按现在的价格来看，这1000枚比特币可是要比硬件投入值钱得多:P）</p>
+<h2 id="解决方案">解决方案</h2><p>支持创建脑钱包的软件应该花一些时间尝试让你的口令稍有差异，并且在blockchain检查一下，看看他们目前是否正在被用来存储着比特币（或在过去任何时间里曾被用来存储过比特币）。如果有的话，就应该提醒你去选择另一个口令。</p>
+<p>如果某个口令生成的地址里有未使用比特币，你也应该立即发送这些比特币至你的钱包里。这是你让其他人知道他们选择了一个糟糕的口令的方式以至给你的奖励，（哈哈，大牛居然也支持转账！）同时让他们知道他们需要将比特币放到他们的主要的脑钱包里。</p>
+<p>随着使用脑钱包（或其它类似的）的人越多，我们就越应该注意选择一个安全的口令。</p>
+<p>致技术人员们：我刚才掩饰一个极大的秘密信息。设置哨兵钱包其实应该是超级简单快捷的，如下：</p>
+<blockquote>
+<p>private key = SHA256(passphrase) //（作者这是在向SHA256致敬吧:P）</p>
+</blockquote>
+<h2 id="译者总结">译者总结</h2><ol>
+<li>脑钱包的破解难度取决于口令的复杂程度，在设置时个性化很有必要（降低被猜中的概率），即使如此，由于人们在选择时词汇量时会受文化限制集中于某个固定的范围里，所以不要对其强度过于自信。</li>
+<li>如果黑客采取针对性的暴力穷举的方式的话，破解所需时间远比预想的要短（例如文中的10万年到一年的差距）。</li>
+<li>采取“哨兵”模式来监测自己口令是否被猜出来了（这是我从这文章学到的方法，以及将其翻译出来的原因@_@），使得在主钱包沦陷前有机会转移至新的安全地址上。（呵呵，如果主钱包直接沦陷，说明你在设置脑钱包前没有加口令用SHA256加密XD）</li>
+</ol>
+<p>文中所引用图片版权归原作者所有。如果这篇文章对您有帮助，请捐献若干比特币，谢谢。</p>
+<p>捐助比特币地址：1MzziGBa7tNNzMwVJMPEjAfM1wRcvSGZu5<br>与君共勉。</p>
+<p>原文地址：<a href="https://gist.github.com/gavinandresen/3840286" target="_blank" rel="external">https://gist.github.com/gavinandresen/3840286</a></p>
+<p>PS：如果读者有兴趣的话，或许我还可以总结一下因弱口令造成的脑钱包沦陷的趣事，例如因“<a href="https://blockchain.info/tx/d1c4b02330effab49599a67f03b4816e02d9a253746a66444277de10202c7499" target="_blank" rel="external">bitcoin is awesome</a>”而损失的那 500 枚:P</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><img src="http://1.bp.blogspot.com/-CMGT-QTUSdM/UQW0_xXLM5I/AAAAAAAAAgk/EEVWxus9XTw/s320/brain_money_2.jpg" alt="brain-wallet"></p>
+<p>好吧，这个有些标题党了。不过作者原意就是如此。不同意这观点的话，可以先把文章看完再来反驳:)<br>]]>
+    
+    </summary>
+    
+      <category term="Bitcoin" scheme="http://imcoddy.github.io/tags/Bitcoin/"/>
+    
+      <category term="Brainwallet" scheme="http://imcoddy.github.io/tags/Brainwallet/"/>
+    
+      <category term="Security" scheme="http://imcoddy.github.io/tags/Security/"/>
+    
+      <category term="Translation" scheme="http://imcoddy.github.io/tags/Translation/"/>
+    
+      <category term="Bitcoin" scheme="http://imcoddy.github.io/categories/Bitcoin/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Bitcoin's Five Year Journey]]></title>
+    <link href="http://imcoddy.github.io/2014/01/10/bitcoin's-journey/"/>
+    <id>http://imcoddy.github.io/2014/01/10/bitcoin's-journey/</id>
+    <published>2014-01-10T12:51:07.000Z</published>
+    <updated>2015-05-16T23:43:04.000Z</updated>
+    <content type="html"><![CDATA[<p>2013年是属于比特币的一年，在这一年里，比特币的价格一路走高，甚至超过了黄金。也是在这一年里，随着各国政府的表态，比特币的价格也出现了大起大落的情况。但即使如此，它依旧吸引了众多投机者趋之若骛。究竟是什么原因让这只存在虚拟世界的一串字符具有如此大的影响力呢？经过假期的几天里了解了一下比特币的相关资料，不免被其精妙的设计所折服。现在趁着比特币五周岁刚过，翻译一下这一份比特币的五年历程。<br><a id="more"></a></p>
+<h1 id="比特币的历程">比特币的历程</h1><h2 id="2014-01-03_BTC/USD_$880">2014-01-03 BTC/USD $880</h2><p><img src="http://www.happybirthdaybitcoin.com/images/5th-bday.gif" alt="5th-bday"><br>随着 1217 万枚比特币被挖出来，比特币至今已经五岁了。</p>
+<p>2013 刚开始时比特币的价值是 13 美元，随后曾一路高涨至与黄金持平（ 1242 美元），年末时 811 美元，其增长率达到了 6000% 以上。</p>
+<p>2013 年是比特币被法律承认为一种金钱货币的形式的一年。</p>
+<p>西方政府谨慎地审查比特币，而一些东方国家直接警告公民不要使用比特币作为投机工具。中国政府彻底禁止它的银行和支付机构参与比特币的相关活动，而中国公民可继续无干扰地进行交易。</p>
+<p>而与比特币相关的故事，如丝绸之路的关闭，比特币的储蓄信贷涉嫌庞氏骗局的传言，以及过山车式的比特币价格波动等吸引了媒体的强烈兴趣，也推动大众对比特币的关注。</p>
+<p>因此，比特币在谷歌 2013 年最热门搜索词汇中排名第 96 位。</p>
+<p>在 2013 年里，ASIC 的比特币矿机将采矿速度从 25TH/s 提升到年底时让人觉得天崩地裂的 11,000TH/s。随着难度的水涨船高这也意味着用 CPU 和 GPU 来采矿成为徒劳无功。这个巨大的增幅也使得“ 51％ 攻击”变得更不可能实现。</p>
+<p>Blockchain.info，这个最流行的网络比特币钱包，声称到 2013 年年底钱包数量将达到近 100 万个。同时 Coinbase 也有 18,000 个商户和 732,000 个钱包，而 BitPay 拥有超过 12,000 个商户签署了这项服务。</p>
+<h2 id="2013-12-07_BTC/USD_$576">2013-12-07 BTC/USD $576</h2><p><img src="http://www.happybirthdaybitcoin.com/images/china-bubble-popped.jpg" alt="china-bubble-popped"></p>
+<p>2013 年里比特币社区张开双臂试图拥抱中国市场，却只能眼睁睁看着中国的人民银行发布通告，禁止中国的银行和支付与直接或间接参与比特币的兑换交易。</p>
+<p>需要指出的是，普通的中国公民依然可以交易自由比特币作为一种商品，该禁令只适用于由政府拥有的银行和政府认可的付款处理。</p>
+<p>就这样因此成名的比特币中国泡沫，破碎于 2013 年 12 月 5 日。</p>
+<p>2013 年 12 月 18 日，1 枚比特币在 MtGox 上价格降到最低 455 美元，而在中国则降到了 2011 元人民币（约 330 美元）。</p>
+<h2 id="2013-11-29_BTC/USD_$1242">2013-11-29 BTC/USD $1242</h2><p><img src="http://www.happybirthdaybitcoin.com/images/gold-parity.jpg" alt="gold-parity"><br>随着媒体的持续关注，比特币在中国市场达到了狂热的程度， 其价值一路飙升。</p>
+<p>仅在 2013 年 11 月的一个月中，比特币的价格就提高了 5 倍。</p>
+<p>而对于黄金市场而言则是惨淡的一年，一盎司黄金下探至 1242 美元，同一天里比特币的价格达到了它的历史最高水平。</p>
+<h2 id="2013-11-27_BTC/USD_$970">2013-11-27 BTC/USD $970</h2><p><img src="http://www.happybirthdaybitcoin.com/images/casascius-coins-closed-for-business.jpg" alt="casascius-coins-closed-for-business"></p>
+<p>可以说，对于比特币而言，由麦克考德威尔（Mike Caldwell）铸造的 Casascius 硬币，是比特币最具标志性和识别符号的物质形态。不过麦克考德威尔关闭了他的这项生意。</p>
+<p>尽管比特币社区对此表达出极大的悲伤和愤怒，但据考德威尔收到的一封来自美国政府部门金融犯罪执法网络（FinCEN）的邮件指出，铸币物理比特币需要拥有作为一个金钱发行商的资格，这意味着他需要在联邦一级注册才可能得到国家的许可了。</p>
+<p>迫于商业的复杂性和经济压力，迈克决定停止运营此业务。</p>
+<h2 id="2013-11-19_BTC/USD_$900">2013-11-19 BTC/USD $900</h2><p><img src="http://www.happybirthdaybitcoin.com/images/us-senate-hearings-on-bitcoin.jpg" alt="us-senate-hearings-on-bitcoin"><br>在美国政府机构坐下来听取包括比特币在内的虚拟货币的积极与消极之处的证词讨论中，多个证人为比特币贴上了“合法”的标签，认为它能够在金融行业产生“深刻的变革”。</p>
+<p>批评者则普遍认为，比特币可以用来洗钱。听证会对此毫不含糊地指出，“现金仍是洗钱的最好方式”，而在进行大规模的犯罪用途中用虚拟货币来洗钱的情况实际上十分鲜见。</p>
+<p>在听证会的积极影响下，比特币的价格达到了一枚 900 美元的历史新高。</p>
+<h2 id="2013-11-16_BTC/USD_$475-80">2013-11-16 BTC/USD $475.80</h2><p><img src="http://www.happybirthdaybitcoin.com/images/top-100-m1-narrow-money-stock.jpg" alt="top-100-m1-narrow-money-stock"><br>狭义货币股票指数是一个国家里例如硬币和货币、活期存款、以及央行持有的其他流动资产物理货币的一个等级指标。</p>
+<p>虽然比特币从严格意义上来说并不是货币，并且它与持有大盘价值的经济相比可以轻易被衡量，不过据 Coinometrics 图表显示，比特币作为达到 M100。</p>
+<p>也就是说，比特币的价值比 91 个国家的货币更高。</p>
+<p>第二天，第一千二百万枚比特币被开采出来。</p>
+<h2 id="2013-10-16_BTC/USD_$163">2013-10-16 BTC/USD $163</h2><p><img src="http://www.happybirthdaybitcoin.com/images/chinese-media.jpg" alt="chinese-media"><br>中国媒体（例如，政府批准的）开始切实推动促进比特币作为替代货币。</p>
+<p>为了努力废黜美元作为世界储备货币，中国的媒体对于推广比特币方面非常地积极：“政府并没有说他们有监管的任何公共计划。（翻译）”</p>
+<p>另外，百度（世界前 5 大最受欢迎的网站 - 又被称为“中国版谷歌”）开始接受比特币作为支付他们的网站服务。</p>
+<h2 id="2013-10-02_BTC/USD_$141-93">2013-10-02 BTC/USD $141.93</h2><p><img src="http://www.happybirthdaybitcoin.com/images/fbi-seizure.jpg" alt="fbi-seizure"><br>美国联邦调查局执法人员关闭了丝绸之路，这个又被称为“暗网”的网上毒品交易市场，同时逮捕了该网站涉嫌人罗斯威廉·乌布利希。</p>
+<p>丝绸之路网站用户的超过 26000 枚比特币被查封，此外还有 144000 多枚比特币是从据称是乌布利希的地址查获的。</p>
+<p>目前尚不清楚美国政府将如何处理被扣押比特币。</p>
+<p>受此消息影响比特币的汇率下降，并在接下来的几天之里跌到 110 美元。</p>
+<h2 id="2013-09-15_BTC/USD_$140-20">2013-09-15 BTC/USD $140.20</h2><p><img src="http://www.happybirthdaybitcoin.com/images/network-speed.gif" alt="network-speed"><br>比特币网络算力估计达到了 1PH/秒（1 PH/秒=1,000,000 GH/秒），而这距创世块的出现仅过了 4.75 年。这个速度也比 2013 的刚开始的时候快了 40 倍。</p>
+<p>在仅仅一个月之后的 2013 年 10 月里，网络算力达到2PH/秒。</p>
+<p>这个速度得以大幅提升的原因是由于ASIC（专用集成电路）这样的专用矿机被广泛投入使用。</p>
+<h2 id="2013-08-06_BTC/USD_$107-30">2013-08-06 BTC/USD $107.30</h2><p><img src="http://www.happybirthdaybitcoin.com/images/bitcoin-ruled-currency.jpg" alt="bitcoin-ruled-currency"><br>在一起将比特币储蓄信贷指控为庞氏骗局的案件里，律师 Trendon Shavers 认为，比特币并不是真正的货币。</p>
+<p>经德州东区法院的法官 Amos Mazzant 裁定认为，“比特币是一种货币或金钱形式，并且有意投资于 BTCST （比特币股）的投资者为此提供了资金进行投资。”</p>
+<p>这项裁决对于 Shavers 律师而言不是好消息，它也被人们认为这意味着当下的比特币成为法律认可的货币。</p>
+<h2 id="2013-06-17_BTC/USD_$102">2013-06-17 BTC/USD $102</h2><p><img src="http://www.happybirthdaybitcoin.com/images/g8-magazine.gif" alt="g8-magazine"></p>
+<p>八国集团（G8）是世界上最大的国家的经济论坛，其成员包括加拿大，法国，德国，意大利，日本，俄罗斯，英国，美国和欧盟。</p>
+<p>比特币兑换提供商 MtGox，在与八国集团首脑会议相关的官方杂志上发布了整版的广告。</p>
+<p>广告内容如下：</p>
+<blockquote>
+<p>最近好像所有人都在谈论比特币，它是彻底改变了人们思考金钱，贸易和透明度的数字货币。MtGox 提供了一个安全，可靠的多货币兑换渠道，在此您可以与整个世界以当地货币进行交易。现在我们是不是应该好好讨论一下这东西了？</p>
+</blockquote>
+<h2 id="2013-04-18_BTC/USD_$113">2013-04-18 BTC/USD $113</h2><p><img src="http://www.happybirthdaybitcoin.com/images/attacks.jpg" alt="attacks"></p>
+<p>对于比特币兑换及相关网站而言，这是非常艰辛的一天。</p>
+<p>MtGox，这个占据了 80％ 左右的市场交易额的交易所，遭受了严重的 DDOS 攻击，使得其网上的正常交易受到了极大的干扰。</p>
+<p>另一个黑客袭击的目标则是当下流行的网络钱包 Blockchain.info。</p>
+<p>不过在此期间比特币的价格保持相对稳定，并在问题消退后继续恢复增长。</p>
+<p>另外一件事与黑客攻击无关，但也在同一天发生。另外两家交易所选择了关门为善：Bitcoin-24 声称“波兰当局关闭了我们的银行帐户在波兰”，而 Bitfloor 则表示他们的在美国的银行账户同样也被关闭。</p>
+<h2 id="2013-04-10_BTC/USD_$107-30">2013-04-10 BTC/USD $107.30</h2><p><img src="http://www.happybirthdaybitcoin.com/images/turbulence.jpg" alt="turbulence"></p>
+<p>MtGox 上比特币汇率攀升至高位 266 美元，并在第二天早上以 124.90 美元收市，MtGox 曾一度停止服务长达一天。</p>
+<p>当交易重新开张后，比特币反弹至 100 美元左右，并在几天后下跌至 65 美元左右。</p>
+<p>这个市场的动荡引起了媒体的狂热与许多学者将这称为“泡沫”，并指责其过于波动，而货币投机者看到了投资比特币的巨大机会，并从中“低买高卖”。</p>
+<h2 id="2013-03-28_BTC/USD_$107-30">2013-03-28 BTC/USD $107.30</h2><p><img src="http://www.happybirthdaybitcoin.com/images/one-billion.jpg" alt="one-billion"></p>
+<p>流通中的所有比特币的总价值金额超过十亿美元，MtGox 上比特币价格也第一次达到了 92 美元的新高。</p>
+<p>与此同时，另一个具有里程碑意义的数字当属比特币的数量达到了接近 1100 万枚。</p>
+<h2 id="2013-03-12_BTC/USD_$48-40">2013-03-12 BTC/USD $48.40</h2><p><img src="http://www.happybirthdaybitcoin.com/images/blockchain-fork.jpg" alt="blockchain-fork"></p>
+<p>一个运行着0.8.0版客户端的比特币矿工创建了一个与比特币早期版本不兼容一大块数据块。</p>
+<p>其结果是造成了块链的分岔：使用新版客户端的矿工，商人和用户接受并在该数据块上继续构建，而使用旧版的则拒绝接受，并创建自己的块链。</p>
+<p>最终结果是运行 0.8.0 版本的大型采矿池被要求切换回 0.7 版本，建立一个单一的块链以确保所有比特币软件兼容。</p>
+<p>（译者注：这次事件也被称为 51% 攻击的一次预演。）</p>
+<h2 id="2013-01-31_BTC/USD_$21-43">2013-01-31 BTC/USD $21.43</h2><p><img src="http://www.happybirthdaybitcoin.com/images/first-asic.jpg" alt="first-asic"></p>
+<p>世界上第一台面向比特币采矿的ASIC（专用集成电路）硬件被交付给付费客户和比特币核心开发者，Jeff Garzik。</p>
+<p>这台ASIC，由阿瓦隆制成，执行速度为 67.5 GH/s。</p>
+<p>Jeff最先收到这台设备（作为礼物），因其对比特币协议的基础性工作所做出的贡献。</p>
+<p>这个日期标志着 ASIC 竞赛的开始。</p>
+<h2 id="2013-01-03_BTC/USD_$13-45">2013-01-03 BTC/USD $13.45</h2><p><img src="http://www.happybirthdaybitcoin.com/images/4th-bday.jpg" alt="4th-bday"></p>
+<p>随着约 1060 万枚比特币浮出水面，比特币也已经度过了四个年头。</p>
+<p>这时候每个比特币的成本约为 13.45 美元，相比一年之前增加了 3 倍。</p>
+<p>在过去的一年里人们见识到了 ASIC（专用集成电路）的专用硬件，能让矿工以更快的速率进行哈希计算，也为 CPU，GPU 和 FPGA 矿工敲响了最后的丧钟。</p>
+<p>2012 年初人们看到了 9TH/s 的算力，在比特币四岁生日时上升到 25TH/s。</p>
+<h2 id="请资助下本网站">请资助下本网站</h2><p><img src="http://www.happybirthdaybitcoin.com/images/tips.gif" alt="tips-please"><br>网站维护更新不易，看官去给原作者赏个小钱吧:P</p>
+<h2 id="2012-11-28_BTC/USD_$12-58">2012-11-28 BTC/USD $12.58</h2><p><img src="http://www.happybirthdaybitcoin.com/images/reward-halved-25.jpg" alt="reward-halved-25"></p>
+<p>根据比特币的协议，成功解决第一块的奖励减为原来的一半至 25 枚比特币。</p>
+<p>没有数据显示这影响了比特币的价格。</p>
+<h2 id="2012-09-27_BTC/USD_$12-38">2012-09-27 BTC/USD $12.38</h2><p><img src="http://www.happybirthdaybitcoin.com/images/foundation.jpg" alt="foundation"></p>
+<h3 id="比特币基金会成立">比特币基金会成立</h3><p>为了实现规范，保护和促进比特币的目标，比特币基金会成立了。</p>
+<p>该基金会证明了它对媒体和企业发起的符合相关法规的合规查询具有着重大的意义。</p>
+<h2 id="2012-05-08_BTC/USD_$5-10">2012-05-08 BTC/USD $5.10</h2><p><img src="http://www.happybirthdaybitcoin.com/images/satoshidice.jpg" alt="satoshidice"><br>比特币的赌博网站，中本聪骰子占据了 Blockchain 上超过一半的交易。</p>
+<p>在中本聪骰子成为比特币赌徒们最热门的聚集地之后，该网站于 2013 年 7 月 17 日以 126315 枚比特币的价格售出。</p>
+<h2 id="2012-01-03_BTC/USD_$5-29">2012-01-03 BTC/USD $5.29</h2><p><img src="http://www.happybirthdaybitcoin.com/images/3rd-bday.jpg" alt="3rd-bday"></p>
+<h3 id="比特币三岁生日快乐！">比特币三岁生日快乐！</h3><p>伴随着比特币的 3 岁生日的是其汇率维持在 5.29 美元左右。在 2011 年 6 月达到的最高点 31.91 美元之后比特币汇率持续走低。</p>
+<p>将近 800 万比特币已被开采出来。</p>
+<p>刚刚过去的一年里，由于 GPU 和现场可编程门阵列（FPGA）比特币采矿硬件的出现，网络算力从 120MH/s 提升至 9TH/s。</p>
+<h2 id="2011-07-06_BTC/USD_$16-50">2011-07-06 BTC/USD $16.50</h2><p><img src="http://www.happybirthdaybitcoin.com/images/mobile-qr.gif" alt="mobile-qr"></p>
+<h3 id="比特币支持手机支付">比特币支持手机支付</h3><p>在比特币安卓版的帮助下，手机支付比特币成为可能。这是诸多与比特币相关的智能手机和平板电脑应用程序中的第一款。</p>
+<p>该应用程序的代码由开发商布赖恩·阿姆斯特朗以开源的方式发布出来，他也是比特币钱包提供商 Coinbase 的共同创办人。</p>
+<h2 id="2011-06-08_BTC/USD_$31-91">2011-06-08 BTC/USD $31.91</h2><p><img src="http://www.happybirthdaybitcoin.com/images/1st-bubble.jpg" alt="1st-bubble"></p>
+<h3 id="比特币第一个经济泡沫">比特币第一个经济泡沫</h3><p>在比特币价格轰然跌至 10.25 美元前曾短暂地创下美元 31.91 美元的历史新高，表明这是比特币第一个经济泡沫。</p>
+<p>在接下来的 5 个月里比特币的价格缓慢而稳定地持续下降，直到 2011 年 11 月 19 日低至谷底 2.26 美元。</p>
+<p>这几个月对比特币而言是一段艰难的时光，比特币看到许多来自批评者们对它成为一个失败的实验的讽刺。</p>
+<h2 id="2011-05-20_BTC/USD_$7-10">2011-05-20 BTC/USD $7.10</h2><p><img src="http://www.happybirthdaybitcoin.com/images/fpga.jpg" alt="fpga"><br>区域可编程门阵列（Field Programmable Gate Array, FPGA）的比特币采矿硬件被引进使用。</p>
+<p>与 CPU 和 GPU 相比，FPGA 所具有的一个显著优势为它是通用硬件。</p>
+<p>虽然大多数 FPGA 在执行哈希计算时速度比 GPU 慢，但他们的优势在于允许一台计算机同时运行成群的 FPGA 矿工，而在相同情况下 GPU 只能运行为数不多的几个。</p>
+<h2 id="2011-04-16_BTC/USD_$1-095">2011-04-16 BTC/USD $1.095</h2><p><img src="http://www.happybirthdaybitcoin.com/images/time-magazine-bitcoin-article.jpg" alt="time-magazine-bitcoin-article"><br>时代杂志出版关于比特币的文章</p>
+<p>杰里·布里托在时代杂志上发表关于比特币的一篇文章，题为“网上现金比特币，可能挑战政府和银行”。</p>
+<h2 id="2011-03-22_BTC/USD_$0-81">2011-03-22 BTC/USD $0.81</h2><iframe width="640" height="360" src="//www.youtube.com/embed/Um63OQz3bjo?feature=player_embedded" frameborder="0" allowfullscreen></iframe>
+
+
+<p>由“我们用硬币”所制作的视频《<a href="http://www.youtube.com/watch?feature=player_embedded&amp;v=Um63OQz3bjo" target="_blank" rel="external">什么是比特币</a>》的广泛传播，标志着一场更广泛的向媒体和公众介绍比特币的宣传运动拉开序幕。</p>
+<p>该视频已经获得了数以百万计的意见反馈，并被大多数主流新闻媒体网站所引用。</p>
+<p>来自比特币社区的热情捐赠使得制作这段视频变为可能。</p>
+<h2 id="2011-02-09_BTC/USD_$1-09">2011-02-09 BTC/USD $1.09</h2><p><img src="http://www.happybirthdaybitcoin.com/images/parity.jpg" alt="parity"><br>比特币的价格与美元持平，在 MtGox 上的兑换汇率达到了 1 美元。</p>
+<h2 id="2011-01-03_BTC/USD_$0-30">2011-01-03 BTC/USD $0.30</h2><p><img src="http://www.happybirthdaybitcoin.com/images/2nd-bday.jpg" alt="2nd-bday"><br>随着刚刚超过 500 万枚比特币的出现，比特币满 2 周岁了。</p>
+<p>比特币兑美元的汇率徘徊在 0.30 美元左右。</p>
+<p>从去年年末开始矿工将计算的主力从 CPU 转移到专用显卡 GPU 上面。</p>
+<p>2010 年开始时在算力仅有 9 MH/s，在比特币二岁生日时上升到 120 MH/s。</p>
+<h2 id="2010-12-16_BTC/USD_$0-255">2010-12-16 BTC/USD $0.255</h2><p><img src="http://www.happybirthdaybitcoin.com/images/pooled-mining.jpg" alt="pooled-mining"></p>
+<h3 id="比特币矿池出现">比特币矿池出现</h3><p>比特币采矿成为一项团队运动，一群矿工一起在泥泞的矿池中争取找到的第一个块。</p>
+<p>根据其所贡献的工作量，每个矿工获得了相应的报酬份额。</p>
+<p>在这一个月内，比特币矿池算力就达到总共 10000 MH/s。</p>
+<h2 id="2010-11-06_BTC/USD_$0-50">2010-11-06 BTC/USD $0.50</h2><p><img src="http://www.happybirthdaybitcoin.com/images/one-million-market.jpg" alt="one-million-market"><br>比特币的市值达到一百万美元，在 MtGox 上比特币的汇率达到了每比特币 0.50 美元。</p>
+<h2 id="2010-08-15_BTC/USD_$0-067">2010-08-15 BTC/USD $0.067</h2><p><img src="http://www.happybirthdaybitcoin.com/images/bitcoin-bugs.gif" alt="bitcoin-bugs"></p>
+<h3 id="比特币漏洞被发现并利用">比特币漏洞被发现并利用</h3><p>比特币协议中的一个主要漏洞于 2010 年 8 月 6 日被发现：交易的信息在没有经过正确验证之前，就被列入交易记录或“块链”里面，这使得用户可以绕过比特币的认证机制并能创造无数的比特币。</p>
+<p>8 月 15 日，这个漏洞被人恶意利用。在一次交易中生成了超过 1840 亿枚比特币，并被发送到两个比特币地址上。</p>
+<p>这个非法交易很快就被发现，并在数小时内漏洞修复后从交易日志中删除。比特币网络协议也从此升级至更新版本。</p>
+<h2 id="2010-07-18_BTC/USD_$0-0858">2010-07-18 BTC/USD $0.0858</h2><p><img src="http://www.happybirthdaybitcoin.com/images/gpu-mining.jpg" alt="gpu-mining"></p>
+<h3 id="GPU_挖矿开始">GPU 挖矿开始</h3><p>由于比特币的汇率持续上升，积极的矿工们开始寻找方法来提高他们的计算能力。</p>
+<p>专用的图形卡远比传统的 CPU 具有更多的能量。</p>
+<p>矿工“ArtForz”据称是第一个成功实现在矿场上用个人的 OpenCL GPU 来挖矿的人。</p>
+<h2 id="2010-05-22_BTC/USD_$0-0025">2010-05-22 BTC/USD $0.0025</h2><p><img src="http://www.happybirthdaybitcoin.com/images/pizza.gif" alt="pizza"></p>
+<p>Bitcointalk 论坛用户拉斯洛购买了两块大型比萨饼花了 10,000 比特币，这在比特币界成为笑谈，因为这将成为世界上最贵的比萨饼。</p>
+<p>当时，10000 比特币大约价值 25 至 30 美元。</p>
+<h2 id="2010-01-03_BTC/USD_$0">2010-01-03 BTC/USD $0</h2><p><img src="http://www.happybirthdaybitcoin.com/images/1st-bday.gif" alt="1st-bday"></p>
+<h3 id="比特币一周岁生日快乐！">比特币一周岁生日快乐！</h3><p>约 160 万比特币的出现伴随着比特币度过了它的第一个生日。</p>
+<p>当时，一个比特币是一美分的很小一部分。（译者注：其实这话应该翻译成当时真的一文不值:P）</p>
+<h2 id="2009-12-30_BTC/USD_$0">2009-12-30 BTC/USD $0</h2><p><img src="http://www.happybirthdaybitcoin.com/images/first-net-diff.gif" alt="first-net-diff"></p>
+<h3 id="比特币第一次增加开采难度">比特币第一次增加开采难度</h3><p>为了保持比特币以每 10 分钟 1 块的恒定开采速度，比特币网络进行了自我调整，使得挖矿难度变得更大。</p>
+<p>2009 年，比特币挖矿在 CPU 上即可进行，当时组网的计算机的平均速度大约为每秒几十个 KiloHash。</p>
+<p>这次难度的首次增长距离创世块的出现将近 1 年。</p>
+<h2 id="2009-10-05_BTC/USD_$0">2009-10-05 BTC/USD $0</h2><p><img src="http://www.happybirthdaybitcoin.com/images/bitcoin-exchange-rate-established.jpg" alt="bitcoin-exchange-rate-established"></p>
+<h3 id="比特币的汇率建立">比特币的汇率建立</h3><p>第一次美元兑比特币的汇率由新自由标准（New Liberty Standard）发布。</p>
+<p>一个比特币的价值计算方法如下：由高 CPU 利用率的计算机运行一年所需要的平均电量，1331.5 千瓦时，乘以上年度美国居民平均用电成本，0.1136 美元，除以 12 个月除以过去 30 天里比特币的数量，最后的结果除以 1.00 美元。</p>
+<p>计算出来的汇率为 1 美元 = 1309.03 比特币。</p>
+<h2 id="2009-01-12_BTC/USD_$0">2009-01-12 BTC/USD $0</h2><p><img src="http://www.happybirthdaybitcoin.com/images/first-bitcoin-transaction.jpg" alt="first-bitcoin-transaction"></p>
+<h3 id="第一个比特币交易">第一个比特币交易</h3><p>在第一个比特币交易中，中本聪发送了 10 比特币给开发者、密码学活动份子，哈尔·芬尼。</p>
+<h2 id="2009-01-03_BTC/USD_$0">2009-01-03 BTC/USD $0</h2><p><img src="http://www.happybirthdaybitcoin.com/images/its-a-bitcoin.gif" alt="its-a-bitcoin"></p>
+<h3 id="比特币诞生">比特币诞生</h3><p>比特币背后的策划者，中本聪，于 2008 年 11 月 1 日发布了他的白皮书讨论了比特币的协议。</p>
+<p>关于比特币的生日有着许多猜测，最后大家达成共识选择了创世块的出现日期，而它是于 2009 年 1 月 3 日开采出来的。</p>
+<h2 id="译者补记">译者补记</h2><p>我是最近才开始了解比特币的。之所以翻译这篇文章，是因为自己在了解的过程中，觉得这个帖子较好地记录了比特币这几年里的发展历程。实际上从原文也可以看出，近半的篇幅所记载的事件都发生在 2013 年。在我看来，也是在这一年里，比特币才真正地走向大众。2014 比特币将何去何从谁也无法预知，但我们将一同见证这一场革命，这也是我选择将其翻译的初衷所在。</p>
+<p>文中所引用图片版权归原作者所有。如果这篇文章对您有帮助，请捐献若干比特币，谢谢。</p>
+<p>捐助比特币地址：1MzziGBa7tNNzMwVJMPEjAfM1wRcvSGZu5<br>与君共勉。</p>
+<p>原文 : <a href="http://www.happybirthdaybitcoin.com/" target="_blank" rel="external">http://www.happybirthdaybitcoin.com/</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>2013年是属于比特币的一年，在这一年里，比特币的价格一路走高，甚至超过了黄金。也是在这一年里，随着各国政府的表态，比特币的价格也出现了大起大落的情况。但即使如此，它依旧吸引了众多投机者趋之若骛。究竟是什么原因让这只存在虚拟世界的一串字符具有如此大的影响力呢？经过假期的几天里了解了一下比特币的相关资料，不免被其精妙的设计所折服。现在趁着比特币五周岁刚过，翻译一下这一份比特币的五年历程。<br>]]>
+    
+    </summary>
+    
+      <category term="Bitcoin" scheme="http://imcoddy.github.io/tags/Bitcoin/"/>
+    
+      <category term="Reading" scheme="http://imcoddy.github.io/tags/Reading/"/>
+    
+      <category term="Translation" scheme="http://imcoddy.github.io/tags/Translation/"/>
+    
+      <category term="Webclip" scheme="http://imcoddy.github.io/tags/Webclip/"/>
+    
+      <category term="Bitcoin" scheme="http://imcoddy.github.io/categories/Bitcoin/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Backup And Restore Your Nook On The Mac]]></title>
+    <link href="http://imcoddy.github.io/2013/12/16/backup-and-restore-your-nook-on-the-mac/"/>
+    <id>http://imcoddy.github.io/2013/12/16/backup-and-restore-your-nook-on-the-mac/</id>
+    <published>2013-12-16T12:36:45.000Z</published>
+    <updated>2015-05-16T23:43:04.000Z</updated>
+    <content type="html"><![CDATA[<p>转眼之间的手头上这台 Nook 已经到手两年了。虽然与 Kindle 相比这玩意名气的确小了不少，而且自带的系统限制不少，对中文支持得也不太到位。不过在经过自己 Root 并精心配置过后，这玩意的阅读体验可以得到很大的提升，实在是物超所值（虽然当年入手不久后这货就跟着 Kindle 狠狠滴降了价-_-）。趁着昨天在知乎挖了个老帖《<a href="http://www.zhihu.com/question/20109608/answer/20869162?group_id=132318107#answer-3543341" target="_blank" rel="external">图书资源和阅读感觉上，Kindle 4 和 nook 2 哪个较好？</a>》，记录一下昨天刷机的过程吧。<br><a id="more"></a><br>其实一直在用着并没有出什么问题，只是有一次不小心，插电脑上充电时没有被其弹出就直接拔出，造成了磁盘的权限出了点问题。虽然不影响平时看书，不过这样一来就没有办法安装新软件或做其它系统修改了。直到昨天想安装点东西失败后，终于决定：还是把它刷回来吧！</p>
+<p>不过在准备刷机的过程中，遇到了一个很尴尬的问题：现有的刷机教程都是基于 Windows 下用 DiskGenius 来操作的，其它系统下的操作指南几乎没有，而我已经摒弃 Windows 好多天……没办法，在某个说明不详的“Linux/Mac users can use dd”这一个模糊不清的提示下，我便开始了在 Mac 下恢复 Nook 的折腾史。</p>
+<h2 id="准备">准备</h2><p>首先需要调整好心态，充分意识到「刷机有风险，操作要谨慎，后果需自负」 的正确折腾心态，并预备好以下几样东西：</p>
+<ol>
+<li>Nook 用 512M 以上大小的 SD 卡及 USB 读卡器，建议用闲置的卡，方便以后使用。</li>
+<li>Nook 机器及数据线。</li>
+<li>引导所需的 Noogie 镜像文件。（点<a href="https://code.google.com/p/nst-recovery/downloads/detail?name=noogie.img.gz" target="_blank" rel="external">这里</a>下载）</li>
+<li>具有管理员权限的 Mac 一台。（ Linux 的操作大致相同，不过我没有验证。）</li>
+</ol>
+<h2 id="制作引导镜像">制作引导镜像</h2><p>（声明：这一步我并没有做，因为之前这个 Noogie 引导镜像已经做好了，不过理论上是可行的。如果有人实践发现有问题请告诉我。）</p>
+<ol>
+<li>将准备中所下载的 Noogie 镜像解压（2.6MB 的文件解压后达到 79.7MB，这个压缩率真心赞啊。），打开一个 Terminal 并将当前目录转至镜像的目录下。</li>
+<li>将 SD 卡通过读卡器连接至 Mac 上。</li>
+<li>在 Terminal 中输入<code>diskutil list</code>获得当前 SD 卡的盘符。（一般来说是 /dev/disk# ，其中 # 号所对应的数字可能不同）</li>
+<li><p>仔细确认了 SD 卡的位置后，输入以下的命令（以 /dev/disk1 为例）。<strong>一定要注意不要选到系统盘，否则整个系统就挂了。</strong></p>
+<pre><code>sudo diskutil unmountDisk <span class="regexp">/dev/</span>disk1
+</code></pre></li>
+<li><p>用 dd 命令将镜像写入到 SD 卡中。</p>
+<pre><code>sudo <span class="tag">dd</span> <span class="keyword">if</span>=/path/to/noogie<span class="class">.img</span> of=/dev/disk1 bs=<span class="number">1</span>m
+</code></pre></li>
+</ol>
+<p>经过一阵等待后，该镜像应该会成功地写入到 SD 卡中。</p>
+<h2 id="备份/刷机">备份/刷机</h2><ol>
+<li>长按背后的 N 键将 Nook 完成关机。</li>
+<li>插入刚才制作好的 SD 卡并开机，稍后会出现”Rooted Forever”的字样。</li>
+<li>将 Nook 插上数据线连接到电脑上，一会会在电脑上加载了名为 boot 和 Nook 的两个磁盘卷。</li>
+<li>通过 DiskUtil 将这两个磁盘卸下。在 Terminal 中获得 Nook 的盘符。</li>
+<li><p>仔细确认了 Nook 的位置后，输入以下的命令将现有的系统备份（以 /dev/disk1 为例）</p>
+<pre><code>sudo <span class="tag">dd</span> <span class="keyword">if</span>=/dev/disk1 of=/path/to/my_nook_backup<span class="class">.img</span> bs=<span class="number">1</span>m
+</code></pre></li>
+<li>经过一阵漫长的等待后，确认生成的镜像大小是 1962934272 bytes。（也有可能大小是 1958739968，似乎不同的版本稍有差别。）</li>
+<li><p>将生成的镜像妥善保管，在需要还原的时候，只需要将 if 和 of 的内容反过来即可</p>
+<pre><code>sudo <span class="tag">dd</span> <span class="keyword">if</span>=/path/to/my_nook_backup<span class="class">.img</span> of=/dev/disk1 bs=<span class="number">1</span>m
+</code></pre></li>
+</ol>
+<h2 id="总结">总结</h2><p>从上面的命令也可以看出，在 Mac 上要备份或者恢复 Nook 实在是太简单了，基本上只需要一个 dd 命令，以至于让我怀疑相关资料这么少的原因是因为这简单得别人不屑于写-_-。而 dd 命令其实使用也并不难，指定输入的文件 input file 以及输入的文件 output file，同时设置一下缓冲区 buffer size 的大小即可，但在使用中，需要注意不要误操作以破坏系统。</p>
+<p>另外，由于我本次刷机用的是自己之前所保存的镜像，并没有涉及到刷他人镜像需要恢复 pmf 分区信息的问题。不过理论上这个也可以通过 DiskUtil 来写入，如果有认证实践了，分享一下经验吧。</p>
+<p>总之，只要把自己的镜像备份了，Nook 这机器基本上就是不怕刷坏的不死之身了。 Happy Reading, And Long Live The Nook :P</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>转眼之间的手头上这台 Nook 已经到手两年了。虽然与 Kindle 相比这玩意名气的确小了不少，而且自带的系统限制不少，对中文支持得也不太到位。不过在经过自己 Root 并精心配置过后，这玩意的阅读体验可以得到很大的提升，实在是物超所值（虽然当年入手不久后这货就跟着 Kindle 狠狠滴降了价-_-）。趁着昨天在知乎挖了个老帖《<a href="http://www.zhihu.com/question/20109608/answer/20869162?group_id=132318107#answer-3543341">图书资源和阅读感觉上，Kindle 4 和 nook 2 哪个较好？</a>》，记录一下昨天刷机的过程吧。<br>]]>
+    
+    </summary>
+    
+      <category term="Hack" scheme="http://imcoddy.github.io/tags/Hack/"/>
+    
+      <category term="Mac" scheme="http://imcoddy.github.io/tags/Mac/"/>
+    
+      <category term="Nook" scheme="http://imcoddy.github.io/tags/Nook/"/>
+    
+      <category term="Reading" scheme="http://imcoddy.github.io/tags/Reading/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[iPad Mini Retina Review: Mini But Powerful]]></title>
+    <link href="http://imcoddy.github.io/2013/11/24/ipad-mini-retina-review-mini-but-powerful/"/>
+    <id>http://imcoddy.github.io/2013/11/24/ipad-mini-retina-review-mini-but-powerful/</id>
+    <published>2013-11-24T12:57:12.000Z</published>
+    <updated>2015-05-16T23:43:52.000Z</updated>
+    <content type="html"><![CDATA[<p>拿到 iPad Mini Retina 已经一个多星期了，随便整理一下这些日子的使用感受吧。</p>
+<p>虽然在一个月前就已经宣布，不过由于 iPad Mini Retina 的上市时间在发布会上并没有公布，于是各路谣言四起，大部分的推测都指向了本月的 22 日。然后苹果公司又和大家开了个玩笑，12 日便开始了预备发售。于是第二天早上便在官网上预订了一台，中午直接到银座店取了货。呵呵，难得当了一次这么积极的果粉。<br><a id="more"></a></p>
+<p>入手 iPad Mini 的理由其实很简单，之前的 iPad 4 用起来还是稍重了些。虽然这次更新的 iPad Air 其实已经轻巧了许多，不过外出携带时还是稍有不便。而 iPad Mini 这款 7.9 寸的屏幕大小，使得其在阅读和便携之间取得了一个很好的平衡。</p>
+<p>相比于上一代，本次更新的 iPad Mini Retina 最直观的感受是屏幕的升级带来的界面清晰度提升。这也算是众望所归吧，毕竟这年头大家都被高清的分辨率宠坏了。虽然经测试 Mini 所配的屏幕存在色域不如 Air 广的缺陷，不过对于我而言，如果不是专门将两个设置并排在一块进行对比的话，是很难察觉其中差异的。当然，如果对画质要求精准的话，这点的确需要注意一下。</p>
+<p>至于用它来看书的效果，个人觉得非常满意。相比 6 寸的阅读器而言， iPad Mini 的屏幕用来<a href="http://www.zhihu.com/question/21871799?group_id=107519220#answer-3080405" target="_blank" rel="external">阅读扫描版 PDF 文件</a>会更加舒适一些，同时配合着一些切边软件，基本上不存在文字显示过小的问题。而且在 App Store 里可以找到各类的应用，文档的格式基本上不成问题。唯一的缺陷就是看久了会伤眼，这点还是没法和 Eink 比:P</p>
+<p>容量方面，个人选择的是16G的，因为主要是看书刷资讯为主，加上最近新败的Time Capsule，看视频都通过共享直接流媒体播放，16G基本上绰绰有余。不过喜欢玩游戏或者离线看电影的的，还是请考虑32G及以上吧。</p>
+<p>应用方面，由于大部分软件都有对 iOS 7 的扁平化风格进行适配，所以界面也不算太唐突，看多了也就习惯了。不过很奇怪的是我发现 iPad 里面没有天气、计算器、闹钟等应用，在 Notification Center 里面看不到天气还有些不习惯。最开始以为是新系统的原因，不过经搜索后发现，这已经是历史遗留问题了-_-</p>
+<p>总体而言，iPad 的使用体验还是非常优异的。如果还在观望的话，可以尽快考虑预定了。毕竟，这货的紧缺程度估计要到元旦后才能缓解了XD</p>
+<p>最后，推荐应用篇网文一则：<a href="http://bbs.weiphone.com/read-htm-tid-5713167.html" target="_blank" rel="external">把mini打造成我的”随身工作秘书”</a></p>
+<p>更新：去年国庆回家后把这台 iPad 给父母，原本期望 iPad Mini 3 的更新能够给力一点，结果发现只更新了 TouchID &gt;_&lt; 失望之余又入了一台 32G 的 iPad Mini 2……</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>拿到 iPad Mini Retina 已经一个多星期了，随便整理一下这些日子的使用感受吧。</p>
+<p>虽然在一个月前就已经宣布，不过由于 iPad Mini Retina 的上市时间在发布会上并没有公布，于是各路谣言四起，大部分的推测都指向了本月的 22 日。然后苹果公司又和大家开了个玩笑，12 日便开始了预备发售。于是第二天早上便在官网上预订了一台，中午直接到银座店取了货。呵呵，难得当了一次这么积极的果粉。<br>]]>
+    
+    </summary>
+    
+      <category term="Review" scheme="http://imcoddy.github.io/tags/Review/"/>
+    
+      <category term="iOS" scheme="http://imcoddy.github.io/tags/iOS/"/>
+    
+      <category term="iPad" scheme="http://imcoddy.github.io/tags/iPad/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Music On The Run]]></title>
+    <link href="http://imcoddy.github.io/2013/11/17/music-on-the-run/"/>
+    <id>http://imcoddy.github.io/2013/11/17/music-on-the-run/</id>
+    <published>2013-11-17T11:54:58.000Z</published>
+    <updated>2015-05-16T23:43:04.000Z</updated>
+    <content type="html"><![CDATA[<p>你还在听保存在电脑上的音乐吗？</p>
+<p>在这网络便利的年代，通过网络在线听歌的方式似乎已经慢慢成为大家的首选方式了。国外流行的有Pandora，国内则有豆瓣FM、虾米等等。在线的方式除了可以随时随地播放之外，还可以将自己喜爱的曲目收藏下来，并在此基础上打造出自己的动听电台。<br><a id="more"></a><br>不过在线音乐固然方便，但对于我这样用iTunes好几年，积累了好几十G音乐的人来说，换用其它音乐网站的迁移成本未免过大了些。而随着现在iDevice增加，曲库的同步管理慢慢成了一个问题。平时iPod/iPhone/iPad用Mac来同步虽然稍有些麻烦但也还凑合，不过在公司的话就没法听家里的音乐了。于是本着外事不解问谷歌的原则，发现了iTunes Match这一个好东西。</p>
+<h2 id="iTunes_Match">iTunes Match</h2><p>虽然iTunes Match已经推出了好一阵子，但周围使用的用户似乎并不多。简单来 说这是个将自己的本地音乐「洗白」的服务，它可以将本地的音乐文件进行匹配，同时将整个曲库的信息放到云端，这样使用着相同帐户的所有iDevice都可以共享曲库。无论是在住宅或者公司，只要登陆之后，听歌+评级都可以无缝整合！写到这里，我不禁对乔布斯的最后一个“One More Thing”致以崇高的敬意！</p>
+<p>不过当我试着去使用这服务的时候，还是悲剧滴失败了。理由很简单，这个服务仅对部分国家开放，而岛国并不在其中。而就算我使用着美区的iTunes账号，在付款时还需要提供美国的信用卡信息才能通过认证……唉，这果然是万恶的资本主义人民才能享受到的服务。</p>
+<h2 id="Google_Music_Play">Google Music Play</h2><p>苹果不给力，只好转向了Google。作为刚起步没多久的竞争对手，Google所拥有的曲库自然不如苹果。于是Google玩起了众包手段，让用户自行上传MP3，上传的数量最多为20000首。</p>
+<p>在上传时，需要下载Google提供的Music Manager应用。它支持读取iTunes的目录信息，并可以通过选择音乐列表来实现部分上传，同时还可以将Podcast单独剔除（毕竟这本来就是通过网络下载来的嘛）。当然，对于我这样还打算继续使用iTunes的用户来说，自动上传新增歌曲这个选项是一定要勾上的。</p>
+<p>上传完毕后，便可以在自己的Google Music Play页面看到自己的曲库了，可可以通过相应的App来进行收听。基本上是以演唱者来划分，如果是音乐列表的话点进去还能看到该列表的详细曲目。唯一可惜的是它没有将Audiobook给划分出来，听着歌的时候突然听到一段语音书的感觉还是有些违和感。</p>
+<p>当然，叛逃到Google服务的话，原先的评分系统自然是没法继续使用的了。</p>
+<h2 id="Home_Sharing">Home Sharing</h2><p>其实如果iPad只是经常在住所使用的话，还可以使用iTunes的Home Sharing功能。其功能就是通过将Mac上的iTunes进行共享，使得在同一局域网内的其它设备也能够播放。</p>
+<p>开启的方式很简单，首先在iTunes的设置的共享项里先将其打开，然后在菜单File-&gt;Home Sharing里将其启用即可。</p>
+<p>接着在使用着相同ID的iDevice上打开Music，在More-&gt;Library选择共享出来的曲库即可。然后就可以看到相应的歌曲并播放了。</p>
+<p>不过虽然可以选择通过Home Sharing更新播放次数，但是似乎没法共享评分。而且，不在同个网域，或者在iTunes里将共享关掉后，其它设置也会立即停止播放Orz</p>
+<h2 id="总结">总结</h2><p>经比较，从方便性而言，iTunes Match &gt; iTunes Home Sharing &gt;= Google Music Play。</p>
+<p>只可惜iTunes Match现在是想付款也没法用的状态，实在是遗憾。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>你还在听保存在电脑上的音乐吗？</p>
+<p>在这网络便利的年代，通过网络在线听歌的方式似乎已经慢慢成为大家的首选方式了。国外流行的有Pandora，国内则有豆瓣FM、虾米等等。在线的方式除了可以随时随地播放之外，还可以将自己喜爱的曲目收藏下来，并在此基础上打造出自己的动听电台。<br>]]>
+    
+    </summary>
+    
+      <category term="Diary" scheme="http://imcoddy.github.io/tags/Diary/"/>
+    
+      <category term="Mac" scheme="http://imcoddy.github.io/tags/Mac/"/>
+    
+      <category term="Music" scheme="http://imcoddy.github.io/tags/Music/"/>
+    
+      <category term="iTunes" scheme="http://imcoddy.github.io/tags/iTunes/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Remapping My HHKB]]></title>
+    <link href="http://imcoddy.github.io/2013/10/20/remapping-my-hhkb/"/>
+    <id>http://imcoddy.github.io/2013/10/20/remapping-my-hhkb/</id>
+    <published>2013-10-20T01:31:44.000Z</published>
+    <updated>2015-05-16T23:43:04.000Z</updated>
+    <content type="html"><![CDATA[<p>入手HHKB Lite for Mac已经好几个月了，不过一直没准备为它写点什么。哈，毕竟一块薄膜键盘，和Pro2版的手感相比的确相去甚远，而为了适应这新的键盘布局也费了不少折腾。不过，配合着Mac下的必备软件KeyRemap4MacBook，经过配置一番后，终于可以和公司的Macbook Pro的键盘键位做到无痛切换了XD<br><a id="more"></a></p>
+<h2 id="HHKB">HHKB</h2><p>HHKB，全称是Happy Hacking Keyboard。它优异的操作手感以及独特（且合理）的键位安排，实在是居家码字的必备良品，在资深码农界可谓是无人不晓。相比市面上常见的键盘布局，HHKB其主要的特点在于以下几点：</p>
+<ol>
+<li>将F1至F12的功能键与数字键放置在一起，通过配合Fn键来调用。</li>
+<li>将Control键放在Cap键的位置，通过Fn+Tab来实现大小切换。</li>
+<li>将Esc键放到数字1的旁边，将~键放到了删除键的位置，同时删除键直接在回车键的上方。</li>
+<li>只有Lite版有方向键，而其它版本通过Fn+;[‘/来实现上面左右的移动</li>
+</ol>
+<p>从上面可以看出，正是由于这样紧凑的设计，以及对许多键的组合利用，使得这块只有60多个键的键盘，不仅足以担任码字的需求，而且实现得更优雅！</p>
+<h2 id="Movement_In_OSX">Movement In OSX</h2><p>虽然HHKB没有直接的方向键，不过由于其将Ctrl放在了Cap的位置，使得按Ctrl组合键方便了许多，只需要左手小指向左轻轻一按即可。因此，对于常用的文本编辑处理时，是完全不需要用所谓的方向键来实现移动的，具体的实现功能如下：</p>
+<ul>
+<li>按Ctrl+a/e可以实行移动到行首/行尾</li>
+<li>按Ctrl+f/b实现单字符的左右移动</li>
+<li>按Ctrl+h/d实现向前删除/向后删除</li>
+<li>按Ctrl+p/n实现移动至上一行/下一行</li>
+<li>按Ctrl+t实现前后字符交换</li>
+<li>按Ctrl+k实现删除至行尾</li>
+</ul>
+<p>另外，在部分模式下</p>
+<ul>
+<li>按Ctrl+m可以实现回车换行</li>
+<li>按Ctrl+w可以实现向前删除一个单词</li>
+</ul>
+<p>上面的快捷键可能适应需要一点时间，不过习惯之后，编辑时移动光标就可以不需要将手指移开主键盘区了。可惜没有找到按词移动光标的方式，要不操作就更方便了。</p>
+<h2 id="KeyRemap4MacBook">KeyRemap4MacBook</h2><p>HHKB的键位安排如此紧凑，在一定程度上也使得HHKB不容易上手。比如在苹果系统下，原本的F1~F12上对应的快捷功能键就无法享受了，Esc与~时常容易混淆导致切换到用户目录不便，删除键虽然变得近了点，但偶尔会习惯性地将手指上移导致按错。</p>
+<p>这个时候，就是KeyRemap4MacBook大显神威的时候了。实际上，HHKB自家也有提供了修改映射的驱动程序，不过可选的设置实在太少了，而前者提供的选项多得吓人，所以还是直接用前者就好哈哈。我开启以下几个选项:</p>
+<ol>
+<li>单独按左Ctrl键时映射到Esc上。这样Ctrl在单击时是退出，组合使用时不变，对于VI党来说这个功能真的很贴心。</li>
+<li>Shift+Esc映射到~上。这样主要是为了与用公司的电脑时兼容，毕竟在Terminal里用~返回用户根目录还是很常用的。</li>
+<li>单按右Shift时切换大小写。因为用左手来按Fn+Tab还是稍有点不顺。</li>
+<li>左Option+hjkl来当上下左右。虽然想用Fn+hijk来着的，可惜lite版里hj两个键无法配合Fn发送信号，因此换用Option键这是个折中的做法吧。</li>
+</ol>
+<p>在启用了这几项设置后，感觉这款HHKB Lite键盘真是用得相当顺手，让我有了再入一款静音版的冲动。唉，果然上次一括刷卡刷了40w后再看Type-S或者MRD-1RBT也不觉得贵了。嗯，这是病，得治~！</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>入手HHKB Lite for Mac已经好几个月了，不过一直没准备为它写点什么。哈，毕竟一块薄膜键盘，和Pro2版的手感相比的确相去甚远，而为了适应这新的键盘布局也费了不少折腾。不过，配合着Mac下的必备软件KeyRemap4MacBook，经过配置一番后，终于可以和公司的Macbook Pro的键盘键位做到无痛切换了XD<br>]]>
+    
+    </summary>
+    
+      <category term="Config" scheme="http://imcoddy.github.io/tags/Config/"/>
+    
+      <category term="Diary" scheme="http://imcoddy.github.io/tags/Diary/"/>
+    
+      <category term="HHKB" scheme="http://imcoddy.github.io/tags/HHKB/"/>
+    
+      <category term="Software" scheme="http://imcoddy.github.io/tags/Software/"/>
+    
+      <category term="Unix" scheme="http://imcoddy.github.io/tags/Unix/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Powered Up From Screen To Tmux]]></title>
+    <link href="http://imcoddy.github.io/2013/10/06/powered-up-from-screen-to-tmux/"/>
+    <id>http://imcoddy.github.io/2013/10/06/powered-up-from-screen-to-tmux/</id>
+    <published>2013-10-06T12:30:05.000Z</published>
+    <updated>2015-05-16T23:43:04.000Z</updated>
+    <content type="html"><![CDATA[<p>平时在公司开发自然少不了用screen这类的远程作业工具，虽然screen可以很方便的进行detach和attach，不过在重新连接时，总是会出现Terminal恢复到默认80行宽的大小。虽然重新调整一下窗口大小并不是什么大事，只是每次这样拖动鼠标有些烦人。最近由于开新项目换了一台VM，解决了之前安装不了tmux的问题，于是便从此摈弃screen，全面投入到tmux的怀抱中。<br><a id="more"></a><br>试用了两天，其实感觉并没有和screen有太大的差别。不过以下的几点其实还是挺贴心的：</p>
+<ol>
+<li>现在在远程服务器时，可以不必再重新调整一次窗口的大小了。</li>
+<li>单个windows里面划分成几个panel很方便，而且大小也比较容易调整。</li>
+<li>在下方开个panel查看帮助信息有时还是很有用的，虽然我还是不太习惯用man 命令:P</li>
+<li>状态栏的自定义功能很强大，可以方便地根据需要进行调整。</li>
+</ol>
+<p>使用Linux/Unix系的软件一般都需要精心配置一番，不过这绝对是磨刀不误砍柴功。经过参考多方资料后，最终的配置如下：</p>
+<pre><code>#-- base settings --#
+<span class="keyword">set</span> -<span class="keyword">g</span> default-terminal <span class="string">"screen-256color"</span>
+<span class="keyword">set</span> -<span class="keyword">g</span> <span class="keyword">display</span>-time 3000
+<span class="keyword">set</span> -<span class="keyword">g</span> escape-time 0
+<span class="keyword">set</span> -<span class="keyword">g</span> history-limit 65535
+<span class="keyword">set</span> -<span class="keyword">g</span> base-index 1
+<span class="keyword">set</span> -<span class="keyword">g</span> pane-base-index 1
+
+#-- bindkeys --#
+# prefix key (Ctrl+a)
+<span class="keyword">set</span> -<span class="keyword">g</span> prefix ^a
+unbind ^b
+bind a send-prefix
+
+# <span class="keyword">split</span> <span class="keyword">window</span>
+unbind '"'
+# vertical <span class="keyword">split</span> (prefix -)
+bind - splitw -v
+unbind %
+bind | splitw -<span class="keyword">h</span> # horizontal <span class="keyword">split</span> (prefix |)
+
+# select pane
+bind k selectp -<span class="keyword">U</span> # above (prefix k)
+bind j selectp -<span class="keyword">D</span> # below (prefix j)
+bind <span class="keyword">h</span> selectp -<span class="keyword">L</span> # left (prefix <span class="keyword">h</span>)
+bind <span class="keyword">l</span> selectp -R # right (prefix <span class="keyword">l</span>)
+
+# Quick pane selection
+bind -r C-<span class="keyword">h</span> select-<span class="keyword">window</span> -t :-
+bind -r C-<span class="keyword">l</span> select-<span class="keyword">window</span> -t :+
+
+# resize pane
+bind -r ^k resizep -<span class="keyword">U</span> 3 # upward (prefix Ctrl+k)
+bind -r ^j resizep -<span class="keyword">D</span> 3 # downward (prefix Ctrl+j)
+bind -r ^<span class="keyword">h</span> resizep -<span class="keyword">L</span> 3 # to the left (prefix Ctrl+<span class="keyword">h</span>)
+bind -r ^<span class="keyword">l</span> resizep -R 3 # to the right (prefix Ctrl+<span class="keyword">l</span>)
+
+# swap pane
+# swap with the previous pane (prefix Ctrl+<span class="keyword">u</span>)
+bind ^<span class="keyword">u</span> swapp -<span class="keyword">U</span>
+# swap with the next pane (prefix Ctrl+<span class="keyword">d</span>)
+bind ^<span class="keyword">d</span> swapp -<span class="literal">D</span>
+
+# Maximize and <span class="keyword">restore</span> a pane
+unbind Up
+bind Up new-<span class="keyword">window</span> -<span class="keyword">d</span> -<span class="keyword">n</span> tmp \; swap-pane -s tmp.1 \; select-<span class="keyword">window</span> -t tmp
+unbind Down
+bind Down last-<span class="keyword">window</span> \; swap-pane -s tmp.1 \; kill-<span class="keyword">window</span> -t tmp
+
+# mouse support - <span class="keyword">set</span> to <span class="keyword">on</span> <span class="keyword">if</span> you want to <span class="keyword">use</span> the mouse
+setw -<span class="keyword">g</span> mode-mouse off
+<span class="keyword">set</span> -<span class="keyword">g</span> mouse-select-pane off
+<span class="keyword">set</span> -<span class="keyword">g</span> mouse-resize-pane off
+<span class="keyword">set</span> -<span class="keyword">g</span> mouse-select-<span class="keyword">window</span> off
+
+# misc
+# select the last pane (prefix <span class="keyword">e</span>)
+bind <span class="keyword">e</span> lastp
+# select the last <span class="keyword">window</span> (prefix Ctrl+<span class="keyword">e</span>)
+bind ^<span class="keyword">e</span> last
+# kill pane (prefix q)
+bind q killp
+# kill <span class="keyword">window</span> (prefix Ctrl+q)
+bind ^q killw
+
+# <span class="keyword">copy</span> mode
+# enter <span class="keyword">copy</span> mode (prefix Escape)
+bind Escape <span class="keyword">copy</span>-mode
+# paste buffer (prefix Ctrl+p)
+bind ^p pasteb
+# select (v)
+bind -t vi-<span class="keyword">copy</span> v begin-selection
+# <span class="keyword">copy</span> (y)
+bind -t vi-<span class="keyword">copy</span> y <span class="keyword">copy</span>-selection
+
+# zoom pane &lt;-&gt; <span class="keyword">window</span>
+#http:<span class="comment">//tmux.svn.sourceforge.net/viewvc/tmux/trunk/examples/tmux-zoom.sh</span>
+bind ^z <span class="keyword">run</span> <span class="string">"tmux-zoom"</span>
+
+# <span class="keyword">app</span>
+# htop (prefix !)
+bind ! splitw htop
+# <span class="keyword">man</span> (prefix <span class="keyword">m</span>)
+bind <span class="keyword">m</span> command-prompt <span class="string">"splitw 'exec man %%'"</span>
+# perl func (prefix @)
+bind @ command-prompt <span class="string">"splitw 'exec perldoc -t -f %%'"</span>
+# perl <span class="keyword">var</span> (prefix *)
+bind * command-prompt <span class="string">"splitw 'exec perldoc -t -v %%'"</span>
+# perl doc (prefix %)
+bind % command-prompt <span class="string">"splitw 'exec perldoc -t %%'"</span>
+# ruby doc (prefix /)
+bind / command-prompt <span class="string">"splitw 'exec ri %%'"</span>
+
+#-- statusbar --#
+<span class="keyword">set</span> -<span class="keyword">g</span> status-utf8 <span class="keyword">on</span>
+<span class="keyword">set</span> -<span class="keyword">g</span> status-interval 15
+<span class="keyword">set</span> -<span class="keyword">g</span> status-keys vi
+
+setw -<span class="keyword">g</span> mode-keys vi
+setw -<span class="keyword">g</span> automatic-<span class="keyword">rename</span> off
+
+#-- colorscheme --#
+#https:<span class="comment">//github.com/daethorian/conf-tmux/blob/master/colors/zenburn.conf</span>
+
+# modes
+setw -<span class="keyword">g</span> clock-mode-colour colour223
+setw -<span class="keyword">g</span> mode-attr bold
+setw -<span class="keyword">g</span> mode-fg colour223
+setw -<span class="keyword">g</span> mode-bg colour235
+
+# panes
+<span class="keyword">set</span> -<span class="keyword">g</span> pane-border-bg colour234
+<span class="keyword">set</span> -<span class="keyword">g</span> pane-border-fg colour234
+<span class="keyword">set</span> -<span class="keyword">g</span> pane-active-border-bg colour232
+<span class="keyword">set</span> -<span class="keyword">g</span> pane-active-border-fg colour232
+
+# statusbar
+<span class="keyword">set</span> -<span class="keyword">g</span> status-justify left
+<span class="keyword">set</span> -<span class="keyword">g</span> status-bg colour235
+<span class="keyword">set</span> -<span class="keyword">g</span> status-fg colour248
+<span class="keyword">set</span> -<span class="keyword">g</span> status-attr dim
+
+#[default]» #[fg=colour187]#S #[default]• #[fg=colour187]w#I.p#P#[default]"
+#<span class="keyword">set</span> -<span class="keyword">g</span> status-left
+<span class="keyword">set</span> -<span class="keyword">g</span> status-left-attr bright
+<span class="keyword">set</span> -<span class="keyword">g</span> status-left-length 20
+
+#<span class="keyword">set</span> -<span class="keyword">g</span> status-right
+<span class="keyword">set</span> -<span class="keyword">g</span> status-right-attr dim
+<span class="keyword">set</span> -<span class="keyword">g</span> status-right-length 80
+<span class="keyword">set</span> -<span class="keyword">g</span> status-right '#[fg=white][#(hostname)] %a %Y-%<span class="keyword">m</span>-%<span class="keyword">d</span> %<span class="keyword">H</span>:%<span class="keyword">M</span>'
+<span class="keyword">set</span> -<span class="keyword">g</span> <span class="keyword">window</span>-status-<span class="keyword">format</span> '#I:#W'
+
+setw -<span class="keyword">g</span> <span class="keyword">window</span>-status-current-fg colour223
+setw -<span class="keyword">g</span> <span class="keyword">window</span>-status-current-bg colour237
+setw -<span class="keyword">g</span> <span class="keyword">window</span>-status-current-attr bold
+setw -<span class="keyword">g</span> <span class="keyword">window</span>-status-current-<span class="keyword">format</span> <span class="string">"[#I]#W#F"</span>
+
+# messages
+<span class="keyword">set</span> -<span class="keyword">g</span> message-attr bold
+<span class="keyword">set</span> -<span class="keyword">g</span> message-fg colour223
+<span class="keyword">set</span> -<span class="keyword">g</span> message-bg colour235
+setw -<span class="keyword">g</span> monitor-activity <span class="keyword">on</span>
+<span class="keyword">set</span> -<span class="keyword">g</span> visual-activity <span class="keyword">on</span>
+
+# bind to reload config
+bind r source-<span class="keyword">file</span> ~/.tmux.<span class="keyword">conf</span> \; <span class="keyword">display</span>-message <span class="string">"Configuration Reloading..."</span>
+</code></pre><p>除了颜色的配色稍稍有点不感觉不足之外，其它的功能基本是十分满意了。改天有心情再去配配主题吧。</p>
+<p>最后强烈推荐在使用tmux前先通篇阅读这不到百页的《<a href="http://book.douban.com/subject/10541112/" target="_blank" rel="external">Productive Mouse-Free Development</a>》小册子，不仅能让人对上面的配置的作用有更深刻的理解，而且还能发现tmux更加强大的功能（比如共享进行结对编程等）。不过话说回来，除了状态栏的自定义部分外，上面的配置其实已经很清晰明了了哈哈。</p>
+<p>最后，吐槽一句虽然tmux这名字有个元音，但还是和其它的Linux命令名一样难念……</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>平时在公司开发自然少不了用screen这类的远程作业工具，虽然screen可以很方便的进行detach和attach，不过在重新连接时，总是会出现Terminal恢复到默认80行宽的大小。虽然重新调整一下窗口大小并不是什么大事，只是每次这样拖动鼠标有些烦人。最近由于开新项目换了一台VM，解决了之前安装不了tmux的问题，于是便从此摈弃screen，全面投入到tmux的怀抱中。<br>]]>
+    
+    </summary>
+    
+      <category term="Dev" scheme="http://imcoddy.github.io/tags/Dev/"/>
+    
+      <category term="Diary" scheme="http://imcoddy.github.io/tags/Diary/"/>
+    
+      <category term="Linux" scheme="http://imcoddy.github.io/tags/Linux/"/>
+    
+      <category term="Software" scheme="http://imcoddy.github.io/tags/Software/"/>
+    
+      <category term="Unix" scheme="http://imcoddy.github.io/tags/Unix/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[独在家乡为异客，中秋佳节胖两斤]]></title>
+    <link href="http://imcoddy.github.io/2013/09/23/at-hometown-as-a-guest/"/>
+    <id>http://imcoddy.github.io/2013/09/23/at-hometown-as-a-guest/</id>
+    <published>2013-09-23T00:28:35.000Z</published>
+    <updated>2015-05-17T00:32:29.000Z</updated>
+    <content type="html"><![CDATA[<p>来日本已经快一年了，一直没有回家。趁着岛国9月里面有两个三连休的机会请了几天假，12号的时候回家陪家人过中秋去了。话说自从高中到桂林念书以来，基本上中秋就没有和家人过了。而选择秋高气爽的九月出行，受天气影响的概率较小，虽然返回东京的时候差点要遇到台风XD</p>
+<a id="more"></a>
+<h1 id="搬家">搬家</h1><p>这次回家的第二天便搬进了新房子里。其实一个多月前和家人说起这次回家计划时，新房子的装修已经开始进行了。而父母为了赶在我回来时搬进去，装修的进度也稍加紧了点，虽然我一直劝二老别太操劳过急，不过现在看来，装修进度总体还算顺利。</p>
+<p>不过离开之前住了近二十年的家的感觉还是挺特别的。虽然自己这十年基本没在那里生活，但偶尔回家时总能从中找到一些幼时的回忆。如今，终是要烟飞云散了。好在新房子更宽敞明亮，希望父母们能住得舒心，这是他们辛勤工作几十年后应得的回报。</p>
+<h1 id="网络">网络</h1><p>不得不说日本的网络环境真是太便利了。除了Facebook不会非死不可之外，速度也是相当滴让人满意，加上平时手机可以随时联网（虽然Softbank这种打着不限流量但实际经常限速的做法让人有上当之感），慢慢养成了没事就拿起手机刷信息的习惯。</p>
+<p>不过这个回到家后就没办法了。除了新家没有接通宽带之外，小城市里Wifi也并不算太普及。而往年免费使用且还时常联不上的CMCC，现在也开始走收费路线了。不过说实话，断网几天其实并不算是坏事，整天挂在网上，的确容易变得浮躁。</p>
+<p>顺便提一句，两江机场的Wifi总算是普及了，这还是挺便利的。</p>
+<h1 id="饮食">饮食</h1><p>并不是说日本的饮食不好吃，只是对于自己，或许如同乡音一般，家乡菜的味道也是在幼时便铭刻在自己的记忆之中。是以回家第一天刚吃下第一口饭菜，便觉一种熟悉的亲切感油然而生。</p>
+<p>不过枉我平时周末按着下厨房的菜谱依葫芦画瓢，中秋之夜时还是对妹妹的厨艺甘拜下风。哈，或许也是性格使然吧，不知道下次比拼，又要到什么时候了。</p>
+<p>相比吃饭，岛国的水果更加显贵，所以中秋时吃个水果拼篮子心里都暗算了一把这货估计要上万极品币……不过今天去超市买菜时，还是忍不住感叹在家水果吃得还不够多哈哈&gt;_&lt;</p>
+<h1 id="头等舱">头等舱</h1><p>由于这次回家要从上海转机，而航班是分开订的。加上返程的时间正好是中秋过后的周末，票价一直高居不下，于是索性订下了一张头等舱票。</p>
+<p>头等舱的乘客所享受的待遇差别还是不小的。除了登机时的快捷通道外，候机室也舒适不少。其它的例如座位更加宽敞、空姐服务时会加姓氏称呼之类的就不多说了，印象最深的是东航按季提供的茉莉花茶味道的确很不错，难怪空姐后来还亲自介绍了一番:P</p>
+<p>之前有个微博说在机场，贵宾厅里面的人大多在阅读，而普通候机区全都在玩手机。然后感叹是人的位置影响了行为还是行为影响了位置之类云云。不过就我的观察实际情况并非如此，而在头等舱里看书的除了我之外，剩下的就是旁边玩iPad玩累的两个小盆友了。虽然单次样例不足以为证，不过看书这类静心的行为，的确还是更符合岛国的习惯吧……</p>
+<h1 id="未来">未来</h1><p>在家期间其实也并没有好好和家人促膝长谈自己将来的打算，因为有一刻，连我自己也不清楚已经偏离原来的目标多远了。不过也正是这个难得的假期，能让自己静下心来好好反思一下这一年的收获与不足。新的工作明天即将开始，经过这番重整旗鼓之后，我要充满干劲去面对新的挑战了:)</p>
+<p>林俊杰的《<a href="http://www.xiami.com/song/1769260207?spm=a1z1s.3521865.23309997.34.JS3kX2" target="_blank" rel="external">加油</a>》，给自己，也给看到这篇日志的所有人^^</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>来日本已经快一年了，一直没有回家。趁着岛国9月里面有两个三连休的机会请了几天假，12号的时候回家陪家人过中秋去了。话说自从高中到桂林念书以来，基本上中秋就没有和家人过了。而选择秋高气爽的九月出行，受天气影响的概率较小，虽然返回东京的时候差点要遇到台风XD</p>]]>
+    
+    </summary>
+    
+      <category term="Diary" scheme="http://imcoddy.github.io/tags/Diary/"/>
+    
+      <category term="Japan" scheme="http://imcoddy.github.io/tags/Japan/"/>
+    
+      <category term="Life" scheme="http://imcoddy.github.io/tags/Life/"/>
+    
+      <category term="Diary" scheme="http://imcoddy.github.io/categories/Diary/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Tabbed Finder in OSX Mountain Lion]]></title>
+    <link href="http://imcoddy.github.io/2013/06/15/tabbed-finder-in-osx-mountian-lion/"/>
+    <id>http://imcoddy.github.io/2013/06/15/tabbed-finder-in-osx-mountian-lion/</id>
+    <published>2013-06-15T13:39:42.000Z</published>
+    <updated>2015-05-16T23:43:04.000Z</updated>
+    <content type="html"><![CDATA[<p>前几天苹果公司召开WWDC之后，大部分人都将注意力放在吐槽iOS的UI变化去了。对于这我种前几天刚惨痛升级到6.1.3的人来说，这次大会中更关心的是OSX会发生怎么样的改变。作为OSX的下一个升级版，这次停止了继续使用猫科动物来命名的方式，而换用了Mavericks。同时也对系统进行了进一步优化，比如终于在Finder里面加入了Tab的功能。</p>
+<a id="more"></a>
+<p>说起Tab的分页式浏览，作为当年受IE6摧残许久的老网虫，第一次在Firefox上看到Tabmix这类的扩展的时候是非常兴奋的。而后来的Chrome将这一点发扬光大，每个Tab页都可以单独的抽出来或者自由组合，极大地提升了浏览网页的用户体验。</p>
+<p>虽然这个功能感觉也并不复杂，但是在Windows和MacOS操作系统中是一直缺失的。反观Linux，虽然绝大部分文件操作都是在Terminal里面进行，而Gnome里面自带的Tab功能对于刚接触Linux的用户来说实在是非常贴心。</p>
+<p>既然系统没有实现，这就是给开发者赚钱的机会嘛。TotalFinder就是这样应运而生的产物。当然，如果觉得18美刀太贵，希望用免费的话，可以尝试一下XtraFinder，至少对我来说这已经够用了。</p>
+<p>下载安装的过程就不细说了。不过安装过程中需要先停止Finder中复制或移动文件的任务，安装完后XtraFinder可能不会自动运行，需要从Application中将其启用。</p>
+<p>当看到状态栏中出现了一个不和谐的Finder图标时，恭喜你，现在可以不再忍受以前打开一堆Finder窗口的痛苦了。当然，这时推荐打开XtraFinder的设置，根据自己的需要稍稍调整一下(比如按回车打开文件，按退格返回上一级什么的)。</p>
+<p>虽然风格跟将来系统自带的位置稍稍有点不同，不过对于我这种标签都是用键盘来选的人来说，放在最底下也不是问题哈哈。</p>
+<p>Enjoy tabbing。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>前几天苹果公司召开WWDC之后，大部分人都将注意力放在吐槽iOS的UI变化去了。对于这我种前几天刚惨痛升级到6.1.3的人来说，这次大会中更关心的是OSX会发生怎么样的改变。作为OSX的下一个升级版，这次停止了继续使用猫科动物来命名的方式，而换用了Mavericks。同时也对系统进行了进一步优化，比如终于在Finder里面加入了Tab的功能。</p>]]>
+    
+    </summary>
+    
+      <category term="Finder" scheme="http://imcoddy.github.io/tags/Finder/"/>
+    
+      <category term="Mac" scheme="http://imcoddy.github.io/tags/Mac/"/>
+    
+      <category term="OSX" scheme="http://imcoddy.github.io/tags/OSX/"/>
+    
+      <category term="Software" scheme="http://imcoddy.github.io/tags/Software/"/>
+    
+      <category term="Tweak" scheme="http://imcoddy.github.io/tags/Tweak/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Update iOS to Unjailbreakable]]></title>
+    <link href="http://imcoddy.github.io/2013/06/10/update-ios-to-unjailbreakable/"/>
+    <id>http://imcoddy.github.io/2013/06/10/update-ios-to-unjailbreakable/</id>
+    <published>2013-06-10T12:18:14.000Z</published>
+    <updated>2015-05-16T23:43:04.000Z</updated>
+    <content type="html"><![CDATA[<p>转眼WWDC2013就要开始了，关于iOS7的扁平化风格的猜测也是此起彼伏。虽然对那种一板子将3维图标打成2D然后落井下石抽除高光纹理的扁平风格说不上讨厌或喜欢，不过今天忽然觉得应该与时俱进升级一下系统了。然后手一抖点了iTunes里的升级，然后就开始了悲剧的一天……</p>
+<a id="more"></a>
+<h1 id="升级重置">升级重置</h1><p>虽然说iOS的升级操作十分傻瓜化，但在升级的时候并非一帆风顺，尤其是当你想指定某个版本的固件的时候。最开始时用的是GSM版的6.1.2，无论是recovery或者DFU模式iTunes都会出现错误。更可悲的是这时系统处于提示连接iTunes的进退两难的情况，完全无法使用。无奈之下，只好更新到了6.1.3。也是在这个时候，我才知道SoftBank的手机是CWDA版的&gt;_&lt;</p>
+<p>于是，现在这手机就变成了悲剧的Unjailbreakable状态。更可悲的是，在经过近一小时将电脑上的备份恢复到手机上时，除了凭空多了近7个G的Unknown Data之外，系统自带的输入法居然莫名其妙地无法输入。虽然这可能的确和我之前用的是某狗输入法有关，不过出现这样的情况还真是让人抓狂。</p>
+<p>于是又痛下决定，恢复出厂状态，接上iTunes后选择Set up as new iPhone。然后就是漫长的重装各种软件的过程。</p>
+<h1 id="软件重装">软件重装</h1><p>虽然我不知道爱迪生如果看到现在的智能手机的话会作何感想，不过智能手机的智能是建立在1%的系统+99%的应用之上这句话也是可以成立的。不得不说，当年乔帮主建立的App模式，极大地丰富了iPhone的应用范围。</p>
+<p>如果平时软件都是在iTunes里面下载的话，其实恢复的时候还算方便。在Purchased里面找到购买（下载）过的软件列表，然后逐个安装即可。不过这个列表因人而异可能会变得很长，这时在这里面要找想要的应用就会变得比较麻烦了。或许是因为使用这功能的人也不是太多吧，如果能根据使用频率来排序或许会更好一些，但这又难免有收集隐私之嫌了。</p>
+<p>当然，如果平时都是用的盗版软件的话，这个时候只能呵呵了。</p>
+<p>重装完之后，自然就是各种帐户设定。提几个小细节：</p>
+<ul>
+<li>iOS里面支持设定Facebook和Twitter的帐户，设定好之后其它应用如果可以通过这两个登陆的话（比如Foursquare等），登陆时会方便许多。当然，这个在大陆估计就享受不了了。另外我在登陆Flickr时进不去，梅姐改版不力呀。</li>
+<li>在启用了中文输入法后，上面的社交设置里面会多出一项新浪微博。不过能否用来做单点登陆我不清楚，但是从安装完新浪官方客户端后还需要重新输入用户名密码来登陆的事实来看，估计这项功能基本只是摆设而已。</li>
+<li>Google的服务在iPhone上用时初期设定就会比较悲剧了，尤其是开启了两步认证之后。比如安装了Google家的Search, Gmail, Chrome, Map, Google+, Hangouts……这时就得一个一个地输入登陆，然后查看发过来的验证码。唉，果然两家是竞争关系，万一iOS中也提供用Google Account来单点登陆的功能，这个世界就真的和谐了。</li>
+<li>相对iCloud那贵而不实的东西，Google的服务+iOS的硬件才是现在最好的服务体验。Google Contacts和Google Calendar的同步是通过CardDAV来交互的，而且设置的时候需要填入的是application-specified password。</li>
+<li>鄙视一下Line。最开始的时候是直接手机认证的，不过重装后使用Facebook来登陆+手机号码认证，但是原有的联系人和组都消失了。不过在岛国这种不经注册直接随机生成ID的作法似乎很常见，不知道他们在设计时是怎么想的。</li>
+</ul>
+<h1 id="使用感受">使用感受</h1><p>如果说iOS7真的要变扁平化的话，其实在iOS6中这个趋势已经体现出来了。除去基本的色调已经稍有变化之外，时钟和播放器的风格则完全变了。这一点也体现在单独分离出来的Podcast上。不过也由于现在这两种风格揉合在一起，感觉稍有些不自然。</p>
+<p>其它增加的功能（如Reminder，应用内分享）需要再体验一阵才好评论，还是先记一下操作方面的不快吧。</p>
+<ul>
+<li>没有了自定义手势。虽然辅助功能可以勉强凑合使用，但还是远比不上Activator来得便利。</li>
+<li>没有设置快捷Toggle。比如要开启Wifi，飞行模式等就需要进入设置里面查找，远比不上NCSetting的方便。</li>
+<li>没有计划任务。这时要想在晚上自动启用飞行模式早上自动恢复3G模式就不可能了。</li>
+<li>没有防火墙功能。虽然对应用的使用权限（如相片，联系人，位置等信息的读取）有所提升，不过还是缺少对应用的联网进行限制的功能。</li>
+<li>内置的中文输入法不好用。虽然某狗输入法在输入密码时会强行启用有暗自记录的嫌疑，不过的确比内置的输入更体贴-__-。同时在输入时要移动光标也不方便了。</li>
+<li>至于Nitrous，Zephyr，f.lux等等提升体验的插件，暂时是享受不了了。</li>
+</ul>
+<p>总之，还是验证了之前一向的观点：没有越狱过的iPhone基本上就是一个残疾品。当然，升级后发现残疾的程度稍稍轻了一些XD</p>
+<p>不知道在iOS7里面，又会从越狱界里汲取多少呢？过了今晚就能揭晓了吧。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>转眼WWDC2013就要开始了，关于iOS7的扁平化风格的猜测也是此起彼伏。虽然对那种一板子将3维图标打成2D然后落井下石抽除高光纹理的扁平风格说不上讨厌或喜欢，不过今天忽然觉得应该与时俱进升级一下系统了。然后手一抖点了iTunes里的升级，然后就开始了悲剧的一天……</p>]]>
+    
+    </summary>
+    
+      <category term="Mobile" scheme="http://imcoddy.github.io/tags/Mobile/"/>
+    
+      <category term="Upgrade" scheme="http://imcoddy.github.io/tags/Upgrade/"/>
+    
+      <category term="iOS" scheme="http://imcoddy.github.io/tags/iOS/"/>
+    
+      <category term="iTunes" scheme="http://imcoddy.github.io/tags/iTunes/"/>
+    
+      <category term="Diary" scheme="http://imcoddy.github.io/categories/Diary/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[How Time Flies, in Database]]></title>
+    <link href="http://imcoddy.github.io/2013/06/01/how-time-flies-in-database/"/>
+    <id>http://imcoddy.github.io/2013/06/01/how-time-flies-in-database/</id>
+    <published>2013-06-01T04:21:28.000Z</published>
+    <updated>2015-05-17T00:32:29.000Z</updated>
+    <content type="html"><![CDATA[<p>前阵子遇到了一个这样的的场景：数据库中原来使用的是MySQL中的DateTime格式，不过由于有经常性的时间比较的需求，以及需要引入多时区支持方便以后扩展。因此，需要将数据库的格式从DateTime转换成Timestamp。这就自然而然地引出了以下的问题：</p>
+<blockquote>
+<p>应该如何操作，以达到不影响服务的情况下平稳地实施这一更新？</p>
+</blockquote>
+<p>在回答这个问题之前，首先需要了解清楚数据库中的时间是如何存储的。<br><a id="more"></a></p>
+<h1 id="DateTime_vs_Timestamp">DateTime vs Timestamp</h1><p>这两个作为数据库中最常见的选择，难免时常被拿出来比较一番。在MySQL的<a href="http://dev.mysql.com/doc/refman/5.6/en/datetime.html" target="_blank" rel="external">官网</a>上，对这两个是这样说明的：</p>
+<blockquote>
+<p>The TIMESTAMP data type is used for values that contain both date and time parts. TIMESTAMP has a range of ‘1970-01-01 00:00:01’ UTC to ‘2038-01-19 03:14:07’ UTC.</p>
+<p>The DATETIME type is used for values that contain both date and time parts. MySQL retrieves and displays DATETIME values in ‘YYYY-MM-DD HH:MM:SS’ format. The supported range is ‘1000-01-01 00:00:00’ to ‘9999-12-31 23:59:59’.</p>
+<p>MySQL converts TIMESTAMP values from the current time zone to UTC for storage, and back from UTC to the current time zone for retrieval. (This does not occur for other types such as DATETIME.)</p>
+</blockquote>
+<p>Timestamp记录的是1970-01-01年始（UTC）所经过的秒数。在存储时，会根据服务器的时区计算出UTC时区对应的值存储下来，并在取出时将其还原成LocalTime。由于其存储时被当作一个4字节的非负整数，在2038年即将溢出（Bug2K+38）。</p>
+<p>DateTime在存储时占用的是8个字节，在记录的范围内可以比Timestamp多出不少。前四个字节的整数存放日期信息，后四个字节的整数存放时间信息。因此，所得到的结果是不连续着。这就意味着当希望把时间推迟一分钟时，并不是单纯地在原有的基础上加上60即可，而是需要经过更复杂的计算。</p>
+<p>实际上，对于已经定格的时间，用DateTime是一个不错的选择，如博文发表的时间，用户的生日等等。不过也由于DateTime本身与时区并无关系，在处理涉及多时区数据的时候（如生成统计报表），往往力不从心。</p>
+<p>另一方面，Timestamp则合适处理经常更新，或者对数据一致性要求较高的场合。虽然它的时间范围有限制，但那也是在不可预见的20年之后。（嗯，当年千年虫问题出现前的开发者也是这样的心态吧:P）</p>
+<h1 id="The_Other_Solution">The Other Solution</h1><p>在实际遇用中，不少开发者是使用int型来存储对应的Timestamp的。虽然做法和使用数据库内置的Timestamp类型大同小异，不过还是稍有区别。例如，SO上有人提到了这样的一个<a href="http://stackoverflow.com/a/4028045/834636" target="_blank" rel="external">场景</a>：</p>
+<blockquote>
+<p>Consider setting a timestamp by a user to a server in New York, for an appointment in Sanghai. Now when the user connects in Sanghai, he accesses the same appointment timestamp from a mirrored server in Tokyo. He will see the appointment in Tokyo time, offset from the original New York time.</p>
+</blockquote>
+<p>虽然该问题的提问者认为这时应该使用DateTime以便能够正确地显示出该时间，不过在我看来用int来记录下UTC的Timestamp，以及创建时所对应的正确时区，从而消除服务器数据库的时区偏差值。因此，在这种情况下，数据库中增加timezone栏必不可少。同时，需要在程序里对时间进行调整计算，确保能换成统一的时间截。</p>
+<p>虽然这样的做法折腾了一些，不过也给了开发者更多的自由，在进行数据查询及比较时也因为少了不必要的格式转换而更加自然。同时，这也意味着需要对代码的安全性担负更大的责任，完备的测试用例必不可少。</p>
+<h1 id="What_I_Learnt">What I Learnt</h1><p>回到前面的问题，在部署这部分的更新时，其实折腾了好一阵子。现在回顾起来，感受如下：</p>
+<ol>
+<li>开发和时区有关系的应用时，一定要使用UTC标准时间，仅在显示的时候根据需要进行调整。</li>
+<li>虽然变更对于软件开发来说不可避免，但前期的考虑还是应该尽可能充分一些。比如这样的变更，在设计时考虑到多时区的因素，可以避免后期不少麻烦。</li>
+<li>对生产环境中的数据库进行变更，需要尽力避免出现服务中断或者宕机造成数据不一致的情况。</li>
+<li>建立相应的运行脚本，并添加dryrun方法，仅在指定参数时才执行更新数据库的操作以避免误执行。</li>
+<li>在要变更的DateTime栏后边增加对应的Timestamp栏，采用Double Write来记录该DateTime相对应的时间截。</li>
+<li>确定数据存储没问题之后，尽可能地在Model层将数据从原先的DateTime读取换成从Timestamp读取，并计算相应的DateTime以保持对外的接口不变。</li>
+<li>确认没问题后，将原先的数据栏给消除掉，停止Double Write。</li>
+</ol>
+<p>总之，最初感觉一个并不太大的功能，最后感觉让自己折腾了不少，这或许是其中最大的收获吧。</p>
+<p>最后，把时间交给程序来处理，有时还是难免出现各种意想不倒的问题。暂且不说“臭名昭著”的夏令时记时的转换给开发增添了多少乱子，也不提那个<a href="http://stackoverflow.com/questions/6841333/why-is-subtracting-these-two-times-in-1927-giving-a-strange-result" target="_blank" rel="external">更换时区的事件</a>对程序员提出了多高的「上知天文、下识地理」的人文需求，光是2012年7月1日添加的那一闰秒，就足以让所有<a href="http://coolshell.cn/articles/7804.html" target="_blank" rel="external">内核低于2.6.18-164的Linux系统的服务器Crush</a>。</p>
+<p>嗯，这让无证程序员压力山大，毕竟，计算机世界里的数据只是现实的映射。然而时间依旧这样流逝着，不紧不慢，不离不弃。</p>
+<p>How Time Flies! 以此为题，在六一里纪念一下逝去的青春。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>前阵子遇到了一个这样的的场景：数据库中原来使用的是MySQL中的DateTime格式，不过由于有经常性的时间比较的需求，以及需要引入多时区支持方便以后扩展。因此，需要将数据库的格式从DateTime转换成Timestamp。这就自然而然地引出了以下的问题：</p>
+<blockquote>
+<p>应该如何操作，以达到不影响服务的情况下平稳地实施这一更新？</p>
+</blockquote>
+<p>在回答这个问题之前，首先需要了解清楚数据库中的时间是如何存储的。<br>]]>
+    
+    </summary>
+    
+      <category term="Dev" scheme="http://imcoddy.github.io/tags/Dev/"/>
+    
+      <category term="Diary" scheme="http://imcoddy.github.io/tags/Diary/"/>
+    
+      <category term="MySQL" scheme="http://imcoddy.github.io/tags/MySQL/"/>
+    
+      <category term="PHP" scheme="http://imcoddy.github.io/tags/PHP/"/>
+    
+      <category term="Diary" scheme="http://imcoddy.github.io/categories/Diary/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[一入果教深似海，从此折腾常相随]]></title>
+    <link href="http://imcoddy.github.io/2013/05/19/journey-to-the-mac/"/>
+    <id>http://imcoddy.github.io/2013/05/19/journey-to-the-mac/</id>
+    <published>2013-05-19T04:21:28.000Z</published>
+    <updated>2015-05-17T00:32:29.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="起因">起因</h1><p>为什么要买Mini呢？因为平时在公司用的Mac觉得顺手了，自己也想搞一台来日常用，顺便在Y450退役之前先将里面的数据迁移出来。</p>
+<p>虽然之前一直盯着13寸的MBPr，不过笔记本那么大的屏幕看起来总觉得小了一些，而且相同的价格可以搞到一台iMac了。不过当考虑入手iMac时，苹果自家的显示器几乎无法外用着实让人觉得不爽。同时也计划入手一台电视方便提升语言能力，加上对便携性无要求，Mini升级方便，其娇小的身材搁着也不占地，日后退居二线还可以当高清下载机，如果硬盘真的可以支撑得到那个时候的话……</p>
+<p>总之，经对比分析一番之后，Mini以显著优势胜出。而历史经验告诉我们，理想可以很丰满，但现实往往是很骨感的……</p>
+<a id="more"></a>
+<h1 id="折腾一_花屏">折腾一 花屏</h1><p>刚拿到手的时候系统是10.8.2，接上电视后开机，那个画面真是……惨不忍睹！好在之前做功课时对这个HDMI接线会出现显示不清的问题，二话不说，直接升级到10.8.3。</p>
+<p>再开机时，画面总算能拿出来见人了，不过还是有些字体发虚。哼哼，平时号称设计界必用的苹果电脑显示出来就这惨样？折腾了半天电视的画面设置无果，加上当时系统不知为何Mac App Store无法更新，于是将Mini放包（其便携性充分体现于此有木有-_-），直接冲到银座苹果店去了。</p>
+<p>Genius Bar里面的Genius们对于MAS无法更新的疑难杂症也说不出个所以然，最后给出的建议是系统重装。哼哼，要不是哥之前的U盘丢了没法做启动盘，也没必要这样千米迢迢地跑去找人重装系统呀。经过漫长的三个小时，最后居然找了个吉林的哥们来给我办理手续（强烈怀疑这是耗时之久的原因所在T_T）。</p>
+<p>不过此行确定了几点：</p>
+<ul>
+<li>这台Mini接DP口输出的效果不错，显示效果差的原因估计在于电视。</li>
+<li>Mini的内存可以自行升级，不过在送修时需要换回原来的内存。</li>
+<li>银座店果然一直都是人满为患……（回来之后发现患了作风，流感季节果然不应该避免出行。不过这是后话了。）</li>
+</ul>
+<p>明确了原因之后，回到家后重新设置了一番。在此先提一下TinkerTool这软件，实在是折腾果机必备良品。</p>
+<p>电视篇：</p>
+<ul>
+<li>HDMI一定要设置成点对点输出。</li>
+<li>绝对不要使用缩放。（不知为什么我接Linux时正常，接Mini时居然需要Underscan）</li>
+<li>将Sharpness设置为最低。（这是解决字体发虚的关键）</li>
+</ul>
+<p>电脑篇：</p>
+<ul>
+<li>对显示器进行颜色校对。（拿着蓝牙键盘坐到两米开外的地方用上下键调节效果最佳=_=）</li>
+<li>用TinkerTool设置FondSmoothing为3。</li>
+<li>用TinkerTool设置默认字体为方正兰亭黑。</li>
+</ul>
+<p>至此，整个系统的显示终于正常了，泪流满面。</p>
+<h1 id="折腾二_移动硬盘">折腾二 移动硬盘</h1><p>作为一款平时在Windows下用的硬盘，分区格式用NTFS自然无可厚非。不过这样的硬盘拿到Mac下用，不方便的地方就充分体现出来了。默认情况之下这样的硬盘格式是只读的，也就意味着无法向移动硬盘里面添加或者删除数据。</p>
+<p>汗，这不是让我这1T的硬盘只能移不能动么？Google了一番后发现还是有不少软件可以解决这个问题的，不过价格都不便宜。不过Mac和Linux类似，通过改分区加载表，可以实在NTFS加载为可读写。有兴趣的可以折腾一下。</p>
+<p>其实移动硬盘不能写对我来说暂时不是问题，毕竟里面存的基本上只是资料。但是下面的这个问题，使我不得不将整块硬盘格式化重新分区：</p>
+<p>Mac里面有个自动增量备份的服务叫TimeMachine，它可以每天定时将当前系统的状况备份下来，并可在需要的时候将系统恢复到某个点。</p>
+<p>其实第一次插入移动硬盘的时候系统就会提示是否设置成备份盘。当时没预留合适的分区，暂时没设置。后来将资料整理到一个分区后再进Mac设置，结果在格式分区时，始终提示分区格式化失败。</p>
+<p>Google之，结果表示，在Windows下使用的移动硬盘通常是MBR引导的，而苹果并不对此支持，需要转换成GPD引导才能格式化。</p>
+<p>虽然有看到DiskGenius可以进行无损转换，不过想起之前设置引导分区失败的惨剧，还是决定重新格盘吧。随后就是一番整理，充分感受到里面收集的东西已经时过境迁。（IT人果然是挨踢的命啊，这么多资料这么快就过时了，有些还木有看呢……）</p>
+<p>将硬盘的东西缩减到近400G后，直接Copy&amp;Paste到了Mini里面。嗯，就当是给做硬盘测试了。不过也发现机械硬盘果然还是速度不行啊，目测了一下复制速度后，关电视睡觉去了……第二天格盘，选择GUID引导，分三个区，设置TimeMachine。成功备份后打开，看到那满天繁星的宇宙画面，再度泪流满面。</p>
+<h1 id="折腾三_软件安装">折腾三 软件安装</h1><p>虽然Mac系统到手时就可以Ready for work，不过还是需要安装不少软件来增加功能。期间参考了不少人的配置推荐，不过这部分，到时再单独开篇吧。</p>
+<h1 id="待折腾篇">待折腾篇</h1><ul>
+<li>iTunes资料迁移。如何实现将之前Windows下的曲库资料迁移到Mac里继续使用呢？包括原有的评分，设置好的Audiobook，Podcast的播放记录等。</li>
+<li>Windows-&gt;Mac的数据迁移方案。之前在Mac里设置共享文件夹，不过不知道为什么联上后复制了几个文件就出错退出了……</li>
+<li>换块键盘。最近看上了HHKB，虽然手感很赞，不过总觉得2万多的价格实在太高了。而且，那个键位似乎也不容易上手的样子……</li>
+<li>换内存换SSD。原计划一入手Mani就淘两条8G内存的，不过看了一下走势，内存在这几个月价格居然涨了一倍。嗯，等哪天价格回落了再折腾吧。</li>
+</ul>
+<h1 id="结语">结语</h1><p>一入果教深似海，从此折腾常相随。</p>
+<p>以此为旨，在这新开的博客记录折腾的生活。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="起因">起因</h1><p>为什么要买Mini呢？因为平时在公司用的Mac觉得顺手了，自己也想搞一台来日常用，顺便在Y450退役之前先将里面的数据迁移出来。</p>
+<p>虽然之前一直盯着13寸的MBPr，不过笔记本那么大的屏幕看起来总觉得小了一些，而且相同的价格可以搞到一台iMac了。不过当考虑入手iMac时，苹果自家的显示器几乎无法外用着实让人觉得不爽。同时也计划入手一台电视方便提升语言能力，加上对便携性无要求，Mini升级方便，其娇小的身材搁着也不占地，日后退居二线还可以当高清下载机，如果硬盘真的可以支撑得到那个时候的话……</p>
+<p>总之，经对比分析一番之后，Mini以显著优势胜出。而历史经验告诉我们，理想可以很丰满，但现实往往是很骨感的……</p>]]>
+    
+    </summary>
+    
+      <category term="Dev" scheme="http://imcoddy.github.io/tags/Dev/"/>
+    
+      <category term="Diary" scheme="http://imcoddy.github.io/tags/Diary/"/>
+    
+      <category term="Life" scheme="http://imcoddy.github.io/tags/Life/"/>
+    
+      <category term="Mac" scheme="http://imcoddy.github.io/tags/Mac/"/>
+    
+      <category term="Diary" scheme="http://imcoddy.github.io/categories/Diary/"/>
+    
+  </entry>
+  
+</feed>
