@@ -136,11 +136,95 @@
   </entry>
   
   <entry>
-    <title><![CDATA[他们的 Bitzone]]></title>
+    <title><![CDATA[Bitcoin In Tokyo]]></title>
+    <link href="http://imcoddy.github.io/2014/08/22/bitcoin-in-tokyo/"/>
+    <id>http://imcoddy.github.io/2014/08/22/bitcoin-in-tokyo/</id>
+    <published>2014-08-22T12:35:14.000Z</published>
+    <updated>2015-05-21T12:40:14.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="比特币在东瀛">比特币在东瀛</h1><h2 id="引子">引子</h2><p><img src="http://i1375.photobucket.com/albums/ag455/imcoddy/bitcoin/customized-bitcoin-necklace_zps958a1d39.jpg" alt="customized-bitcoin-necklace"></p>
+<blockquote>
+<p>“このネックレス、カッコイイ！！(这条项链好赞耶！)”</p>
+<p>“でしょう？僕もそうと思う！そう言えば、お前、本当にビットコインを知っている？(对吧？我也这样觉得呢！不过话说回来，妳真的知道比特币？)”</p>
+<p>“うん！それは最近禁止されたじゃない？だからカッコイイと思ってる！(嗯，那不是最近刚被禁掉了嘛？所以我才觉得它好酷！)”</p>
+<p>“ま～、お前は本当不良少女なんだ……(什么嘛，妳果然是个不良少女嘛……)”</p>
+</blockquote>
+<p>比特币创始人中本聪这个日式名字，或许会让初接触比特币的人认为它与日本有着千丝万缕。开在东京的曾为世界上最大的比特币交易平台 MtGox，也的确为比特币的流通起了不少促进作用。而随着媒体对 MtGox 破产事件的推波助澜，着实让更多的日本人有机会听说到这个虚拟货币。那么，在与中国一衣带水的日本，比特币的发展情况究竟如何呢？本文就从笔者自身的体会出发，记录下此时比特币在东瀛的发展情况。</p>
+<p>个人己见，仅供考虑。</p>
+<h2 id="MtGox_之殇">MtGox 之殇</h2><p>对于 MtGox 而言，其真是成也比特币，败也比特币。</p>
+<p><img src="http://blogs-images.forbes.com/kashmirhill/files/2014/02/Mark-Karpeles-Mt-Gox.jpg" alt="mtgox-bankruptcy"><br>(MtGox CEO 为 MtGox 破产事件举办发布会 via forbes.com)</p>
+<p>MtGox 网站由电驴创始人 Jed McCaleb 所创设，原是是一个魔法风云会线上买卖交易平台，后来被改成一个比特币交易平台，并在 2011年时 Mark Karpeles 将其买下，并在其管理下，Mt.Gox 一度成长为世界上最大的比特币交易所，承担全球超过 70% 的比特币交易。</p>
+<p>笔者刚接触比特币的时候已经是 2014 的新年伊始。这个时候 MtGox 的价格实际上已经由于提现不畅而出现了虚高。尽管这个价格差吸引了不少搬砖工为趋之若鹜，但由于 MtGox 后来开始要求用户认证，进一步造成了资金周转的难度加大。这样的情况持续至 MtGox 的关闭。在 2014 年 2 月 25 日深夜，MtGox 官方网站张贴最新讯息“决定暂时关闭所有交易”，并于 2014 年 2 月 28 日，正式申请了破产保护。笔者侥幸躲过了门头坑，不过对于那些未能将财产从中提取出来的人而言，这一场噩梦至今还远远没有结束。</p>
+<p><img src="http://altcoinpress.com/wp-content/uploads/2014/02/money-660x406.jpg" alt="where-is-our-money"><br>(MtGox 事件受伤者在其办公室门前抗议 via altcoinpress.com)</p>
+<p>尽管 MtGox 的办公室在东京，不过有好事者曾经对其泄露出来的用户数据库文件进行分析，得到的结论是注册的用户绝大部分都是非日籍人士。实际上，如果不是因为其破产丑闻，MtGox 或许还是只在比特币爱好者中被人知晓，以致于出现当人们聚集到其涉谷办公楼游行抗议时，楼下的保安都不知道这是一家什么样的公司竟会引起这样的骚动。</p>
+<p>而随着媒体的大肆报道，听说过比特币的民众其实也逐渐增加。而相对而言，这边的新闻报导也更客观一些。不过由于近期较多的都是比特币负面新闻，认为比特币是经济泡沫或者应被禁止的其实也大有人在。至于有多少人会像笔者这样通过媒体知晓后自行研究并投身其中的就不得而知了，至少，我是还没有遇到。</p>
+<h1 id="东京比特币聚会">东京比特币聚会</h1><p>有人的地方就有江湖，有江湖的地方就有 Meetup。</p>
+<p>东京比特币聚会(<a href="http://www.meetup.com/Tokyo-Bitcoin-Meetup-Group/" target="_blank" rel="external">Tokyo Bitcoin Meetup</a>)由比特币耶稣 Roger Ver 创立于 2011 年 8 月 28 日(很快就要满三年了)，至今为止登记用户有 467 人。现在除了每周四晚上七点半起有一个比特币爱好者例会之外，有时周末也会不定期举行一些其它的聚会活动。</p>
+<p>每周参加聚会的人通常在 40 人左右，他们的背景也大不相同。即有现在还在冰岛部署矿场的矿工，也有 CoinDesk 的在日编辑，还有希望投资相关项目的 VC。大家见面后会互相交流近期比特币界的新鲜事，或者进行场外交易。偶尔也会来一些刚接触比特币的新人，不过不必担心，在这里的氛围很轻松即可融入。</p>
+<p><img src="http://www.wired.com/wiredenterprise/wp-content/uploads/2014/10/20131017-JAPAN-0498_edit-660x440.jpg" alt="tokyo-bitcoin-meetup-scene"><br>(东京比特币聚会场景 via wired.com)</p>
+<p>东京比特币聚会，实际上起了一个很好的沟通作用。在 MtGox 倒闭期间，它让许多国外比特币爱好者在这边能避免语言不通的障碍。也有电视台会来这里采访取景，让大众更好了解这个不一样的圈子。聚会参与者大多也都是比特币的积极推动者，在日本政府处理 MtGox 案件定性比特币性质期间，他们也通过各种方式表达了自己的意见和建议。这个聚会至今依然能够持续，自然与他们的辛勤努力分不开。</p>
+<h1 id="比特币流通">比特币流通</h1><p>尽管在聚会里曾遇到某比特币壕发出如下感叹：“We need more places to use Bitoin!(我们需要有更多地方能使用比特币！)”，不过对于笔者这种只有屈指可数的比特币屌丝而言，有更多的地方能够方便购买比特币才更实在。</p>
+<p>相比半年前 MtGox 送金不能，现在在日本要想购买比特币稍稍方便了一些。除了 Kraken 这类希望打入日本市场的比特币交易所之外，更本土化的 Paybit、Btcbox 也颇有人气。受制于日本金融厅的严格管理，在使用这些比特币交易所时需要实名认证(提供身份证明以及电气单之类的住址证明)。同时由于交易过程需要交手续费，整体算下来价格要比国内的略高。这也使得笔者原本计划用比特币给家人汇款的计划一直只存在理论阶段而没实践。</p>
+<p><img src="http://i1375.photobucket.com/albums/ag455/imcoddy/pay-bit-website_zps69798f9b.png" alt="pay-bit-website"><br>(Paybit 比特币交易所首页截图)</p>
+<p>除了交易所之外，东京几个月前还引入了比特币自动贩卖 BTM 机。一台位于港区六本木的 PinkCow 餐厅，另一台则在西麻布的 Veranda 餐厅。BTM 使用起来也非常方便，设置好要购买的金额，扫描 QR 地址，投币，然后不过一会比特币就会发送到你的账号上。不过由于 BTM 机需要从中赚取手续费，使得比特币单价会比市面价格高出不少，甚至单枚比特币的买入卖出有时差价可能达到 10000 日元(约 600 人民币)，这也使得大部分人仅是尝鲜式的试用一下而已。</p>
+<p><img src="http://si.wsj.net/public/resources/images/BN-DI126_jbitco_G_20140619065222.jpg" alt="btm-in-pink-cow"><br>(客户在 试用 PinkCow 里面的 BTM 机 via wsj.net)</p>
+<p>上面的两家餐厅也会接受比特币付款。由于距离办公地点不远，有时下班后会去里面坐坐。不过除了在 PinkCow 举办比特币聚会之外，很少能看到有人使用比特币进行支付。这或许一定程度上也反应了比特币在这边的普及依然任重道远。</p>
+<p><img src="http://www.wired.com/wiredenterprise/wp-content/uploads/2014/10/20131017-JAPAN-0490_edit-660x440.jpg" alt="using-bitcoin-in-pink-cow"><br>(PinkCow 里面客户用比特币支付 via wired.com)</p>
+<h1 id="本土萌乃币">本土萌乃币</h1><p><img src="http://bitcoinfansite.com/wp-content/uploads/2014/08/mona.png" alt="monacoin-logo"></p>
+<p>与“低迷”的比特币相比，一款名叫萌乃币(Monacoin)的竞争币在岛国的人气要旺盛不少。萌乃币从莱特币衍生而来，作者是一位末满 18 岁的腼腆男生。其打着日本第一款加密货币的口号，社区氛围也很好的适应本土文化。虽然较少被外界所知，不过相关的爱好者在其中倒是玩得不亦乐乎。</p>
+<p><img src="http://i1375.photobucket.com/albums/ag455/imcoddy/bitcoin-chan_zps98b65be9.png" alt="bitcoin-chan"><br>(比特酱乱入！其实在岛国将各种动漫化是很常见的事情，这一点在萌乃币社区里面体现也很明显)</p>
+<p>如果说莱特币给了那些错过用平民计算机挖比特币机会的人一个感受挖矿的机会，那么萌乃币则满足了岛国那些因英文欠佳而与比特币失之交臂的人一个自己动手挖矿的愿望。由于它刚出来不久总体算力并不高，使用普通的电脑也能挖矿，于是还出现了某些好事者将学校的机房的用来挖萌乃币的事迹。部分岛国比特币矿工也会用淘汰的矿机挖上一把。</p>
+<p>加密货币需要在流通上体现其价值传递，否则就只是硬盘上的一串数字而已。而在流通方式，萌乃币的表现实在是可圈可点。除了爱好者们会积极制作文化衫纸钱包等周边进行宣传派发之外，在一些岛国人气社区里也会用萌乃币进行打赏或者物品购买，其中包括一些同人作品甚至 18 禁成人游戏漫画。由于这些作品颇有一些地下交易的味道，或许一定程度上也反向促进了萌乃币的推广。</p>
+<p><img src="http://i1375.photobucket.com/albums/ag455/imcoddy/monacoin-jinsya_zpsd2f4a50a.png" alt="monacoin-jinsya"><br>(相比“成熟稳重”的比特酱，萌乃酱们显得更加幼齿化呀……)</p>
+<p>就在最近刚落幕的日本同人展第 86 届Comic Market 活动中，萌奈币社区依靠大家捐款获得 18025 枚萌乃币，不仅制作了相关的<a href="http://monacomi.net/" target="_blank" rel="external">宣传网站</a>，还募集了十七名画师进行同人创作，印制了 300 本 44 页的萌奈币同人漫画册子，并在会场进行免费发放。笔者虽然没有参加这场聚会， 不过从网络上的反馈来看，这场萌奈币宣传活动还是非常地成功。</p>
+<p><img src="http://i1375.photobucket.com/albums/ag455/imcoddy/bitcoin/MONACOIN5408540C8A8C_-_MONACOMI_NET_zps7b30cb39.png" alt="monacoin-manga"><br>(Monacomi 网站对所有支持者表示感谢)</p>
+<p>总之，萌乃币给笔者的感觉就是狗币的即视感(其实萌乃币的 Logo 是一只猫 囧)。但在良好的社区文化推动下，萌乃币的发展在这边还是显得蓬勃而有生机。至少人家已经有人尝试只靠萌乃币来生活了，虽然结果还是有些拮据XD</p>
+<h1 id="岛国不爱加密货币？">岛国不爱加密货币？</h1><p>尽管媒体的报道让许多人听说了比特币，尽管有着萌乃币这样的本土加密货币消除了语言障碍，不过笔者还是觉得，在日本对加密货币有兴趣并了解的人依然只是很小的一部分。这一点上，日本与其它国家相比并没有明显优势。</p>
+<p>造成这样的原因或许很多，个人认为有以下几点：</p>
+<h2 id="均富社会">均富社会</h2><p>得益于相对健全的保障制度，日本是一个橄榄球型的均富社会。日本在上世纪 70 年代中期达到人均 GDP 4000 美元，而它在工业化和城市化发展的过程中大幅降低贫富差距，并一直维持至今。这边即使是远离都市的乡村，居民基本上都有房有车，衣食无忧。在这样的社会里生活，只要兢兢业业工作，即使积蓄不多，但也不会为生活所困。虽然这边不是没有投机者，不过对于比特币这样价格波动无常高风险的东西，一定程度上其实就不符合一般日本人的生活品性。</p>
+<h2 id="通胀温和">通胀温和</h2><p>与国内这二十年里飞涨的物价相比，日本的通货膨胀率要显得温和得多。实际上，日本从 1997 年以来就陷入了长期的通缩状态。虽然在 2007 年 1 月至 2008 年 10 月日本曾一度改变了持续通缩的局面，但在之后又再次进入了核心物价指数持续下滑的局面。</p>
+<p>更直观的感受是，即使到了一顿饭钱可按一千日元来估计的今天，日常生活中还是会不时出现找零时有用个位日元的情况。所以，国人刚来日本时通常都会很不习惯，以至不得不准备一个零钱袋来装这一堆硬币(日元现行纸币中最小面额是 1000 日元，硬币的最小面额为 1 日元，最大面额为 500 日元)。相对的，国内现在使用角币的都不常见了，更不必说分币了吧？</p>
+<p>正由于这样经济稳定的情况，大部分日本人都没有将金钱换为抗通胀资产的意识，对比特币鲜有兴趣自然也很容易理解。虽然这一点上，很可能随着今年四月开始的个人消费税上涨而慢慢改变。</p>
+<h2 id="支付便利">支付便利</h2><p>总体而言，日本人是很信任并习惯于现有的支付系统的。</p>
+<p>现金支付的适用范围之广就不用多说了，但在日本用现金时那种普遍存在的信任感实在是让人佩服。虽然经常会出现找回一堆零硬币的情况，不过大部分店里都是配了自动找零机，收银员投入纸币输入支付金额然后硬币就唰唰唰地出来，然后支付方基本上也不会清点就直接放入钱包拿着东西走人。而且，日本银行里基本是没有防弹玻璃隔开的，通常到里面办业务时与工作人员就只有一桌之隔。(的确这会让抢银行的成本低了许多，不过居然会有想对里边漂亮的美眉动粗的想法，想想都觉得这真 TMD 混蛋啊&gt;_&lt;)另外，来日至今笔者没有看到过一台验钞机，每每看到国内又出现“M3S7百元假钞骗过银行取款机”新闻时想到这点就不禁汗颜。</p>
+<p>至于网上支付，日本的网银不像国内那般需要 ActiveX 控件，在网上汇款什么的虽然稍显繁琐，不过一般的需要也基本能凑合。而网上购物大家通常都会选择信用卡，在与 Amazon 账户等绑定后，基本上都是购物一键下单然后就把账单发邮箱了(淘宝剁手党在岛国切记自重……)。信用卡最容易申请的当属乐天，而且在日本使用时还能返点供乐天集市购物时使用。实在不想在网上支付的，还可以在网上下好订单，然后在附近的便利店里支付即可。</p>
+<p>相比之下，用比特币支持时，得先拿出手机解锁，扫描 QR 码，确定金额后输入消费密码……还是稍显得有些繁琐了啦。或许在乐天集市真正支持比特币支付后，这样的情况可能会得到改变:P</p>
+<h1 id="日本发展虚拟货币的优势">日本发展虚拟货币的优势</h1><p>即使现在比特币在日本使用得还不是太广泛，但相比国内而言，笔者认为比特币在这边发展会有更多的优势。</p>
+<h2 id="时刻在线">时刻在线</h2><p>作为存活在互联网的比特币，网络连接是其必不可少的一部分。随着近几年智能手机时代的兴起，日本的运营商在网络基础建设的投入也是不遗余力。除了手机上网提供的基础套餐不限流量之外(弱弱吐槽一句流量用多了会限速)，市区内数量繁多的 WiFi 热点基本上可覆盖主要的公共场所。</p>
+<p><img src="http://i1375.photobucket.com/albums/ag455/imcoddy/bitcoin/softbank-wifi_zps0fe107e5.png" alt="softbank-wifi-hotspot"><br>(软银在公共场所推进免费 WiFi 热点部署)</p>
+<h2 id="扫码习惯">扫码习惯</h2><p>微信在让国人习惯扫码这一点在着实立下了汗马功劳，而日本人使用 QR 码则可追溯到上个世纪。1994 年时日本 Toyota 子公司发明了 QR 码用于汽车制造过程中的零件追踪，后来被广泛地用到了生活各处。举个例子，某天当我想着把某段文字发送到手机上时，我会想着给手机邮箱发一封邮件，而日本同事则是直接把这文字变成 QR 码然后手机直接扫描……</p>
+<p><img src="http://i1375.photobucket.com/albums/ag455/imcoddy/bitcoin/IMG_4307_zpsb0f2bed3.jpg" alt="reality-enhance-bikini-girl"><br>(看到有码的妹子怎么办？马上扫啊……扫描上图中的 QR 码后会提示下载一个应用，安装后再到秋叶原对上图拍摄就能看到美眉换上了清爽的比基尼装。嗯，在乱点科技树的 11 区，现实增强 AR 技术就是这样被玩坏的@_@)</p>
+<h2 id="学术自由">学术自由</h2><p>与国内科研机构热衷于研究三个代表和谐社会不同，日本的学术研究要显得自由得多。实际上，在日本的大学里，已有相关教授对比特币展开研究分析。上个月时，就有部分学者聚集到一起就<a href="http://risingbitcoin.jp/?p=263" target="_blank" rel="external">比特币展开了分享讨论</a>。关于学术自由，或许大家还可以从上个月的《<a href="http://news.ifeng.com/a/20140706/41037877_0.shtml" target="_blank" rel="external">东京大学拒绝参与日本防卫省新型运输机研究</a>》这一新闻中管中窥豹。<br><img src="http://getnews.jp/img/archives/2012y09m19d_182212010.jpg" alt="is-this-the-real-satoshi"><br>(不知道还有多少人记得曾有人以为望月教授是中本聪的真身呢? via getnews.jp)</p>
+<h2 id="奥运契机">奥运契机</h2><p>2020 年夏季奥运会将在东京举办，这对于推广比特币的广泛使用或许是个不错的契机。实际上，东京比特币聚会的爱好者们也正在为这个目标而与政府人员积极进行沟通。届时实际成果如何，让我们拭目以待。<br><img src="http://www.beinsports.tv/di/library/bein_us/7e/dd/tokyo-2020_1qy1r8b06pmhd1k079qy2gb91w.jpg?t=-98471208&amp;w=640&amp;h=360&amp;quality=97&amp;cropTo=top" alt="tokyo-2020-olympics"></p>
+<ul>
+<li>作者：@imcoddy <a href="http://www.weibo.com/imcoddy" target="_blank" rel="external">(http://www.weibo.com/imcoddy)</a></li>
+<li>稿源：巴比特资讯（www.8btc.com）</li>
+<li>捐赠地址：码字不易，求打赏 1MCoddYCZe8jwNkBp42dscC9ELfvha3ALL</li>
+<li>版权声明：本文在中华人民共和国著作权法的基础上，使用署名-非商业性使用-相同方式共享（BY-NC-SA 2.5 CN）。非商业使用定义为慈善或非盈利机构使用以及个人非盈利目之使用。除此之外，如欲转载，请联系作者并付费。</li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[比特币创始人中本聪这个日式名字，或许会让初接触比特币的人认为它与日本有着千丝万缕。开在东京的曾为世界上最大的比特币交易平台 MtGox，也的确为比特币的流通起了不少促进作用。而随着媒体对 MtGox 破产事件的推波助澜，着实让更多的日本人有机会听说到这个虚拟货币。那么，在与中国一衣带水的日本，比特币的发展情况究竟如何呢？本文就从笔者自身的体会出发，记录下此时比特币在东瀛的发展情况。]]>
+    
+    </summary>
+    
+      <category term="Bitcoin" scheme="http://imcoddy.github.io/tags/bitcoin/"/>
+    
+      <category term="Japan" scheme="http://imcoddy.github.io/tags/japan/"/>
+    
+      <category term="Life" scheme="http://imcoddy.github.io/tags/life/"/>
+    
+      <category term="Thinking" scheme="http://imcoddy.github.io/tags/thinking/"/>
+    
+      <category term="Bitcoin" scheme="http://imcoddy.github.io/categories/bitcoin/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Their Bitzone]]></title>
     <link href="http://imcoddy.github.io/2014/06/21/their-bit-zone/"/>
     <id>http://imcoddy.github.io/2014/06/21/their-bit-zone/</id>
     <published>2014-06-21T00:28:35.000Z</published>
-    <updated>2015-05-17T00:32:29.000Z</updated>
+    <updated>2015-05-21T12:23:02.000Z</updated>
     <content type="html"><![CDATA[<p>我已经很久很久没有写关于比特币的文字了。准确的说，距离上一篇文章已经有 35 天 7 时 21 分。这段时间看起来的确不长，不过要知道，在比特币这个 7＊24 不间断的世界里，这已经足以让你有恍然隔世之感。</p>
 <p>事实的确如此，在比特币的圈子里，每一天都不会平淡无奇令人乏味。不过，当我将自己抽身于外后，试图将周围的人发展成下线时，我忽然发现这居然是如此艰难。因为在一个人诚心接纳比特币变成一个意志坚定的比特忠之前，他需要先越过一大片遍布荆棘的Bitzone。</p>
 <a id="more"></a>
@@ -176,6 +260,61 @@
     </summary>
     
       <category term="Bitoin" scheme="http://imcoddy.github.io/tags/bitoin/"/>
+    
+      <category term="Bitcoin" scheme="http://imcoddy.github.io/categories/bitcoin/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[A Finite Monetary Supply For Bitcoin]]></title>
+    <link href="http://imcoddy.github.io/2014/04/07/a-finite-monetary-supply-for-bitcoin/"/>
+    <id>http://imcoddy.github.io/2014/04/07/a-finite-monetary-supply-for-bitcoin/</id>
+    <published>2014-04-07T13:03:26.000Z</published>
+    <updated>2015-05-21T13:27:45.000Z</updated>
+    <content type="html"><![CDATA[<blockquote>
+<p>BIP: 42<br>    标题: 比特币无限量供应修正案<br>    作者: Pieter Wuille<br>    状态: 草案<br>    类型: 常规跟踪<br>    创建于: 2014 年 4 月 1 日</p>
+</blockquote>
+<h2 id="摘要">摘要</h2><p>尽管人们普遍认为，中本聪是个对通货膨胀鄙夷之极的金本位支持者，但他从来没有说过这样的话。实际上，他所编写的代码将让比特币的供应量无限增长，直到永远。在他所建立的货币供应量模型里，每经过一个 Mibillenium (1024 年)将会有四个金矿被开采出来，它们之前有着相同的时间间隔，每一个金矿在 140 年的历程中被开采完。</p>
+<p>然而，这会造成一些明显的问题。其中最突出的问题是我们应该怎么称呼 10亿 （1 Billion）比特币，它的标识应该采用什么样的颜色，以及人们应该在什么时候把这作为默认的比特币单位。</p>
+<p>为了解决这个问题，本文提出了一个富有争议的修正案：将比特币的货币供应量从无限变更为有限。<span style="color: #ffffff">（翻译不易，插个广告，欢迎打赏 1MzziGBa7tNNzMwVJMPEjAfM1wRcvSGZu5 ^_^）</span></p>
+<h2 id="实现细节">实现细节</h2><p>如所周知，中本聪是一位编程大师，他对 C++ 的了解是如此深入，唯一能与其匹配的只有他身后所深韵的日本文化气息。看下面的代码：</p>
+<pre><code><span class="keyword">int64_t</span> nSubsidy = <span class="number">50</span> * COIN;  
+<span class="comment">// Subsidy is cut in half every 210,000 blocks  </span>
+<span class="comment">// which will occur approximately every 4 years.  </span>
+nSubsidy &gt;&gt;= (nHeight / <span class="number">210000</span>);`
+</code></pre><p>这段代码巧妙地依赖于 C++ 规范中一个不确定的行为，或许它是为了在未来使用硬件加速而做的准备。</p>
+<p>他把区块的数目直接除以 210000（即产量减半的块间隔），并把结果作为二进制移位的输入，并用在最初时的原始支出（50 BTC）上，然后将这作为基本单位。 由于采用了新的金矿间隔正好是这个半衰周期的 64 倍，而 64 位正好是比特币数据类型的大小，因此，在所有目前支持的平台上，每经过 64 个周期后，比特币的供应量将重归原样。</p>
+<p>虽然这让中本聪大师很好的秀了一把他编程技术的娴熟，不过我们希望比特币的产量能够清晰明确，否则，我们将不可避免地遭遇一场惨烈的砸盘运动。</p>
+<p><img src="https://github.com/sipa/bips/raw/e04e99c315dd4067e267b62f84c9eeffeeccf94e/bip-0042/inflation.png" alt="比特币供应图表"></p>
+<p>需要注意的是其他一些编程语言并没有表现出这种行为，这使得新的实现可能会更慢一些，而且通常比 Bitcoin Core 更假。比如说，Python 在处理整数移位超出了它的大小的意外时将返回 0。</p>
+<h2 id="其他解决方案">其他解决方案</h2><h3 id="浮点近似值">浮点近似值</h3><p>一个显而易见的重绘供应曲线图的解决办法是使用浮点近似值来实现，例如模拟政府救市或者量化宽松政策，它们都已经证明了自己的价值所在。不过不幸的是，自金融危机以来，大家都认为带小数点的数字有猫腻，而且 JavaScript 不能很好的支持整数。</p>
+<h3 id="截尾舍去">截尾舍去</h3><p>另一种解决办法是将表示比特币的总数的类型变为字符串：</p>
+<pre><code>“21000000000000000000000”
+</code></pre><p> 然后每隔 4 年就使用字符串操作来删除最右边的零，并依据闰年与否加以调整：</p>
+<pre><code><span class="attribute">strSubsidy </span>=<span class="string"> strSubsidy.substr（0，strSubsidy.size（） - 2）;</span>
+</code></pre><p>这种风格依赖较少依赖于 C++ 中的小聪明编程技巧，并且对于平时主要用语言的是 PHP 的核心开发团队来说会更加得心应手一些。</p>
+<h2 id="建议">建议</h2><p>还是让我们停止这场对长远问题的考虑吧，毕竟到了那个时候我们都将入土为安。（除非我们去做时光旅行，低温复苏，或者其它的生命延长技术，就像虚拟货币一样，实际上只存在科技小说里面）。</p>
+<p>一个软分叉（参见 BIP16，BIP34，BIP62 ）将于 2214 年 4 月 1 日准备就位，到时供应量将永久设置为零。这样做的结果将是总的货币供应将被限制在第 42 个半衰周期，（这里面包括了创世块 coinbase 的输出，而实际上它无法被花费）。</p>
+<h2 id="实现">实现</h2><p>相关的代码实现在此：<a href="https://github.com/bitcoin/bitcoin/pull/3842" target="_blank" rel="external">https://github.com/bitcoin/bitcoin/pull/3842</a> .</p>
+<h2 id="兼容性">兼容性</h2><p>鉴于此次变更的期限比较充裕，我们希望所有的矿工在 2214 年之前将其部署。</p>
+<p>如果他们不这样做，并且有少数人使用旧代码继续挖矿，可能会造成一个区块链分叉。从本质上讲，他们将在此时间之后挖掘傻瓜的黄金。</p>
+<h2 id="致谢">致谢</h2><p>感谢 Gregory Maxwell 提出这项解决方案，以及 Mike Hearn 对 Web 开发的见解。也多亏了“ditto-b”在 Github 首先实现的原型。</p>
+<h2 id="版权">版权</h2><p>本文已向公众公开，中文版版权归译者 imcoddy 所有。</p>
+<h2 id="译者补记：">译者补记：</h2><p>本文首发于<a href="http://www.8btc.com/a-finite-monetary-supply-for-bitcoin" target="_blank" rel="external">巴比特</a>，转载请保持原文信息完整。</p>
+<p>由于这篇草案是在愚人节的时候发出来的，而且原文作者里扯了不少程序员才能明白的调侃，所以当时大家看到这文章时，都单纯把这当成了恶搞，直到 Gavin 把这个代码合并了。真亦假时假亦真，这算是今年看到的最佳愚人节恶搞之一了 :)</p>
+<p>最后阴谋论一下，没准这本来就是本聪大叔为抗通缩所设计的本意也说不定呢。毕竟经过一百多年之后，不少私钥已经被其主人忘记，造成了许多比特币被永久尘封。所以说，<a href="http://www.8btc.com/bitcoin-change-addresses-explanation" target="_blank" rel="external">It’s not a bug, it is a feature！</a> :P</p>
+<p>文中所引用图片版权归原作者所有。<br>译者：imcoddy<br>原文地址：<a href="https://github.com/sipa/bips/blob/e04e99c315dd4067e267b62f84c9eeffeeccf94e/bip-0042.mediawiki" target="_blank" rel="external">A finite monetary supply for Bitcoin</a><br>欢迎打赏：1MzziGBa7tNNzMwVJMPEjAfM1wRcvSGZu5</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[尽管人们普遍认为，中本聪是个对通货膨胀鄙夷之极的金本位支持者，但他从来没有说过这样的话。实际上，他所编写的代码将让比特币的供应量无限增长，直到永远。在他所建立的货币供应量模型里，每经过一个 Mibillenium (1024 年)将会有四个金矿被开采出来，它们之前有着相同的时间间隔，每一个金矿在 140 年的历程中被开采完。]]>
+    
+    </summary>
+    
+      <category term="Bitcoin" scheme="http://imcoddy.github.io/tags/bitcoin/"/>
+    
+      <category term="Translation" scheme="http://imcoddy.github.io/tags/translation/"/>
+    
+      <category term="Bitcoin" scheme="http://imcoddy.github.io/categories/bitcoin/"/>
     
   </entry>
   
@@ -232,7 +371,7 @@
     <link href="http://imcoddy.github.io/2014/01/18/do-not-use-a-brainwallet/"/>
     <id>http://imcoddy.github.io/2014/01/18/do-not-use-a-brainwallet/</id>
     <published>2014-01-18T00:55:31.000Z</published>
-    <updated>2015-05-16T23:43:04.000Z</updated>
+    <updated>2015-05-21T12:34:34.000Z</updated>
     <content type="html"><![CDATA[<p><img src="http://1.bp.blogspot.com/-CMGT-QTUSdM/UQW0_xXLM5I/AAAAAAAAAgk/EEVWxus9XTw/s320/brain_money_2.jpg" alt="brain-wallet"></p>
 <p>好吧，这个有些标题党了。不过作者原意就是如此。不同意这观点的话，可以先把文章看完再来反驳:)<br><a id="more"></a></p>
 <p>本文翻译自 <a href="http://en.wikipedia.org/wiki/Gavin_Andresen" target="_blank" rel="external">Gavin Andresen</a> 几个月前的一篇笔记（玩比特币只听说过中本聪却不知道 Nakamoto Satoshi 和 Gavin Andresen 的话，说明还得加强学习一下比特币知识:P）。比特币脑钱包因其使用方便成为不少初学者的选择，不过在设置脑钱包口令（passphrases）时经常出现过于简单以至被人将币转走的情况。因此，虽然已是旧文，不过现在看来，这篇文章依旧具有不少教育意义。如果觉得这篇文章对您有帮助的话，欢迎往文章末尾的地址打赏;)</p>
