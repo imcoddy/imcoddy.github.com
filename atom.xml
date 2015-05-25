@@ -4,7 +4,7 @@
   <subtitle><![CDATA[记录下那些折腾过的岁月。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://imcoddy.github.io/"/>
-  <updated>2015-05-19T13:34:53.000Z</updated>
+  <updated>2015-05-24T11:54:50.000Z</updated>
   <id>http://imcoddy.github.io/</id>
   
   <author>
@@ -13,6 +13,42 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Hiking 20km in Mt Takao]]></title>
+    <link href="http://imcoddy.github.io/2015/05/24/hiking-20km-in-mt-takao/"/>
+    <id>http://imcoddy.github.io/2015/05/24/hiking-20km-in-mt-takao/</id>
+    <published>2015-05-24T05:55:32.000Z</published>
+    <updated>2015-05-24T11:54:50.000Z</updated>
+    <content type="html"><![CDATA[<p>本周六参加了浙江大学日本校友会的高尾山 20 公里登山毅行。好一阵子没有过这样高强度的运动了，虽然现在码字时难免全身酸痛，不过这次活动倒的确玩得挺有意思，是以为记。</p>
+<a id="more"></a>
+<p>虽然高尾山已经是东京附近最交通方便的登山景点了，不过坐车过去也需要一个半小时。早上六点钟起床，六点四十出发，准点八点三十抵达高尾山口站与大部队汇合。</p>
+<p>参加者约有七十余人，共分成了十组。由于本组里尚有一人需要到九点半才能到，无奈之下只能继续等待，不过或许这也是因祸得福，因为出行时间稍晚，为了赶上大部队则直接坐了 Lift 上去，不仅节省了部分时间，也节省了不少体力。</p>
+<p>到高尾山顶沿途看到了不少寺庙和神社，看来逢年过节来这里参拜的人也不少。正因如此，这段路基本都是爬阶梯，真是毫无压力。</p>
+<p>山顶上稍稍休息了一下后，才发现这其实才是今天行程的起点 Orz 不过这些线路都已经很成形了。</p>
+<p>最后说一下活动的感受吧。</p>
+<ol>
+<li><p>出行准备要充分<br>当天去的大部分人都配了登山运动用的衣服鞋帽，带着手套手杖等常用器具的人也随处可见。由于我只是一时兴起参加，相比之下实在是业余之极。</p>
+</li>
+<li></li>
+</ol>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>本周六参加了浙江大学日本校友会的高尾山 20 公里登山毅行。好一阵子没有过这样高强度的运动了，虽然现在码字时难免全身酸痛，不过这次活动倒的确玩得挺有意思，是以为记。</p>]]>
+    
+    </summary>
+    
+      <category term="Diary" scheme="http://imcoddy.github.io/tags/diary/"/>
+    
+      <category term="Japan" scheme="http://imcoddy.github.io/tags/japan/"/>
+    
+      <category term="Life" scheme="http://imcoddy.github.io/tags/life/"/>
+    
+      <category term="Travel" scheme="http://imcoddy.github.io/tags/travel/"/>
+    
+      <category term="Diary" scheme="http://imcoddy.github.io/categories/diary/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[The Leetcode Challenge]]></title>
