@@ -2,13 +2,48 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://imcoddy.github.io/2015/05/28/mastering-bitcoin-chapter-10-bitcoin-security/</loc>
-    <lastmod>2015-05-28T14:23:49.000Z</lastmod>
+    <loc>http://imcoddy.github.io/2013/06/01/how-time-flies-in-database/</loc>
+    <lastmod>2015-05-29T12:05:50.000Z</lastmod>
   </url>
   
   <url>
-    <loc>http://imcoddy.github.io/2014/04/07/a-finite-monetary-supply-for-bitcoin/</loc>
-    <lastmod>2015-05-21T14:41:01.000Z</lastmod>
+    <loc>http://imcoddy.github.io/2013/06/15/tabbed-finder-in-osx-mountian-lion/</loc>
+    <lastmod>2015-05-29T12:04:15.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://imcoddy.github.io/2013/10/20/remapping-my-hhkb/</loc>
+    <lastmod>2015-05-29T12:04:15.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://imcoddy.github.io/2013/10/06/powered-up-from-screen-to-tmux/</loc>
+    <lastmod>2015-05-29T12:04:15.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://imcoddy.github.io/2013/11/24/ipad-mini-retina-review-mini-but-powerful/</loc>
+    <lastmod>2015-05-29T12:04:15.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://imcoddy.github.io/2013/11/17/music-on-the-run/</loc>
+    <lastmod>2015-05-29T12:04:15.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://imcoddy.github.io/2015/01/10/what-sarutobi-app-means-to-bitcoin/</loc>
+    <lastmod>2015-05-29T12:03:23.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://imcoddy.github.io/2013/12/16/backup-and-restore-your-nook-on-the-mac/</loc>
+    <lastmod>2015-05-29T12:01:26.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://imcoddy.github.io/2015/05/28/mastering-bitcoin-chapter-10-bitcoin-security/</loc>
+    <lastmod>2015-05-28T14:23:49.000Z</lastmod>
   </url>
   
   <url>
@@ -18,6 +53,11 @@
   
   <url>
     <loc>http://imcoddy.github.io/2014/06/21/their-bit-zone/</loc>
+    <lastmod>2015-05-21T14:41:01.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://imcoddy.github.io/2014/04/07/a-finite-monetary-supply-for-bitcoin/</loc>
     <lastmod>2015-05-21T14:41:01.000Z</lastmod>
   </url>
   
@@ -32,12 +72,12 @@
   </url>
   
   <url>
-    <loc>http://imcoddy.github.io/categories/index.html</loc>
+    <loc>http://imcoddy.github.io/tags/index.html</loc>
     <lastmod>2015-05-18T12:33:55.000Z</lastmod>
   </url>
   
   <url>
-    <loc>http://imcoddy.github.io/tags/index.html</loc>
+    <loc>http://imcoddy.github.io/categories/index.html</loc>
     <lastmod>2015-05-18T12:33:55.000Z</lastmod>
   </url>
   
@@ -47,33 +87,13 @@
   </url>
   
   <url>
-    <loc>http://imcoddy.github.io/2013/09/23/at-hometown-as-a-guest/</loc>
-    <lastmod>2015-05-17T00:32:29.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://imcoddy.github.io/2013/06/01/how-time-flies-in-database/</loc>
-    <lastmod>2015-05-17T00:32:29.000Z</lastmod>
-  </url>
-  
-  <url>
     <loc>http://imcoddy.github.io/2013/05/19/journey-to-the-mac/</loc>
     <lastmod>2015-05-17T00:32:29.000Z</lastmod>
   </url>
   
   <url>
-    <loc>http://imcoddy.github.io/2013/11/24/ipad-mini-retina-review-mini-but-powerful/</loc>
-    <lastmod>2015-05-16T23:43:52.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://imcoddy.github.io/2015/01/10/what-sarutobi-app-means-to-bitcoin/</loc>
-    <lastmod>2015-05-16T23:43:52.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://imcoddy.github.io/2013/11/17/music-on-the-run/</loc>
-    <lastmod>2015-05-16T23:43:04.000Z</lastmod>
+    <loc>http://imcoddy.github.io/2013/09/23/at-hometown-as-a-guest/</loc>
+    <lastmod>2015-05-17T00:32:29.000Z</lastmod>
   </url>
   
   <url>
@@ -82,32 +102,12 @@
   </url>
   
   <url>
-    <loc>http://imcoddy.github.io/2013/10/06/powered-up-from-screen-to-tmux/</loc>
+    <loc>http://imcoddy.github.io/2013/06/10/update-ios-to-unjailbreakable/</loc>
     <lastmod>2015-05-16T23:43:04.000Z</lastmod>
   </url>
   
   <url>
     <loc>http://imcoddy.github.io/2014/01/10/bitcoin's-journey/</loc>
-    <lastmod>2015-05-16T23:43:04.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://imcoddy.github.io/2013/12/16/backup-and-restore-your-nook-on-the-mac/</loc>
-    <lastmod>2015-05-16T23:43:04.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://imcoddy.github.io/2013/10/20/remapping-my-hhkb/</loc>
-    <lastmod>2015-05-16T23:43:04.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://imcoddy.github.io/2013/06/15/tabbed-finder-in-osx-mountian-lion/</loc>
-    <lastmod>2015-05-16T23:43:04.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://imcoddy.github.io/2013/06/10/update-ios-to-unjailbreakable/</loc>
     <lastmod>2015-05-16T23:43:04.000Z</lastmod>
   </url>
   

@@ -140,7 +140,7 @@
     <link href="http://imcoddy.github.io/2015/01/10/what-sarutobi-app-means-to-bitcoin/"/>
     <id>http://imcoddy.github.io/2015/01/10/what-sarutobi-app-means-to-bitcoin/</id>
     <published>2015-01-10T00:46:43.000Z</published>
-    <updated>2015-05-16T23:43:52.000Z</updated>
+    <updated>2015-05-29T12:03:23.000Z</updated>
     <content type="html"><![CDATA[<p><img src="http://media.coindesk.com/2015/01/sarutobi-630x263.png" alt="SaruTori" title="SaruTori"></p>
 <h2 id="背景">背景</h2><p>不久前的圣诞节前夕，苹果公司通过了一款名为「<a href="https://itunes.apple.com/us/app/sarutobi/id932194840?ls=1&amp;mt=8" target="_blank" rel="external">SaruTobi</a>」的游戏应用。这个名字来源于日语的「さるとび（猿飛）」，在此笔者将其译为「顽猴狂舞」。游戏的玩法很简单，玩家通过晃动一只在树上荡秋千的猴子，收集游戏中的道具和金币，并让猴子尽可能的飞得更远。<br><a id="more"></a></p>
 <p>在上线的短短两周，这款游戏受到了比特币社区的热烈关注。不仅 Coindesk 专门为其<a href="https://www.coindesk.com/apple-approves-ios-game-tips-players-bitcoin/" target="_blank" rel="external">撰文</a>，Reddit 社区里大家也是<a href="http://www.reddit.com/r/Bitcoin/comments/2rqlj6/apple_approves_ios_game_that_tips_players_in/" target="_blank" rel="external">纷纷点赞</a>。原因很简单，1、游戏里采用的虚拟货币的名称就叫比特币，对还没有接触过比特币的用户而言是一个不错的宣传方式；2、刚进入游戏时会提示玩家输入自己的真实比特币地址，当玩家累计游戏时间达到一定数量时，将会得到这款游戏所赠送的实实在在的比特币！（还没有下载这款游戏的 iOS 用户还在等什么？快去点上面的链接下载再回来看文章吧！）</p>
@@ -183,6 +183,8 @@
       <category term="Game" scheme="http://imcoddy.github.io/tags/game/"/>
     
       <category term="iOS" scheme="http://imcoddy.github.io/tags/ios/"/>
+    
+      <category term="Bitcoin" scheme="http://imcoddy.github.io/categories/bitcoin/"/>
     
   </entry>
   
@@ -672,8 +674,8 @@ nSubsidy &gt;&gt;= (nHeight / <span class="number">210000</span>);`
     <link href="http://imcoddy.github.io/2013/12/16/backup-and-restore-your-nook-on-the-mac/"/>
     <id>http://imcoddy.github.io/2013/12/16/backup-and-restore-your-nook-on-the-mac/</id>
     <published>2013-12-16T12:36:45.000Z</published>
-    <updated>2015-05-16T23:43:04.000Z</updated>
-    <content type="html"><![CDATA[<p>转眼之间的手头上这台 Nook 已经到手两年了。虽然与 Kindle 相比这玩意名气的确小了不少，而且自带的系统限制不少，对中文支持得也不太到位。不过在经过自己 Root 并精心配置过后，这玩意的阅读体验可以得到很大的提升，实在是物超所值（虽然当年入手不久后这货就跟着 Kindle 狠狠滴降了价-_-）。趁着昨天在知乎挖了个老帖《<a href="http://www.zhihu.com/question/20109608/answer/20869162?group_id=132318107#answer-3543341" target="_blank" rel="external">图书资源和阅读感觉上，Kindle 4 和 nook 2 哪个较好？</a>》，记录一下昨天刷机的过程吧。<br><a id="more"></a><br>其实一直在用着并没有出什么问题，只是有一次不小心，插电脑上充电时没有被其弹出就直接拔出，造成了磁盘的权限出了点问题。虽然不影响平时看书，不过这样一来就没有办法安装新软件或做其它系统修改了。直到昨天想安装点东西失败后，终于决定：还是把它刷回来吧！</p>
+    <updated>2015-05-29T12:01:26.000Z</updated>
+    <content type="html"><![CDATA[<p>转眼之间的手头上这台 Nook 已经到手两年了。虽然与 Kindle 相比这玩意名气的确小了不少，而且自带的系统限制不少，对中文支持得也不太到位。不过在经过自己 Root 并精心配置过后，这玩意的阅读体验可以得到很大的提升，实在是物超所值（虽然当年入手不久后这货就跟着 Kindle 狠狠滴降了价-_-）。趁着昨天在知乎挖了个老帖《<a href="http://www.zhihu.com/question/20109608/answer/20869162?group_id=132318107#answer-3543341" target="_blank" rel="external">图书资源和阅读感觉上，Kindle 4 和 Nook 2 哪个较好？</a>》，记录一下昨天刷机的过程吧。<br><a id="more"></a><br>其实一直在用着并没有出什么问题，只是有一次不小心，插电脑上充电时没有被其弹出就直接拔出，造成了磁盘的权限出了点问题。虽然不影响平时看书，不过这样一来就没有办法安装新软件或做其它系统修改了。直到昨天想安装点东西失败后，终于决定：还是把它刷回来吧！</p>
 <p>不过在准备刷机的过程中，遇到了一个很尴尬的问题：现有的刷机教程都是基于 Windows 下用 DiskGenius 来操作的，其它系统下的操作指南几乎没有，而我已经摒弃 Windows 好多天……没办法，在某个说明不详的“Linux/Mac users can use dd”这一个模糊不清的提示下，我便开始了在 Mac 下恢复 Nook 的折腾史。</p>
 <h2 id="准备">准备</h2><p>首先需要调整好心态，充分意识到「刷机有风险，操作要谨慎，后果需自负」 的正确折腾心态，并预备好以下几样东西：</p>
 <ol>
@@ -713,7 +715,7 @@ nSubsidy &gt;&gt;= (nHeight / <span class="number">210000</span>);`
 <p>总之，只要把自己的镜像备份了，Nook 这机器基本上就是不怕刷坏的不死之身了。 Happy Reading, And Long Live The Nook :P</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>转眼之间的手头上这台 Nook 已经到手两年了。虽然与 Kindle 相比这玩意名气的确小了不少，而且自带的系统限制不少，对中文支持得也不太到位。不过在经过自己 Root 并精心配置过后，这玩意的阅读体验可以得到很大的提升，实在是物超所值（虽然当年入手不久后这货就跟着 Kindle 狠狠滴降了价-_-）。趁着昨天在知乎挖了个老帖《<a href="http://www.zhihu.com/question/20109608/answer/20869162?group_id=132318107#answer-3543341">图书资源和阅读感觉上，Kindle 4 和 nook 2 哪个较好？</a>》，记录一下昨天刷机的过程吧。<br>]]>
+    <![CDATA[<p>转眼之间的手头上这台 Nook 已经到手两年了。虽然与 Kindle 相比这玩意名气的确小了不少，而且自带的系统限制不少，对中文支持得也不太到位。不过在经过自己 Root 并精心配置过后，这玩意的阅读体验可以得到很大的提升，实在是物超所值（虽然当年入手不久后这货就跟着 Kindle 狠狠滴降了价-_-）。趁着昨天在知乎挖了个老帖《<a href="http://www.zhihu.com/question/20109608/answer/20869162?group_id=132318107#answer-3543341">图书资源和阅读感觉上，Kindle 4 和 Nook 2 哪个较好？</a>》，记录一下昨天刷机的过程吧。<br>]]>
     
     </summary>
     
@@ -725,6 +727,8 @@ nSubsidy &gt;&gt;= (nHeight / <span class="number">210000</span>);`
     
       <category term="Reading" scheme="http://imcoddy.github.io/tags/reading/"/>
     
+      <category term="Diary" scheme="http://imcoddy.github.io/categories/diary/"/>
+    
   </entry>
   
   <entry>
@@ -732,7 +736,7 @@ nSubsidy &gt;&gt;= (nHeight / <span class="number">210000</span>);`
     <link href="http://imcoddy.github.io/2013/11/24/ipad-mini-retina-review-mini-but-powerful/"/>
     <id>http://imcoddy.github.io/2013/11/24/ipad-mini-retina-review-mini-but-powerful/</id>
     <published>2013-11-24T12:57:12.000Z</published>
-    <updated>2015-05-16T23:43:52.000Z</updated>
+    <updated>2015-05-29T12:04:15.000Z</updated>
     <content type="html"><![CDATA[<p>拿到 iPad Mini Retina 已经一个多星期了，随便整理一下这些日子的使用感受吧。</p>
 <p>虽然在一个月前就已经宣布，不过由于 iPad Mini Retina 的上市时间在发布会上并没有公布，于是各路谣言四起，大部分的推测都指向了本月的 22 日。然后苹果公司又和大家开了个玩笑，12 日便开始了预备发售。于是第二天早上便在官网上预订了一台，中午直接到银座店取了货。呵呵，难得当了一次这么积极的果粉。<br><a id="more"></a></p>
 <p>入手 iPad Mini 的理由其实很简单，之前的 iPad 4 用起来还是稍重了些。虽然这次更新的 iPad Air 其实已经轻巧了许多，不过外出携带时还是稍有不便。而 iPad Mini 这款 7.9 寸的屏幕大小，使得其在阅读和便携之间取得了一个很好的平衡。</p>
@@ -756,6 +760,8 @@ nSubsidy &gt;&gt;= (nHeight / <span class="number">210000</span>);`
     
       <category term="iPad" scheme="http://imcoddy.github.io/tags/ipad/"/>
     
+      <category term="Tech" scheme="http://imcoddy.github.io/categories/tech/"/>
+    
   </entry>
   
   <entry>
@@ -763,7 +769,7 @@ nSubsidy &gt;&gt;= (nHeight / <span class="number">210000</span>);`
     <link href="http://imcoddy.github.io/2013/11/17/music-on-the-run/"/>
     <id>http://imcoddy.github.io/2013/11/17/music-on-the-run/</id>
     <published>2013-11-17T11:54:58.000Z</published>
-    <updated>2015-05-16T23:43:04.000Z</updated>
+    <updated>2015-05-29T12:04:15.000Z</updated>
     <content type="html"><![CDATA[<p>你还在听保存在电脑上的音乐吗？</p>
 <p>在这网络便利的年代，通过网络在线听歌的方式似乎已经慢慢成为大家的首选方式了。国外流行的有Pandora，国内则有豆瓣FM、虾米等等。在线的方式除了可以随时随地播放之外，还可以将自己喜爱的曲目收藏下来，并在此基础上打造出自己的动听电台。<br><a id="more"></a><br>不过在线音乐固然方便，但对于我这样用iTunes好几年，积累了好几十G音乐的人来说，换用其它音乐网站的迁移成本未免过大了些。而随着现在iDevice增加，曲库的同步管理慢慢成了一个问题。平时iPod/iPhone/iPad用Mac来同步虽然稍有些麻烦但也还凑合，不过在公司的话就没法听家里的音乐了。于是本着外事不解问谷歌的原则，发现了iTunes Match这一个好东西。</p>
 <h2 id="iTunes_Match">iTunes Match</h2><p>虽然iTunes Match已经推出了好一阵子，但周围使用的用户似乎并不多。简单来 说这是个将自己的本地音乐「洗白」的服务，它可以将本地的音乐文件进行匹配，同时将整个曲库的信息放到云端，这样使用着相同帐户的所有iDevice都可以共享曲库。无论是在住宅或者公司，只要登陆之后，听歌+评级都可以无缝整合！写到这里，我不禁对乔布斯的最后一个“One More Thing”致以崇高的敬意！</p>
@@ -793,6 +799,8 @@ nSubsidy &gt;&gt;= (nHeight / <span class="number">210000</span>);`
     
       <category term="iTunes" scheme="http://imcoddy.github.io/tags/itunes/"/>
     
+      <category term="Tech" scheme="http://imcoddy.github.io/categories/tech/"/>
+    
   </entry>
   
   <entry>
@@ -800,7 +808,7 @@ nSubsidy &gt;&gt;= (nHeight / <span class="number">210000</span>);`
     <link href="http://imcoddy.github.io/2013/10/20/remapping-my-hhkb/"/>
     <id>http://imcoddy.github.io/2013/10/20/remapping-my-hhkb/</id>
     <published>2013-10-20T01:31:44.000Z</published>
-    <updated>2015-05-16T23:43:04.000Z</updated>
+    <updated>2015-05-29T12:04:15.000Z</updated>
     <content type="html"><![CDATA[<p>入手HHKB Lite for Mac已经好几个月了，不过一直没准备为它写点什么。哈，毕竟一块薄膜键盘，和Pro2版的手感相比的确相去甚远，而为了适应这新的键盘布局也费了不少折腾。不过，配合着Mac下的必备软件KeyRemap4MacBook，经过配置一番后，终于可以和公司的Macbook Pro的键盘键位做到无痛切换了XD<br><a id="more"></a></p>
 <h2 id="HHKB">HHKB</h2><p>HHKB，全称是Happy Hacking Keyboard。它优异的操作手感以及独特（且合理）的键位安排，实在是居家码字的必备良品，在资深码农界可谓是无人不晓。相比市面上常见的键盘布局，HHKB其主要的特点在于以下几点：</p>
 <ol>
@@ -850,6 +858,8 @@ nSubsidy &gt;&gt;= (nHeight / <span class="number">210000</span>);`
     
       <category term="Unix" scheme="http://imcoddy.github.io/tags/unix/"/>
     
+      <category term="Tech" scheme="http://imcoddy.github.io/categories/tech/"/>
+    
   </entry>
   
   <entry>
@@ -857,7 +867,7 @@ nSubsidy &gt;&gt;= (nHeight / <span class="number">210000</span>);`
     <link href="http://imcoddy.github.io/2013/10/06/powered-up-from-screen-to-tmux/"/>
     <id>http://imcoddy.github.io/2013/10/06/powered-up-from-screen-to-tmux/</id>
     <published>2013-10-06T12:30:05.000Z</published>
-    <updated>2015-05-16T23:43:04.000Z</updated>
+    <updated>2015-05-29T12:04:15.000Z</updated>
     <content type="html"><![CDATA[<p>平时在公司开发自然少不了用screen这类的远程作业工具，虽然screen可以很方便的进行detach和attach，不过在重新连接时，总是会出现Terminal恢复到默认80行宽的大小。虽然重新调整一下窗口大小并不是什么大事，只是每次这样拖动鼠标有些烦人。最近由于开新项目换了一台VM，解决了之前安装不了tmux的问题，于是便从此摈弃screen，全面投入到tmux的怀抱中。<br><a id="more"></a><br>试用了两天，其实感觉并没有和screen有太大的差别。不过以下的几点其实还是挺贴心的：</p>
 <ol>
 <li>现在在远程服务器时，可以不必再重新调整一次窗口的大小了。</li>
@@ -1032,6 +1042,8 @@ bind r source-<span class="keyword">file</span> ~/.tmux.<span class="keyword">co
     
       <category term="Unix" scheme="http://imcoddy.github.io/tags/unix/"/>
     
+      <category term="Tech" scheme="http://imcoddy.github.io/categories/tech/"/>
+    
   </entry>
   
   <entry>
@@ -1076,7 +1088,7 @@ bind r source-<span class="keyword">file</span> ~/.tmux.<span class="keyword">co
     <link href="http://imcoddy.github.io/2013/06/15/tabbed-finder-in-osx-mountian-lion/"/>
     <id>http://imcoddy.github.io/2013/06/15/tabbed-finder-in-osx-mountian-lion/</id>
     <published>2013-06-15T13:39:42.000Z</published>
-    <updated>2015-05-16T23:43:04.000Z</updated>
+    <updated>2015-05-29T12:04:15.000Z</updated>
     <content type="html"><![CDATA[<p>前几天苹果公司召开WWDC之后，大部分人都将注意力放在吐槽iOS的UI变化去了。对于这我种前几天刚惨痛升级到6.1.3的人来说，这次大会中更关心的是OSX会发生怎么样的改变。作为OSX的下一个升级版，这次停止了继续使用猫科动物来命名的方式，而换用了Mavericks。同时也对系统进行了进一步优化，比如终于在Finder里面加入了Tab的功能。</p>
 <a id="more"></a>
 <p>说起Tab的分页式浏览，作为当年受IE6摧残许久的老网虫，第一次在Firefox上看到Tabmix这类的扩展的时候是非常兴奋的。而后来的Chrome将这一点发扬光大，每个Tab页都可以单独的抽出来或者自由组合，极大地提升了浏览网页的用户体验。</p>
@@ -1101,6 +1113,8 @@ bind r source-<span class="keyword">file</span> ~/.tmux.<span class="keyword">co
       <category term="Software" scheme="http://imcoddy.github.io/tags/software/"/>
     
       <category term="Tweak" scheme="http://imcoddy.github.io/tags/tweak/"/>
+    
+      <category term="Tech" scheme="http://imcoddy.github.io/categories/tech/"/>
     
   </entry>
   
@@ -1161,7 +1175,7 @@ bind r source-<span class="keyword">file</span> ~/.tmux.<span class="keyword">co
     <link href="http://imcoddy.github.io/2013/06/01/how-time-flies-in-database/"/>
     <id>http://imcoddy.github.io/2013/06/01/how-time-flies-in-database/</id>
     <published>2013-06-01T04:21:28.000Z</published>
-    <updated>2015-05-17T00:32:29.000Z</updated>
+    <updated>2015-05-29T12:05:50.000Z</updated>
     <content type="html"><![CDATA[<p>前阵子遇到了一个这样的的场景：数据库中原来使用的是MySQL中的DateTime格式，不过由于有经常性的时间比较的需求，以及需要引入多时区支持方便以后扩展。因此，需要将数据库的格式从DateTime转换成Timestamp。这就自然而然地引出了以下的问题：</p>
 <blockquote>
 <p>应该如何操作，以达到不影响服务的情况下平稳地实施这一更新？</p>
@@ -1215,7 +1229,7 @@ bind r source-<span class="keyword">file</span> ~/.tmux.<span class="keyword">co
     
       <category term="PHP" scheme="http://imcoddy.github.io/tags/php/"/>
     
-      <category term="Diary" scheme="http://imcoddy.github.io/categories/diary/"/>
+      <category term="Tech" scheme="http://imcoddy.github.io/categories/tech/"/>
     
   </entry>
   
