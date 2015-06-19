@@ -4,7 +4,7 @@
   <subtitle><![CDATA[记录下那些折腾过的岁月。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://imcoddy.github.io/"/>
-  <updated>2015-05-28T14:23:49.000Z</updated>
+  <updated>2015-06-19T14:09:09.000Z</updated>
   <id>http://imcoddy.github.io/</id>
   
   <author>
@@ -15,11 +15,87 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[Link It In The Hard Way]]></title>
+    <link href="http://imcoddy.github.io/2015/06/19/link-it-in-the-hard-way/"/>
+    <id>http://imcoddy.github.io/2015/06/19/link-it-in-the-hard-way/</id>
+    <published>2015-06-19T13:01:51.000Z</published>
+    <updated>2015-06-19T14:09:09.000Z</updated>
+    <content type="html"><![CDATA[<p>又一阵子没有写博客了。最近晚上回到家打开电脑后，基本都是在上 Leetcode 刷题。其实最近有好几件事都可以写写，不过认真想想，从启动电脑到输入 Hexo 命令再打开 Atom 编辑器码字，实在是有些显得繁琐不堪。今天一时心血来潮，购买了 iPad 上传说中的编辑神器 <a href="https://itunes.apple.com/us/app/editorial/id673907758?mt=8" target="_blank" rel="external">Editorial</a>，然后又有了一个折腾的想法，将博客的撰写转移到 iPad 上。<br><a id="more"></a><br>这个想法其实并不新鲜，毕竟有了 Dropbox 之类的同步软件之后，只要有网络，基本上可以实现设备之间的无缝切换。因此，只需要在灵感来临之时掏出 iPhone 或者 iPad 上随时随地记录一下，然后等打开电脑时再发布即可。</p>
+<p>不过在这之前，还是遇到了一点小麻烦。</p>
+<h2 id="情况说明">情况说明</h2><p>现在这个博客是用 Hexo 生成的，目录放在 <code>/Users/imcoddy/Blog/</code> 下面，代码和网页都托管在 Github 上。现在要做的，只需要将 Blog 下的 <code>_posts</code> 链接到 Dropbox 里面即可。</p>
+<p>在 iPad 里面将 Editorial 与 Dropbox 关联之后，即会在 <code>Apps</code> 目录下出现一个同名的文件夹，因此，决定将目标路径设置为 <code>/Users/imcoddy/Dropbox/Apps/Editorial/Blog/Posts</code>。</p>
+<p>不过现在是很残酷的，ln 命令不允许直接做文件夹的硬链接。终端里面执行结果如下：</p>
+<pre><code>/Users/imcoddy [<span class="link_label">imcoddy@iMac</span>] [<span class="link_label">22:44</span>][<span class="link_reference">1</span>]
+<span class="blockquote">&gt; ln /Users/imcoddy/Blog/source/_posts /Users/imcoddy/Dropbox/Apps/Editorial/Blog/Posts</span>
+ln: /Users/imcoddy/Blog/source/_posts: Is a directory
+</code></pre><h2 id="解决方案">解决方案</h2><p>一个很简单的方案是将 Blog 下面的 <code>_posts</code> 文件夹删除，在 Dropbox 里面建立好文件夹后再将其通过软链接的方式链接过来。虽然这种方案很简单快捷，不过也有一个不好的结果：<code>_posts</code> 文件夹下的 md 文件将不再被 Git 所管理。更好的方案自然是在 Blog 里面正常编辑发布，而相关的 md 文件能自动同步到 Dropbox 里。</p>
+<p>Google 一番之后，发现 Stackoverflow 上有个<a href="http://stackoverflow.com/questions/80875/what-is-the-unix-command-to-create-a-hardlink-to-a-directory-in-os-x" target="_blank" rel="external">解答</a>说得很详细，也说得很吓人。要想在 Mac 上建立文件夹的硬链接，需要先满足下面的几个条件：</p>
+<ol>
+<li>The file system must be journaled HFS+.</li>
+<li>The parent directories of the source and destination must be different.</li>
+<li>The source’s parent must not be the root directory.</li>
+<li>The destination must not be in the root directory.</li>
+<li>The destination must not be a descendent of the source.</li>
+<li>The destination must not have any ancestor that’s a directory hard link.</li>
+</ol>
+<p>给出的解决方案倒很简单。<br>首先编译如下的文件</p>
+<pre><code><span class="preprocessor">#<span class="keyword">include</span> &lt;stdio.h&gt;</span>
+<span class="preprocessor">#<span class="keyword">include</span> &lt;unistd.h&gt;</span>
+<span class="function"><span class="keyword">int</span>
+<span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span>
+</span>{
+   <span class="keyword">if</span> (argc != <span class="number">2</span>)
+      <span class="keyword">return</span> <span class="number">1</span>;
+   <span class="keyword">int</span> ret = unlink(argv[<span class="number">1</span>]);
+   <span class="keyword">if</span> (ret != <span class="number">0</span>)
+      perror(<span class="string">"unlink"</span>);
+   <span class="keyword">return</span> ret;
+}
+
+gcc -o hunlink hunlink.c
+</code></pre><p>使用的时候，只需要 <code>hlink source_folder target_folder</code> 即可。</p>
+<p>再 Google 一番，其实<a href="https://github.com/selkhateeb/hardlink" target="_blank" rel="external">这个功能</a>已经有人在 Homebrew 上发布了。因此，要做的就简单多了：</p>
+<pre><code>/Users/imcoddy [<span class="link_label">imcoddy@iMac</span>] [<span class="link_label">22:44</span>][<span class="link_reference">1</span>]
+<span class="blockquote">&gt; brew install hardlink-osx</span>
+==&gt; Downloading https://homebrew.bintray.com/bottles/hardlink-osx-0.1.1.yosemite.bottle.t
+<span class="header">######################################################################## 100.0%</span>
+==&gt; Pouring hardlink-osx-0.1.1.yosemite.bottle.tar.gz
+==&gt; Caveats
+Hardlinks can not be created under the same directory root. If you try to
+<span class="code">`hln source directory`</span> to target directory under the same root you will get an error!
+
+Also, remember the binary is named <span class="code">`hln`</span> due to a naming conflict.
+==&gt; Summary
+🍺  /usr/local/Cellar/hardlink-osx/0.1.1: 3 files, 20K
+<span class="blockquote">&gt; hln /Users/imcoddy/Blog/source/_posts /Users/imcoddy/Dropbox/Apps/Editorial/Blog/Posts</span>
+</code></pre><p>然后，在 Hexo 里面新建这篇博客，打开 Atom，看着菜单栏里的 Dropbox 不时地自动同步，心情真是舒畅。</p>
+<p>不过这篇文章还是在电脑上记录的，Editorial 的使用心得，就留着以后慢慢体会吧。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>又一阵子没有写博客了。最近晚上回到家打开电脑后，基本都是在上 Leetcode 刷题。其实最近有好几件事都可以写写，不过认真想想，从启动电脑到输入 Hexo 命令再打开 Atom 编辑器码字，实在是有些显得繁琐不堪。今天一时心血来潮，购买了 iPad 上传说中的编辑神器 <a href="https://itunes.apple.com/us/app/editorial/id673907758?mt=8">Editorial</a>，然后又有了一个折腾的想法，将博客的撰写转移到 iPad 上。<br>]]>
+    
+    </summary>
+    
+      <category term="Blog" scheme="http://imcoddy.github.io/tags/blog/"/>
+    
+      <category term="Homebrew" scheme="http://imcoddy.github.io/tags/homebrew/"/>
+    
+      <category term="Mac" scheme="http://imcoddy.github.io/tags/mac/"/>
+    
+      <category term="Tweak" scheme="http://imcoddy.github.io/tags/tweak/"/>
+    
+      <category term="Writing" scheme="http://imcoddy.github.io/tags/writing/"/>
+    
+      <category term="Tech" scheme="http://imcoddy.github.io/categories/tech/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[Mastering Bitcoin Ch10: Bitcoin Security]]></title>
     <link href="http://imcoddy.github.io/2015/05/28/mastering-bitcoin-chapter-10-bitcoin-security/"/>
     <id>http://imcoddy.github.io/2015/05/28/mastering-bitcoin-chapter-10-bitcoin-security/</id>
     <published>2015-05-28T14:09:48.000Z</published>
-    <updated>2015-05-28T14:23:49.000Z</updated>
+    <updated>2015-06-19T12:38:59.000Z</updated>
     <content type="html"><![CDATA[<p>前阵子李笑来老师在网上招人合译《Mastering Bitcoin》一书，受巴比特之邀自己也参与其中。由于当时时间有限，只翻译了最后的第十章。如今此书<a href="http://zhibimo.com/explore/Mastering-Bitcoin" target="_blank" rel="external">初稿</a>已经公布于众，自己也在此整理一下留个备份。从此，我也算是出过书的人了哈哈。<br><a id="more"></a></p>
 <h1 id="比特币安全">比特币安全</h1><p>保护比特币件很具有挑战性的事情，因为比特币不是价值的抽象体现，就像银行账户里的余额那样。比特币其实更像数字现金或黄金。你可能听过这样的说法，“现实持有，败一胜九。”（译者注：这句谚语是指拥有实际所有权能在法律纠纷中占有很大的胜算优势）好吧，在比特币的世界里，这样的持有只能让你有一成胜率。而拥有用于解锁比特币的密钥才相当于持有现金或一块贵重金属。你可能会将其丢失，会放错地方，会被盗或者不小心支付错了数额。无论是哪种场景，用户都没有办法撤回，因为这就像是将现金丢在了车水马龙的大街上。</p>
 <p>不过，与现金、黄金或者银行账户相比，比特币有着一个其它东西没有的优势。你不能“备份”现金、黄金或者银行账户，但包含着你的密钥的比特币钱包，可以像其它文件一样备份。它可以被复制多份分别保存起来，甚至能打印到纸上进行实物备份。比特币与至今为止的事物是如此不同，以致于我们需要以一种全新的思路来思考比特币的安全性。</p>
@@ -70,7 +146,7 @@
     <link href="http://imcoddy.github.io/2015/05/19/the-leetcode-challenge/"/>
     <id>http://imcoddy.github.io/2015/05/19/the-leetcode-challenge/</id>
     <published>2015-05-19T12:06:28.000Z</published>
-    <updated>2015-05-19T13:34:53.000Z</updated>
+    <updated>2015-06-19T12:38:59.000Z</updated>
     <content type="html"><![CDATA[<p>最近开始试着刷 <a href="https://leetcode.com/" target="_blank" rel="external">Leetcode</a> 了。倒也没有想太多，只是最近写的代码太多是查 API 调用，让人有了种沦为纯码农做体力活之感。虽然以前也曾有过算法无用论的想法，不过在工作了这一阵子之后，也慢慢开始体会到了数据结构和算法在实际生活中的实用。现在翻看一些相关文章，也不觉得算法像以前上课时那般枯燥了，偶尔居然有种拍案叫绝的感想。加上最近发现 Leetcode 支持的答题语言多了不少，还能支持用 Javascript。至此，还能有什么不去刷题的理由呢？</p>
 <a id="more"></a>
 <p>如果还有人不知道不知道 Leetcode 的大名，在这里引用<a href="http://coolshell.cn/articles/12052.html" target="_blank" rel="external">酷壳的文章</a>简单地介绍一下：“Leetcode 这个网站上的题都是一些经典的公司用来面试应聘者的面试题，很多人通过刷这些题来应聘一些喜欢面试算法的公司，比如：Google、微软、Facebook、Amazon 之类的这些公司，基本上是应试教育的功利主义。”</p>
@@ -111,7 +187,7 @@
     <link href="http://imcoddy.github.io/2015/05/17/upgrade-to-hexo-3/"/>
     <id>http://imcoddy.github.io/2015/05/17/upgrade-to-hexo-3/</id>
     <published>2015-05-17T00:45:42.000Z</published>
-    <updated>2015-05-17T01:21:47.000Z</updated>
+    <updated>2015-06-19T12:38:59.000Z</updated>
     <content type="html"><![CDATA[<p>转眼之间，又一晃半年多都没有打理博客了。 前一阵子，似乎进入了一个低潮。倒不是没有了感触，只是有时却又不知道如何说起。这样的状态的确不太好，是时候把这里重新拾起来了。</p>
 <a id="more"></a>
 <p>最近重新翻了一下李笑来的<a href="http://zhibimo.com/explore/ba-shi-jian-dang-zuo-peng-you" target="_blank" rel="external">《把时间当朋友》</a>，原因是看到他在推荐斯坦福公开课<a href="https://startupclass.co/courses/how-to-start-a-startup" target="_blank" rel="external">《How To Start A Startup》</a>之余，还几乎每天坚持更新自己的学习笔记整理成文并分享出来。有意思的是，这份学习笔记名为<a href="http://zhibimo.com/explore/growth" target="_blank" rel="external">《成长》</a>，而这种学习的成长心态，与《把时间当朋友》是一脉相承的。</p>
@@ -140,7 +216,7 @@
     <link href="http://imcoddy.github.io/2015/01/10/what-sarutobi-app-means-to-bitcoin/"/>
     <id>http://imcoddy.github.io/2015/01/10/what-sarutobi-app-means-to-bitcoin/</id>
     <published>2015-01-10T00:46:43.000Z</published>
-    <updated>2015-05-29T12:03:23.000Z</updated>
+    <updated>2015-06-19T12:38:59.000Z</updated>
     <content type="html"><![CDATA[<p><img src="http://media.coindesk.com/2015/01/sarutobi-630x263.png" alt="SaruTori" title="SaruTori"></p>
 <h2 id="背景">背景</h2><p>不久前的圣诞节前夕，苹果公司通过了一款名为「<a href="https://itunes.apple.com/us/app/sarutobi/id932194840?ls=1&amp;mt=8" target="_blank" rel="external">SaruTobi</a>」的游戏应用。这个名字来源于日语的「さるとび（猿飛）」，在此笔者将其译为「顽猴狂舞」。游戏的玩法很简单，玩家通过晃动一只在树上荡秋千的猴子，收集游戏中的道具和金币，并让猴子尽可能的飞得更远。<br><a id="more"></a></p>
 <p>在上线的短短两周，这款游戏受到了比特币社区的热烈关注。不仅 Coindesk 专门为其<a href="https://www.coindesk.com/apple-approves-ios-game-tips-players-bitcoin/" target="_blank" rel="external">撰文</a>，Reddit 社区里大家也是<a href="http://www.reddit.com/r/Bitcoin/comments/2rqlj6/apple_approves_ios_game_that_tips_players_in/" target="_blank" rel="external">纷纷点赞</a>。原因很简单，1、游戏里采用的虚拟货币的名称就叫比特币，对还没有接触过比特币的用户而言是一个不错的宣传方式；2、刚进入游戏时会提示玩家输入自己的真实比特币地址，当玩家累计游戏时间达到一定数量时，将会得到这款游戏所赠送的实实在在的比特币！（还没有下载这款游戏的 iOS 用户还在等什么？快去点上面的链接下载再回来看文章吧！）</p>
@@ -193,7 +269,7 @@
     <link href="http://imcoddy.github.io/2014/08/22/bitcoin-in-tokyo/"/>
     <id>http://imcoddy.github.io/2014/08/22/bitcoin-in-tokyo/</id>
     <published>2014-08-22T12:35:14.000Z</published>
-    <updated>2015-05-21T14:41:01.000Z</updated>
+    <updated>2015-06-19T12:38:59.000Z</updated>
     <content type="html"><![CDATA[<h1 id="比特币在东瀛">比特币在东瀛</h1><h2 id="引子">引子</h2><p><img src="http://i1375.photobucket.com/albums/ag455/imcoddy/bitcoin/customized-bitcoin-necklace_zps958a1d39.jpg" alt="customized-bitcoin-necklace"></p>
 <blockquote>
 <p>“このネックレス、カッコイイ！！(这条项链好赞耶！)”</p>
@@ -277,7 +353,7 @@
     <link href="http://imcoddy.github.io/2014/06/21/their-bit-zone/"/>
     <id>http://imcoddy.github.io/2014/06/21/their-bit-zone/</id>
     <published>2014-06-21T00:28:35.000Z</published>
-    <updated>2015-05-21T14:41:01.000Z</updated>
+    <updated>2015-06-19T12:38:59.000Z</updated>
     <content type="html"><![CDATA[<p>我已经很久很久没有写关于比特币的文字了。准确的说，距离上一篇文章已经有 35 天 7 时 21 分。这段时间看起来的确不长，不过要知道，在比特币这个 7＊24 不间断的世界里，这已经足以让你有恍然隔世之感。</p>
 <p>事实的确如此，在比特币的圈子里，每一天都不会平淡无奇令人乏味。不过，当我将自己抽身于外后，试图将周围的人发展成下线时，我忽然发现这居然是如此艰难。因为在一个人诚心接纳比特币变成一个意志坚定的比特忠之前，他需要先越过一大片遍布荆棘的Bitzone。</p>
 <a id="more"></a>
@@ -323,7 +399,7 @@
     <link href="http://imcoddy.github.io/2014/04/07/a-finite-monetary-supply-for-bitcoin/"/>
     <id>http://imcoddy.github.io/2014/04/07/a-finite-monetary-supply-for-bitcoin/</id>
     <published>2014-04-07T13:03:26.000Z</published>
-    <updated>2015-05-21T14:41:01.000Z</updated>
+    <updated>2015-06-19T12:38:59.000Z</updated>
     <content type="html"><![CDATA[<blockquote>
 <p>BIP: 42<br>    标题: 比特币无限量供应修正案<br>    作者: Pieter Wuille<br>    状态: 草案<br>    类型: 常规跟踪<br>    创建于: 2014 年 4 月 1 日</p>
 </blockquote>
@@ -376,7 +452,7 @@ nSubsidy &gt;&gt;= (nHeight / <span class="number">210000</span>);`
     <link href="http://imcoddy.github.io/2014/01/25/network-miner-fee-policy-migration-plan/"/>
     <id>http://imcoddy.github.io/2014/01/25/network-miner-fee-policy-migration-plan/</id>
     <published>2014-01-25T02:38:35.000Z</published>
-    <updated>2015-05-16T23:43:04.000Z</updated>
+    <updated>2015-06-19T12:38:59.000Z</updated>
     <content type="html"><![CDATA[<h2 id="译者前言：">译者前言：</h2><p>据比特币核心开发人员 Mike Hearn 透露，比特币协议在<a href="http://www.8btc.com/4-new-bitcoin-features" target="_blank" rel="external">今年将会迎来四大改动</a>，其中一项就是转账所需要的交易费（transaction fee）将会浮动。实际上，Gavin Andresen 在几个月前就在一篇笔记中为大家勾画了交易费的变更计划。下面就让我们来看看它的详细情况吧。<br><a id="more"></a></p>
 <h1 id="网络/矿工收费政策的迁移计划">网络/矿工收费政策的迁移计划</h1><p>要想改变交易在网络中传递以及矿工将其保存到区块链中所需的交易费用，是需要花一些心思的。政策不匹配可能会导致用户的交易无法得到确认，这要么是交易无法到达矿工那里（它们没有被传递过去），要么就是交易被矿工直接拒绝了。</p>
 <p>我一直在努力简化 0.9 版本的交易费规则。这篇帖子的目的是说明所有使这一转变尽可能顺利执行所需要的细节。</p>
@@ -424,7 +500,7 @@ nSubsidy &gt;&gt;= (nHeight / <span class="number">210000</span>);`
     <link href="http://imcoddy.github.io/2014/01/18/do-not-use-a-brainwallet/"/>
     <id>http://imcoddy.github.io/2014/01/18/do-not-use-a-brainwallet/</id>
     <published>2014-01-18T00:55:31.000Z</published>
-    <updated>2015-05-21T12:34:34.000Z</updated>
+    <updated>2015-06-19T12:38:59.000Z</updated>
     <content type="html"><![CDATA[<p><img src="http://1.bp.blogspot.com/-CMGT-QTUSdM/UQW0_xXLM5I/AAAAAAAAAgk/EEVWxus9XTw/s320/brain_money_2.jpg" alt="brain-wallet"></p>
 <p>好吧，这个有些标题党了。不过作者原意就是如此。不同意这观点的话，可以先把文章看完再来反驳:)<br><a id="more"></a></p>
 <p>本文翻译自 <a href="http://en.wikipedia.org/wiki/Gavin_Andresen" target="_blank" rel="external">Gavin Andresen</a> 几个月前的一篇笔记（玩比特币只听说过中本聪却不知道 Nakamoto Satoshi 和 Gavin Andresen 的话，说明还得加强学习一下比特币知识:P）。比特币脑钱包因其使用方便成为不少初学者的选择，不过在设置脑钱包口令（passphrases）时经常出现过于简单以至被人将币转走的情况。因此，虽然已是旧文，不过现在看来，这篇文章依旧具有不少教育意义。如果觉得这篇文章对您有帮助的话，欢迎往文章末尾的地址打赏;)</p>
@@ -502,7 +578,7 @@ nSubsidy &gt;&gt;= (nHeight / <span class="number">210000</span>);`
     <link href="http://imcoddy.github.io/2014/01/10/bitcoin's-journey/"/>
     <id>http://imcoddy.github.io/2014/01/10/bitcoin's-journey/</id>
     <published>2014-01-10T12:51:07.000Z</published>
-    <updated>2015-05-16T23:43:04.000Z</updated>
+    <updated>2015-06-19T12:38:59.000Z</updated>
     <content type="html"><![CDATA[<p>2013年是属于比特币的一年，在这一年里，比特币的价格一路走高，甚至超过了黄金。也是在这一年里，随着各国政府的表态，比特币的价格也出现了大起大落的情况。但即使如此，它依旧吸引了众多投机者趋之若骛。究竟是什么原因让这只存在虚拟世界的一串字符具有如此大的影响力呢？经过假期的几天里了解了一下比特币的相关资料，不免被其精妙的设计所折服。现在趁着比特币五周岁刚过，翻译一下这一份比特币的五年历程。<br><a id="more"></a></p>
 <h1 id="比特币的历程">比特币的历程</h1><h2 id="2014-01-03_BTC/USD_$880">2014-01-03 BTC/USD $880</h2><p><img src="http://www.happybirthdaybitcoin.com/images/5th-bday.gif" alt="5th-bday"><br>随着 1217 万枚比特币被挖出来，比特币至今已经五岁了。</p>
 <p>2013 刚开始时比特币的价值是 13 美元，随后曾一路高涨至与黄金持平（ 1242 美元），年末时 811 美元，其增长率达到了 6000% 以上。</p>
@@ -674,7 +750,7 @@ nSubsidy &gt;&gt;= (nHeight / <span class="number">210000</span>);`
     <link href="http://imcoddy.github.io/2013/12/16/backup-and-restore-your-nook-on-the-mac/"/>
     <id>http://imcoddy.github.io/2013/12/16/backup-and-restore-your-nook-on-the-mac/</id>
     <published>2013-12-16T12:36:45.000Z</published>
-    <updated>2015-05-29T12:01:26.000Z</updated>
+    <updated>2015-06-19T12:38:59.000Z</updated>
     <content type="html"><![CDATA[<p>转眼之间的手头上这台 Nook 已经到手两年了。虽然与 Kindle 相比这玩意名气的确小了不少，而且自带的系统限制不少，对中文支持得也不太到位。不过在经过自己 Root 并精心配置过后，这玩意的阅读体验可以得到很大的提升，实在是物超所值（虽然当年入手不久后这货就跟着 Kindle 狠狠滴降了价-_-）。趁着昨天在知乎挖了个老帖《<a href="http://www.zhihu.com/question/20109608/answer/20869162?group_id=132318107#answer-3543341" target="_blank" rel="external">图书资源和阅读感觉上，Kindle 4 和 Nook 2 哪个较好？</a>》，记录一下昨天刷机的过程吧。<br><a id="more"></a><br>其实一直在用着并没有出什么问题，只是有一次不小心，插电脑上充电时没有被其弹出就直接拔出，造成了磁盘的权限出了点问题。虽然不影响平时看书，不过这样一来就没有办法安装新软件或做其它系统修改了。直到昨天想安装点东西失败后，终于决定：还是把它刷回来吧！</p>
 <p>不过在准备刷机的过程中，遇到了一个很尴尬的问题：现有的刷机教程都是基于 Windows 下用 DiskGenius 来操作的，其它系统下的操作指南几乎没有，而我已经摒弃 Windows 好多天……没办法，在某个说明不详的“Linux/Mac users can use dd”这一个模糊不清的提示下，我便开始了在 Mac 下恢复 Nook 的折腾史。</p>
 <h2 id="准备">准备</h2><p>首先需要调整好心态，充分意识到「刷机有风险，操作要谨慎，后果需自负」 的正确折腾心态，并预备好以下几样东西：</p>
@@ -736,7 +812,7 @@ nSubsidy &gt;&gt;= (nHeight / <span class="number">210000</span>);`
     <link href="http://imcoddy.github.io/2013/11/24/ipad-mini-retina-review-mini-but-powerful/"/>
     <id>http://imcoddy.github.io/2013/11/24/ipad-mini-retina-review-mini-but-powerful/</id>
     <published>2013-11-24T12:57:12.000Z</published>
-    <updated>2015-05-29T12:04:15.000Z</updated>
+    <updated>2015-06-19T12:38:59.000Z</updated>
     <content type="html"><![CDATA[<p>拿到 iPad Mini Retina 已经一个多星期了，随便整理一下这些日子的使用感受吧。</p>
 <p>虽然在一个月前就已经宣布，不过由于 iPad Mini Retina 的上市时间在发布会上并没有公布，于是各路谣言四起，大部分的推测都指向了本月的 22 日。然后苹果公司又和大家开了个玩笑，12 日便开始了预备发售。于是第二天早上便在官网上预订了一台，中午直接到银座店取了货。呵呵，难得当了一次这么积极的果粉。<br><a id="more"></a></p>
 <p>入手 iPad Mini 的理由其实很简单，之前的 iPad 4 用起来还是稍重了些。虽然这次更新的 iPad Air 其实已经轻巧了许多，不过外出携带时还是稍有不便。而 iPad Mini 这款 7.9 寸的屏幕大小，使得其在阅读和便携之间取得了一个很好的平衡。</p>
@@ -769,7 +845,7 @@ nSubsidy &gt;&gt;= (nHeight / <span class="number">210000</span>);`
     <link href="http://imcoddy.github.io/2013/11/17/music-on-the-run/"/>
     <id>http://imcoddy.github.io/2013/11/17/music-on-the-run/</id>
     <published>2013-11-17T11:54:58.000Z</published>
-    <updated>2015-05-29T12:04:15.000Z</updated>
+    <updated>2015-06-19T12:38:59.000Z</updated>
     <content type="html"><![CDATA[<p>你还在听保存在电脑上的音乐吗？</p>
 <p>在这网络便利的年代，通过网络在线听歌的方式似乎已经慢慢成为大家的首选方式了。国外流行的有Pandora，国内则有豆瓣FM、虾米等等。在线的方式除了可以随时随地播放之外，还可以将自己喜爱的曲目收藏下来，并在此基础上打造出自己的动听电台。<br><a id="more"></a><br>不过在线音乐固然方便，但对于我这样用iTunes好几年，积累了好几十G音乐的人来说，换用其它音乐网站的迁移成本未免过大了些。而随着现在iDevice增加，曲库的同步管理慢慢成了一个问题。平时iPod/iPhone/iPad用Mac来同步虽然稍有些麻烦但也还凑合，不过在公司的话就没法听家里的音乐了。于是本着外事不解问谷歌的原则，发现了iTunes Match这一个好东西。</p>
 <h2 id="iTunes_Match">iTunes Match</h2><p>虽然iTunes Match已经推出了好一阵子，但周围使用的用户似乎并不多。简单来 说这是个将自己的本地音乐「洗白」的服务，它可以将本地的音乐文件进行匹配，同时将整个曲库的信息放到云端，这样使用着相同帐户的所有iDevice都可以共享曲库。无论是在住宅或者公司，只要登陆之后，听歌+评级都可以无缝整合！写到这里，我不禁对乔布斯的最后一个“One More Thing”致以崇高的敬意！</p>
@@ -808,7 +884,7 @@ nSubsidy &gt;&gt;= (nHeight / <span class="number">210000</span>);`
     <link href="http://imcoddy.github.io/2013/10/20/remapping-my-hhkb/"/>
     <id>http://imcoddy.github.io/2013/10/20/remapping-my-hhkb/</id>
     <published>2013-10-20T01:31:44.000Z</published>
-    <updated>2015-05-29T12:04:15.000Z</updated>
+    <updated>2015-06-19T12:38:59.000Z</updated>
     <content type="html"><![CDATA[<p>入手HHKB Lite for Mac已经好几个月了，不过一直没准备为它写点什么。哈，毕竟一块薄膜键盘，和Pro2版的手感相比的确相去甚远，而为了适应这新的键盘布局也费了不少折腾。不过，配合着Mac下的必备软件KeyRemap4MacBook，经过配置一番后，终于可以和公司的Macbook Pro的键盘键位做到无痛切换了XD<br><a id="more"></a></p>
 <h2 id="HHKB">HHKB</h2><p>HHKB，全称是Happy Hacking Keyboard。它优异的操作手感以及独特（且合理）的键位安排，实在是居家码字的必备良品，在资深码农界可谓是无人不晓。相比市面上常见的键盘布局，HHKB其主要的特点在于以下几点：</p>
 <ol>
@@ -867,7 +943,7 @@ nSubsidy &gt;&gt;= (nHeight / <span class="number">210000</span>);`
     <link href="http://imcoddy.github.io/2013/10/06/powered-up-from-screen-to-tmux/"/>
     <id>http://imcoddy.github.io/2013/10/06/powered-up-from-screen-to-tmux/</id>
     <published>2013-10-06T12:30:05.000Z</published>
-    <updated>2015-05-29T12:04:15.000Z</updated>
+    <updated>2015-06-19T12:38:59.000Z</updated>
     <content type="html"><![CDATA[<p>平时在公司开发自然少不了用screen这类的远程作业工具，虽然screen可以很方便的进行detach和attach，不过在重新连接时，总是会出现Terminal恢复到默认80行宽的大小。虽然重新调整一下窗口大小并不是什么大事，只是每次这样拖动鼠标有些烦人。最近由于开新项目换了一台VM，解决了之前安装不了tmux的问题，于是便从此摈弃screen，全面投入到tmux的怀抱中。<br><a id="more"></a><br>试用了两天，其实感觉并没有和screen有太大的差别。不过以下的几点其实还是挺贴心的：</p>
 <ol>
 <li>现在在远程服务器时，可以不必再重新调整一次窗口的大小了。</li>
@@ -1051,7 +1127,7 @@ bind r source-<span class="keyword">file</span> ~/.tmux.<span class="keyword">co
     <link href="http://imcoddy.github.io/2013/09/23/at-hometown-as-a-guest/"/>
     <id>http://imcoddy.github.io/2013/09/23/at-hometown-as-a-guest/</id>
     <published>2013-09-23T00:28:35.000Z</published>
-    <updated>2015-05-17T00:32:29.000Z</updated>
+    <updated>2015-06-19T12:38:59.000Z</updated>
     <content type="html"><![CDATA[<p>来日本已经快一年了，一直没有回家。趁着岛国9月里面有两个三连休的机会请了几天假，12号的时候回家陪家人过中秋去了。话说自从高中到桂林念书以来，基本上中秋就没有和家人过了。而选择秋高气爽的九月出行，受天气影响的概率较小，虽然返回东京的时候差点要遇到台风XD</p>
 <a id="more"></a>
 <h1 id="搬家">搬家</h1><p>这次回家的第二天便搬进了新房子里。其实一个多月前和家人说起这次回家计划时，新房子的装修已经开始进行了。而父母为了赶在我回来时搬进去，装修的进度也稍加紧了点，虽然我一直劝二老别太操劳过急，不过现在看来，装修进度总体还算顺利。</p>
@@ -1088,7 +1164,7 @@ bind r source-<span class="keyword">file</span> ~/.tmux.<span class="keyword">co
     <link href="http://imcoddy.github.io/2013/06/15/tabbed-finder-in-osx-mountian-lion/"/>
     <id>http://imcoddy.github.io/2013/06/15/tabbed-finder-in-osx-mountian-lion/</id>
     <published>2013-06-15T13:39:42.000Z</published>
-    <updated>2015-05-29T12:04:15.000Z</updated>
+    <updated>2015-06-19T12:38:59.000Z</updated>
     <content type="html"><![CDATA[<p>前几天苹果公司召开WWDC之后，大部分人都将注意力放在吐槽iOS的UI变化去了。对于这我种前几天刚惨痛升级到6.1.3的人来说，这次大会中更关心的是OSX会发生怎么样的改变。作为OSX的下一个升级版，这次停止了继续使用猫科动物来命名的方式，而换用了Mavericks。同时也对系统进行了进一步优化，比如终于在Finder里面加入了Tab的功能。</p>
 <a id="more"></a>
 <p>说起Tab的分页式浏览，作为当年受IE6摧残许久的老网虫，第一次在Firefox上看到Tabmix这类的扩展的时候是非常兴奋的。而后来的Chrome将这一点发扬光大，每个Tab页都可以单独的抽出来或者自由组合，极大地提升了浏览网页的用户体验。</p>
@@ -1123,7 +1199,7 @@ bind r source-<span class="keyword">file</span> ~/.tmux.<span class="keyword">co
     <link href="http://imcoddy.github.io/2013/06/10/update-ios-to-unjailbreakable/"/>
     <id>http://imcoddy.github.io/2013/06/10/update-ios-to-unjailbreakable/</id>
     <published>2013-06-10T12:18:14.000Z</published>
-    <updated>2015-05-16T23:43:04.000Z</updated>
+    <updated>2015-06-19T12:38:59.000Z</updated>
     <content type="html"><![CDATA[<p>转眼WWDC2013就要开始了，关于iOS7的扁平化风格的猜测也是此起彼伏。虽然对那种一板子将3维图标打成2D然后落井下石抽除高光纹理的扁平风格说不上讨厌或喜欢，不过今天忽然觉得应该与时俱进升级一下系统了。然后手一抖点了iTunes里的升级，然后就开始了悲剧的一天……</p>
 <a id="more"></a>
 <h1 id="升级重置">升级重置</h1><p>虽然说iOS的升级操作十分傻瓜化，但在升级的时候并非一帆风顺，尤其是当你想指定某个版本的固件的时候。最开始时用的是GSM版的6.1.2，无论是recovery或者DFU模式iTunes都会出现错误。更可悲的是这时系统处于提示连接iTunes的进退两难的情况，完全无法使用。无奈之下，只好更新到了6.1.3。也是在这个时候，我才知道SoftBank的手机是CWDA版的&gt;_&lt;</p>
@@ -1175,7 +1251,7 @@ bind r source-<span class="keyword">file</span> ~/.tmux.<span class="keyword">co
     <link href="http://imcoddy.github.io/2013/06/01/how-time-flies-in-database/"/>
     <id>http://imcoddy.github.io/2013/06/01/how-time-flies-in-database/</id>
     <published>2013-06-01T04:21:28.000Z</published>
-    <updated>2015-05-29T12:05:50.000Z</updated>
+    <updated>2015-06-19T12:38:59.000Z</updated>
     <content type="html"><![CDATA[<p>前阵子遇到了一个这样的的场景：数据库中原来使用的是MySQL中的DateTime格式，不过由于有经常性的时间比较的需求，以及需要引入多时区支持方便以后扩展。因此，需要将数据库的格式从DateTime转换成Timestamp。这就自然而然地引出了以下的问题：</p>
 <blockquote>
 <p>应该如何操作，以达到不影响服务的情况下平稳地实施这一更新？</p>
@@ -1230,76 +1306,6 @@ bind r source-<span class="keyword">file</span> ~/.tmux.<span class="keyword">co
       <category term="PHP" scheme="http://imcoddy.github.io/tags/php/"/>
     
       <category term="Tech" scheme="http://imcoddy.github.io/categories/tech/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[一入果教深似海，从此折腾常相随]]></title>
-    <link href="http://imcoddy.github.io/2013/05/19/journey-to-the-mac/"/>
-    <id>http://imcoddy.github.io/2013/05/19/journey-to-the-mac/</id>
-    <published>2013-05-19T04:21:28.000Z</published>
-    <updated>2015-05-17T00:32:29.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="起因">起因</h1><p>为什么要买Mini呢？因为平时在公司用的Mac觉得顺手了，自己也想搞一台来日常用，顺便在Y450退役之前先将里面的数据迁移出来。</p>
-<p>虽然之前一直盯着13寸的MBPr，不过笔记本那么大的屏幕看起来总觉得小了一些，而且相同的价格可以搞到一台iMac了。不过当考虑入手iMac时，苹果自家的显示器几乎无法外用着实让人觉得不爽。同时也计划入手一台电视方便提升语言能力，加上对便携性无要求，Mini升级方便，其娇小的身材搁着也不占地，日后退居二线还可以当高清下载机，如果硬盘真的可以支撑得到那个时候的话……</p>
-<p>总之，经对比分析一番之后，Mini以显著优势胜出。而历史经验告诉我们，理想可以很丰满，但现实往往是很骨感的……</p>
-<a id="more"></a>
-<h1 id="折腾一_花屏">折腾一 花屏</h1><p>刚拿到手的时候系统是10.8.2，接上电视后开机，那个画面真是……惨不忍睹！好在之前做功课时对这个HDMI接线会出现显示不清的问题，二话不说，直接升级到10.8.3。</p>
-<p>再开机时，画面总算能拿出来见人了，不过还是有些字体发虚。哼哼，平时号称设计界必用的苹果电脑显示出来就这惨样？折腾了半天电视的画面设置无果，加上当时系统不知为何Mac App Store无法更新，于是将Mini放包（其便携性充分体现于此有木有-_-），直接冲到银座苹果店去了。</p>
-<p>Genius Bar里面的Genius们对于MAS无法更新的疑难杂症也说不出个所以然，最后给出的建议是系统重装。哼哼，要不是哥之前的U盘丢了没法做启动盘，也没必要这样千米迢迢地跑去找人重装系统呀。经过漫长的三个小时，最后居然找了个吉林的哥们来给我办理手续（强烈怀疑这是耗时之久的原因所在T_T）。</p>
-<p>不过此行确定了几点：</p>
-<ul>
-<li>这台Mini接DP口输出的效果不错，显示效果差的原因估计在于电视。</li>
-<li>Mini的内存可以自行升级，不过在送修时需要换回原来的内存。</li>
-<li>银座店果然一直都是人满为患……（回来之后发现患了作风，流感季节果然不应该避免出行。不过这是后话了。）</li>
-</ul>
-<p>明确了原因之后，回到家后重新设置了一番。在此先提一下TinkerTool这软件，实在是折腾果机必备良品。</p>
-<p>电视篇：</p>
-<ul>
-<li>HDMI一定要设置成点对点输出。</li>
-<li>绝对不要使用缩放。（不知为什么我接Linux时正常，接Mini时居然需要Underscan）</li>
-<li>将Sharpness设置为最低。（这是解决字体发虚的关键）</li>
-</ul>
-<p>电脑篇：</p>
-<ul>
-<li>对显示器进行颜色校对。（拿着蓝牙键盘坐到两米开外的地方用上下键调节效果最佳=_=）</li>
-<li>用TinkerTool设置FondSmoothing为3。</li>
-<li>用TinkerTool设置默认字体为方正兰亭黑。</li>
-</ul>
-<p>至此，整个系统的显示终于正常了，泪流满面。</p>
-<h1 id="折腾二_移动硬盘">折腾二 移动硬盘</h1><p>作为一款平时在Windows下用的硬盘，分区格式用NTFS自然无可厚非。不过这样的硬盘拿到Mac下用，不方便的地方就充分体现出来了。默认情况之下这样的硬盘格式是只读的，也就意味着无法向移动硬盘里面添加或者删除数据。</p>
-<p>汗，这不是让我这1T的硬盘只能移不能动么？Google了一番后发现还是有不少软件可以解决这个问题的，不过价格都不便宜。不过Mac和Linux类似，通过改分区加载表，可以实在NTFS加载为可读写。有兴趣的可以折腾一下。</p>
-<p>其实移动硬盘不能写对我来说暂时不是问题，毕竟里面存的基本上只是资料。但是下面的这个问题，使我不得不将整块硬盘格式化重新分区：</p>
-<p>Mac里面有个自动增量备份的服务叫TimeMachine，它可以每天定时将当前系统的状况备份下来，并可在需要的时候将系统恢复到某个点。</p>
-<p>其实第一次插入移动硬盘的时候系统就会提示是否设置成备份盘。当时没预留合适的分区，暂时没设置。后来将资料整理到一个分区后再进Mac设置，结果在格式分区时，始终提示分区格式化失败。</p>
-<p>Google之，结果表示，在Windows下使用的移动硬盘通常是MBR引导的，而苹果并不对此支持，需要转换成GPD引导才能格式化。</p>
-<p>虽然有看到DiskGenius可以进行无损转换，不过想起之前设置引导分区失败的惨剧，还是决定重新格盘吧。随后就是一番整理，充分感受到里面收集的东西已经时过境迁。（IT人果然是挨踢的命啊，这么多资料这么快就过时了，有些还木有看呢……）</p>
-<p>将硬盘的东西缩减到近400G后，直接Copy&amp;Paste到了Mini里面。嗯，就当是给做硬盘测试了。不过也发现机械硬盘果然还是速度不行啊，目测了一下复制速度后，关电视睡觉去了……第二天格盘，选择GUID引导，分三个区，设置TimeMachine。成功备份后打开，看到那满天繁星的宇宙画面，再度泪流满面。</p>
-<h1 id="折腾三_软件安装">折腾三 软件安装</h1><p>虽然Mac系统到手时就可以Ready for work，不过还是需要安装不少软件来增加功能。期间参考了不少人的配置推荐，不过这部分，到时再单独开篇吧。</p>
-<h1 id="待折腾篇">待折腾篇</h1><ul>
-<li>iTunes资料迁移。如何实现将之前Windows下的曲库资料迁移到Mac里继续使用呢？包括原有的评分，设置好的Audiobook，Podcast的播放记录等。</li>
-<li>Windows-&gt;Mac的数据迁移方案。之前在Mac里设置共享文件夹，不过不知道为什么联上后复制了几个文件就出错退出了……</li>
-<li>换块键盘。最近看上了HHKB，虽然手感很赞，不过总觉得2万多的价格实在太高了。而且，那个键位似乎也不容易上手的样子……</li>
-<li>换内存换SSD。原计划一入手Mani就淘两条8G内存的，不过看了一下走势，内存在这几个月价格居然涨了一倍。嗯，等哪天价格回落了再折腾吧。</li>
-</ul>
-<h1 id="结语">结语</h1><p>一入果教深似海，从此折腾常相随。</p>
-<p>以此为旨，在这新开的博客记录折腾的生活。</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h1 id="起因">起因</h1><p>为什么要买Mini呢？因为平时在公司用的Mac觉得顺手了，自己也想搞一台来日常用，顺便在Y450退役之前先将里面的数据迁移出来。</p>
-<p>虽然之前一直盯着13寸的MBPr，不过笔记本那么大的屏幕看起来总觉得小了一些，而且相同的价格可以搞到一台iMac了。不过当考虑入手iMac时，苹果自家的显示器几乎无法外用着实让人觉得不爽。同时也计划入手一台电视方便提升语言能力，加上对便携性无要求，Mini升级方便，其娇小的身材搁着也不占地，日后退居二线还可以当高清下载机，如果硬盘真的可以支撑得到那个时候的话……</p>
-<p>总之，经对比分析一番之后，Mini以显著优势胜出。而历史经验告诉我们，理想可以很丰满，但现实往往是很骨感的……</p>]]>
-    
-    </summary>
-    
-      <category term="Dev" scheme="http://imcoddy.github.io/tags/dev/"/>
-    
-      <category term="Diary" scheme="http://imcoddy.github.io/tags/diary/"/>
-    
-      <category term="Life" scheme="http://imcoddy.github.io/tags/life/"/>
-    
-      <category term="Mac" scheme="http://imcoddy.github.io/tags/mac/"/>
-    
-      <category term="Diary" scheme="http://imcoddy.github.io/categories/diary/"/>
     
   </entry>
   
