@@ -4,7 +4,7 @@
   <subtitle><![CDATA[记录下那些折腾过的岁月。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://imcoddy.github.io/"/>
-  <updated>2015-06-19T14:09:09.000Z</updated>
+  <updated>2015-06-26T14:05:26.000Z</updated>
   <id>http://imcoddy.github.io/</id>
   
   <author>
@@ -13,6 +13,179 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Atom: The Hacking Editor Of Your Choice]]></title>
+    <link href="http://imcoddy.github.io/2015/06/26/atom-the-hacking-editor-of-your-choice/"/>
+    <id>http://imcoddy.github.io/2015/06/26/atom-the-hacking-editor-of-your-choice/</id>
+    <published>2015-06-26T13:04:41.000Z</published>
+    <updated>2015-06-26T14:05:26.000Z</updated>
+    <content type="html"><![CDATA[<p>经过了长达一年的 Beta 公众测试之后，Atom，这个号称可 Hack 的面向 21 世纪的文本编辑器，正式更新到了 1.0 版。虽然没有在其推出之初就用上（以前还是需要邀请码才能用的呢），但在最近刷 Leetcode 的时候，深感这款编辑器的可定制性和方便程度远超其它。而前阵子微软推出的新 IDE 和 Facebook 推出的 Nuclide 都基于 Atom，颇让人有种天下编辑器苦人久矣之感。是以在这个特别的日子里，有必要为其记上一笔。<br><a id="more"></a></p>
+<h2 id="巨人的肩膀">巨人的肩膀</h2><p>对于程序员而言，世界上的编辑器只有三种：Vim，Emacs，和其它。而对于我这样的 Vim 党而言，虽然 Vim 和 Emacs 的学习成本稍有些高，但在经历了一段磨合期之后，的确深感到其设计的优越性，让你的手在最小的移动范围内能高效实现各种操作。而且两者的定制程度都很高，配合着各种插件，可以将输入体验提高到一个的新的层次。</p>
+<p>可是，这两个 70 年代里诞生的软件，现在看来，终究还是显得有些过时了。除了界面经常让一些习惯用鼠标点来点去的用户觉得难以上手之外，其架构也使得在它上面进行功能扩展并不方便（无论是插件的编写语法还是兼容维护）。虽然对于程序员而言了解基本的 Vim 用法还是非常有必要，但对于非 Linux/Unix 的用户而言，更多人选择了”界面更友好”的其它编辑器。</p>
+<p>这里面不乏有各种优秀应用，例如 Notepad++，TextMate，Sublime 等等。而 Atom 作为后起之秀，有着更加远大的理想。</p>
+<h2 id="为何选用_Atom">为何选用 Atom</h2><p>对于每个 Atom 的新用户而言，这是一个必问的问题。Atom 的其官方手册上给出了<a href="https://atom.io/docs/latest/getting-started-why-atom" target="_blank" rel="external">这样的答案</a>：</p>
+<p>这个世界上有那么多种编辑器，为什么你要花时间学习和使用 Atom 呢？</p>
+<p>虽然 Sublime 和 TextMate 之类的编辑器已经非常好用了，但它们仅提供了很有限的拓展性。而在另一个极端，Emacs 和 Vim 提供了灵活的拓展性，但它们并不是很友好，需要使用专用的编程语言来配置和拓展。</p>
+<p>我们觉得我们可以做得更好。我们的目标是在保证易用性的同时提供充分的可拓展性（hackability）：这个编辑器会受到第一天学习编程的新生欢迎，而且当他们成长为编程专家时也难以割舍。</p>
+<p>当我们使用 Atom 来开发 Atom 的时候，随着它的逐渐完善，我们愈发觉得已经离不开它了。从表面上来看，Atom 是一个能满足你的期待的，现代化的桌面文本编辑器，而在表面之下，这是一个值得你去一同完善的系统。</p>
+<h2 id="超强的可定制性">超强的可定制性</h2><p>如上所述，如果说 Vim 和 Emacs 凝聚的是上个世纪文本编辑器的精华。那么 Atom 则将其思想进一步发扬光大。由于采用了 NodeWebkit 技术（Github 公司为了改进这技术还专门把 NodeWebkit 作者雇用了让他专职开发），在 Atom 里面，每一个窗口实际上都是一个本地渲染的网页。同时由于其良好的扩展性，用户可以用 JS 和 HTML5 语言在上面开发各种扩展。这大大降低了开发插件的难度，是以在短短的一年之内，围绕 Atom 所建的主题超过 500 多个，插件更是超过了 2000 多件。</p>
+<p>相关的插件都可以在 <a href="https://atom.io/packages/" target="_blank" rel="external">https://atom.io/packages/</a> 上进行查找。 个人所安装的插件列表<a href="https://github.com/imcoddy/.dotfiles/blob/feature/mac-home/atom/packages.txt" target="_blank" rel="external">如下</a>：</p>
+<pre><code>atom-beautify
+atom-color-<span class="keyword">highlight</span>
+atom-ctags
+atom-pair
+autocomplete-plus
+autocomplete-snippets
+color-picker
+comment
+dash
+easy-motion
+editor-stats
+emmet
+<span class="keyword">ex</span>-<span class="built_in">mode</span>
+<span class="keyword">file</span>-icons
+<span class="keyword">filetype</span>-color
+git-plus
+git-<span class="keyword">tab</span>-status
+<span class="keyword">highlight</span>-<span class="built_in">line</span>
+<span class="keyword">highlight</span>-selected
+japanese-wrap
+jshint
+<span class="keyword">language</span>-scheme
+linter
+linter-coffeelint
+linter-jshint
+merge-conflicts
+minimap
+minimap-<span class="keyword">highlight</span>-selected
+mocha-test-runner
+<span class="keyword">open</span>-<span class="keyword">last</span>-project
+pretty-json
+project-manager
+remote-<span class="keyword">edit</span>
+script
+seti-monokai
+seti-ui
+symbols-tree-<span class="keyword">view</span>
+terminal-status
+todo-show
+<span class="keyword">vim</span>-<span class="built_in">mode</span>
+<span class="keyword">vim</span>-surround
+</code></pre><p>长长的列表可能让人觉得管理起来会很麻烦，但这正是 Atom 的强大之处。在安装好 Atom 后它会在系统里面加上一个 <code>apm</code> 的命令，将上面的脚本保存到一个 packages.txt 文件里，配合一个简单的脚本，安装插件只在一念之中：</p>
+<pre><code>&gt; <span class="keyword">cat</span> install.<span class="keyword">sh</span>
+<span class="keyword">while</span> <span class="keyword">read</span> p; <span class="keyword">do</span>
+  apm install <span class="label">$p</span>
+done &lt; packages.txt
+</code></pre><p>更关键的一点是，不光是插件的管理可以用文本化，插件的配置也会全部放到 ~/.atom 目录下面，并以 cson 文件格式进行保存。这就意味着，只要通过 Github 之类的服务进行托管，就能很快的将其部署到新机器上，使得在新环境也能很快将 Atom 配置成自己习惯的样子！个人的配置<a href="https://github.com/imcoddy/.dotfiles/blob/feature/mac-home/atom/config.cson" target="_blank" rel="external">如下</a>：</p>
+<pre><code><span class="string">"*"</span>:
+  <span class="string">"exception-reporting"</span><span class="keyword">: {</span><span class="keyword">}</span>
+  welcome:
+    showOnStartup: <span class="keyword">false</span>
+  core:
+    themes: [
+      <span class="string">"one-light-ui"</span>
+      <span class="string">"one-light-syntax"</span>
+    ]
+    disabledPackages: [
+      <span class="string">"atom-ctags"</span>
+      <span class="string">"atom-pair"</span>
+      <span class="string">"atom-color-highlight"</span>
+      <span class="string">"editor-stats"</span>
+      <span class="string">"emmet"</span>
+      <span class="string">"exception-reporting"</span>
+      <span class="string">"git-plus"</span>
+      <span class="string">"git-tab-status"</span>
+      <span class="string">"language-scheme"</span>
+      <span class="string">"linter-coffeelint"</span>
+      <span class="string">"feedback"</span>
+      <span class="string">"git-plus"</span>
+      <span class="string">"git-tab-status"</span>
+      <span class="string">"metrics"</span>
+      <span class="string">"merge-conflicts"</span>
+      <span class="string">"minimap"</span>
+      <span class="string">"minimap-highlight-selected"</span>
+      <span class="string">"mocha-test-runner"</span>
+      <span class="string">"symbols-view"</span>
+      <span class="string">"symbols-tree-view"</span>
+      <span class="string">"terminal-status"</span>
+      <span class="string">"welcome"</span>
+    ]
+    followSymlinks: <span class="keyword">true</span>
+  editor:
+    <span class="keyword">invisibles: {</span><span class="keyword">}</span>
+    softWrap: <span class="keyword">true</span>
+    showIndentGuide: <span class="keyword">true</span>
+    showInvisibles: <span class="keyword">true</span>
+    softWrapAtPreferredLineLength: <span class="keyword">true</span>
+    fontSize: <span class="number">14</span>
+    lineHeight: <span class="number">1.2</span>
+    tabLength: <span class="number">4</span>
+  <span class="string">"filetype-color"</span>:
+    <span class="literal">enabled</span>: <span class="string">"false"</span>
+  <span class="keyword">linter: {</span><span class="keyword">}</span>
+  <span class="string">"terminal-status"</span><span class="keyword">: {</span><span class="keyword">}</span>
+  <span class="string">"atom-beautify"</span>:
+    analytics: <span class="keyword">false</span>
+    muteUnsupportedLanguageErrors: <span class="keyword">true</span>
+    language_coffeescript_beautify_on_save: <span class="keyword">true</span>
+    language_css_beautify_on_save: <span class="keyword">true</span>
+    language_csv_beautify_on_save: <span class="keyword">true</span>
+    language_html_beautify_on_save: <span class="keyword">true</span>
+    language_js_beautify_on_save: <span class="keyword">true</span>
+    language_json_beautify_on_save: <span class="keyword">true</span>
+    language_scss_beautify_on_save: <span class="keyword">true</span>
+    language_ruby_disabled: <span class="keyword">true</span>
+    language_python_beautify_on_save: <span class="keyword">true</span>
+  <span class="string">"vim-mode"</span>:
+    useClipboardAsDefaultRegister: <span class="keyword">true</span>
+    useSmartcaseForSearch: <span class="keyword">true</span>
+  <span class="string">"japanese-wrap"</span>:
+    <span class="keyword">characterWidth: {</span><span class="keyword">}</span>
+    <span class="keyword">lineBreakingRule: {</span><span class="keyword">}</span>
+  <span class="keyword">emmet: {</span><span class="keyword">}</span>
+  <span class="string">"autocomplete-plus"</span>:
+    confirmCompletion: <span class="string">"tab and enter"</span>
+    includeCompletionsFromAllBuffers: <span class="keyword">true</span>
+  minimap:
+    plugins:
+      <span class="string">"highlight-selected"</span>: <span class="keyword">true</span>
+  <span class="string">"atom-ctags"</span><span class="keyword">: {</span><span class="keyword">}</span>
+  <span class="string">"atom-pair"</span><span class="keyword">: {</span><span class="keyword">}</span>
+  <span class="string">"atom-color-highlight"</span><span class="keyword">: {</span><span class="keyword">}</span>
+  <span class="string">"linter-jshint"</span><span class="keyword">: {</span><span class="keyword">}</span>
+  <span class="string">"vim-surround"</span><span class="keyword">: {</span><span class="keyword">}</span>
+  autosave:
+    <span class="literal">enabled</span>: <span class="keyword">true</span>
+  script:
+    scrollWithOutput: <span class="keyword">false</span>
+</code></pre><p>至于其它的，还可以自定义 snippets，shortcuts 之类的，就不在这里一一描述了。但从上应该已经能体会到，只要你乐意去改，很多东西都是能 Hack 的，也难怪 Atom 从一开始就定位如此了:P</p>
+<h2 id="遗憾之处">遗憾之处</h2><p>虽然 Atom 的确有许多优秀的地方，我也通过定制尽可能地将 Vim 上的操作习惯迁移到了 Atom 上来。不过在使用 Atom 期间，还是遇到了一些小问题或不快的地方。</p>
+<ol>
+<li>启动稍慢<br>虽然打开后的反应还是很及时，但在启动的时候速度还是相对慢了一些。如果插件安装得比较多的话，有时可能需要等上数十秒。相比之下，基本 Atom 开发的微软 Code IDE 似乎快上不少，看来 Atom 应该还有不少待优化的地方。</li>
+<li>部分插件功能太弱<br>Vim 里面的 NerdCommenter 提供了许多强大的代码注释功能，可以快速地进行状态切换。这点在调试代码的时候非常有用。而 Atom 里面暂时还没有个较好的替代，而且唯一现在有的在家里的 Mac Mini 上还不能正常使用。其它的快速跳转和添加配对括号的插件也不是很顺手，内置的 Terminal 似乎也无法读取本地的 .zshrc 配置导致用得不习惯。这一些小问题，只能期待社区更加给力一点了。</li>
+<li>远程编辑功能缺失<br>不知道是我没有找对还是怎么回事，现有的 RemoteEdit 和Nuclide-server 都无法满足我的需求，使得在公司电脑上想在本地写 VM 里面的代码还是一种奢望。</li>
+</ol>
+<p>虽然稍有遗憾，但 Atom 的良好可定制性，还是深深地赢得了我的欢心。也相信随着 1.0 版的面世，这款编辑器将会变得更加强大。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>经过了长达一年的 Beta 公众测试之后，Atom，这个号称可 Hack 的面向 21 世纪的文本编辑器，正式更新到了 1.0 版。虽然没有在其推出之初就用上（以前还是需要邀请码才能用的呢），但在最近刷 Leetcode 的时候，深感这款编辑器的可定制性和方便程度远超其它。而前阵子微软推出的新 IDE 和 Facebook 推出的 Nuclide 都基于 Atom，颇让人有种天下编辑器苦人久矣之感。是以在这个特别的日子里，有必要为其记上一笔。<br>]]>
+    
+    </summary>
+    
+      <category term="App" scheme="http://imcoddy.github.io/tags/app/"/>
+    
+      <category term="Editor" scheme="http://imcoddy.github.io/tags/editor/"/>
+    
+      <category term="Hack" scheme="http://imcoddy.github.io/tags/hack/"/>
+    
+      <category term="Mac" scheme="http://imcoddy.github.io/tags/mac/"/>
+    
+      <category term="OSX" scheme="http://imcoddy.github.io/tags/osx/"/>
+    
+      <category term="Tech" scheme="http://imcoddy.github.io/categories/tech/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Link It In The Hard Way]]></title>
@@ -1243,69 +1416,6 @@ bind r source-<span class="keyword">file</span> ~/.tmux.<span class="keyword">co
       <category term="iTunes" scheme="http://imcoddy.github.io/tags/itunes/"/>
     
       <category term="Diary" scheme="http://imcoddy.github.io/categories/diary/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[How Time Flies, in Database]]></title>
-    <link href="http://imcoddy.github.io/2013/06/01/how-time-flies-in-database/"/>
-    <id>http://imcoddy.github.io/2013/06/01/how-time-flies-in-database/</id>
-    <published>2013-06-01T04:21:28.000Z</published>
-    <updated>2015-06-19T12:38:59.000Z</updated>
-    <content type="html"><![CDATA[<p>前阵子遇到了一个这样的的场景：数据库中原来使用的是MySQL中的DateTime格式，不过由于有经常性的时间比较的需求，以及需要引入多时区支持方便以后扩展。因此，需要将数据库的格式从DateTime转换成Timestamp。这就自然而然地引出了以下的问题：</p>
-<blockquote>
-<p>应该如何操作，以达到不影响服务的情况下平稳地实施这一更新？</p>
-</blockquote>
-<p>在回答这个问题之前，首先需要了解清楚数据库中的时间是如何存储的。<br><a id="more"></a></p>
-<h1 id="DateTime_vs_Timestamp">DateTime vs Timestamp</h1><p>这两个作为数据库中最常见的选择，难免时常被拿出来比较一番。在MySQL的<a href="http://dev.mysql.com/doc/refman/5.6/en/datetime.html" target="_blank" rel="external">官网</a>上，对这两个是这样说明的：</p>
-<blockquote>
-<p>The TIMESTAMP data type is used for values that contain both date and time parts. TIMESTAMP has a range of ‘1970-01-01 00:00:01’ UTC to ‘2038-01-19 03:14:07’ UTC.</p>
-<p>The DATETIME type is used for values that contain both date and time parts. MySQL retrieves and displays DATETIME values in ‘YYYY-MM-DD HH:MM:SS’ format. The supported range is ‘1000-01-01 00:00:00’ to ‘9999-12-31 23:59:59’.</p>
-<p>MySQL converts TIMESTAMP values from the current time zone to UTC for storage, and back from UTC to the current time zone for retrieval. (This does not occur for other types such as DATETIME.)</p>
-</blockquote>
-<p>Timestamp记录的是1970-01-01年始（UTC）所经过的秒数。在存储时，会根据服务器的时区计算出UTC时区对应的值存储下来，并在取出时将其还原成LocalTime。由于其存储时被当作一个4字节的非负整数，在2038年即将溢出（Bug2K+38）。</p>
-<p>DateTime在存储时占用的是8个字节，在记录的范围内可以比Timestamp多出不少。前四个字节的整数存放日期信息，后四个字节的整数存放时间信息。因此，所得到的结果是不连续着。这就意味着当希望把时间推迟一分钟时，并不是单纯地在原有的基础上加上60即可，而是需要经过更复杂的计算。</p>
-<p>实际上，对于已经定格的时间，用DateTime是一个不错的选择，如博文发表的时间，用户的生日等等。不过也由于DateTime本身与时区并无关系，在处理涉及多时区数据的时候（如生成统计报表），往往力不从心。</p>
-<p>另一方面，Timestamp则合适处理经常更新，或者对数据一致性要求较高的场合。虽然它的时间范围有限制，但那也是在不可预见的20年之后。（嗯，当年千年虫问题出现前的开发者也是这样的心态吧:P）</p>
-<h1 id="The_Other_Solution">The Other Solution</h1><p>在实际遇用中，不少开发者是使用int型来存储对应的Timestamp的。虽然做法和使用数据库内置的Timestamp类型大同小异，不过还是稍有区别。例如，SO上有人提到了这样的一个<a href="http://stackoverflow.com/a/4028045/834636" target="_blank" rel="external">场景</a>：</p>
-<blockquote>
-<p>Consider setting a timestamp by a user to a server in New York, for an appointment in Sanghai. Now when the user connects in Sanghai, he accesses the same appointment timestamp from a mirrored server in Tokyo. He will see the appointment in Tokyo time, offset from the original New York time.</p>
-</blockquote>
-<p>虽然该问题的提问者认为这时应该使用DateTime以便能够正确地显示出该时间，不过在我看来用int来记录下UTC的Timestamp，以及创建时所对应的正确时区，从而消除服务器数据库的时区偏差值。因此，在这种情况下，数据库中增加timezone栏必不可少。同时，需要在程序里对时间进行调整计算，确保能换成统一的时间截。</p>
-<p>虽然这样的做法折腾了一些，不过也给了开发者更多的自由，在进行数据查询及比较时也因为少了不必要的格式转换而更加自然。同时，这也意味着需要对代码的安全性担负更大的责任，完备的测试用例必不可少。</p>
-<h1 id="What_I_Learnt">What I Learnt</h1><p>回到前面的问题，在部署这部分的更新时，其实折腾了好一阵子。现在回顾起来，感受如下：</p>
-<ol>
-<li>开发和时区有关系的应用时，一定要使用UTC标准时间，仅在显示的时候根据需要进行调整。</li>
-<li>虽然变更对于软件开发来说不可避免，但前期的考虑还是应该尽可能充分一些。比如这样的变更，在设计时考虑到多时区的因素，可以避免后期不少麻烦。</li>
-<li>对生产环境中的数据库进行变更，需要尽力避免出现服务中断或者宕机造成数据不一致的情况。</li>
-<li>建立相应的运行脚本，并添加dryrun方法，仅在指定参数时才执行更新数据库的操作以避免误执行。</li>
-<li>在要变更的DateTime栏后边增加对应的Timestamp栏，采用Double Write来记录该DateTime相对应的时间截。</li>
-<li>确定数据存储没问题之后，尽可能地在Model层将数据从原先的DateTime读取换成从Timestamp读取，并计算相应的DateTime以保持对外的接口不变。</li>
-<li>确认没问题后，将原先的数据栏给消除掉，停止Double Write。</li>
-</ol>
-<p>总之，最初感觉一个并不太大的功能，最后感觉让自己折腾了不少，这或许是其中最大的收获吧。</p>
-<p>最后，把时间交给程序来处理，有时还是难免出现各种意想不倒的问题。暂且不说“臭名昭著”的夏令时记时的转换给开发增添了多少乱子，也不提那个<a href="http://stackoverflow.com/questions/6841333/why-is-subtracting-these-two-times-in-1927-giving-a-strange-result" target="_blank" rel="external">更换时区的事件</a>对程序员提出了多高的「上知天文、下识地理」的人文需求，光是2012年7月1日添加的那一闰秒，就足以让所有<a href="http://coolshell.cn/articles/7804.html" target="_blank" rel="external">内核低于2.6.18-164的Linux系统的服务器Crush</a>。</p>
-<p>嗯，这让无证程序员压力山大，毕竟，计算机世界里的数据只是现实的映射。然而时间依旧这样流逝着，不紧不慢，不离不弃。</p>
-<p>How Time Flies! 以此为题，在六一里纪念一下逝去的青春。</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>前阵子遇到了一个这样的的场景：数据库中原来使用的是MySQL中的DateTime格式，不过由于有经常性的时间比较的需求，以及需要引入多时区支持方便以后扩展。因此，需要将数据库的格式从DateTime转换成Timestamp。这就自然而然地引出了以下的问题：</p>
-<blockquote>
-<p>应该如何操作，以达到不影响服务的情况下平稳地实施这一更新？</p>
-</blockquote>
-<p>在回答这个问题之前，首先需要了解清楚数据库中的时间是如何存储的。<br>]]>
-    
-    </summary>
-    
-      <category term="Dev" scheme="http://imcoddy.github.io/tags/dev/"/>
-    
-      <category term="Diary" scheme="http://imcoddy.github.io/tags/diary/"/>
-    
-      <category term="MySQL" scheme="http://imcoddy.github.io/tags/mysql/"/>
-    
-      <category term="PHP" scheme="http://imcoddy.github.io/tags/php/"/>
-    
-      <category term="Tech" scheme="http://imcoddy.github.io/categories/tech/"/>
     
   </entry>
   

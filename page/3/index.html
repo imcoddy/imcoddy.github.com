@@ -162,6 +162,91 @@
           
           
             
+              <a class="post-title-link" href="/2013/06/01/how-time-flies-in-database/">
+                How Time Flies, in Database
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on 2013-06-01
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; In
+            
+              <a href="/categories/tech/">Tech</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+            <a href="/2013/06/01/how-time-flies-in-database/#comments" >
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/06/01/how-time-flies-in-database/"></span>
+            </a>
+          </span>
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>前阵子遇到了一个这样的的场景：数据库中原来使用的是MySQL中的DateTime格式，不过由于有经常性的时间比较的需求，以及需要引入多时区支持方便以后扩展。因此，需要将数据库的格式从DateTime转换成Timestamp。这就自然而然地引出了以下的问题：</p>
+<blockquote>
+<p>应该如何操作，以达到不影响服务的情况下平稳地实施这一更新？</p>
+</blockquote>
+<p>在回答这个问题之前，首先需要了解清楚数据库中的时间是如何存储的。<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2013/06/01/how-time-flies-in-database/">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
               <a class="post-title-link" href="/2013/05/19/journey-to-the-mac/">
                 一入果教深似海，从此折腾常相随
               </a>
@@ -272,7 +357,7 @@
         <div class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">21</span>
+              <span class="site-state-item-count">22</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -286,7 +371,7 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">43</span>
+              <span class="site-state-item-count">44</span>
               <span class="site-state-item-name">tags</span>
               </a>
           </div>
@@ -406,23 +491,22 @@
 
   
 
-    
-      
-    
-
     <script type="text/javascript">
       var disqus_shortname = 'imcoddy';
       var disqus_identifier = 'page/3/index.html';
       var disqus_title = '';
       var disqus_url = '';
 
-      (function(){
+      function run_disqus_script(disqus_script){
         var dsq = document.createElement('script');
         dsq.type = 'text/javascript';
         dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-      }());
+      }
+
+      run_disqus_script('count.js');
+      
     </script>
   
 

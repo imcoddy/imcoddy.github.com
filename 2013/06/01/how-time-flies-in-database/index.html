@@ -333,7 +333,7 @@
         <div class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">21</span>
+              <span class="site-state-item-count">22</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -347,7 +347,7 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">43</span>
+              <span class="site-state-item-count">44</span>
               <span class="site-state-item-name">tags</span>
               </a>
           </div>
@@ -617,23 +617,24 @@
 
   
 
-    
-      
-    
-
     <script type="text/javascript">
       var disqus_shortname = 'imcoddy';
       var disqus_identifier = '2013/06/01/how-time-flies-in-database/';
       var disqus_title = 'How Time Flies, in Database';
       var disqus_url = 'http://imcoddy.github.io/2013/06/01/how-time-flies-in-database/';
 
-      (function(){
+      function run_disqus_script(disqus_script){
         var dsq = document.createElement('script');
         dsq.type = 'text/javascript';
         dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-      }());
+      }
+
+      run_disqus_script('count.js');
+      
+        run_disqus_script('embed.js');
+      
     </script>
   
 
