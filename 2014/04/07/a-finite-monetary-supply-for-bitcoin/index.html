@@ -1,11 +1,15 @@
 <!doctype html>
 <html class="theme-next use-motion theme-next-mist">
 <head>
-  
+    
 
 <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
 
 
 
@@ -16,10 +20,10 @@
 
 
 
-  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
 
-<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.3"/>
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.4"/>
 
 
     <meta name="description" content="用只言片语，来记录下那些折腾过的岁月。I am here, therefore I go Z-turn." />
@@ -34,28 +38,32 @@
 
 
 
-  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.3" />
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.4" />
 
+
+<meta name="description" content="尽管人们普遍认为，中本聪是个对通货膨胀鄙夷之极的金本位支持者，但他从来没有说过这样的话。实际上，他所编写的代码将让比特币的供应量无限增长，直到永远。在他所建立的货币供应量模型里，每经过一个 Mibillenium (1024 年)将会有四个金矿被开采出来，它们之前有着相同的时间间隔，每一个金矿在 140 年的历程中被开采完。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="A Finite Monetary Supply For Bitcoin">
+<meta property="og:url" content="http://imcoddy.github.io/2014/04/07/a-finite-monetary-supply-for-bitcoin/index.html">
+<meta property="og:site_name" content="Q小帝的折腾笔记">
+<meta property="og:description" content="尽管人们普遍认为，中本聪是个对通货膨胀鄙夷之极的金本位支持者，但他从来没有说过这样的话。实际上，他所编写的代码将让比特币的供应量无限增长，直到永远。在他所建立的货币供应量模型里，每经过一个 Mibillenium (1024 年)将会有四个金矿被开采出来，它们之前有着相同的时间间隔，每一个金矿在 140 年的历程中被开采完。">
+<meta property="og:image" content="https://github.com/sipa/bips/raw/e04e99c315dd4067e267b62f84c9eeffeeccf94e/bip-0042/inflation.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="A Finite Monetary Supply For Bitcoin">
+<meta name="twitter:description" content="尽管人们普遍认为，中本聪是个对通货膨胀鄙夷之极的金本位支持者，但他从来没有说过这样的话。实际上，他所编写的代码将让比特币的供应量无限增长，直到永远。在他所建立的货币供应量模型里，每经过一个 Mibillenium (1024 年)将会有四个金矿被开采出来，它们之前有着相同的时间间隔，每一个金矿在 140 年的历程中被开采完。">
 
 
 <script type="text/javascript" id="hexo.configuration">
   var CONFIG = {
     scheme: 'Mist',
-    analytics: {
-      google: 'UA-41226530-1'
-    },
     sidebar: 'hide'
   };
 </script>
 
-
-
-
-  <title> A Finite Monetary Supply For Bitcoin // Q小帝的折腾笔记 </title>
+    <title> A Finite Monetary Supply For Bitcoin // Q小帝的折腾笔记 </title>
 </head>
-
-<body>
-  <!--[if lte IE 8]>
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+<!--[if lte IE 8]>
   <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
     <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
       <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
@@ -65,14 +73,24 @@
   </div>
 <![endif]-->
 
-  <div class="container one-column page-post-detail">
-    <div class="headband"></div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-41226530-1', 'auto');
+  ga('send', 'pageview');
+</script>
 
-    <div id="header" class="header">
-      <div class="header-inner">
-        <h1 class="site-meta">
+
+
+
+<div class="container one-column page-post-detail">
+    <div class="headband"></div>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+        <div class="header-inner"><h1 class="site-meta">
   <span class="logo-line-before"><i></i></span>
-  <a href="/" class="brand">
+  <a href="/" class="brand" rel="start">
       <span class="logo">
         <i class="icon-logo"></i>
       </span>
@@ -89,7 +107,7 @@
   </button>
 </div>
 
-<div class="site-nav">
+<nav class="site-nav">
   
 
   
@@ -97,7 +115,7 @@
       
         
         <li class="menu-item menu-item-categories">
-          <a href="/categories">
+          <a href="/categories" rel="section">
             <i class="menu-item-icon icon-categories"></i> <br />
             Categories
           </a>
@@ -105,7 +123,7 @@
       
         
         <li class="menu-item menu-item-archives">
-          <a href="/archives">
+          <a href="/archives" rel="section">
             <i class="menu-item-icon icon-archives"></i> <br />
             Archives
           </a>
@@ -113,7 +131,7 @@
       
         
         <li class="menu-item menu-item-tags">
-          <a href="/tags">
+          <a href="/tags" rel="section">
             <i class="menu-item-icon icon-tags"></i> <br />
             Tags
           </a>
@@ -141,26 +159,26 @@
 <div class="site-search-toggle"></div>
     </div>
   
-</div>
+</nav>
 
 
-      </div>
-    </div>
+        </div>
+    </header>
 
-    <div id="main" class="main">
-      <div class="main-inner">
-        <div id="content" class="content">
-          
+    <main id="main" class="main">
+        <div class="main-inner">
+            <div id="content" class="content">
+                
 
   <div id="posts" class="posts-expand">
     
 
-  <div class="post post-type-normal ">
-    <div class="post-header">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
 
       
       
-        <h1 class="post-title">
+        <h1 class="post-title" itemprop="name headline">
           
           
             
@@ -172,14 +190,17 @@
 
       <div class="post-meta">
         <span class="post-time">
-          Posted on 2014-04-07
+          Posted on
+          <time itemprop="dateCreated" datetime="2014-04-07T22:03:26+09:00" content="2014-04-07">
+            2014-04-07
+          </time>
         </span>
 
         
-          <span class="post-category">
+          <span class="post-category" >
             &nbsp; | &nbsp; In
             
-              <a href="/categories/bitcoin/">Bitcoin</a>
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a href="/categories/bitcoin/" itemprop="url" rel="index"><span itemprop="name">Bitcoin</span></a></span>
 
               
               
@@ -192,14 +213,14 @@
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/2014/04/07/a-finite-monetary-supply-for-bitcoin/#comments" >
-              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2014/04/07/a-finite-monetary-supply-for-bitcoin/"></span>
+            <a href="/2014/04/07/a-finite-monetary-supply-for-bitcoin/#comments" itemprop="discussionUrl">
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2014/04/07/a-finite-monetary-supply-for-bitcoin/" itemprop="commentsCount"></span>
             </a>
           </span>
           
         
       </div>
-    </div>
+    </header>
 
     <div class="post-body">
 
@@ -207,7 +228,7 @@
       
 
       
-        <blockquote>
+        <span itemprop="articleBody"><blockquote>
 <p>BIP: 42<br>    标题: 比特币无限量供应修正案<br>    作者: Pieter Wuille<br>    状态: 草案<br>    类型: 常规跟踪<br>    创建于: 2014 年 4 月 1 日</p>
 </blockquote>
 <h2 id="摘要">摘要</h2><p>尽管人们普遍认为，中本聪是个对通货膨胀鄙夷之极的金本位支持者，但他从来没有说过这样的话。实际上，他所编写的代码将让比特币的供应量无限增长，直到永远。在他所建立的货币供应量模型里，每经过一个 Mibillenium (1024 年)将会有四个金矿被开采出来，它们之前有着相同的时间间隔，每一个金矿在 140 年的历程中被开采完。</p>
@@ -240,17 +261,17 @@ nSubsidy &gt;&gt;= (nHeight / <span class="number">210000</span>);`
 <p>由于这篇草案是在愚人节的时候发出来的，而且原文作者里扯了不少程序员才能明白的调侃，所以当时大家看到这文章时，都单纯把这当成了恶搞，直到 Gavin 把这个代码合并了。真亦假时假亦真，这算是今年看到的最佳愚人节恶搞之一了 :)</p>
 <p>最后阴谋论一下，没准这本来就是本聪大叔为抗通缩所设计的本意也说不定呢。毕竟经过一百多年之后，不少私钥已经被其主人忘记，造成了许多比特币被永久尘封。所以说，<a href="http://www.8btc.com/bitcoin-change-addresses-explanation" target="_blank" rel="external">It’s not a bug, it is a feature！</a> :P</p>
 <p>文中所引用图片版权归原作者所有。<br>译者：imcoddy<br>原文地址：<a href="https://github.com/sipa/bips/blob/e04e99c315dd4067e267b62f84c9eeffeeccf94e/bip-0042.mediawiki" target="_blank" rel="external">A finite monetary supply for Bitcoin</a><br>欢迎打赏：1MzziGBa7tNNzMwVJMPEjAfM1wRcvSGZu5</p>
-
+</span>
       
     </div>
 
-    <div class="post-footer">
+    <footer class="post-footer">
       
         <div class="post-tags">
           
-            <a href="/tags/bitcoin/"> #Bitcoin </a>
+            <a href="/tags/bitcoin/" rel="tag">#Bitcoin</a>
           
-            <a href="/tags/translation/"> #Translation </a>
+            <a href="/tags/translation/" rel="tag">#Translation</a>
           
         </div>
       
@@ -259,13 +280,13 @@ nSubsidy &gt;&gt;= (nHeight / <span class="number">210000</span>);`
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2014/06/21/their-bit-zone/">Their Bitzone</a>
+              <a href="/2014/06/21/their-bit-zone/" rel="prev">Their Bitzone</a>
             
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2014/01/25/network-miner-fee-policy-migration-plan/">Network/Miner Fee Policy Migration Plan</a>
+              <a href="/2014/01/25/network-miner-fee-policy-migration-plan/" rel="next">Network/Miner Fee Policy Migration Plan</a>
             
           </div>
         </div>
@@ -273,34 +294,33 @@ nSubsidy &gt;&gt;= (nHeight / <span class="number">210000</span>);`
 
       
       
-    </div>
-  </div>
+    </footer>
+  </article>
 
 
 
     <div class="post-spread">
       
     </div>
-
-    
-      <div class="comments" id="comments">
-        
-          <div id="disqus_thread">
-            <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-          </div>
-        
-      </div>
-    
   </div>
 
 
+            </div>
+
+            
+
+            
+              <div class="comments" id="comments">
+                
+                  <div id="disqus_thread">
+                    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                  </div>
+                
+              </div>
+            
         </div>
 
         
-      </div>
-
-
-      
   
   <div class="sidebar-toggle">
     <div class="sidebar-toggle-line-wrap">
@@ -310,12 +330,12 @@ nSubsidy &gt;&gt;= (nHeight / <span class="number">210000</span>);`
     </div>
   </div>
 
-  <div id="sidebar" class="sidebar">
+  <aside id="sidebar" class="sidebar">
     <div class="sidebar-inner">
 
       
         <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
             Table Of Contents
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
@@ -324,13 +344,13 @@ nSubsidy &gt;&gt;= (nHeight / <span class="number">210000</span>);`
         </ul>
       
 
-      <div class="site-overview">
-        <div class="site-author motion-element">
-          <img class="site-author-image" src="https://avatars2.githubusercontent.com/u/622780?v=3&s=460" alt="Qiu Di" />
-          <p class="site-author-name">Qiu Di</p>
+      <section class="site-overview">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="https://avatars2.githubusercontent.com/u/622780?v=3&s=460" alt="Qiu Di" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">Qiu Di</p>
         </div>
-        <p class="site-description motion-element">用只言片语，来记录下那些折腾过的岁月。I am here, therefore I go Z-turn.</p>
-        <div class="site-state motion-element">
+        <p class="site-description motion-element" itemprop="description">用只言片语，来记录下那些折腾过的岁月。I am here, therefore I go Z-turn.</p>
+        <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
               <span class="site-state-item-count">23</span>
@@ -347,16 +367,16 @@ nSubsidy &gt;&gt;= (nHeight / <span class="number">210000</span>);`
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">46</span>
+              <span class="site-state-item-count">48</span>
               <span class="site-state-item-name">tags</span>
               </a>
           </div>
 
-        </div>
+        </nav>
 
         
           <div class="feed-link motion-element">
-            <a href="/atom.xml">
+            <a href="/atom.xml" rel="alternate">
               <i class="menu-item-icon icon-feed"></i>
               RSS
             </a>
@@ -367,19 +387,19 @@ nSubsidy &gt;&gt;= (nHeight / <span class="number">210000</span>);`
           
             
               <span class="links-of-author-item">
-              <a href="https://github.com/imcoddy" target="_blank">GitHub</a>
-            </span>
+                <a href="https://github.com/imcoddy" target="_blank">GitHub</a>
+              </span>
             
               <span class="links-of-author-item">
-              <a href="https://twitter.com/imcoddy" target="_blank">Twitter</a>
-            </span>
+                <a href="https://twitter.com/imcoddy" target="_blank">Twitter</a>
+              </span>
             
           
         </div>
 
         
         
-          <div class="cc-license motion-element">
+          <div class="cc-license motion-element" itemprop="license">
             <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
               <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
             </a>
@@ -389,11 +409,11 @@ nSubsidy &gt;&gt;= (nHeight / <span class="number">210000</span>);`
         <div class="links-of-author motion-element">
           
         </div>
-        
-      </div>
+
+      </section>
 
       
-        <div class="post-toc-wrap sidebar-panel-active">
+        <section class="post-toc-wrap sidebar-panel-active">
           <div class="post-toc-indicator-top post-toc-indicator"></div>
           <div class="post-toc">
             
@@ -402,25 +422,25 @@ nSubsidy &gt;&gt;= (nHeight / <span class="number">210000</span>);`
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
-        </div>
+        </section>
       
 
     </div>
-  </div>
+  </aside>
 
 
-    </div>
+    </main>
 
-    <div id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">
+    <footer id="footer" class="footer">
+        <div class="footer-inner">
+            <div class="copyright" >
   
   &copy; &nbsp;  2013 - 
-  2015
+  <span itemprop="copyrightYear">2015</span>
   <span class="with-love">
     <i class="icon-heart"></i>
   </span>
-  <span class="author">Qiu Di</span>
+  <span class="author" itemprop="copyrightHolder">Qiu Di</span>
 </div>
 
 <div class="powered-by">
@@ -436,23 +456,51 @@ nSubsidy &gt;&gt;= (nHeight / <span class="number">210000</span>);`
 
 
 
-      </div>
-    </div>
+        </div>
+    </footer>
 
     <div class="back-to-top"></div>
-  </div>
+</div>
 
-  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
 
   
   
+  
+    
+    
 
+  
+
+    <script type="text/javascript">
+      var disqus_shortname = 'imcoddy';
+      var disqus_identifier = '2014/04/07/a-finite-monetary-supply-for-bitcoin/';
+      var disqus_title = 'A Finite Monetary Supply For Bitcoin';
+      var disqus_url = 'http://imcoddy.github.io/2014/04/07/a-finite-monetary-supply-for-bitcoin/';
+
+      function run_disqus_script(disqus_script){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }
+
+      run_disqus_script('count.js');
+      
+        run_disqus_script('embed.js');
+      
+    </script>
+  
+
+
+  
   
   <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
-  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.3"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.4"></script>
 
 
-  <script type="text/javascript" src="/js/helpers.js?v=0.4.3"></script>
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.4"></script>
   
   <script type="text/javascript">
     $(document).ready(function() {
@@ -470,15 +518,15 @@ nSubsidy &gt;&gt;= (nHeight / <span class="number">210000</span>);`
   <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
   <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
 
-  <script type="text/javascript" src="/js/motion_global.js?v=0.4.3" id="motion.global"></script>
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.4" id="motion.global"></script>
 
 
 
   <script type="text/javascript" src="/js/search-toggle.js"></script>
 
+
   
-  
-<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.3" id="bootstrap.scrollspy.custom"></script>
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.4" id="bootstrap.scrollspy.custom"></script>
 
 
 <script type="text/javascript" id="sidebar.toc.highlight">
@@ -511,7 +559,6 @@ nSubsidy &gt;&gt;= (nHeight / <span class="number">210000</span>);`
     }
 
     function getTOCMaxHeight () {
-      var $sidebarInner = $('.sidebar-inner');
       var height = $('.sidebar').height() -
                    $tocSelector.position().top -
                    $('.post-toc-indicator-bottom').height();
@@ -533,7 +580,7 @@ nSubsidy &gt;&gt;= (nHeight / <span class="number">210000</span>);`
       )
     }
 
-    $(document).on('sidebar.didShow', function () {
+    $(document).on('sidebar.motion.complete', function () {
       processTOC();
     });
 
@@ -617,61 +664,30 @@ nSubsidy &gt;&gt;= (nHeight / <span class="number">210000</span>);`
 
 
 
-  <script type="text/javascript">
+<script type="text/javascript">
     $(document).ready(function () {
-      if (CONFIG.sidebar === 'always') {
-        displaySidebar();
-      }
+        if (CONFIG.sidebar === 'always') {
+            displaySidebar();
+        }
     });
-  </script>
-
-  
-
-  
-  
-  
-
-  
-
-    <script type="text/javascript">
-      var disqus_shortname = 'imcoddy';
-      var disqus_identifier = '2014/04/07/a-finite-monetary-supply-for-bitcoin/';
-      var disqus_title = 'A Finite Monetary Supply For Bitcoin';
-      var disqus_url = 'http://imcoddy.github.io/2014/04/07/a-finite-monetary-supply-for-bitcoin/';
-
-      function run_disqus_script(disqus_script){
-        var dsq = document.createElement('script');
-        dsq.type = 'text/javascript';
-        dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-      }
-
-      run_disqus_script('count.js');
-      
-        run_disqus_script('embed.js');
-      
-    </script>
-  
+</script>
 
 
 
 
-  
-  
-  <script type="text/javascript" src="/js/analytics_google-analytics.js?v=0.4.3"></script>
 
 
-  
-  <!-- lazyload -->
-  <script type="text/javascript" src="/js/lazyload.js"></script>
-      <script type="text/javascript">
-        jQuery(function() {          
-            jQuery("#posts img").lazyload({
-              placeholder:"http://www.arao.me/loading.gif",  
-                effect:"fadeIn"
-              });
-            });
-    </script>   
+
+
+<!-- lazyload -->
+<script type="text/javascript" src="/js/lazyload.js"></script>
+<script type="text/javascript">
+    jQuery(function () {
+        jQuery("#posts img").lazyload({
+            placeholder: "/images/loading.gif",
+            effect: "fadeIn"
+        });
+    });
+</script>
 </body>
 </html>

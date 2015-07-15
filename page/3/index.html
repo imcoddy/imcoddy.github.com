@@ -1,11 +1,15 @@
 <!doctype html>
 <html class="theme-next use-motion theme-next-mist">
 <head>
-  
+    
 
 <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
 
 
 
@@ -16,10 +20,10 @@
 
 
 
-  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
 
-<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.3"/>
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.4"/>
 
 
     <meta name="description" content="用只言片语，来记录下那些折腾过的岁月。I am here, therefore I go Z-turn." />
@@ -34,28 +38,31 @@
 
 
 
-  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.3" />
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.4" />
 
+
+<meta name="description" content="用只言片语，来记录下那些折腾过的岁月。I am here, therefore I go Z-turn.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Q小帝的折腾笔记">
+<meta property="og:url" content="http://imcoddy.github.io/page/3/index.html">
+<meta property="og:site_name" content="Q小帝的折腾笔记">
+<meta property="og:description" content="用只言片语，来记录下那些折腾过的岁月。I am here, therefore I go Z-turn.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Q小帝的折腾笔记">
+<meta name="twitter:description" content="用只言片语，来记录下那些折腾过的岁月。I am here, therefore I go Z-turn.">
 
 
 <script type="text/javascript" id="hexo.configuration">
   var CONFIG = {
     scheme: 'Mist',
-    analytics: {
-      google: 'UA-41226530-1'
-    },
     sidebar: 'hide'
   };
 </script>
 
-
-
-
-  <title> Q小帝的折腾笔记 </title>
+    <title> Q小帝的折腾笔记 </title>
 </head>
-
-<body>
-  <!--[if lte IE 8]>
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+<!--[if lte IE 8]>
   <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
     <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
       <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
@@ -65,16 +72,26 @@
   </div>
 <![endif]-->
 
-  <div class="container one-column 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-41226530-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+<div class="container one-column 
    page-home 
 ">
     <div class="headband"></div>
-
-    <div id="header" class="header">
-      <div class="header-inner">
-        <h1 class="site-meta">
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+        <div class="header-inner"><h1 class="site-meta">
   <span class="logo-line-before"><i></i></span>
-  <a href="/" class="brand">
+  <a href="/" class="brand" rel="start">
       <span class="logo">
         <i class="icon-logo"></i>
       </span>
@@ -91,7 +108,7 @@
   </button>
 </div>
 
-<div class="site-nav">
+<nav class="site-nav">
   
 
   
@@ -99,7 +116,7 @@
       
         
         <li class="menu-item menu-item-categories">
-          <a href="/categories">
+          <a href="/categories" rel="section">
             <i class="menu-item-icon icon-categories"></i> <br />
             Categories
           </a>
@@ -107,7 +124,7 @@
       
         
         <li class="menu-item menu-item-archives">
-          <a href="/archives">
+          <a href="/archives" rel="section">
             <i class="menu-item-icon icon-archives"></i> <br />
             Archives
           </a>
@@ -115,7 +132,7 @@
       
         
         <li class="menu-item menu-item-tags">
-          <a href="/tags">
+          <a href="/tags" rel="section">
             <i class="menu-item-icon icon-tags"></i> <br />
             Tags
           </a>
@@ -143,30 +160,30 @@
 <div class="site-search-toggle"></div>
     </div>
   
-</div>
+</nav>
 
 
-      </div>
-    </div>
+        </div>
+    </header>
 
-    <div id="main" class="main">
-      <div class="main-inner">
-        <div id="content" class="content">
-          
-  <div id="posts" class="posts-expand">
+    <main id="main" class="main">
+        <div class="main-inner">
+            <div id="content" class="content">
+                
+  <section id="posts" class="posts-expand">
     
       
 
-  <div class="post post-type-normal ">
-    <div class="post-header">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
 
       
       
-        <h1 class="post-title">
+        <h1 class="post-title" itemprop="name headline">
           
           
             
-              <a class="post-title-link" href="/2013/06/10/update-ios-to-unjailbreakable/">
+              <a class="post-title-link" href="/2013/06/10/update-ios-to-unjailbreakable/" itemprop="url">
                 Update iOS to Unjailbreakable
               </a>
             
@@ -176,14 +193,17 @@
 
       <div class="post-meta">
         <span class="post-time">
-          Posted on 2013-06-10
+          Posted on
+          <time itemprop="dateCreated" datetime="2013-06-10T21:18:14+09:00" content="2013-06-10">
+            2013-06-10
+          </time>
         </span>
 
         
-          <span class="post-category">
+          <span class="post-category" >
             &nbsp; | &nbsp; In
             
-              <a href="/categories/diary/">Diary</a>
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a href="/categories/diary/" itemprop="url" rel="index"><span itemprop="name">Diary</span></a></span>
 
               
               
@@ -196,14 +216,14 @@
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/2013/06/10/update-ios-to-unjailbreakable/#comments" >
-              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/06/10/update-ios-to-unjailbreakable/"></span>
+            <a href="/2013/06/10/update-ios-to-unjailbreakable/#comments" itemprop="discussionUrl">
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/06/10/update-ios-to-unjailbreakable/" itemprop="commentsCount"></span>
             </a>
           </span>
           
         
       </div>
-    </div>
+    </header>
 
     <div class="post-body">
 
@@ -214,7 +234,7 @@
         
           <p>转眼WWDC2013就要开始了，关于iOS7的扁平化风格的猜测也是此起彼伏。虽然对那种一板子将3维图标打成2D然后落井下石抽除高光纹理的扁平风格说不上讨厌或喜欢，不过今天忽然觉得应该与时俱进升级一下系统了。然后手一抖点了iTunes里的升级，然后就开始了悲剧的一天……</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2013/06/10/update-ios-to-unjailbreakable/">
+            <a class="btn" href="/2013/06/10/update-ios-to-unjailbreakable/" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -222,7 +242,7 @@
       
     </div>
 
-    <div class="post-footer">
+    <footer class="post-footer">
       
 
       
@@ -231,23 +251,23 @@
       
         <div class="post-eof"></div>
       
-    </div>
-  </div>
+    </footer>
+  </article>
 
 
     
       
 
-  <div class="post post-type-normal ">
-    <div class="post-header">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
 
       
       
-        <h1 class="post-title">
+        <h1 class="post-title" itemprop="name headline">
           
           
             
-              <a class="post-title-link" href="/2013/06/01/how-time-flies-in-database/">
+              <a class="post-title-link" href="/2013/06/01/how-time-flies-in-database/" itemprop="url">
                 How Time Flies, in Database
               </a>
             
@@ -257,14 +277,17 @@
 
       <div class="post-meta">
         <span class="post-time">
-          Posted on 2013-06-01
+          Posted on
+          <time itemprop="dateCreated" datetime="2013-06-01T13:21:28+09:00" content="2013-06-01">
+            2013-06-01
+          </time>
         </span>
 
         
-          <span class="post-category">
+          <span class="post-category" >
             &nbsp; | &nbsp; In
             
-              <a href="/categories/tech/">Tech</a>
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a href="/categories/tech/" itemprop="url" rel="index"><span itemprop="name">Tech</span></a></span>
 
               
               
@@ -277,14 +300,14 @@
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/2013/06/01/how-time-flies-in-database/#comments" >
-              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/06/01/how-time-flies-in-database/"></span>
+            <a href="/2013/06/01/how-time-flies-in-database/#comments" itemprop="discussionUrl">
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/06/01/how-time-flies-in-database/" itemprop="commentsCount"></span>
             </a>
           </span>
           
         
       </div>
-    </div>
+    </header>
 
     <div class="post-body">
 
@@ -299,7 +322,7 @@
 </blockquote>
 <p>在回答这个问题之前，首先需要了解清楚数据库中的时间是如何存储的。<br>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2013/06/01/how-time-flies-in-database/">
+            <a class="btn" href="/2013/06/01/how-time-flies-in-database/" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -307,7 +330,7 @@
       
     </div>
 
-    <div class="post-footer">
+    <footer class="post-footer">
       
 
       
@@ -316,23 +339,23 @@
       
         <div class="post-eof"></div>
       
-    </div>
-  </div>
+    </footer>
+  </article>
 
 
     
       
 
-  <div class="post post-type-normal ">
-    <div class="post-header">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
 
       
       
-        <h1 class="post-title">
+        <h1 class="post-title" itemprop="name headline">
           
           
             
-              <a class="post-title-link" href="/2013/05/19/journey-to-the-mac/">
+              <a class="post-title-link" href="/2013/05/19/journey-to-the-mac/" itemprop="url">
                 一入果教深似海，从此折腾常相随
               </a>
             
@@ -342,14 +365,17 @@
 
       <div class="post-meta">
         <span class="post-time">
-          Posted on 2013-05-19
+          Posted on
+          <time itemprop="dateCreated" datetime="2013-05-19T13:21:28+09:00" content="2013-05-19">
+            2013-05-19
+          </time>
         </span>
 
         
-          <span class="post-category">
+          <span class="post-category" >
             &nbsp; | &nbsp; In
             
-              <a href="/categories/diary/">Diary</a>
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a href="/categories/diary/" itemprop="url" rel="index"><span itemprop="name">Diary</span></a></span>
 
               
               
@@ -362,14 +388,14 @@
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/2013/05/19/journey-to-the-mac/#comments" >
-              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/05/19/journey-to-the-mac/"></span>
+            <a href="/2013/05/19/journey-to-the-mac/#comments" itemprop="discussionUrl">
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/05/19/journey-to-the-mac/" itemprop="commentsCount"></span>
             </a>
           </span>
           
         
       </div>
-    </div>
+    </header>
 
     <div class="post-body">
 
@@ -382,7 +408,7 @@
 <p>虽然之前一直盯着13寸的MBPr，不过笔记本那么大的屏幕看起来总觉得小了一些，而且相同的价格可以搞到一台iMac了。不过当考虑入手iMac时，苹果自家的显示器几乎无法外用着实让人觉得不爽。同时也计划入手一台电视方便提升语言能力，加上对便携性无要求，Mini升级方便，其娇小的身材搁着也不占地，日后退居二线还可以当高清下载机，如果硬盘真的可以支撑得到那个时候的话……</p>
 <p>总之，经对比分析一番之后，Mini以显著优势胜出。而历史经验告诉我们，理想可以很丰满，但现实往往是很骨感的……</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2013/05/19/journey-to-the-mac/">
+            <a class="btn" href="/2013/05/19/journey-to-the-mac/" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -390,7 +416,7 @@
       
     </div>
 
-    <div class="post-footer">
+    <footer class="post-footer">
       
 
       
@@ -399,26 +425,27 @@
       
         <div class="post-eof"></div>
       
-    </div>
-  </div>
+    </footer>
+  </article>
 
 
     
-  </div>
+  </section>
 
   
-  <div class="pagination">
+  <nav class="pagination">
     <a class="extend prev" rel="prev" href="/page/2/">&laquo;</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
-  </div>
+  </nav>
 
 
+            </div>
+
+            
+
+            
         </div>
 
         
-      </div>
-
-
-      
   
   <div class="sidebar-toggle">
     <div class="sidebar-toggle-line-wrap">
@@ -428,18 +455,18 @@
     </div>
   </div>
 
-  <div id="sidebar" class="sidebar">
+  <aside id="sidebar" class="sidebar">
     <div class="sidebar-inner">
 
       
 
-      <div class="site-overview">
-        <div class="site-author motion-element">
-          <img class="site-author-image" src="https://avatars2.githubusercontent.com/u/622780?v=3&s=460" alt="Qiu Di" />
-          <p class="site-author-name">Qiu Di</p>
+      <section class="site-overview">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="https://avatars2.githubusercontent.com/u/622780?v=3&s=460" alt="Qiu Di" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">Qiu Di</p>
         </div>
-        <p class="site-description motion-element">用只言片语，来记录下那些折腾过的岁月。I am here, therefore I go Z-turn.</p>
-        <div class="site-state motion-element">
+        <p class="site-description motion-element" itemprop="description">用只言片语，来记录下那些折腾过的岁月。I am here, therefore I go Z-turn.</p>
+        <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
               <span class="site-state-item-count">23</span>
@@ -456,16 +483,16 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">46</span>
+              <span class="site-state-item-count">48</span>
               <span class="site-state-item-name">tags</span>
               </a>
           </div>
 
-        </div>
+        </nav>
 
         
           <div class="feed-link motion-element">
-            <a href="/atom.xml">
+            <a href="/atom.xml" rel="alternate">
               <i class="menu-item-icon icon-feed"></i>
               RSS
             </a>
@@ -476,19 +503,19 @@
           
             
               <span class="links-of-author-item">
-              <a href="https://github.com/imcoddy" target="_blank">GitHub</a>
-            </span>
+                <a href="https://github.com/imcoddy" target="_blank">GitHub</a>
+              </span>
             
               <span class="links-of-author-item">
-              <a href="https://twitter.com/imcoddy" target="_blank">Twitter</a>
-            </span>
+                <a href="https://twitter.com/imcoddy" target="_blank">Twitter</a>
+              </span>
             
           
         </div>
 
         
         
-          <div class="cc-license motion-element">
+          <div class="cc-license motion-element" itemprop="license">
             <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
               <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
             </a>
@@ -498,27 +525,27 @@
         <div class="links-of-author motion-element">
           
         </div>
-        
-      </div>
+
+      </section>
 
       
 
     </div>
-  </div>
+  </aside>
 
 
-    </div>
+    </main>
 
-    <div id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">
+    <footer id="footer" class="footer">
+        <div class="footer-inner">
+            <div class="copyright" >
   
   &copy; &nbsp;  2013 - 
-  2015
+  <span itemprop="copyrightYear">2015</span>
   <span class="with-love">
     <i class="icon-heart"></i>
   </span>
-  <span class="author">Qiu Di</span>
+  <span class="author" itemprop="copyrightHolder">Qiu Di</span>
 </div>
 
 <div class="powered-by">
@@ -534,58 +561,16 @@
 
 
 
-      </div>
-    </div>
+        </div>
+    </footer>
 
     <div class="back-to-top"></div>
-  </div>
+</div>
 
-  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
-
-  
-  
+<script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
 
   
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
-  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.3"></script>
-
-
-  <script type="text/javascript" src="/js/helpers.js?v=0.4.3"></script>
   
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $('#st-search-input').focus(function(){
-        $(this).animate({ width:"260px"}, 800); // enlarge width
-      }).blur(function(){
-        $(this).animate({ width:"140px"}, 800); // return to original value
-      });
-    });
-  </script>
-
-
-  
-
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
-  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
-
-  <script type="text/javascript" src="/js/motion_global.js?v=0.4.3" id="motion.global"></script>
-
-
-
-  <script type="text/javascript" src="/js/search-toggle.js"></script>
-
-  
-
-  <script type="text/javascript">
-    $(document).ready(function () {
-      if (CONFIG.sidebar === 'always') {
-        displaySidebar();
-      }
-    });
-  </script>
-
-  
-
   
   
   
@@ -613,22 +598,87 @@
 
 
 
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.4"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.4"></script>
+  
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('#st-search-input').focus(function(){
+        $(this).animate({ width:"260px"}, 800); // enlarge width
+      }).blur(function(){
+        $(this).animate({ width:"140px"}, 800); // return to original value
+      });
+    });
+  </script>
+
+
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.4" id="motion.global"></script>
+
+
+
+  <script type="text/javascript" src="/js/search-toggle.js"></script>
+
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        if (CONFIG.sidebar === 'always') {
+            displaySidebar();
+        }
+    });
+</script>
+
+
+
 
   
   
-  <script type="text/javascript" src="/js/analytics_google-analytics.js?v=0.4.3"></script>
-
 
   
-  <!-- lazyload -->
-  <script type="text/javascript" src="/js/lazyload.js"></script>
-      <script type="text/javascript">
-        jQuery(function() {          
-            jQuery("#posts img").lazyload({
-              placeholder:"http://www.arao.me/loading.gif",  
-                effect:"fadeIn"
-              });
-            });
-    </script>   
+
+    <script type="text/javascript">
+      var disqus_shortname = 'imcoddy';
+      var disqus_identifier = 'page/3/index.html';
+      var disqus_title = '';
+      var disqus_url = '';
+
+      function run_disqus_script(disqus_script){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }
+
+      run_disqus_script('count.js');
+      
+    </script>
+  
+
+
+
+
+
+
+
+<!-- lazyload -->
+<script type="text/javascript" src="/js/lazyload.js"></script>
+<script type="text/javascript">
+    jQuery(function () {
+        jQuery("#posts img").lazyload({
+            placeholder: "/images/loading.gif",
+            effect: "fadeIn"
+        });
+    });
+</script>
 </body>
 </html>
