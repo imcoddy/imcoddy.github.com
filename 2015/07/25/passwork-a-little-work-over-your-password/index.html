@@ -1,0 +1,705 @@
+<!doctype html>
+<html class="theme-next use-motion theme-next-mist">
+<head>
+    
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+
+  <link href='//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.4"/>
+
+
+    <meta name="description" content="用只言片语，来记录下那些折腾过的岁月。I am here, therefore I go Z-turn." />
+
+
+
+  <meta name="keywords" content="Bitcoin,Development,PassworK,Project,Security," />
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Q小帝的折腾笔记" type="application/atom+xml" />
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.4" />
+
+
+<meta name="description" content="很早之前就打算写一个密码生成工具来辅助生成密码了。趁着最近 Lastpass Premium 到期，终于将它实现出来。网址为https://passwork.herokuapp.com/，欢迎大家使用。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PassworK - A Little Work Over Your Password">
+<meta property="og:url" content="http://imcoddy.github.io/2015/07/25/passwork-a-little-work-over-your-password/index.html">
+<meta property="og:site_name" content="Q小帝的折腾笔记">
+<meta property="og:description" content="很早之前就打算写一个密码生成工具来辅助生成密码了。趁着最近 Lastpass Premium 到期，终于将它实现出来。网址为https://passwork.herokuapp.com/，欢迎大家使用。">
+<meta property="og:image" content="https://passwork.herokuapp.com/assets/images/64aa250e.passwork-256x256.png">
+<meta property="og:image" content="http://i1375.photobucket.com/albums/ag455/imcoddy/Blog/PassworK_zpsb3bcsnpa.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PassworK - A Little Work Over Your Password">
+<meta name="twitter:description" content="很早之前就打算写一个密码生成工具来辅助生成密码了。趁着最近 Lastpass Premium 到期，终于将它实现出来。网址为https://passwork.herokuapp.com/，欢迎大家使用。">
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: 'hide'
+  };
+</script>
+
+    <title> PassworK - A Little Work Over Your Password // Q小帝的折腾笔记 </title>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+<!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-41226530-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+<div class="container one-column page-post-detail">
+    <div class="headband"></div>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+        <div class="header-inner"><h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand" rel="start">
+      <span class="logo">
+        <i class="icon-logo"></i>
+      </span>
+      <span class="site-title">Q小帝的折腾笔记</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu menu-left">
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            <i class="menu-item-icon icon-categories"></i> <br />
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon icon-archives"></i> <br />
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            <i class="menu-item-icon icon-tags"></i> <br />
+            Tags
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+<form class="site-search-form">
+  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+</form>
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', '9i_t1xRXxu3ezvVDPFut','2.0.0');
+</script>
+
+<div class="site-search-toggle"></div>
+    </div>
+  
+</nav>
+
+
+        </div>
+    </header>
+
+    <main id="main" class="main">
+        <div class="main-inner">
+            <div id="content" class="content">
+                
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              PassworK - A Little Work Over Your Password
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on
+          <time itemprop="dateCreated" datetime="2015-07-25T16:10:02+09:00" content="2015-07-25">
+            2015-07-25
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; In
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a href="/categories/diary/" itemprop="url" rel="index"><span itemprop="name">Diary</span></a></span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+            <a href="/2015/07/25/passwork-a-little-work-over-your-password/#comments" itemprop="discussionUrl">
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/07/25/passwork-a-little-work-over-your-password/" itemprop="commentsCount"></span>
+            </a>
+          </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><p><img src="https://passwork.herokuapp.com/assets/images/64aa250e.passwork-256x256.png" alt=""></p>
+<p>很早之前就打算写一个密码生成工具来辅助生成密码了。趁着最近 Lastpass Premium 到期，终于将它实现出来。网址为<a href="https://passwork.herokuapp.com/" target="_blank" rel="external">https://passwork.herokuapp.com/</a>，欢迎大家使用。</p>
+<a id="more"></a>
+<h2 id="设计原因">设计原因</h2><p>只所以写这个工具，是因为大部分用户还是习惯性的在不同的网站上设置相同的密码，而且密码的内容也十分简单，如用生日“19880219”或者姓名缩写+电话“jzm13018923223”。这样只要一个网站的密码被盗后，其它网站上的帐户也很容易受到影响。</p>
+<h2 id="使用方法">使用方法</h2><p>PassworK 正是为了解决这一问题而诞生的。其用法也很简单：通过用户输入的自定义字符串，生成一个比较复杂的密码。用户所定义的字符串可以分成两部分：固定语和变化语。前者是自己设计的短语，可以包含空格或其它的标点符号，长度也可以超过 16 位，只需要用户能够确保自己能完全记得住（切记一定要自己能记住，否则就算只差了一个空格，生成的密码也会完全不一样）；后者则是随着要登陆的网站不同而变化的信息，比如网站的域名。</p>
+<p>例如，假设我以“MyPassworK”作为固定的密语，要登陆的网站的域名为变化语，那么可以得到如下的结果：</p>
+<pre><code><span class="variable">MyPassw0rK</span> + facebook → f<span class="variable">Cb5ADZh2pQpK5Lq</span>
+<span class="variable">MyPassworK</span> + twitter → <span class="variable">HZrqB6YYBBdW98GC</span>
+<span class="variable">MyPassworK</span> + google → <span class="variable">HUL17S6dePbyriCQ</span>
+...
+</code></pre><p><img src="http://i1375.photobucket.com/albums/ag455/imcoddy/Blog/PassworK_zpsb3bcsnpa.png" alt=""></p>
+<p>通过这样的设置之后，就可以在只记住自己所设定的固定语这一个密码的情况下，为不同的网站创建容易生成而不重复的密码。</p>
+<h2 id="高级用法">高级用法</h2><p>尽管 PassworK 的推荐用法如上所示，用户实际上完全可以设置自己的密码生成规则。例如将固定语中的“MyPassworK”改成“MyPassw0rK”，同时将变化语中的域名部分的第二个字母变成大写。这将得到如下的结果：</p>
+<pre><code>MyPassw<span class="number">0</span>rK + fAcebook → <span class="title">M7</span>WS<span class="number">5</span>L<span class="number">54</span><span class="keyword">G6</span>QK<span class="number">97</span>F<span class="number">6</span>
+MyPassw<span class="number">0</span>rK + tWitter → XMYCxGcEarF<span class="number">3</span>sCQR
+MyPassw<span class="number">0</span>rK + gOogle → SwyqE<span class="number">4</span>UMuMf<span class="number">6</span>oTPR
+...
+</code></pre><p>甚至再将其颠倒过来，得到如下的结果：</p>
+<pre><code>fAcebook + MyPassw<span class="number">0</span>rK → Q<span class="number">9</span><span class="label">Nt24</span>mPXTSD<span class="label">NFC5</span>
+tWitter + MyPassw<span class="number">0</span>rK → <span class="number">4</span>K<span class="number">5</span>H<span class="number">2</span>YAmfxidJHyA
+gOogle + MyPassw<span class="number">0</span>rK → KEfq<span class="label">nLuGEoGf5</span>giy
+...
+</code></pre><p>一个更好的办法是，用户根据自己要登陆的账号的重要程度，分别设置两到三个不同的固定语，从而可以更大程度上保护自己账号的安全。</p>
+<p>同时，PassworK 还可将生成的密码以 QR 码的形式显示出来，例如用户要在不安全的电脑（例如网吧或者他人可能感染了病毒的电脑）上登陆时，可以在保证自己手机在可信任状态下（例如没有越狱过的 iPhone 上面）生成密码，再通过电脑摄像头进行读取。</p>
+<h2 id="实现原理">实现原理</h2><p>加密算法可以有很种多。 PassworK 受 Brainwallet 的启发，通过用 Bitcore 库，对用户输入的内容进行组合，然后生成一个比特币脑钱包地址。再将其秘钥所对应的字符串进行截取，用第三至第十八位字符作生成的密码。</p>
+<p>由于每一个确定的输入都能得到一个确定的比特币地址，所以，只要用户能确保自己记得所设定的暗语，就可以得到相同的密码。</p>
+<p>以 MyPassw0rK + fAcebook 为例子，这两个短语组合后可以得到字符串MyPassworKfacebook，将这作为输入，可以得到如下的结果（这一点可以在 <a href="https://brainwallet.org/" target="_blank" rel="external">Brainwallet</a> 上进行验证）：</p>
+<pre><code>Secret <span class="string">Exponent:</span> f2c2d825155bb3860d80247c243c4acec2a04fc578f1ba5db350390b5e2d4379
+Point <span class="string">Conversion:</span> Uncompressed
+Private <span class="string">Key:</span> <span class="number">5</span>KfCb5ADZh2pQpK5Lqvr2P86aXj43enZ4FL78yFbF52nYY58FJf
+<span class="string">Address:</span> <span class="number">1</span>JnB64zCAYS6KJ4WqdsBoXU71io9193wdP
+</code></pre><p>而所生成的密码 fCb5ADZh2pQpK5Lq，便来自上面的私钥。</p>
+<h2 id="安全分析">安全分析</h2><p>尽管比特币脑钱包并不被大众推荐，脑钱包所生成的私钥在格式上与其他并无二异。问题在于如果用户所设计的暗语过于简单的话，很有可能会受到暴力破解。换句话说，如果选择的暗语足够独特（例如 8299c2360c05bd4207014da2228b54d54db34236，PassworK 的第一个 commit ID ），被破解的概率与随机生成一个含有余额的比特币私钥其实差别不大。</p>
+<p>同时，从生成机制上说，PassworK 所生成的密码受比特币地址的规则所限，仅包含 Base58 所允许的字符。尽管密码里没有标点或许会让某些高级用户觉得不够安全，但这也很好地避免了某些网站不允许设置标点作为密码从而提高了兼容性。毕竟，PassworK 解决的问题是，提供了一种简单易记的方式生成一个较高强度的密码。如果有更高的要求，请购买 1Password 或者 Lastpass 的服务，或者自行修改源码配置自己的字符映射表。</p>
+<h2 id="支持捐助">支持捐助</h2><ul>
+<li>如果你觉得 PassworK 对你能有所帮助，请推荐给你的朋友，网络安全的意识提升需要大家的共同努力。</li>
+<li>如果你对 PassworK 有任何的意见或建议，欢迎与我联系。</li>
+<li>如果你喜欢 PassworK，请向 <a href="https://blockchain.info/address/1DNpE2i4H4bCRd6ezcgv3bL13Uc8GCEEPo" target="_blank" rel="external">1DNpE2i4H4bCRd6ezcgv3bL13Uc8GCEEPo</a> 进行捐赠。</li>
+<li>如果你对这种方式生成的密码的安全性还有疑虑，上面的地址就是用这种方式生成的，如果你能猜出我的密码的话欢迎将里面的币取走，不过之后烦请告诉我一下 ┗(°0°)┛</li>
+</ul>
+</span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/bitcoin/" rel="tag">#Bitcoin</a>
+          
+            <a href="/tags/development/" rel="tag">#Development</a>
+          
+            <a href="/tags/passwork/" rel="tag">#PassworK</a>
+          
+            <a href="/tags/project/" rel="tag">#Project</a>
+          
+            <a href="/tags/security/" rel="tag">#Security</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/07/18/map-filco-minila-air-to-hhkb/" rel="next">Map Filco Minila Air To HHKB</a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+            </div>
+
+            
+
+            
+              <div class="comments" id="comments">
+                
+                  <div id="disqus_thread">
+                    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                  </div>
+                
+              </div>
+            
+        </div>
+
+        
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table Of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="https://avatars2.githubusercontent.com/u/622780?v=3&s=460" alt="Qiu Di" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">Qiu Di</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">用只言片语，来记录下那些折腾过的岁月。I am here, therefore I go Z-turn.</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">24</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-name">categories</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">50</span>
+              <span class="site-state-item-name">tags</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="menu-item-icon icon-feed"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/imcoddy" target="_blank">GitHub</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/imcoddy" target="_blank">Twitter</a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#设计原因"><span class="nav-number">1.</span> <span class="nav-text">设计原因</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用方法"><span class="nav-number">2.</span> <span class="nav-text">使用方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#高级用法"><span class="nav-number">3.</span> <span class="nav-text">高级用法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现原理"><span class="nav-number">4.</span> <span class="nav-text">实现原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安全分析"><span class="nav-number">5.</span> <span class="nav-text">安全分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#支持捐助"><span class="nav-number">6.</span> <span class="nav-text">支持捐助</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+    </main>
+
+    <footer id="footer" class="footer">
+        <div class="footer-inner">
+            <div class="copyright" >
+  
+  &copy; &nbsp;  2013 - 
+  <span itemprop="copyrightYear">2015</span>
+  <span class="with-love">
+    <i class="icon-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Qiu Di</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+
+        </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+</div>
+
+<script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+    
+    
+
+  
+
+    <script type="text/javascript">
+      var disqus_shortname = 'imcoddy';
+      var disqus_identifier = '2015/07/25/passwork-a-little-work-over-your-password/';
+      var disqus_title = 'PassworK - A Little Work Over Your Password';
+      var disqus_url = 'http://imcoddy.github.io/2015/07/25/passwork-a-little-work-over-your-password/';
+
+      function run_disqus_script(disqus_script){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }
+
+      run_disqus_script('count.js');
+      
+        run_disqus_script('embed.js');
+      
+    </script>
+  
+
+
+  
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.4"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.4"></script>
+  
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('#st-search-input').focus(function(){
+        $(this).animate({ width:"260px"}, 800); // enlarge width
+      }).blur(function(){
+        $(this).animate({ width:"140px"}, 800); // return to original value
+      });
+    });
+  </script>
+
+
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.4" id="motion.global"></script>
+
+
+
+  <script type="text/javascript" src="/js/search-toggle.js"></script>
+
+
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.4" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+          var self = this;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      $(indicator).velocity('stop').velocity({
+        opacity: action === 'show' ? 0.4 : 0
+      }, { duration: 100 });
+    }
+
+  });
+</script>
+
+
+  <script type="text/javascript" id="sidebar.nav">
+    $(document).ready(function () {
+      var html = $('html');
+
+      $('.sidebar-nav li').on('click', function () {
+        var item = $(this);
+        var activeTabClassName = 'sidebar-nav-active';
+        var activePanelClassName = 'sidebar-panel-active';
+        if (item.hasClass(activeTabClassName)) {
+          return;
+        }
+
+        var currentTarget = $('.' + activePanelClassName);
+        var target = $('.' + item.data('target'));
+
+        currentTarget.velocity('transition.slideUpOut', 200, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', 200)
+            .addClass(activePanelClassName);
+        });
+
+        item.siblings().removeClass(activeTabClassName);
+        item.addClass(activeTabClassName);
+      });
+
+      $('.post-toc a').on('click', function (e) {
+        e.preventDefault();
+        var offset = $(escapeSelector(this.getAttribute('href'))).offset().top;
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        });
+      });
+
+      // Expand sidebar on post detail page by default, when post has a toc.
+      var $tocContent = $('.post-toc-content');
+      if (isDesktop() && CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    });
+  </script>
+
+
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        if (CONFIG.sidebar === 'always') {
+            displaySidebar();
+        }
+    });
+</script>
+
+
+
+
+
+
+
+
+<!-- lazyload -->
+<script type="text/javascript" src="/js/lazyload.js"></script>
+<script type="text/javascript">
+    jQuery(function () {
+        jQuery("#posts img").lazyload({
+            placeholder: "/images/loading.gif",
+            effect: "fadeIn"
+        });
+    });
+</script>
+</body>
+</html>
