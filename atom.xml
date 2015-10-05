@@ -4,7 +4,7 @@
   <subtitle><![CDATA[记录下那些折腾过的岁月。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://imcoddy.github.io/"/>
-  <updated>2015-10-05T08:03:20.000Z</updated>
+  <updated>2015-10-05T13:01:17.000Z</updated>
   <id>http://imcoddy.github.io/</id>
   
   <author>
@@ -15,11 +15,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[“Alias For Your Git Branches"]]></title>
+    <title><![CDATA[Alias For Your Git Branches]]></title>
     <link href="http://imcoddy.github.io/2015/10/05/alias-your-git-branches/"/>
     <id>http://imcoddy.github.io/2015/10/05/alias-your-git-branches/</id>
     <published>2015-10-05T12:23:00.000Z</published>
-    <updated>2015-10-05T08:03:20.000Z</updated>
+    <updated>2015-10-05T13:01:17.000Z</updated>
     <content type="html"><![CDATA[<p><img src="http://i1375.photobucket.com/albums/ag455/imcoddy/Blog/git-branch_zps9p0s7kro.jpg" alt="git-branch"> </p>
 <p>今天手头上工作的项目终于从 SVN 迁移到 Git 上了。其实这事本身对我来说没有什么太大影响，因为在此之前就直接用 git-svn 一直开发着，现在只不过换了一下提交的方式而已，所以当同事在推进的时候基本也没有怎么关心。直到项目迁移完了，才发现遇到了一个问题。</p>
 <a id="more"></a>
