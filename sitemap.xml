@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://imcoddy.github.io/2015/10/05/alias-your-git-branches/</loc>
+    <lastmod>2015-10-05T08:03:20.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://imcoddy.github.io/2015/07/25/passwork-a-little-work-over-your-password/</loc>
     <lastmod>2015-07-26T02:41:25.000Z</lastmod>
   </url>
@@ -14,11 +19,6 @@
   <url>
     <loc>http://imcoddy.github.io/2015/01/10/what-sarutobi-app-means-to-bitcoin/</loc>
     <lastmod>2015-07-12T06:11:39.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://imcoddy.github.io/tags/index.html</loc>
-    <lastmod>2015-07-05T11:58:18.000Z</lastmod>
   </url>
   
   <url>
@@ -52,7 +52,7 @@
   </url>
   
   <url>
-    <loc>http://imcoddy.github.io/2013/09/23/at-hometown-as-a-guest/</loc>
+    <loc>http://imcoddy.github.io/2015/05/17/upgrade-to-hexo-3/</loc>
     <lastmod>2015-07-05T11:58:18.000Z</lastmod>
   </url>
   
@@ -67,7 +67,7 @@
   </url>
   
   <url>
-    <loc>http://imcoddy.github.io/2015/05/17/upgrade-to-hexo-3/</loc>
+    <loc>http://imcoddy.github.io/tags/index.html</loc>
     <lastmod>2015-07-05T11:58:18.000Z</lastmod>
   </url>
   
@@ -92,12 +92,17 @@
   </url>
   
   <url>
-    <loc>http://imcoddy.github.io/2015/06/26/atom-the-hacking-editor-of-your-choice/</loc>
+    <loc>http://imcoddy.github.io/2013/09/23/at-hometown-as-a-guest/</loc>
     <lastmod>2015-07-05T11:58:18.000Z</lastmod>
   </url>
   
   <url>
     <loc>http://imcoddy.github.io/2014/08/22/bitcoin-in-tokyo/</loc>
+    <lastmod>2015-07-05T11:58:18.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://imcoddy.github.io/2015/06/26/atom-the-hacking-editor-of-your-choice/</loc>
     <lastmod>2015-07-05T11:58:18.000Z</lastmod>
   </url>
   
