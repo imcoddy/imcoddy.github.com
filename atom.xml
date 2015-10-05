@@ -84,7 +84,7 @@
     <link href="http://imcoddy.github.io/2015/07/25/passwork-a-little-work-over-your-password/"/>
     <id>http://imcoddy.github.io/2015/07/25/passwork-a-little-work-over-your-password/</id>
     <published>2015-07-25T07:10:02.000Z</published>
-    <updated>2015-07-26T02:41:25.000Z</updated>
+    <updated>2015-07-26T02:49:02.000Z</updated>
     <content type="html"><![CDATA[<p><img src="https://passwork.herokuapp.com/assets/images/64aa250e.passwork-256x256.png" alt=""></p>
 <p>很早之前就打算写一个密码生成工具来辅助生成密码了。趁着最近 Lastpass Premium 到期，终于将它实现出来。网址为<a href="https://passwork.herokuapp.com/" target="_blank" rel="external">https://passwork.herokuapp.com/</a>，欢迎大家使用。</p>
 <a id="more"></a>
