@@ -4,7 +4,7 @@
   <subtitle><![CDATA[记录下那些折腾过的岁月。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://imcoddy.github.io/"/>
-  <updated>2015-10-05T13:01:17.000Z</updated>
+  <updated>2015-10-05T14:19:24.000Z</updated>
   <id>http://imcoddy.github.io/</id>
   
   <author>
@@ -13,6 +13,38 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Host Static Html On Heroku]]></title>
+    <link href="http://imcoddy.github.io/2015/10/05/host-static-html-on-heroku/"/>
+    <id>http://imcoddy.github.io/2015/10/05/host-static-html-on-heroku/</id>
+    <published>2015-10-05T13:34:00.000Z</published>
+    <updated>2015-10-05T14:19:24.000Z</updated>
+    <content type="html"><![CDATA[<p><img src="http://photos.prnewswire.com/prn/20110712/SF33967LOGO" alt="heroku"><br>前阵子脑钱包的作者因为安全性的原因，将脑钱包网站彻底关闭，而且还将代码也清空了。确实，从安全性的角度而言，脑钱包的确容易出现被人撞库而造成损失，以至于 <a href="http://imcoddy.github.io/2014/01/18/do-not-use-a-brainwallet/" target="_blank" rel="external">Gavin 都强烈警告过不要用它</a>。但平心而论，脑钱包其实还是一个非常不错的在线工具，这样关闭未免有些矫枉过正了。因此，我打算在 Heroku 上重新开一个镜像。<br><a id="more"></a></p>
+<p>由于之前 fork 过代码，将最近一些小修改合并到了 master 分支后，设置了一下 heroku 的配置，轻车熟路地就将代码部署上去了。不过当我打开了 <a href="http://brainwallet.herokuapp.com/" target="_blank" rel="external">http://brainwallet.herokuapp.com/</a> 之后，却提示应用没有正常配置。搜索一番后发现，原来结果居然是 Heroku 不支持直接部署静态的 HTML 网页！</p>
+<p>发现这个原因后觉得有点哭笑不得。不过在知道原因后，解决起来也就容易多了：只需要让 Heroku 能正常识别出文件类型就好。这一般是通过设置 Procfile 来实现，不过人懒如偶，当然不会为了折腾一个静态页面去配置各种 Ruby 插件。当我知道 Heroku 对 PHP 支持不错时，新建一个叫 index.php 的文件，在里面加入以下一行代码即可。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="php"><span class="preprocessor">&lt;?php</span> <span class="keyword">include_once</span>(<span class="string">"home.html"</span>); <span class="preprocessor">?&gt;</span></span></span><br></pre></td></tr></table></figure>
+<p>这样做之后，Heroku 就会将程序识别为 PHP 的应用，虽然会提示缺少某些文件，不过对于这样一个静态的网站，这并不是什么问题。</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">&gt; gps heroku master</span><br><span class="line">Counting <span class="string">objects:</span> <span class="number">1954</span>, done.</span><br><span class="line">Delta compression using up to <span class="number">4</span> threads.</span><br><span class="line">Compressing <span class="string">objects:</span> <span class="number">100</span>% (<span class="number">764</span>/<span class="number">764</span>), done.</span><br><span class="line">Writing <span class="string">objects:</span> <span class="number">100</span>% (<span class="number">1954</span><span class="regexp">/1954), 600.38 KiB | 0 bytes/</span>s, done.</span><br><span class="line">Total <span class="number">1954</span> (delta <span class="number">1335</span>), reused <span class="number">1741</span> (delta <span class="number">1182</span>)</span><br><span class="line"><span class="string">remote:</span> Compressing source files... done.</span><br><span class="line"><span class="string">remote:</span> Building <span class="string">source:</span></span><br><span class="line"><span class="string">remote:</span></span><br><span class="line"><span class="string">remote:</span> -----&gt; PHP app detected</span><br><span class="line"><span class="string">remote:</span></span><br><span class="line"><span class="string">remote:</span>  !     <span class="string">WARNING:</span> No <span class="string">'composer.json'</span> found.</span><br><span class="line"><span class="string">remote:</span>        Using <span class="string">'index.php'</span> to declare PHP applications is considered legacy</span><br><span class="line"><span class="string">remote:</span>        functionality and may lead to unexpected behavior.</span><br><span class="line"><span class="string">remote:</span></span><br><span class="line"><span class="string">remote:</span> -----&gt; No runtime required <span class="keyword">in</span> <span class="string">'composer.json'</span>, defaulting to PHP <span class="number">5.6</span>.14.</span><br><span class="line"><span class="string">remote:</span> -----&gt; Installing system packages...</span><br><span class="line"><span class="string">remote:</span>        - PHP <span class="number">5.6</span>.14</span><br><span class="line"><span class="string">remote:</span>        - Apache <span class="number">2.4</span>.10</span><br><span class="line"><span class="string">remote:</span>        - Nginx <span class="number">1.6</span>.0</span><br><span class="line"><span class="string">remote:</span> -----&gt; Installing PHP extensions...</span><br><span class="line"><span class="string">remote:</span>        - zend-opcache (automatic; bundled)</span><br><span class="line"><span class="string">remote:</span> -----&gt; Installing dependencies...</span><br><span class="line"><span class="string">remote:</span>        Composer version <span class="number">1.0</span>.0-alpha10 <span class="number">2015</span>-<span class="number">04</span>-<span class="number">14</span> <span class="number">21</span>:<span class="number">18</span>:<span class="number">51</span></span><br><span class="line"><span class="string">remote:</span> -----&gt; Preparing runtime environment...</span><br><span class="line"><span class="string">remote:</span>        <span class="string">NOTICE:</span> No Procfile, using <span class="string">'web: vendor/bin/heroku-php-apache2'</span>.</span><br><span class="line"><span class="string">remote:</span> -----&gt; Discovering process types</span><br><span class="line"><span class="string">remote:</span>        Procfile declares types -&gt; web</span><br><span class="line"><span class="string">remote:</span></span><br><span class="line"><span class="string">remote:</span> -----&gt; Compressing... done, <span class="number">72.7</span>MB</span><br><span class="line"><span class="string">remote:</span> -----&gt; Launching... done, v3</span><br><span class="line"><span class="string">remote:</span>        <span class="string">https:</span><span class="comment">//brainwallet.herokuapp.com/ deployed to Heroku</span></span><br><span class="line"><span class="string">remote:</span></span><br><span class="line"><span class="string">remote:</span> Verifying deploy... done.</span><br></pre></td></tr></table></figure>
+<p>就这样，脑钱包网站就重新恢复啦。撒花~ <a href="http://brainwallet.herokuapp.com/" target="_blank" rel="external">http://brainwallet.herokuapp.com/</a></p>
+<p>当然，就算恢复了，并不意味着我推荐大家去将币存在脑钱包里面，除非你真的明白其原理，并加密过自己输入的密语。脑钱包对我而言是一个很方便的管理私钥的方式，但对于更多的人而言，用<a href="https://bither.net/" target="_blank" rel="external">比太钱包</a>才是更合适的选择。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><img src="http://photos.prnewswire.com/prn/20110712/SF33967LOGO" alt="heroku"><br>前阵子脑钱包的作者因为安全性的原因，将脑钱包网站彻底关闭，而且还将代码也清空了。确实，从安全性的角度而言，脑钱包的确容易出现被人撞库而造成损失，以至于 <a href="http://imcoddy.github.io/2014/01/18/do-not-use-a-brainwallet/">Gavin 都强烈警告过不要用它</a>。但平心而论，脑钱包其实还是一个非常不错的在线工具，这样关闭未免有些矫枉过正了。因此，我打算在 Heroku 上重新开一个镜像。<br>]]>
+    
+    </summary>
+    
+      <category term="Bitcoin" scheme="http://imcoddy.github.io/tags/bitcoin/"/>
+    
+      <category term="Brainwallet" scheme="http://imcoddy.github.io/tags/brainwallet/"/>
+    
+      <category term="Dairy" scheme="http://imcoddy.github.io/tags/dairy/"/>
+    
+      <category term="Heroku" scheme="http://imcoddy.github.io/tags/heroku/"/>
+    
+      <category term="Tech" scheme="http://imcoddy.github.io/categories/tech/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Alias For Your Git Branches]]></title>
@@ -1242,190 +1274,6 @@ nSubsidy &gt;&gt;= (nHeight / <span class="number">210000</span>);`
       <category term="Diary" scheme="http://imcoddy.github.io/tags/diary/"/>
     
       <category term="HHKB" scheme="http://imcoddy.github.io/tags/hhkb/"/>
-    
-      <category term="Software" scheme="http://imcoddy.github.io/tags/software/"/>
-    
-      <category term="Unix" scheme="http://imcoddy.github.io/tags/unix/"/>
-    
-      <category term="Tech" scheme="http://imcoddy.github.io/categories/tech/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Powered Up From Screen To Tmux]]></title>
-    <link href="http://imcoddy.github.io/2013/10/06/powered-up-from-screen-to-tmux/"/>
-    <id>http://imcoddy.github.io/2013/10/06/powered-up-from-screen-to-tmux/</id>
-    <published>2013-10-06T12:30:05.000Z</published>
-    <updated>2015-07-05T11:58:18.000Z</updated>
-    <content type="html"><![CDATA[<p>平时在公司开发自然少不了用screen这类的远程作业工具，虽然screen可以很方便的进行detach和attach，不过在重新连接时，总是会出现Terminal恢复到默认80行宽的大小。虽然重新调整一下窗口大小并不是什么大事，只是每次这样拖动鼠标有些烦人。最近由于开新项目换了一台VM，解决了之前安装不了tmux的问题，于是便从此摈弃screen，全面投入到tmux的怀抱中。<br><a id="more"></a><br>试用了两天，其实感觉并没有和screen有太大的差别。不过以下的几点其实还是挺贴心的：</p>
-<ol>
-<li>现在在远程服务器时，可以不必再重新调整一次窗口的大小了。</li>
-<li>单个windows里面划分成几个panel很方便，而且大小也比较容易调整。</li>
-<li>在下方开个panel查看帮助信息有时还是很有用的，虽然我还是不太习惯用man 命令:P</li>
-<li>状态栏的自定义功能很强大，可以方便地根据需要进行调整。</li>
-</ol>
-<p>使用Linux/Unix系的软件一般都需要精心配置一番，不过这绝对是磨刀不误砍柴功。经过参考多方资料后，最终的配置如下：</p>
-<pre><code>#-- base settings --#
-<span class="keyword">set</span> -<span class="keyword">g</span> default-terminal <span class="string">"screen-256color"</span>
-<span class="keyword">set</span> -<span class="keyword">g</span> <span class="keyword">display</span>-time 3000
-<span class="keyword">set</span> -<span class="keyword">g</span> escape-time 0
-<span class="keyword">set</span> -<span class="keyword">g</span> history-limit 65535
-<span class="keyword">set</span> -<span class="keyword">g</span> base-index 1
-<span class="keyword">set</span> -<span class="keyword">g</span> pane-base-index 1
-
-#-- bindkeys --#
-# prefix key (Ctrl+a)
-<span class="keyword">set</span> -<span class="keyword">g</span> prefix ^a
-unbind ^b
-bind a send-prefix
-
-# <span class="keyword">split</span> <span class="keyword">window</span>
-unbind '"'
-# vertical <span class="keyword">split</span> (prefix -)
-bind - splitw -v
-unbind %
-bind | splitw -<span class="keyword">h</span> # horizontal <span class="keyword">split</span> (prefix |)
-
-# select pane
-bind k selectp -<span class="keyword">U</span> # above (prefix k)
-bind j selectp -<span class="keyword">D</span> # below (prefix j)
-bind <span class="keyword">h</span> selectp -<span class="keyword">L</span> # left (prefix <span class="keyword">h</span>)
-bind <span class="keyword">l</span> selectp -R # right (prefix <span class="keyword">l</span>)
-
-# Quick pane selection
-bind -r C-<span class="keyword">h</span> select-<span class="keyword">window</span> -t :-
-bind -r C-<span class="keyword">l</span> select-<span class="keyword">window</span> -t :+
-
-# resize pane
-bind -r ^k resizep -<span class="keyword">U</span> 3 # upward (prefix Ctrl+k)
-bind -r ^j resizep -<span class="keyword">D</span> 3 # downward (prefix Ctrl+j)
-bind -r ^<span class="keyword">h</span> resizep -<span class="keyword">L</span> 3 # to the left (prefix Ctrl+<span class="keyword">h</span>)
-bind -r ^<span class="keyword">l</span> resizep -R 3 # to the right (prefix Ctrl+<span class="keyword">l</span>)
-
-# swap pane
-# swap with the previous pane (prefix Ctrl+<span class="keyword">u</span>)
-bind ^<span class="keyword">u</span> swapp -<span class="keyword">U</span>
-# swap with the next pane (prefix Ctrl+<span class="keyword">d</span>)
-bind ^<span class="keyword">d</span> swapp -<span class="literal">D</span>
-
-# Maximize and <span class="keyword">restore</span> a pane
-unbind Up
-bind Up new-<span class="keyword">window</span> -<span class="keyword">d</span> -<span class="keyword">n</span> tmp \; swap-pane -s tmp.1 \; select-<span class="keyword">window</span> -t tmp
-unbind Down
-bind Down last-<span class="keyword">window</span> \; swap-pane -s tmp.1 \; kill-<span class="keyword">window</span> -t tmp
-
-# mouse support - <span class="keyword">set</span> to <span class="keyword">on</span> <span class="keyword">if</span> you want to <span class="keyword">use</span> the mouse
-setw -<span class="keyword">g</span> mode-mouse off
-<span class="keyword">set</span> -<span class="keyword">g</span> mouse-select-pane off
-<span class="keyword">set</span> -<span class="keyword">g</span> mouse-resize-pane off
-<span class="keyword">set</span> -<span class="keyword">g</span> mouse-select-<span class="keyword">window</span> off
-
-# misc
-# select the last pane (prefix <span class="keyword">e</span>)
-bind <span class="keyword">e</span> lastp
-# select the last <span class="keyword">window</span> (prefix Ctrl+<span class="keyword">e</span>)
-bind ^<span class="keyword">e</span> last
-# kill pane (prefix q)
-bind q killp
-# kill <span class="keyword">window</span> (prefix Ctrl+q)
-bind ^q killw
-
-# <span class="keyword">copy</span> mode
-# enter <span class="keyword">copy</span> mode (prefix Escape)
-bind Escape <span class="keyword">copy</span>-mode
-# paste buffer (prefix Ctrl+p)
-bind ^p pasteb
-# select (v)
-bind -t vi-<span class="keyword">copy</span> v begin-selection
-# <span class="keyword">copy</span> (y)
-bind -t vi-<span class="keyword">copy</span> y <span class="keyword">copy</span>-selection
-
-# zoom pane &lt;-&gt; <span class="keyword">window</span>
-#http:<span class="comment">//tmux.svn.sourceforge.net/viewvc/tmux/trunk/examples/tmux-zoom.sh</span>
-bind ^z <span class="keyword">run</span> <span class="string">"tmux-zoom"</span>
-
-# <span class="keyword">app</span>
-# htop (prefix !)
-bind ! splitw htop
-# <span class="keyword">man</span> (prefix <span class="keyword">m</span>)
-bind <span class="keyword">m</span> command-prompt <span class="string">"splitw 'exec man %%'"</span>
-# perl func (prefix @)
-bind @ command-prompt <span class="string">"splitw 'exec perldoc -t -f %%'"</span>
-# perl <span class="keyword">var</span> (prefix *)
-bind * command-prompt <span class="string">"splitw 'exec perldoc -t -v %%'"</span>
-# perl doc (prefix %)
-bind % command-prompt <span class="string">"splitw 'exec perldoc -t %%'"</span>
-# ruby doc (prefix /)
-bind / command-prompt <span class="string">"splitw 'exec ri %%'"</span>
-
-#-- statusbar --#
-<span class="keyword">set</span> -<span class="keyword">g</span> status-utf8 <span class="keyword">on</span>
-<span class="keyword">set</span> -<span class="keyword">g</span> status-interval 15
-<span class="keyword">set</span> -<span class="keyword">g</span> status-keys vi
-
-setw -<span class="keyword">g</span> mode-keys vi
-setw -<span class="keyword">g</span> automatic-<span class="keyword">rename</span> off
-
-#-- colorscheme --#
-#https:<span class="comment">//github.com/daethorian/conf-tmux/blob/master/colors/zenburn.conf</span>
-
-# modes
-setw -<span class="keyword">g</span> clock-mode-colour colour223
-setw -<span class="keyword">g</span> mode-attr bold
-setw -<span class="keyword">g</span> mode-fg colour223
-setw -<span class="keyword">g</span> mode-bg colour235
-
-# panes
-<span class="keyword">set</span> -<span class="keyword">g</span> pane-border-bg colour234
-<span class="keyword">set</span> -<span class="keyword">g</span> pane-border-fg colour234
-<span class="keyword">set</span> -<span class="keyword">g</span> pane-active-border-bg colour232
-<span class="keyword">set</span> -<span class="keyword">g</span> pane-active-border-fg colour232
-
-# statusbar
-<span class="keyword">set</span> -<span class="keyword">g</span> status-justify left
-<span class="keyword">set</span> -<span class="keyword">g</span> status-bg colour235
-<span class="keyword">set</span> -<span class="keyword">g</span> status-fg colour248
-<span class="keyword">set</span> -<span class="keyword">g</span> status-attr dim
-
-#[default]» #[fg=colour187]#S #[default]• #[fg=colour187]w#I.p#P#[default]"
-#<span class="keyword">set</span> -<span class="keyword">g</span> status-left
-<span class="keyword">set</span> -<span class="keyword">g</span> status-left-attr bright
-<span class="keyword">set</span> -<span class="keyword">g</span> status-left-length 20
-
-#<span class="keyword">set</span> -<span class="keyword">g</span> status-right
-<span class="keyword">set</span> -<span class="keyword">g</span> status-right-attr dim
-<span class="keyword">set</span> -<span class="keyword">g</span> status-right-length 80
-<span class="keyword">set</span> -<span class="keyword">g</span> status-right '#[fg=white][#(hostname)] %a %Y-%<span class="keyword">m</span>-%<span class="keyword">d</span> %<span class="keyword">H</span>:%<span class="keyword">M</span>'
-<span class="keyword">set</span> -<span class="keyword">g</span> <span class="keyword">window</span>-status-<span class="keyword">format</span> '#I:#W'
-
-setw -<span class="keyword">g</span> <span class="keyword">window</span>-status-current-fg colour223
-setw -<span class="keyword">g</span> <span class="keyword">window</span>-status-current-bg colour237
-setw -<span class="keyword">g</span> <span class="keyword">window</span>-status-current-attr bold
-setw -<span class="keyword">g</span> <span class="keyword">window</span>-status-current-<span class="keyword">format</span> <span class="string">"[#I]#W#F"</span>
-
-# messages
-<span class="keyword">set</span> -<span class="keyword">g</span> message-attr bold
-<span class="keyword">set</span> -<span class="keyword">g</span> message-fg colour223
-<span class="keyword">set</span> -<span class="keyword">g</span> message-bg colour235
-setw -<span class="keyword">g</span> monitor-activity <span class="keyword">on</span>
-<span class="keyword">set</span> -<span class="keyword">g</span> visual-activity <span class="keyword">on</span>
-
-# bind to reload config
-bind r source-<span class="keyword">file</span> ~/.tmux.<span class="keyword">conf</span> \; <span class="keyword">display</span>-message <span class="string">"Configuration Reloading..."</span>
-</code></pre><p>除了颜色的配色稍稍有点不感觉不足之外，其它的功能基本是十分满意了。改天有心情再去配配主题吧。</p>
-<p>最后强烈推荐在使用tmux前先通篇阅读这不到百页的《<a href="http://book.douban.com/subject/10541112/" target="_blank" rel="external">Productive Mouse-Free Development</a>》小册子，不仅能让人对上面的配置的作用有更深刻的理解，而且还能发现tmux更加强大的功能（比如共享进行结对编程等）。不过话说回来，除了状态栏的自定义部分外，上面的配置其实已经很清晰明了了哈哈。</p>
-<p>最后，吐槽一句虽然tmux这名字有个元音，但还是和其它的Linux命令名一样难念……</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>平时在公司开发自然少不了用screen这类的远程作业工具，虽然screen可以很方便的进行detach和attach，不过在重新连接时，总是会出现Terminal恢复到默认80行宽的大小。虽然重新调整一下窗口大小并不是什么大事，只是每次这样拖动鼠标有些烦人。最近由于开新项目换了一台VM，解决了之前安装不了tmux的问题，于是便从此摈弃screen，全面投入到tmux的怀抱中。<br>]]>
-    
-    </summary>
-    
-      <category term="Dev" scheme="http://imcoddy.github.io/tags/dev/"/>
-    
-      <category term="Diary" scheme="http://imcoddy.github.io/tags/diary/"/>
-    
-      <category term="Linux" scheme="http://imcoddy.github.io/tags/linux/"/>
     
       <category term="Software" scheme="http://imcoddy.github.io/tags/software/"/>
     

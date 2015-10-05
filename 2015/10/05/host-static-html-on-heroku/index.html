@@ -32,7 +32,7 @@
 
 
 
-  <meta name="keywords" content="Blog,Hexo," />
+  <meta name="keywords" content="Bitcoin,Brainwallet,Dairy,Heroku," />
 
 
 
@@ -43,15 +43,16 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="转眼之间，又一晃半年多都没有打理博客了。 前一阵子，似乎进入了一个低潮。倒不是没有了感触，只是有时却又不知道如何说起。这样的状态的确不太好，是时候把这里重新拾起来了。">
+<meta name="description" content="前阵子脑钱包的作者因为安全性的原因，将脑钱包网站彻底关闭，而且还将代码也清空了。确实，从安全性的角度而言，脑钱包的确容易出现被人撞库而造成损失，以至于 Gavin 都强烈警告过不要用它。但平心而论，脑钱包其实还是一个非常不错的在线工具，这样关闭未免有些矫枉过正了。因此，我打算在 Heroku 上重新开一个镜像。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Upgrade to Hexo 3">
-<meta property="og:url" content="http://imcoddy.github.io/2015/05/17/upgrade-to-hexo-3/index.html">
+<meta property="og:title" content="Host Static Html On Heroku">
+<meta property="og:url" content="http://imcoddy.github.io/2015/10/05/host-static-html-on-heroku/index.html">
 <meta property="og:site_name" content="Q小帝的折腾笔记">
-<meta property="og:description" content="转眼之间，又一晃半年多都没有打理博客了。 前一阵子，似乎进入了一个低潮。倒不是没有了感触，只是有时却又不知道如何说起。这样的状态的确不太好，是时候把这里重新拾起来了。">
+<meta property="og:description" content="前阵子脑钱包的作者因为安全性的原因，将脑钱包网站彻底关闭，而且还将代码也清空了。确实，从安全性的角度而言，脑钱包的确容易出现被人撞库而造成损失，以至于 Gavin 都强烈警告过不要用它。但平心而论，脑钱包其实还是一个非常不错的在线工具，这样关闭未免有些矫枉过正了。因此，我打算在 Heroku 上重新开一个镜像。">
+<meta property="og:image" content="http://photos.prnewswire.com/prn/20110712/SF33967LOGO">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Upgrade to Hexo 3">
-<meta name="twitter:description" content="转眼之间，又一晃半年多都没有打理博客了。 前一阵子，似乎进入了一个低潮。倒不是没有了感触，只是有时却又不知道如何说起。这样的状态的确不太好，是时候把这里重新拾起来了。">
+<meta name="twitter:title" content="Host Static Html On Heroku">
+<meta name="twitter:description" content="前阵子脑钱包的作者因为安全性的原因，将脑钱包网站彻底关闭，而且还将代码也清空了。确实，从安全性的角度而言，脑钱包的确容易出现被人撞库而造成损失，以至于 Gavin 都强烈警告过不要用它。但平心而论，脑钱包其实还是一个非常不错的在线工具，这样关闭未免有些矫枉过正了。因此，我打算在 Heroku 上重新开一个镜像。">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -61,7 +62,7 @@
   };
 </script>
 
-  <title> Upgrade to Hexo 3 | Q小帝的折腾笔记 </title>
+  <title> Host Static Html On Heroku | Q小帝的折腾笔记 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="default">
@@ -190,7 +191,7 @@
           
           
             
-              Upgrade to Hexo 3
+              Host Static Html On Heroku
             
           
         </h1>
@@ -199,8 +200,8 @@
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2015-05-17T09:45:42+09:00" content="2015-05-17">
-            2015-05-17
+          <time itemprop="dateCreated" datetime="2015-10-05T22:34:00+09:00" content="2015-10-05">
+            2015-10-05
           </time>
         </span>
 
@@ -209,8 +210,8 @@
             &nbsp; | &nbsp; In
             
               <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/diary/" itemprop="url" rel="index">
-                  <span itemprop="name">Diary</span>
+                <a href="/categories/tech/" itemprop="url" rel="index">
+                  <span itemprop="name">Tech</span>
                 </a>
               </span>
 
@@ -225,8 +226,8 @@
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/2015/05/17/upgrade-to-hexo-3/#comments" itemprop="discussionUrl">
-              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/05/17/upgrade-to-hexo-3/" itemprop="commentsCount"></span>
+            <a href="/2015/10/05/host-static-html-on-heroku/#comments" itemprop="discussionUrl">
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/10/05/host-static-html-on-heroku/" itemprop="commentsCount"></span>
             </a>
           </span>
           
@@ -240,15 +241,14 @@
       
 
       
-        <span itemprop="articleBody"><p>转眼之间，又一晃半年多都没有打理博客了。 前一阵子，似乎进入了一个低潮。倒不是没有了感触，只是有时却又不知道如何说起。这样的状态的确不太好，是时候把这里重新拾起来了。</p>
-<a id="more"></a>
-<p>最近重新翻了一下李笑来的<a href="http://zhibimo.com/explore/ba-shi-jian-dang-zuo-peng-you" target="_blank" rel="external">《把时间当朋友》</a>，原因是看到他在推荐斯坦福公开课<a href="https://startupclass.co/courses/how-to-start-a-startup" target="_blank" rel="external">《How To Start A Startup》</a>之余，还几乎每天坚持更新自己的学习笔记整理成文并分享出来。有意思的是，这份学习笔记名为<a href="http://zhibimo.com/explore/growth" target="_blank" rel="external">《成长》</a>，而这种学习的成长心态，与《把时间当朋友》是一脉相承的。</p>
-<p>是以再看这本书时，深深地感受到，坚持是多么的不容易。正如书中所说：</p>
-<blockquote>
-<p>在 ClipMine上，2015年3月18日，这套课程中的第一课，数字是这样的：<br>324K views | 2.4K likes<br>而第二十课的数字是这样的：<br>19.1K views | 113 likes<br>也就是说，仅有百分之六不到的人看完所有课程……要是用最终第二十课点赞的人数作为分子，用最初看第一课的人数作为分母，得出来的比例是万分之三……<br>想起来我过去讲课时常说的话，每期班第一课我都会说：<br>我看到你们目光炯炯，我知道你们刚刚决心重新做人……我倒是想知道你们能坚持多久？</p>
-</blockquote>
-<p>因此，空谈误国，实干兴邦。雄心壮志的话还是少说，静心做事才是王道。今天趁着把 Hexo 更新到 3 ，今后也坚持把自己的所思所想多用文字记录下来吧。</p>
-<p>更新的方法其实没有太多好说的，参考<a href="https://github.com/hexojs/hexo/wiki/Migrating-from-2.x-to-3.0" target="_blank" rel="external">官方文档</a>就好了。比较可惜的是之前用的主题不能用了，现在默认的 langscape 主题不是太符合自己的口味。不过这个，改天再换了。</p>
+        <span itemprop="articleBody"><p><img src="http://photos.prnewswire.com/prn/20110712/SF33967LOGO" alt="heroku"><br>前阵子脑钱包的作者因为安全性的原因，将脑钱包网站彻底关闭，而且还将代码也清空了。确实，从安全性的角度而言，脑钱包的确容易出现被人撞库而造成损失，以至于 <a href="http://imcoddy.github.io/2014/01/18/do-not-use-a-brainwallet/" target="_blank" rel="external">Gavin 都强烈警告过不要用它</a>。但平心而论，脑钱包其实还是一个非常不错的在线工具，这样关闭未免有些矫枉过正了。因此，我打算在 Heroku 上重新开一个镜像。<br><a id="more"></a></p>
+<p>由于之前 fork 过代码，将最近一些小修改合并到了 master 分支后，设置了一下 heroku 的配置，轻车熟路地就将代码部署上去了。不过当我打开了 <a href="http://brainwallet.herokuapp.com/" target="_blank" rel="external">http://brainwallet.herokuapp.com/</a> 之后，却提示应用没有正常配置。搜索一番后发现，原来结果居然是 Heroku 不支持直接部署静态的 HTML 网页！</p>
+<p>发现这个原因后觉得有点哭笑不得。不过在知道原因后，解决起来也就容易多了：只需要让 Heroku 能正常识别出文件类型就好。这一般是通过设置 Procfile 来实现，不过人懒如偶，当然不会为了折腾一个静态页面去配置各种 Ruby 插件。当我知道 Heroku 对 PHP 支持不错时，新建一个叫 index.php 的文件，在里面加入以下一行代码即可。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="php"><span class="preprocessor">&lt;?php</span> <span class="keyword">include_once</span>(<span class="string">"home.html"</span>); <span class="preprocessor">?&gt;</span></span></span><br></pre></td></tr></table></figure>
+<p>这样做之后，Heroku 就会将程序识别为 PHP 的应用，虽然会提示缺少某些文件，不过对于这样一个静态的网站，这并不是什么问题。</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">&gt; gps heroku master</span><br><span class="line">Counting <span class="string">objects:</span> <span class="number">1954</span>, done.</span><br><span class="line">Delta compression using up to <span class="number">4</span> threads.</span><br><span class="line">Compressing <span class="string">objects:</span> <span class="number">100</span>% (<span class="number">764</span>/<span class="number">764</span>), done.</span><br><span class="line">Writing <span class="string">objects:</span> <span class="number">100</span>% (<span class="number">1954</span><span class="regexp">/1954), 600.38 KiB | 0 bytes/</span>s, done.</span><br><span class="line">Total <span class="number">1954</span> (delta <span class="number">1335</span>), reused <span class="number">1741</span> (delta <span class="number">1182</span>)</span><br><span class="line"><span class="string">remote:</span> Compressing source files... done.</span><br><span class="line"><span class="string">remote:</span> Building <span class="string">source:</span></span><br><span class="line"><span class="string">remote:</span></span><br><span class="line"><span class="string">remote:</span> -----&gt; PHP app detected</span><br><span class="line"><span class="string">remote:</span></span><br><span class="line"><span class="string">remote:</span>  !     <span class="string">WARNING:</span> No <span class="string">'composer.json'</span> found.</span><br><span class="line"><span class="string">remote:</span>        Using <span class="string">'index.php'</span> to declare PHP applications is considered legacy</span><br><span class="line"><span class="string">remote:</span>        functionality and may lead to unexpected behavior.</span><br><span class="line"><span class="string">remote:</span></span><br><span class="line"><span class="string">remote:</span> -----&gt; No runtime required <span class="keyword">in</span> <span class="string">'composer.json'</span>, defaulting to PHP <span class="number">5.6</span>.14.</span><br><span class="line"><span class="string">remote:</span> -----&gt; Installing system packages...</span><br><span class="line"><span class="string">remote:</span>        - PHP <span class="number">5.6</span>.14</span><br><span class="line"><span class="string">remote:</span>        - Apache <span class="number">2.4</span>.10</span><br><span class="line"><span class="string">remote:</span>        - Nginx <span class="number">1.6</span>.0</span><br><span class="line"><span class="string">remote:</span> -----&gt; Installing PHP extensions...</span><br><span class="line"><span class="string">remote:</span>        - zend-opcache (automatic; bundled)</span><br><span class="line"><span class="string">remote:</span> -----&gt; Installing dependencies...</span><br><span class="line"><span class="string">remote:</span>        Composer version <span class="number">1.0</span>.0-alpha10 <span class="number">2015</span>-<span class="number">04</span>-<span class="number">14</span> <span class="number">21</span>:<span class="number">18</span>:<span class="number">51</span></span><br><span class="line"><span class="string">remote:</span> -----&gt; Preparing runtime environment...</span><br><span class="line"><span class="string">remote:</span>        <span class="string">NOTICE:</span> No Procfile, using <span class="string">'web: vendor/bin/heroku-php-apache2'</span>.</span><br><span class="line"><span class="string">remote:</span> -----&gt; Discovering process types</span><br><span class="line"><span class="string">remote:</span>        Procfile declares types -&gt; web</span><br><span class="line"><span class="string">remote:</span></span><br><span class="line"><span class="string">remote:</span> -----&gt; Compressing... done, <span class="number">72.7</span>MB</span><br><span class="line"><span class="string">remote:</span> -----&gt; Launching... done, v3</span><br><span class="line"><span class="string">remote:</span>        <span class="string">https:</span><span class="comment">//brainwallet.herokuapp.com/ deployed to Heroku</span></span><br><span class="line"><span class="string">remote:</span></span><br><span class="line"><span class="string">remote:</span> Verifying deploy... done.</span><br></pre></td></tr></table></figure>
+<p>就这样，脑钱包网站就重新恢复啦。撒花~ <a href="http://brainwallet.herokuapp.com/" target="_blank" rel="external">http://brainwallet.herokuapp.com/</a></p>
+<p>当然，就算恢复了，并不意味着我推荐大家去将币存在脑钱包里面，除非你真的明白其原理，并加密过自己输入的密语。脑钱包对我而言是一个很方便的管理私钥的方式，但对于更多的人而言，用<a href="https://bither.net/" target="_blank" rel="external">比太钱包</a>才是更合适的选择。</p>
 </span>
       
     </div>
@@ -257,9 +257,13 @@
       
         <div class="post-tags">
           
-            <a href="/tags/blog/" rel="tag">#Blog</a>
+            <a href="/tags/bitcoin/" rel="tag">#Bitcoin</a>
           
-            <a href="/tags/hexo/" rel="tag">#Hexo</a>
+            <a href="/tags/brainwallet/" rel="tag">#Brainwallet</a>
+          
+            <a href="/tags/dairy/" rel="tag">#Dairy</a>
+          
+            <a href="/tags/heroku/" rel="tag">#Heroku</a>
           
         </div>
       
@@ -268,13 +272,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/05/19/the-leetcode-challenge/" rel="prev">The Leetcode Challenge</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/01/10/what-sarutobi-app-means-to-bitcoin/" rel="next">What Sarutobi App Means to Bitcoin</a>
+              <a href="/2015/10/05/alias-your-git-branches/" rel="next">Alias For Your Git Branches</a>
             
           </div>
         </div>
@@ -459,9 +461,9 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'imcoddy';
-      var disqus_identifier = '2015/05/17/upgrade-to-hexo-3/';
-      var disqus_title = 'Upgrade to Hexo 3';
-      var disqus_url = 'http://imcoddy.github.io/2015/05/17/upgrade-to-hexo-3/';
+      var disqus_identifier = '2015/10/05/host-static-html-on-heroku/';
+      var disqus_title = 'Host Static Html On Heroku';
+      var disqus_url = 'http://imcoddy.github.io/2015/10/05/host-static-html-on-heroku/';
 
       function run_disqus_script(disqus_script){
         var dsq = document.createElement('script');
