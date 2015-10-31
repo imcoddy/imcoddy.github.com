@@ -4,7 +4,7 @@
   <subtitle><![CDATA[记录下那些折腾过的岁月。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://imcoddy.github.io/"/>
-  <updated>2015-10-05T14:19:24.000Z</updated>
+  <updated>2015-10-31T01:43:01.000Z</updated>
   <id>http://imcoddy.github.io/</id>
   
   <author>
@@ -13,6 +13,302 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Brainwallet.org Is Dead, Long Live Brainwallet IV]]></title>
+    <link href="http://imcoddy.github.io/2015/10/13/brainwallet-org-is-dead-long-live-brainwallet-iv/"/>
+    <id>http://imcoddy.github.io/2015/10/13/brainwallet-org-is-dead-long-live-brainwallet-iv/</id>
+    <published>2015-10-13T12:36:00.000Z</published>
+    <updated>2015-10-31T01:43:01.000Z</updated>
+    <content type="html"><![CDATA[<p><img src="http://i1375.photobucket.com/albums/ag455/imcoddy/Blog/brain-wallets_zpsfabntddg.png" alt="brainwallet"><br>币圈里过的时间总是很快，两周前写的关于脑钱包的帖子因为个人原因耽搁了一下，估计大家也都忘记得差不多了。尽管如此，还是将这篇文章发在这里，一方面提醒大家不要因为币价稍涨就忘记了买买提，另一方面，提币到自己的钱包里面也请注意不要忘记了经常检查一下，因为从某种意义上来说，所有的比特币钱包都是脑钱包。</p>
+<a id="more"></a>
+<p>如果还没有看过《Brainwallet.org 已死，脑钱包将永生!》这一系列帖子的同学，可以先回顾一下。<br><a href="http://www.8btc.com/long-live-brainwallet" target="_blank" rel="external">http://www.8btc.com/long-live-brainwallet</a><br><a href="http://www.8btc.com/long-live-brainwallet-ii" target="_blank" rel="external">http://www.8btc.com/long-live-brainwallet-ii</a><br><a href="http://www.8btc.com/long-live-brainwallet-iii" target="_blank" rel="external">http://www.8btc.com/long-live-brainwallet-iii</a></p>
+<p>这里，我们将从上次的测试开始说起。</p>
+<h2 id="测试结果">测试结果</h2><p>尽管在上一篇文章里笔者说的是有三个地址存有币，实际的结果是，共有四个地址是有币的。具体的交易信息在<a href="https://blockchain.info/tx/92da49d1363f339dfa7ad38a1460066eec0b1265dce85a493d410ed4830ddfdf" target="_blank" rel="external">这里</a>。</p>
+<p>生成的语句见<a href="http://www.8btc.com/long-live-brainwallet-iii" target="_blank" rel="external">文末评论</a>。几个小改动的地方如下（或许破解者自己都没有注意到……）：</p>
+<ol>
+<li>部分引号中的内容本身已包含有一个空格。</li>
+<li>部分地址生成时用的是压缩格式而非默认的非压缩格式。</li>
+<li>青楼变红楼。</li>
+</ol>
+<p>本次测试从文章发布到最后全部被破解，所花的时间正好一天。虽然不知道具体猜出来的两位用户花了多少时间，不过从几次取走的时间来看，应该花了不止十几分钟。虽然笔者的确试图增加一些混淆，不过在严格遵守所说的规则情况下，如果通过程序来找出来的话，其实一秒钟都不需要。</p>
+<p>之所以做这个试验，是因为在一年前笔者的确用中文短语直接生成过部分脑钱包并存币于内。后来发现，这点沾沾自喜小聪明其实在暴力破解前面完全就是然并卵，随后就将部分转至了用 Git commit ID 与个人信息组合生成的脑钱包里。这样做是否足够安全了呢？或许下面的概念能让你更好的去评估。</p>
+<h2 id="信息熵">信息熵</h2><p>信息是个很抽象的概念。我们常常说信息很多，或者信息较少，但却很难说清楚信息到底有多少，比如一本五十万字的中文书到底有多少信息量。直到 1948 年，香农提出了“信息熵”(shāng) 的概念，才解决了对信息的量化度量问题。</p>
+<p>在信息论中，熵是接收的每条消息中包含的信息的平均量。实际上，熵的大小与事件出现的概率息息相关。事件的概率分布和每个事件的信息量构成了一个随机变量，这个随机变量的均值（即期望）就是这个分布产生的信息量的平均值（即熵）。假设有一枚“理想”的硬币（抛出正面和反面的几率相等），每一次抛硬币都是独立的、不可预测的，其结果不是正面、就是反面（ 0 和 1 ），那么这个抛硬币事件的熵就是 1 个比特/位，抛 256 次的熵就是 256 个比特/位。而这，将会是一个完美的比特币私钥。</p>
+<p>对于所生成的每一个比特币私钥，其生成方式的熵的大小是否足够大是衡量其是否安全的一个重要指标。但是，在计算机的世界里，<a href="http://www.zhihu.com/question/20423025" target="_blank" rel="external">所有的随机数产生器都是伪随机</a>，这就意味着黑客有可能通过刻意的方式，模拟并生成相同的私钥。在这一点上，<a href="https://www.bikeji.com/t/378" target="_blank" rel="external">Blockchain.info 就吃过大亏</a>。</p>
+<p>在这一方面，国内的比太钱包团队曾经做过不少科普（具体见<a href="http://www.8btc.com/random23304" target="_blank" rel="external">文1</a>、<a href="http://www.8btc.com/random" target="_blank" rel="external">文2</a>、<a href="http://www.8btc.com/random-3" target="_blank" rel="external">文3</a>），其钱包在生成私钥时会要求用户打开摄像头和麦克风以从用户周围的环境获取信息以得到更高的随机性，以便生成的私钥的熵更大。</p>
+<p>而脑钱包的熵能有多大呢？在这一点上，阐述得最明确的是  <a href="https://blog.ethereum.org/author/vitalik-buterin/" target="_blank" rel="external">Vitalik Buterin</a> 的博文《<a href="https://blog.ethereum.org/2014/10/23/information-theoretic-account-secure-brainwallets/" target="_blank" rel="external">An Information-Theoretic Account of Secure Brainwallets</a>》。巴比特曾将其翻译成<a href="http://www.8btc.com/secure-brainwallets" target="_blank" rel="external">中文</a>，但翻译有部分错误，推荐有能力的同学直接看原文。</p>
+<p>文中最终结论是，从目前的情况来看，2^80 是可接受的最小安全水平。而要拥有 80 位熵，你需要约 17 个随机英文字母或 12 个随机字母、数字和符号的组合。单纯从字面上看，上一篇文章所提到的「加长输入的长度」、「使用扩展字符集」等建议，是可以轻松满足这个条件的。</p>
+<p>但是，用户是否真的如此有把握，能够让能够让自己所构建的输入信息足够随机？很遗憾，这几乎是不可能的任务。受限于人类文化的限制，纵使有着浩如烟海的书海，大部分人脑海中所能想到的词汇其实只是其中很小的一个子集。在计算机硬件飞速提升以及机器学习能力日益增强的情况下，如果输入的短语长度不够，或者语义过于容易记忆，被暴力破解将是不可避免的事情。</p>
+<p>因此，直接输入一串常用单词组成的短语来当作脑钱包，是非常不安全的。从这一点上来说，Brainwallet.org 死得并不冤枉。</p>
+<h2 id="确定性">确定性</h2><p>如果说直接用常用的词组来组成的脑钱包难以逃脱黑客无特定目标的暴力破解的话，在生成脑钱包时通过「添加个人专属信息」、「对输入进行加密转换」等方式来处理的话，在一定的程度上可以生成十分”复杂“的脑钱包，因为这相当于给这个脑钱包增加了一些不确定性（Deterministic）。</p>
+<p>但这种用户刻意增加的步骤，其实并没有改变所生成的脑钱包是已经确定了（Determined）的本质。此时黑客要想攻破这样的脑钱包，不仅需要构建相同的输入，同时还需要知晓用户对原始输入的操作步骤。虽然针对某个地址的个性化攻击通常成本很高，但在币价高涨而且确定某个地址里数量颇多的币确属于某个人的时候，通过一些社交工程进行定向分析并破解绝非匪夷所思。</p>
+<p>举个例子，假如用户通过 <code>SHA256(&quot;a&quot;)</code> 去掉后三位得到的字符串 <code>ca978112ca1bbdcafac231b39a23dc4da786eff8147c4e72b9807785afee4</code> 看上去似乎十分复杂，要想直接通过暴力穷举这个字符串难度也的确难度很大。但如果攻击者通过监视日志和上网记录等方式，判断出用户在交易前都有用在线工具计算 SHA256 值的习惯后，尝试碰撞并成功的概率则不可忽视。</p>
+<p>虽然用户确实可以通过对上面的结果再通过某种方式进行二次加工以降低被破解的可能性，但这并没有解决上述的问题，只不过是隐藏得更深一些而已。而在这种情况下，脑钱包的安全性将不仅取决于用户所使用的方法的复杂度，还将依赖于用户是否有足够的记忆力去清楚地记住生成的步骤。虽然自定义的步骤越多的确破解的可能性就越小，但笔者以长者的身份告诉你，这种繁琐的步骤，最终将往往成为你再次解锁该地址的阻碍。</p>
+<p>这就是所有脑钱包的悲剧根源，既然它是确定性的，可以从你的脑海映射到具体的比特币地址上，也就意味着他人在知晓你的输入内容及生成方式的情况下，能够如法泡制生成相同的私钥。虽然用户可以努力防护好自己，但这份与生俱来的原罪，如同一把达摩克利斯之剑，无时不刻不悬挂在每一个存有币的脑钱包地址上。　　　</p>
+<p>值得一提的是，虽然脑钱包工具无法避免上面的根本问题所带来的尴尬，但事实上可以通过另一种方式来缓解被暴力破解的情况。其做法是通过多次重复执行算法固定的运算，增加生成结果的复杂度的同时，也增加了生成脑钱包所需的时间。对于用户而言，生成一个脑钱包地址时需要花费 2ms 和花费 200ms 似乎没有太大的差别，但对于暴力破解的程序来说，速度就这样活生生地拖慢至原先的百分之一。有兴趣的同学可以自行到 Keybase.io 所提供的 <a href="https://keybase.io/warp" target="_blank" rel="external">Wrap</a> 钱包体验一下。（话说我似乎还有 <a href="https://keybase.io/" target="_blank" rel="external">Keybase.io</a> 的邀请，10mBTC/枚出售，有兴趣的同学快私信我吧哈哈哈。）</p>
+<h2 id="万物皆是脑钱包">万物皆是脑钱包</h2><p>既然脑钱包的问题根源是因为其有着确定性的根源、可以被单向推导而出造成的，那么换用具有不确定性的生成算法，是否就能解决这问题了？</p>
+<p>这个问题，回答是，但回答又不是。</p>
+<p>诚然，从密码学安全的角度来说，通过引入了用户环境的随机变量，攻击者即使知道其使用的加密方法，但因无法重现用户生成私钥时的运行环境，因此无法将其攻破。但纵使比特币地址的数量如同浩瀚星海，当用户最终弱水三千只取一瓢确定下想要使用的比特币地址时，其私钥亦已尘埃落定，无法更改。因为最终，每一个比特币私钥都将确定无疑。</p>
+<p>如果说通过在 Brainwallet.org 输入一串短语所得到的比特币私钥是传统意义上的脑钱包的话，广义上的脑钱包，指的是用户通过自己的记忆，采取各种方式获得对比特币私钥控制权的能力。而对于每一个将要被使用的比特币私钥，事实上都必须通过使用者的脑力转换，才可能将其解锁。</p>
+<p>不相信是吗？那我们聊聊看：</p>
+<blockquote>
+<p>我用的是 Bitcoin Core 随机生成的钱包。</p>
+</blockquote>
+<p>你其实需要记住对 wallet.dat 加密的密码，而且还可能需要定期备份该文件，并记得它存在哪个文件夹里面。</p>
+<blockquote>
+<p>我用的是 Electrum 离线生成的钱包地址。</p>
+</blockquote>
+<p>它应该让你做备份了吧？那十几个随机单词的生成方式和我上一篇文章介绍的是相同的。而且你不仅需要记下这十几个单词，还需要记住是用什么软件生成的以便能重新导入。</p>
+<blockquote>
+<p>我用的是 Vanitygen 自己生成的私钥。</p>
+</blockquote>
+<p>然后这私钥你是记在脑海里面还是记在本子里面了？用没有用 BIP38 加密？加密的密码记下来了么？</p>
+<blockquote>
+<p>我用的是硬件钱包，它支持指纹识别，我完全不需要密码！</p>
+</blockquote>
+<p>你其实还是需要记住你用的是那个硬件钱包，它放在哪里，以及你是用哪一根指头去进行识别的……</p>
+<p>因此，虽然每一个比特币私钥只是短短的几十个字符，其存储媒介和获取方式由于使用者的不同而存在着诸多差异。</p>
+<p>人类对于物理媒介的管理要比数字化信息的管理要在行得多，很多时候只需要将私钥打印在纸张上，然后锁在保险箱里即可。这时候对私钥的管理其实降纬成了对纸钱包保存位置的记忆，而这样的物理隔离，使得私钥的一免受暴力穷举的攻击，毕竟黑客不太可能登门入室进行劫取。不过这在增加使用不便的同时，其实也加大了私钥备份维护的负担。否则在火灾洪水等意外灾难来临之时，存在里面的比特币也将一同化为乌有。</p>
+<p>写到这里，想必各位读者也已经能明白，对于比特币的存储，没有一种方法是一劳永逸的。传统的脑钱包在方便了自己的同时，也给了黑客可乘之机；而通过软件生成的地址，无法在急需的时候能迅速使用，还可能因为天灾人祸而毁于一旦。</p>
+<p>因此，更重要的是，需要根据不同的存储方式的特点，选择合适的方式来进行托管。</p>
+<ul>
+<li>对于日常使用的小额比特币，可以用手机软件随机生成地址存储，不过请不要忘记支付密码。</li>
+<li>对于储值用的大额比特币，可以用软件在离线环境下生成地址存储，不过请不要忘记备份所保存的位置。</li>
+<li>对于部分暂时不用但希望能在某天用来应急的比特币，可以用脑钱包生成存储，不过切记需要混淆输入的内容，加入个人信息，并使用类似 WrapWallet 这样的脑钱包工具进行多次运算以增加破解难度。</li>
+<li>可能的话，使用多签名地址。我就是用脑钱包生成的私钥来构建多签名地址保存 ，可惜没有找到支持自行导入多签名 RedeemScript 的软件。</li>
+</ul>
+<p>写到这里，终于可以应一下本系列文章的题目了：Brainwallet.org 已死，脑钱包将永生。好好记住你是如何管理每一个比特币地址的吧！因为除了你，或许谁也无法再将其重现。</p>
+<h2 id="总结">总结</h2><p>然后记住保存的位置就好。这时候对私钥的</p>
+<p>本文打赏链接：1873PE9v17hZcAHPmBVufTAWVEhkunLoV3</p>
+<p>问君能有几多愁，恰似一群太监上红楼。 13dq8G1FZxn9LoSrtuhJxtQSdc8SpWVooG</p>
+<p>如果新手不确定如何生成脑钱包密码的话，那么就不要使用脑钱包。自己用比特币地址生成器去直接生成地址和私钥，电脑的随机熵发生器一般来说比人脑要靠谱得多。4不要矫枉过正！不要为了过分的追求安全而设计你记不住的超长密码，其实黑客攻击你的概率是很低的。很多人丢比特币未必是因为黑客攻击，而是因为忘记了自己的密码。如果你设计了一个超级复杂的密码，一旦你忘记它，那么这个超级复杂的密码会成为你丢失比特币的最大对手。</p>
+<p>引用参考：</p>
+<p><a href="https://en.wikipedia.org/wiki/How_much_wood_would_a_woodchuck_chuck" target="_blank" rel="external">注</a></p>
+<p><a href="http://p2pbucks.com/?p=9020" target="_blank" rel="external">http://p2pbucks.com/?p=9020</a> 比特币基础教学之：你对脑钱包密码了解多少</p>
+<p><a href="https://en.bitcoin.it/wiki/Brainwallet" target="_blank" rel="external">https://en.bitcoin.it/wiki/Brainwallet</a></p>
+<p>比特币地址生成（图形化）:<a href="http://www.8btc.com/graphical-address-generator" target="_blank" rel="external">http://www.8btc.com/graphical-address-generator</a></p>
+<p><a href="https://www.reddit.com/r/Bitcoin/comments/3g9f1s/why_im_releasing_a_brainwallet_cracker_at_defcon/" target="_blank" rel="external">https://www.reddit.com/r/Bitcoin/comments/3g9f1s/why_im_releasing_a_brainwallet_cracker_at_defcon/</a></p>
+<p><a href="https://bitcointalk.org/index.php?topic=311000.msg3345309#msg3345309" target="_blank" rel="external">https://bitcointalk.org/index.php?topic=311000.msg3345309#msg3345309</a></p>
+<p><a href="https://blog.ethereum.org/2014/10/23/information-theoretic-account-secure-brainwallets/" target="_blank" rel="external">https://blog.ethereum.org/2014/10/23/information-theoretic-account-secure-brainwallets/</a> An Information-Theoretic Account of Secure Brainwallets（ <a href="http://www.8btc.com/secure-brainwallets）" target="_blank" rel="external">http://www.8btc.com/secure-brainwallets）</a></p>
+<p><a href="https://brainwallet.io/" target="_blank" rel="external">https://brainwallet.io/</a> deterministic bitcoin address generator</p>
+<p><a href="http://www.8btc.com/wiki/bitcoin-wallet-safe-use-perfect-backup" target="_blank" rel="external">http://www.8btc.com/wiki/bitcoin-wallet-safe-use-perfect-backup</a> 选择安全性最高的脑钱包</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><img src="http://i1375.photobucket.com/albums/ag455/imcoddy/Blog/brain-wallets_zpsfabntddg.png" alt="brainwallet"><br>币圈里过的时间总是很快，两周前写的关于脑钱包的帖子因为个人原因耽搁了一下，估计大家也都忘记得差不多了。尽管如此，还是将这篇文章发在这里，一方面提醒大家不要因为币价稍涨就忘记了买买提，另一方面，提币到自己的钱包里面也请注意不要忘记了经常检查一下，因为从某种意义上来说，所有的比特币钱包都是脑钱包。</p>]]>
+    
+    </summary>
+    
+      <category term="Bitcoin" scheme="http://imcoddy.github.io/tags/bitcoin/"/>
+    
+      <category term="Blog" scheme="http://imcoddy.github.io/tags/blog/"/>
+    
+      <category term="Brainwallet" scheme="http://imcoddy.github.io/tags/brainwallet/"/>
+    
+      <category term="Dairy" scheme="http://imcoddy.github.io/tags/dairy/"/>
+    
+      <category term="Bitcoin" scheme="http://imcoddy.github.io/categories/bitcoin/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Brainwallet.org Is Dead, Long Live Brainwallet III]]></title>
+    <link href="http://imcoddy.github.io/2015/10/10/brainwallet-org-is-dead-long-live-brainwallet-iii/"/>
+    <id>http://imcoddy.github.io/2015/10/10/brainwallet-org-is-dead-long-live-brainwallet-iii/</id>
+    <published>2015-10-10T09:16:00.000Z</published>
+    <updated>2015-10-12T03:03:31.000Z</updated>
+    <content type="html"><![CDATA[<p><img src="http://i1375.photobucket.com/albums/ag455/imcoddy/Blog/brain-wallets_zpsfabntddg.png" alt="brainwallet"></p>
+<p>这其实是一份姗姗来迟的文章，阐述了笔者个人对脑钱包的一些看法。尽管原作者因安全原因将 brainwallet.org 关闭，但笔者认为脑钱包有其存在的意义和研究价值。在<a href="http://www.8btc.com/long-live-brainwallet-ii" target="_blank" rel="external">上一篇文章</a>里面从原理上分析脑钱包的安全性，本篇将分享部分“可行”的脑钱包生成方案。首先感谢读者对前两篇文章打赏支持，本文以飧读者，包含了几个小彩蛋，欢迎大家挖掘。　</p>
+<a id="more"></a>
+<h2 id="脑钱包使用军规">脑钱包使用军规</h2><p>前两篇说了这么多，是时候开始进入脑钱包的使用实战了。在出征前，有必要重温一下脑钱包的安全使用军规：　　　</p>
+<blockquote>
+<p>“安全的根本，是时刻记住，没有任何东西是绝对安全的。 ”</p>
+<p><cite>@imcoddy</cite></p>
+</blockquote>
+<p>安全，永远是一个讨论起来就永无止境的话题。如果你认真看完前面的两篇文章，到现在应该已经清楚地明白上面这个观点了。</p>
+<p>虽然绝对的安全无法获取，但对大部分人而言，相对的安全在很多时候已经足够。既然 Brainwallet.org 在原理上并没有太大的问题，如果想要通过它来使用好脑钱包，享受其所带来的便利的话，那么问题就变成了这个：如何构建一个独一无二的输入？</p>
+<p>下面这些笔者的个人经验，或许能给你带来一些启发。</p>
+<h2 id="“正确”的使用姿势">“正确”的使用姿势</h2><p>要想“正确”地使用好脑钱包，下面的一些个人经验，是很好的参考对象：</p>
+<h3 id="1-_增加输入的长度">1. 增加输入的长度</h3><p>首先出一道小测试题。下面的两个短语，哪一个用来做脑钱包安全性会更高？</p>
+<ol>
+<li>D0g!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</li>
+<li>PrXyc.N(n4k77#L!eVdAfp9</li>
+</ol>
+<p>这里面的小把戏如果用等宽字体显示就会很容易看出来。前者是英文单词“dog”的简单变形再加上 30 个感叹号，而后者则是一般人记不住的由 23 个字符组成的乱码。虽然对人类而言前者虽长但却容易记忆，对计算机而言，两者其实只是不同长度的字符串。而要通过穷举的方式构造一个相同的字符串的话，所需要花费的时候将根据长度的增加而指数增长。　</p>
+<p>但在经过了这么多年的网站注册登陆教育后，许多人都已经习惯了将密码设置为不超过 16 位长度，甚至有的人还只使用不超过十位的纯数字当密码。这一点，是使用脑钱包的新手最容易犯的错误。如果说设置网站密码时不能超过 16 位还情有可原（其实这也是这个网站过于懒惰，一切明码存储用户密码的网站都是流氓。更合理的做法是对用户密码进行哈希计算然后保存 hash 值，而这样做之后所有的密码最终存储都是定长的，完全不需要限制用户的输入长度），但对于脑钱包这样可以输入无限字符的工具，仅仅输入十几个字母就拿来用无异于将里面的币拱手相让。　</p>
+<p><img src="http://i1375.photobucket.com/albums/ag455/imcoddy/Blog/password-strength_zpsm0hzv0e3.png" alt="password-strength">　</p>
+<p>因此，与其瞑思苦想去构建一个长度限定的复杂密码，不如想一个别人难以想到的长句子。这里说句题外话，将上面的过程反过来，通过一个好记的长句子，其实可以生成一个好密码，这正是笔者前阵子编写的 <a href="http://passwork.herokuapp.com/" target="_blank" rel="external">PassworK</a> 的原理所在，这个工具的论坛讨论帖<a href="http://8btc.com/thread-21037-1-1.html" target="_blank" rel="external">在此</a>，欢迎有兴趣的同学围观。</p>
+<h3 id="2-扩大输入的字符集">2.扩大输入的字符集</h3><p>可以说，现在针对脑钱包的攻击大都是基于 ASCII 码的，这一方面是因为脑钱包出现时外文资料贫乏，活跃的基本都是英文玩家；另一方面，与不超过 256 个字符的 ASCII 码字符集相比，针对非标准字符集生成的脑钱包的暴力攻击难度直接提升了若干倍。</p>
+<p>这对于中文玩家，可谓是一个福音。虽然中文常用字数量与英文常用词汇相比偏低（大陆常用字为 2500 字，香港 4759 字，台湾 4808 字。<a href="https://zh.wikipedia.org/wiki/%E5%B8%B8%E7%94%A8%E5%AD%97" target="_blank" rel="external">信息来源</a>），但字字相组成词后，所能表达的意思远大于相同长度的其它语言。</p>
+<p>如果对上面的这句话不太好理解的话，看完下面的例子或许你就能豁然开朗了：</p>
+<blockquote>
+<ol>
+<li>The king is always lucky——王老吉；</li>
+<li>The king is kept justice——王守义；</li>
+<li>The king is lead to peace——王致和；</li>
+<li>The king from the sky——王天来。</li>
+</ol>
+</blockquote>
+<p>这意味着什么？这意味着在相同长度的输入里，中文可以拥有更多的信息量。纵使许多人对重复输入一模一样的几百字长文或许稍有难度，但完全无误地输入十几个相同的汉字通常都不会有问题。而用十个汉字组成的一个有意义的短句所生成的脑钱包，要破解的难度就可能比十个英文单词生成的更大。</p>
+<p>十几个汉字很难构造吗？写到这里，笔者顿时觉得“文思似泉涌，下笔如尿崩。”想来年少时曾受中华文化目濡目染，神马唐诗宋词还不是信手拈来？且看本湿人呤来！</p>
+<blockquote>
+<p>“一朝被蛇咬，处处闻啼鸟。”</p>
+<p>“两岸猿声啼不住，一枝红杏出墙来。”</p>
+<p>“在天愿作比翼鸟，大难临头各自飞。 ”</p>
+<p>“问君能有几多愁，恰似一群太监上青楼。”</p>
+<p>“红酥手，黄滕酒，两个黄鹂鸣翠柳。长亭外，古道边，一行白鹭上青天。”</p>
+<p>……</p>
+</blockquote>
+<p>当然，要是觉得才思枯竭一时想不出什么好句子，这也简单。随便找一段话复制粘贴出来不也是很简单的事情嘛。</p>
+<p>例如巴比特站长长铗对<a href="http://www.8btc.com/long-live-brainwallet" target="_blank" rel="external">本文的评论</a>是这样的：</p>
+<blockquote>
+<p>“很有趣，脑钱包就像是火，对人猿来说，它是危险的玩物，但对智人来说，它是可驾驭的工具。”</p>
+</blockquote>
+<p>币科技活跃人士超级君的<a href="https://www.bikeji.com/t/2281#reply11" target="_blank" rel="external">评论</a>则是这样：</p>
+<blockquote>
+<p>“之前对脑钱包并不大感冒，这篇文章给出了脉络清晰的脑钱包历史，有论点有史料，作者还动手，延续脑钱包的产品，真是比特币极客党派。已赞。”</p>
+</blockquote>
+<p>只要上面的网站能访问，该评论未被删除，你就可以找到这两段原话，然后用来生成脑钱包。</p>
+<p>等等，脑钱包不是不应该用网上可以找到的语句吗？如果你产生了这样的疑惑，那么恭喜你，你还没有忘记一开始所说的安全军规！虽然像中本聪这样大隐隐地市让吾等无尽感慨，试图将比特币隐藏于网络上的只言片语的做法往往得不偿失。虽然如此，笔者打算以此为契机尝试一下，作为给刚看到本文的读者的福利：</p>
+<ol>
+<li>通过上文每一对双引号中的内容所生成的脑钱包地址里，有三个并不是空的。</li>
+<li>生成脑钱包的网址为：<a href="http://brainwallet.herokuapp.com/" target="_blank" rel="external">http://brainwallet.herokuapp.com/</a></li>
+<li>注意，在生成脑钱包时所用的短语为双引号中全部内容并加上一个半角空格。因此，“一朝被蛇咬，处处闻啼鸟。”所生成的地址并不是 13DuS9tSRuXtS13P11pJSFRq25VuDG33kT。</li>
+<li>其中的一个脑钱包中的颜色的汉字被换成了另外一种颜色的汉字。</li>
+<li>若干小陷阱，且看君人品。</li>
+</ol>
+<p>成功找到的同学请自行取走，然后留言告之并宣布正确答案吧~</p>
+<p>最后，关于此节里值得一提的是，采用扩大字符集会有潜在风险：你可能无法在一台离线的设备上输入非英文字符（例如有些人可能会用 Live USB 启动一个 Ubuntu 系统而里面并没有安装默认安装中文字库），或者不同的系统对 UTF-8 的支持不同造成在不同的机器上输入有差异，以至于生成的地址不一致。　　　　　　　　</p>
+<h3 id="3-混淆输入内容">3.混淆输入内容</h3><p>如果你没有马上去找上面奖励而是继续往下看，那真是儒子可教。因为对于这种明码放出来的脑钱包，是使用脑钱包的大忌。脑钱包的破解其实是一个见招拆招的过程，虽然上面吟诵的几句都是混搭而非原作，他人的评论亦可认为是一个随机产生的结果，但像上面这样将规则公布于众之后，就相当于将里面的比特币拱手相让了，虽然笔者的确是在送比特币 :P</p>
+<p>要想生成一个足够安全的脑钱包，对其输入的内容进行混淆是必不可少 。而混淆的方式，则可以有千万多种。</p>
+<h4 id="添加个人专属信息">添加个人专属信息</h4><p>这包括但不限于你的名字，身高，住址，邮箱等个人信息。这一点的好处是对于自己而言输入并不是难事，但在输入里面增加这些个人信息后，那些无具体针对目标的脑钱包攻击将大部分失效。因为他们的词汇表里面没有你的个人信息，也就无法构建相同的输入。</p>
+<p>例如我曾经用过的一个例子是之前所用的 iPhone 4S 手机的序列号，或许知道这信息的只有我电脑上的 iTunes，以及我的 Gmail 邮箱。</p>
+<h4 id="对输入进行加密转换">对输入进行加密转换　　　</h4><p>在确定输入的内容后，对输入的内容进行加密转换。这个方式有许多种，你可以选择现有的加密算法，可以自己制定规则，甚至只是改变一下系统设置。</p>
+<p>比如说，如果想以“A brainwallet has two sides”来生成脑钱包，下面举两个加密转换的例子。</p>
+<p>1，对于每个长度大于 1 的单词，删除最后一个字母。即得到 <code>A brainwalle ha tw side</code>，用其生成的脑钱包为<code>12kXjcVD22FpQLmy9TYAr1fnUCMpeQMjXP</code></p>
+<p>2、先切换到 Converter 页，在 Source Text 框输入 <code>A brainwallet has two sides</code>，设置从 Text 输入转换成 Poetry 输出，结果为 <code>waist easily grasp hunger grab taint slide walk gather slam church concrete world passion shimmer mostly heel house people dig form</code>。将其作为脑钱包输入，得到<code>1HQDUbP5YNZKvhJ4tCvq7t8FGbSb38snWG</code>。</p>
+<p><img src="http://i1375.photobucket.com/albums/ag455/imcoddy/convert-from-text-to-poetry_zpsdikokjoy.png" alt="convert-text-to-poetry"></p>
+<p>上面的两个方法，都是对原始输入多进行了一次加工转换。相比前一种手动删除字母容易出错，个人更喜欢后者。这也是笔者将 Brainwallet.org 重新上线的原因。但这并不意味着后者一定比前者安全，因为后者的算法是固定并公开的，而前者的做法更多是用户一时兴起的做法，但在某些场合里说不定会有无招胜有招的效果。</p>
+<p>至此，如果读者能意识到自己在脑钱包输入框里输入的内容自己也记不住时，你对脑钱包的理解就得到了升华：你并不一定需要记住最后输入的内容，你需要清楚记住的是你所输入的内容的生成方式。</p>
+<p>值得一提的是，这个使用 Converter 进行的转换并不会增加输入的信息熵。在上一篇文章里，@ahr999 就<a href="https://www.bikeji.com/t/2288#reply10" target="_blank" rel="external">指出了这一点</a>。事实的确如此，单纯的执行 Hash 函数并不会使信息熵增加，但对于他人而言，用户在选择 Hash 算法这个操作上会使信息熵增加，因为这要求攻击者知晓被攻击者所采用的生成方式的信息。</p>
+<p>关于熵的概念及进一步讨论将在下一篇文章里面说明。如果你还没有猜出上面的彩蛋的话，不妨去试一试吧。大家对上面脑钱包的破解所花的时间，将成为下一篇文章的参考。</p>
+<p>本文打赏链接：1873PE9v17hZcAHPmBVufTAWVEhkunLoV3</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><img src="http://i1375.photobucket.com/albums/ag455/imcoddy/Blog/brain-wallets_zpsfabntddg.png" alt="brainwallet"></p>
+<p>这其实是一份姗姗来迟的文章，阐述了笔者个人对脑钱包的一些看法。尽管原作者因安全原因将 brainwallet.org 关闭，但笔者认为脑钱包有其存在的意义和研究价值。在<a href="http://www.8btc.com/long-live-brainwallet-ii">上一篇文章</a>里面从原理上分析脑钱包的安全性，本篇将分享部分“可行”的脑钱包生成方案。首先感谢读者对前两篇文章打赏支持，本文以飧读者，包含了几个小彩蛋，欢迎大家挖掘。　</p>]]>
+    
+    </summary>
+    
+      <category term="Bitcoin" scheme="http://imcoddy.github.io/tags/bitcoin/"/>
+    
+      <category term="Blog" scheme="http://imcoddy.github.io/tags/blog/"/>
+    
+      <category term="Brainwallet" scheme="http://imcoddy.github.io/tags/brainwallet/"/>
+    
+      <category term="Dairy" scheme="http://imcoddy.github.io/tags/dairy/"/>
+    
+      <category term="Bitcoin" scheme="http://imcoddy.github.io/categories/bitcoin/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Brainwallet.org Is Dead, Long Live Brainwallet II]]></title>
+    <link href="http://imcoddy.github.io/2015/10/09/brainwallet-org-is-dead-long-live-brainwallet-ii/"/>
+    <id>http://imcoddy.github.io/2015/10/09/brainwallet-org-is-dead-long-live-brainwallet-ii/</id>
+    <published>2015-10-09T12:16:00.000Z</published>
+    <updated>2015-10-09T23:37:40.000Z</updated>
+    <content type="html"><![CDATA[<p><img src="http://i1375.photobucket.com/albums/ag455/imcoddy/Blog/brain-wallets_zpsfabntddg.png" alt="brainwallet"></p>
+<p>这其实是一份姗姗来迟的文章，阐述了笔者个人对脑钱包的一些看法。尽管原作者因安全原因将 brainwallet.org 关闭，但笔者认为脑钱包有其存在的意义和研究价值。在<a href="http://www.8btc.com/long-live-brainwallet" target="_blank" rel="external">上一篇文章</a>里面介绍了脑钱包的相关知识以及 Brainwallet.org 从诞生到关闭的过程。在本篇里，将从原理上分析脑钱包的安全性。</p>
+<a id="more"></a>
+<h2 id="比特币私钥">比特币私钥</h2><p>要分析脑钱包的安全性，首先要从比特币私钥的生成原理开始说起。以下部分大量参考了《<a href="http://zhibimo.com/books/wang-miao/mastering-bitcoin" target="_blank" rel="external">Mastering Bitcoin</a>》一书的相关章节，想了解更详细的读者请自行查阅。</p>
+<p>比特币的所有权是通过数字密钥、比特币地址和数字签名来确立的。数字密钥实际上并不是存储在网络中，而是由用户以某种方式生成并存储在某个地方。它完全独立于比特币协议，亦无需区块链数据或网络连接。</p>
+<p>每个密钥对包括一个私钥和一个公钥。私钥（k）是一个数字，通常是随机选出的。有了私钥，我们就可以使用椭圆曲线乘法这个单向加密函数产生一个公钥（K）。有了公钥（K），我们就可以使用一个单向加密哈希函数生成比特币地址（A）。</p>
+<p><img src="http://i1375.photobucket.com/albums/ag455/imcoddy/Blog/private-key-to-address_zpsljvm2zjd.png" alt="private-key-to-public-address"></p>
+<p>大多数比特币钱包工具为了方便，会将私钥和公钥以密钥对的形式存储在一起。实际上，比特币公钥可以由私钥计算推导得出，所以只存储私钥也是可以的。这一点，正是脑钱包能确保相同输入会生成相同输出的基础。</p>
+<p>而比特币私钥，实际上只是一个随机选出的数字而已。你甚至可以完全不用电子设备，单纯用硬币、铅笔和纸来随机生成你的私钥：拿一枚硬币，重复抛 256 次，每次用纸和笔记录正反面并转换为 0 和 1 ，然后这一串随机得到的 256 位二进制数字即可作为比特币钱包的私钥。有好事者就曾经将自己的操作经历拍成视频放到了 <a href="https://www.youtube.com/watch?v=ieHoQ4sGuEY" target="_blank" rel="external">Youtube</a> 上，并“好心”地向里面放了一些比特币让有心人去领取。</p>
+<p>事实上，作为一个比特币爱好者，笔者强烈建议大家去亲自尝试一下手工生成比特币私钥这一过程。然后你会深刻地感受到，虽然 256 次抛硬币看起来并不是太艰难，但这过程实在是无聊至极:P</p>
+<p>另外多说一句，即使真的拿一枚硬币抛上几百次，得到的结果也不一定能保证足够随机。因为受现实物质世界的影响，这枚硬币最后是正面还是反面的概率无法达到完全相等的五五平开。正如理想的直线的宽度为零一样，真正的随机数只存在于理论里。知乎上<a href="http://daily.zhihu.com/story/7167468" target="_blank" rel="external">这篇文章</a>和<a href="http://daily.zhihu.com/story/4447721" target="_blank" rel="external">这篇文章</a>对此有所说明。</p>
+<h2 id="脑钱包的生成原理">脑钱包的生成原理</h2><p>在上面抛硬币的实验中，有一个常识或许是很多人难以意识到的：如果你没有将抛硬币所得到的私钥保存下来的话，你这一生都将无法再次遇到它。因为对于 2^n 这一个指数级增长的函数而言，要想从 2^256 这个集合中随机抽取两次并期望所得结果相同的概率接近为零。</p>
+<p>这或许成了不少早期比特币玩家无限懊悔的根源，在那个默认使用找零地址时常需要备份密钥的年代，有多少币只因玩家一时疏忽就从此永远埋没。虽然笔者没有看到较详尽的丢币统计，毕竟地址上的币是丢失了还是暂时尘封在区块链上是完全无法区分，但个人认为，在币价低廉的初期，因用户的操作失误而无法重见天日的比特币或许比大多数人估计的都要多得多。因此，对于每个擦身而过转瞬即逝的私钥，笔者只想说一句：且生成且珍惜。</p>
+<p>Brainwallet.org 在某种意义上缓解了这个尴尬的局面。相对于难以记忆的一长串 0 和 1，用户通过输入自行编写的一串字符串，即可与一个固定的密钥生成一一对应的映射。其采用的算法其实很简单，通过对用户的输入进行一次 SHA256 操作，然后将生成的 256 位 hash 值作为私钥，其具体的代码如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">calc_hash</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> hash = Crypto.SHA256($(<span class="string">'#pass'</span>).val(), &#123; asBytes: <span class="literal">true</span> &#125;);</span><br><span class="line">    $(<span class="string">'#hash'</span>).val(Crypto.util.bytesToHex(hash));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>巴比特去年翻译的《<a href="http://www.8btc.com/graphical-address-generator" target="_blank" rel="external">比特币地址生成（图形化）</a>》一文其实介绍的就是 Brainwallet.org 的生成方式。实际上，各个比特币软件在生成地址时，除了第一步中选取随机数时采用的方式可能稍有不同之外，后面的步骤完全相同。　　　　　　</p>
+<p><img src="http://i1375.photobucket.com/albums/ag455/imcoddy/Blog/bitcoin-address-generation_zpscgfe3yma.png" alt="bitcoin-address-generation"></p>
+<p>因此，单纯从实现上来说，Brainwallet.org 做得也是无可厚非。毕竟 SHA256 算法目前还是安全的，比特币在内部实现时也大量使用，其生成的 hash 值也的确分布得足够分散。那么，为什么脑钱包自上线以来一直受到这么多安全指责呢？答案已经是不言自明了，这里面最脆弱的不是别的，正是在“Type passphrase here…”里输入的短语，以及输入这个短语的人。</p>
+<p>因此，<strong>从这个角度而言，单纯地指责脑钱包不安全是不负责任的</strong>，因为在一条不结实的安全长链里面，其牢固程度取决于最脆弱的一环。而与计算机准确无误地按照指示执行命令相比，因用户操作而出错的概率要远远大得多。拿电脑系统来举例，现代的操作系统在用户权限管理上其实已经非常完善，如果能将自己置于受限帐户下，日常使用基本很难感染病毒。但还是有许多人贪图方便直接使用管理员账户，从而不小心被植木马的事情屡见不鲜。</p>
+<p>但从另一个角度来说，脑钱包的确非常不安全。由于 Brainwallet.org 的算法透明公开（毕竟算法不透明的话是不会有人用的），整个流程的安全性完全取决于用户自身的安全意识。在这一点上， Brainwallet.org 向用户暴露了一个过于开放的接口，这虽然方便了用户，也带来了严重的安全隐患。</p>
+<p>如果说要通过获取 wallet.dat 来盗币需要先通过种植木马及破解密码（如果钱包加密过的话）这两道关卡，将比特币存在脑钱包里就像将现金放在街头的公共储蓄箱里面，而且你无法阻止别人不时过来将其打开看看里面是否有币。更关键的一点是，这些不时过来打开箱子查看的人并不是针对某个个体，而是通过分析统计找出那些最可能被使用的箱子，然后飞速地确认并将里面的币收入囊中。</p>
+<p><img src="http://i1375.photobucket.com/albums/ag455/imcoddy/public-safe-locker_zpsknr2iolu.jpg" alt="public-safe-locker"></p>
+<p>只有充分理解上面这个例子的人，才有资格使用脑钱包。因为他会明白，此时要做的是找到一个不容易被他人发现而只有自己知道的箱子，才能安心地把东西放进去。幸运的是，能明白这点的人通常都会放弃自行生成比特币地址而是通过软件代劳，因为那样才能获得更好的随机性。而如果你依然“执迷不悟”的坚持想要使用 Brainwallet.org 来生成的话，笔者觉得有必要在下一篇文章里给你传授一些人生经验。</p>
+<p>打赏链接：1873PE9v17hZcAHPmBVufTAWVEhkunLoV3</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><img src="http://i1375.photobucket.com/albums/ag455/imcoddy/Blog/brain-wallets_zpsfabntddg.png" alt="brainwallet"></p>
+<p>这其实是一份姗姗来迟的文章，阐述了笔者个人对脑钱包的一些看法。尽管原作者因安全原因将 brainwallet.org 关闭，但笔者认为脑钱包有其存在的意义和研究价值。在<a href="http://www.8btc.com/long-live-brainwallet">上一篇文章</a>里面介绍了脑钱包的相关知识以及 Brainwallet.org 从诞生到关闭的过程。在本篇里，将从原理上分析脑钱包的安全性。</p>]]>
+    
+    </summary>
+    
+      <category term="Bitcoin" scheme="http://imcoddy.github.io/tags/bitcoin/"/>
+    
+      <category term="Blog" scheme="http://imcoddy.github.io/tags/blog/"/>
+    
+      <category term="Brainwallet" scheme="http://imcoddy.github.io/tags/brainwallet/"/>
+    
+      <category term="Dairy" scheme="http://imcoddy.github.io/tags/dairy/"/>
+    
+      <category term="Bitcoin" scheme="http://imcoddy.github.io/categories/bitcoin/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Brainwallet.org Is Dead, Long Live Brainwallet]]></title>
+    <link href="http://imcoddy.github.io/2015/10/06/brainwallet-org-is-dead-long-live-brainwallet/"/>
+    <id>http://imcoddy.github.io/2015/10/06/brainwallet-org-is-dead-long-live-brainwallet/</id>
+    <published>2015-10-06T09:16:00.000Z</published>
+    <updated>2015-10-09T07:24:49.000Z</updated>
+    <content type="html"><![CDATA[<p><img src="http://i1375.photobucket.com/albums/ag455/imcoddy/Blog/brain-wallets_zpsfabntddg.png" alt="brainwallet"></p>
+<p>这其实是一份姗姗来迟的文章，阐述了笔者个人对脑钱包的一些看法。尽管原作者因安全原因将 Brainwallet.org 关闭，但笔者认为脑钱包有其存在的意义和研究价值，是以又搭建了一个<a href="http://brainwallet.herokuapp.com/" target="_blank" rel="external">镜像</a>放到网上。内容较长，将分成几部分发表，欢迎大家围观并讨论。</p>
+<a id="more"></a>
+<h2 id="脑钱包是什么">脑钱包是什么</h2><p>顾名思义，脑钱包即存在于脑海中的比特币钱包。它其实是一种比特币私钥的生成方式，通过对用户的输入进行计算生成相应的比特币地址。让你只需要记住一个密码，便可以用这个密码在脑钱包程序中恢复比特币地址和私钥。</p>
+<p>基于这个思想，一个名叫 Brainwallet.org 的网站于 2012 年 4 月出现了 。这是一个基于网页的 JavaScript 比特币地址生成器，通过对用户输入的内容进行运算后生成对应的比特币私钥和地址。</p>
+<p>它带来的好处是十分明显的：1，用户不需要去安装 Bitcoin Core （当时还叫 Bitcoin ）软件，不需要下载庞大的区块链数据，只需要打开一个网址便可方便地生成比特币地址并接收；2，用户不要去学习如何定期备份 wallet.dat 文件，只需要记住自己所设置的密码，就能在需要的时候通过计算得到相应私钥。</p>
+<p><img src="http://i1375.photobucket.com/albums/ag455/imcoddy/Blog/brainwallet-org-first-public-release_zpsnahqghbf.png" alt="brainwallet-org-first-public-release"></p>
+<p>脑钱包的出现在当时比特币应用贫瘠、对用户电脑水平要求较高的情况下，犹如一阵清新的拂面春风，给比特币社区带来不少活力。Electrum 的作者 Vitalik Buterin，就曾经在 Bitcoin Magazine 上写过一篇脑钱包的指南《<a href="https://bitcoinmagazine.com/articles/brain-wallets-the-what-and-the-how-1333845334" target="_blank" rel="external">Brain Wallets: The What and the How</a>》。在随后的几年里，Brainwallet.org 亦是更新不断，但这个核心的功能，直至 2015 年 8 月关闭为止，都几乎没有太大的变化。</p>
+<h2 id="Brainwallet-org_之殇">Brainwallet.org 之殇</h2><p>尽管 Brainwallet.org 给大家带来了不少便利，不过由于其实现的机制，时常被业内人士所诟病。例如 Gavin 就曾经在个人的 <a href="https://gist.github.com/gavinandresen/3840286" target="_blank" rel="external">Github Gist</a> 上就写过一篇针对脑钱包的檄文《<a href="http://imcoddy.github.io/2014/01/18/do-not-use-a-brainwallet/" target="_blank" rel="external">Do Not Use A Brainwallet! You Are Likely To Lose Your Coins!</a>》，甚至做过这样的<a href="https://bitcointalk.org/index.php?topic=102349.10;" target="_blank" rel="external">表态</a>：</p>
+<blockquote>
+<p>Every time I look at the academic literature on passwords/passphrases, I get more depressed about the feasibility of either giving users a secure passphrase that they will remember or getting a secure passphrase from them. I fear there will be a lot of lost coins if “brain wallets” get popular.　　　</p>
+</blockquote>
+<p>这样的担忧绝非杞人忧天。实际上，这是由比特币的原理决定的。作为一款基于 P2P 网络的虚拟货币，比特币的存储实际上贯穿于整个网络，而非具体的实物媒介。尽管用户可以在离线的环境下保证使用脑钱包生成的私钥不会被木马盗取，但对于黑客而言，其可以采用暴力穷举的方式不断进行尝试，从而在发现存有币的地址时将其盗取。</p>
+<p>实际上，每一个（存有币）的比特币地址都有可能被碰撞出来，因为每一个私钥不过是一串特别的字符串。而脑钱包的出现，虽然给了人们通过单词语句来生成比特币地址的便利，同时也让比特币地址被猜出来的概率大大增加了。</p>
+<p>这催生部分以此为乐的掘金猎人，例如部分黑客就在 《<a href="http://www.morxploit.com/morxpapers/smashingbitcoins.pdf" target="_blank" rel="external">Smashing Bitcoin BrainWallets, for fun and profit! </a> 》一文里给出了详尽的代码，用户只需要设置好自己词汇表并运行便可。这样的攻击在 Brainwallet.org 出现初期非常有效，因为有不少用户仅使用很简单的诸如“password1”这样的短语生成的地址，而要暴力破解这样的脑钱包不需超过十秒。</p>
+<p>这其中最让人著名的莫过于用”bitcoin is awesome”生成的脑钱包地址 <a href="https://blockchain.info/address/14NWDXkQwcGN1Pd9fboL8npVynD5SfyJAE" target="_blank" rel="external">14NWDXkQwcGN1Pd9fboL8npVynD5SfyJAE</a> ，因为有人在 2012 年用这个短语生成该地址后，向里面转入 500 枚比特币后，随后在不到一分钟的时间内，这上面的币就被全部转走。另一个著名的脑钱包地址为“correct horse battery staple”生成的地址 <a href="https://blockchain.info/address/1JwSSubhmg6iPtRjtyqhUYYH7bZg3Lfy1T" target="_blank" rel="external">1JwSSubhmg6iPtRjtyqhUYYH7bZg3Lfy1T</a>，由于这是 Brainwallet.org 初期的默认地址，陆陆续续不断有用户直接拿来使用向里面发币，到网站关闭为止居然积累了 15.4 个币，实在算是现代版的守株待兔。</p>
+<p>这就是脑钱包的特点：如果你能确保生成一个独一无二的输入，你就基本上可以认为它是安全的。但一旦他人能构建出相同的输入，对方也将获得该地址的掌控权。而对于大量使用 Brainwallet.org 来存储比特币的用户而言，他们当中的大部分远远没有驾驭好这个工具所需的能力。</p>
+<p>尽管社区里抵制脑钱包的呼声一直不断，最终导致 Brainwallet.org 关闭的，是数字反欺诈公司 White Ops 的安全研究员 Ryan Castellucci 于 2015 年 8 月 7 日在 DEF CON 23 大会公布的一项<a href="https://rya.nc/cracking_cryptocurrency_brainwallets.pdf" target="_blank" rel="external">研究</a>。</p>
+<p>在该研究中，Ryan 编写了一个叫 Brainflayer 的程序，它能够每秒猜测 130,000 个密码，相比其早期版本性能足足提升了十余倍。如果该软件在强大的计算机上进行运算，花费 1 美元的成本就可以核对 5.6 亿个短语密码(<a href="https://bitcointalk.org/index.php?topic=1147035.0" target="_blank" rel="external">相关资料</a>）。Ryan 称，他用这个程序找到了超过 730 个比特币，其中有一个脑钱包是由“<a href="https://blockchain.info/address/1GjjGLYR7UhtM1n6z7QDpQskBicgmsHW9k" target="_blank" rel="external">how much wood could a woodchuck chuck if a woodchuck could chuck wood</a>”生成的，里面包含了 250 个比特币。</p>
+<p>这使得以往被认为是足够安全的脑钱包短语被证明事实上十分脆弱。在这项研究被公布之后，Brainwallet.org 立即在 Twitter 上 <a href="https://twitter.com/brainwallet/status/629759260004630528" target="_blank" rel="external">宣布将永久关闭</a>，并清空了其在 Github 的源代码。</p>
+<p><img src="http://i1375.photobucket.com/albums/ag455/imcoddy/Blog/brainwallet-org-closed-down_zpsdgq6ee9m.png" alt="brainwallet-org-shut-down"></p>
+<p>事已至令，Brainwallet.org 就算是从此落下了帷幕。但这是否就算是给脑钱包下了死刑呢？脑钱包的安全性是否如此不济？这一切，还需要从脑钱包的详细原理说起。在下一篇文章里，笔者将对此进行阐述，并分析讨论脑钱包的安全性。</p>
+<p>打赏地址：1873PE9v17hZcAHPmBVufTAWVEhkunLoV3</p>
+<p>本文同步</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><img src="http://i1375.photobucket.com/albums/ag455/imcoddy/Blog/brain-wallets_zpsfabntddg.png" alt="brainwallet"></p>
+<p>这其实是一份姗姗来迟的文章，阐述了笔者个人对脑钱包的一些看法。尽管原作者因安全原因将 Brainwallet.org 关闭，但笔者认为脑钱包有其存在的意义和研究价值，是以又搭建了一个<a href="http://brainwallet.herokuapp.com/">镜像</a>放到网上。内容较长，将分成几部分发表，欢迎大家围观并讨论。</p>]]>
+    
+    </summary>
+    
+      <category term="Bitcoin" scheme="http://imcoddy.github.io/tags/bitcoin/"/>
+    
+      <category term="Blog" scheme="http://imcoddy.github.io/tags/blog/"/>
+    
+      <category term="Brainwallet" scheme="http://imcoddy.github.io/tags/brainwallet/"/>
+    
+      <category term="Dairy" scheme="http://imcoddy.github.io/tags/dairy/"/>
+    
+      <category term="Bitcoin" scheme="http://imcoddy.github.io/categories/bitcoin/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Host Static Html On Heroku]]></title>
@@ -1087,199 +1383,6 @@ nSubsidy &gt;&gt;= (nHeight / <span class="number">210000</span>);`
       <category term="Webclip" scheme="http://imcoddy.github.io/tags/webclip/"/>
     
       <category term="Bitcoin" scheme="http://imcoddy.github.io/categories/bitcoin/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Backup And Restore Your Nook On The Mac]]></title>
-    <link href="http://imcoddy.github.io/2013/12/16/backup-and-restore-your-nook-on-the-mac/"/>
-    <id>http://imcoddy.github.io/2013/12/16/backup-and-restore-your-nook-on-the-mac/</id>
-    <published>2013-12-16T12:36:45.000Z</published>
-    <updated>2015-07-05T11:58:18.000Z</updated>
-    <content type="html"><![CDATA[<p>转眼之间的手头上这台 Nook 已经到手两年了。虽然与 Kindle 相比这玩意名气的确小了不少，而且自带的系统限制不少，对中文支持得也不太到位。不过在经过自己 Root 并精心配置过后，这玩意的阅读体验可以得到很大的提升，实在是物超所值（虽然当年入手不久后这货就跟着 Kindle 狠狠滴降了价-_-）。趁着昨天在知乎挖了个老帖《<a href="http://www.zhihu.com/question/20109608/answer/20869162?group_id=132318107#answer-3543341" target="_blank" rel="external">图书资源和阅读感觉上，Kindle 4 和 Nook 2 哪个较好？</a>》，记录一下昨天刷机的过程吧。<br><a id="more"></a><br>其实一直在用着并没有出什么问题，只是有一次不小心，插电脑上充电时没有被其弹出就直接拔出，造成了磁盘的权限出了点问题。虽然不影响平时看书，不过这样一来就没有办法安装新软件或做其它系统修改了。直到昨天想安装点东西失败后，终于决定：还是把它刷回来吧！</p>
-<p>不过在准备刷机的过程中，遇到了一个很尴尬的问题：现有的刷机教程都是基于 Windows 下用 DiskGenius 来操作的，其它系统下的操作指南几乎没有，而我已经摒弃 Windows 好多天……没办法，在某个说明不详的“Linux/Mac users can use dd”这一个模糊不清的提示下，我便开始了在 Mac 下恢复 Nook 的折腾史。</p>
-<h2 id="准备">准备</h2><p>首先需要调整好心态，充分意识到「刷机有风险，操作要谨慎，后果需自负」 的正确折腾心态，并预备好以下几样东西：</p>
-<ol>
-<li>Nook 用 512M 以上大小的 SD 卡及 USB 读卡器，建议用闲置的卡，方便以后使用。</li>
-<li>Nook 机器及数据线。</li>
-<li>引导所需的 Noogie 镜像文件。（点<a href="https://code.google.com/p/nst-recovery/downloads/detail?name=noogie.img.gz" target="_blank" rel="external">这里</a>下载）</li>
-<li>具有管理员权限的 Mac 一台。（ Linux 的操作大致相同，不过我没有验证。）</li>
-</ol>
-<h2 id="制作引导镜像">制作引导镜像</h2><p>（声明：这一步我并没有做，因为之前这个 Noogie 引导镜像已经做好了，不过理论上是可行的。如果有人实践发现有问题请告诉我。）</p>
-<ol>
-<li>将准备中所下载的 Noogie 镜像解压（2.6MB 的文件解压后达到 79.7MB，这个压缩率真心赞啊。），打开一个 Terminal 并将当前目录转至镜像的目录下。</li>
-<li>将 SD 卡通过读卡器连接至 Mac 上。</li>
-<li>在 Terminal 中输入<code>diskutil list</code>获得当前 SD 卡的盘符。（一般来说是 /dev/disk# ，其中 # 号所对应的数字可能不同）</li>
-<li><p>仔细确认了 SD 卡的位置后，输入以下的命令（以 /dev/disk1 为例）。<strong>一定要注意不要选到系统盘，否则整个系统就挂了。</strong></p>
-<pre><code>sudo diskutil unmountDisk <span class="regexp">/dev/</span>disk1
-</code></pre></li>
-<li><p>用 dd 命令将镜像写入到 SD 卡中。</p>
-<pre><code>sudo <span class="tag">dd</span> <span class="keyword">if</span>=/path/to/noogie<span class="class">.img</span> of=/dev/disk1 bs=<span class="number">1</span>m
-</code></pre></li>
-</ol>
-<p>经过一阵等待后，该镜像应该会成功地写入到 SD 卡中。</p>
-<h2 id="备份/刷机">备份/刷机</h2><ol>
-<li>长按背后的 N 键将 Nook 完成关机。</li>
-<li>插入刚才制作好的 SD 卡并开机，稍后会出现”Rooted Forever”的字样。</li>
-<li>将 Nook 插上数据线连接到电脑上，一会会在电脑上加载了名为 boot 和 Nook 的两个磁盘卷。</li>
-<li>通过 DiskUtil 将这两个磁盘卸下。在 Terminal 中获得 Nook 的盘符。</li>
-<li><p>仔细确认了 Nook 的位置后，输入以下的命令将现有的系统备份（以 /dev/disk1 为例）</p>
-<pre><code>sudo <span class="tag">dd</span> <span class="keyword">if</span>=/dev/disk1 of=/path/to/my_nook_backup<span class="class">.img</span> bs=<span class="number">1</span>m
-</code></pre></li>
-<li>经过一阵漫长的等待后，确认生成的镜像大小是 1962934272 bytes。（也有可能大小是 1958739968，似乎不同的版本稍有差别。）</li>
-<li><p>将生成的镜像妥善保管，在需要还原的时候，只需要将 if 和 of 的内容反过来即可</p>
-<pre><code>sudo <span class="tag">dd</span> <span class="keyword">if</span>=/path/to/my_nook_backup<span class="class">.img</span> of=/dev/disk1 bs=<span class="number">1</span>m
-</code></pre></li>
-</ol>
-<h2 id="总结">总结</h2><p>从上面的命令也可以看出，在 Mac 上要备份或者恢复 Nook 实在是太简单了，基本上只需要一个 dd 命令，以至于让我怀疑相关资料这么少的原因是因为这简单得别人不屑于写-_-。而 dd 命令其实使用也并不难，指定输入的文件 input file 以及输入的文件 output file，同时设置一下缓冲区 buffer size 的大小即可，但在使用中，需要注意不要误操作以破坏系统。</p>
-<p>另外，由于我本次刷机用的是自己之前所保存的镜像，并没有涉及到刷他人镜像需要恢复 pmf 分区信息的问题。不过理论上这个也可以通过 DiskUtil 来写入，如果有认证实践了，分享一下经验吧。</p>
-<p>总之，只要把自己的镜像备份了，Nook 这机器基本上就是不怕刷坏的不死之身了。 Happy Reading, And Long Live The Nook :P</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>转眼之间的手头上这台 Nook 已经到手两年了。虽然与 Kindle 相比这玩意名气的确小了不少，而且自带的系统限制不少，对中文支持得也不太到位。不过在经过自己 Root 并精心配置过后，这玩意的阅读体验可以得到很大的提升，实在是物超所值（虽然当年入手不久后这货就跟着 Kindle 狠狠滴降了价-_-）。趁着昨天在知乎挖了个老帖《<a href="http://www.zhihu.com/question/20109608/answer/20869162?group_id=132318107#answer-3543341">图书资源和阅读感觉上，Kindle 4 和 Nook 2 哪个较好？</a>》，记录一下昨天刷机的过程吧。<br>]]>
-    
-    </summary>
-    
-      <category term="Hack" scheme="http://imcoddy.github.io/tags/hack/"/>
-    
-      <category term="Mac" scheme="http://imcoddy.github.io/tags/mac/"/>
-    
-      <category term="Nook" scheme="http://imcoddy.github.io/tags/nook/"/>
-    
-      <category term="Reading" scheme="http://imcoddy.github.io/tags/reading/"/>
-    
-      <category term="Diary" scheme="http://imcoddy.github.io/categories/diary/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[iPad Mini Retina Review: Mini But Powerful]]></title>
-    <link href="http://imcoddy.github.io/2013/11/24/ipad-mini-retina-review-mini-but-powerful/"/>
-    <id>http://imcoddy.github.io/2013/11/24/ipad-mini-retina-review-mini-but-powerful/</id>
-    <published>2013-11-24T12:57:12.000Z</published>
-    <updated>2015-07-05T11:58:18.000Z</updated>
-    <content type="html"><![CDATA[<p>拿到 iPad Mini Retina 已经一个多星期了，随便整理一下这些日子的使用感受吧。</p>
-<p>虽然在一个月前就已经宣布，不过由于 iPad Mini Retina 的上市时间在发布会上并没有公布，于是各路谣言四起，大部分的推测都指向了本月的 22 日。然后苹果公司又和大家开了个玩笑，12 日便开始了预备发售。于是第二天早上便在官网上预订了一台，中午直接到银座店取了货。呵呵，难得当了一次这么积极的果粉。<br><a id="more"></a></p>
-<p>入手 iPad Mini 的理由其实很简单，之前的 iPad 4 用起来还是稍重了些。虽然这次更新的 iPad Air 其实已经轻巧了许多，不过外出携带时还是稍有不便。而 iPad Mini 这款 7.9 寸的屏幕大小，使得其在阅读和便携之间取得了一个很好的平衡。</p>
-<p>相比于上一代，本次更新的 iPad Mini Retina 最直观的感受是屏幕的升级带来的界面清晰度提升。这也算是众望所归吧，毕竟这年头大家都被高清的分辨率宠坏了。虽然经测试 Mini 所配的屏幕存在色域不如 Air 广的缺陷，不过对于我而言，如果不是专门将两个设置并排在一块进行对比的话，是很难察觉其中差异的。当然，如果对画质要求精准的话，这点的确需要注意一下。</p>
-<p>至于用它来看书的效果，个人觉得非常满意。相比 6 寸的阅读器而言， iPad Mini 的屏幕用来<a href="http://www.zhihu.com/question/21871799?group_id=107519220#answer-3080405" target="_blank" rel="external">阅读扫描版 PDF 文件</a>会更加舒适一些，同时配合着一些切边软件，基本上不存在文字显示过小的问题。而且在 App Store 里可以找到各类的应用，文档的格式基本上不成问题。唯一的缺陷就是看久了会伤眼，这点还是没法和 Eink 比:P</p>
-<p>容量方面，个人选择的是16G的，因为主要是看书刷资讯为主，加上最近新败的Time Capsule，看视频都通过共享直接流媒体播放，16G基本上绰绰有余。不过喜欢玩游戏或者离线看电影的的，还是请考虑32G及以上吧。</p>
-<p>应用方面，由于大部分软件都有对 iOS 7 的扁平化风格进行适配，所以界面也不算太唐突，看多了也就习惯了。不过很奇怪的是我发现 iPad 里面没有天气、计算器、闹钟等应用，在 Notification Center 里面看不到天气还有些不习惯。最开始以为是新系统的原因，不过经搜索后发现，这已经是历史遗留问题了-_-</p>
-<p>总体而言，iPad 的使用体验还是非常优异的。如果还在观望的话，可以尽快考虑预定了。毕竟，这货的紧缺程度估计要到元旦后才能缓解了XD</p>
-<p>最后，推荐应用篇网文一则：<a href="http://bbs.weiphone.com/read-htm-tid-5713167.html" target="_blank" rel="external">把mini打造成我的”随身工作秘书”</a></p>
-<p>更新：去年国庆回家后把这台 iPad 给父母，原本期望 iPad Mini 3 的更新能够给力一点，结果发现只更新了 TouchID &gt;_&lt; 失望之余又入了一台 32G 的 iPad Mini 2……</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>拿到 iPad Mini Retina 已经一个多星期了，随便整理一下这些日子的使用感受吧。</p>
-<p>虽然在一个月前就已经宣布，不过由于 iPad Mini Retina 的上市时间在发布会上并没有公布，于是各路谣言四起，大部分的推测都指向了本月的 22 日。然后苹果公司又和大家开了个玩笑，12 日便开始了预备发售。于是第二天早上便在官网上预订了一台，中午直接到银座店取了货。呵呵，难得当了一次这么积极的果粉。<br>]]>
-    
-    </summary>
-    
-      <category term="Review" scheme="http://imcoddy.github.io/tags/review/"/>
-    
-      <category term="iOS" scheme="http://imcoddy.github.io/tags/ios/"/>
-    
-      <category term="iPad" scheme="http://imcoddy.github.io/tags/ipad/"/>
-    
-      <category term="Tech" scheme="http://imcoddy.github.io/categories/tech/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Music On The Run]]></title>
-    <link href="http://imcoddy.github.io/2013/11/17/music-on-the-run/"/>
-    <id>http://imcoddy.github.io/2013/11/17/music-on-the-run/</id>
-    <published>2013-11-17T11:54:58.000Z</published>
-    <updated>2015-07-05T11:58:18.000Z</updated>
-    <content type="html"><![CDATA[<p>你还在听保存在电脑上的音乐吗？</p>
-<p>在这网络便利的年代，通过网络在线听歌的方式似乎已经慢慢成为大家的首选方式了。国外流行的有Pandora，国内则有豆瓣FM、虾米等等。在线的方式除了可以随时随地播放之外，还可以将自己喜爱的曲目收藏下来，并在此基础上打造出自己的动听电台。<br><a id="more"></a><br>不过在线音乐固然方便，但对于我这样用iTunes好几年，积累了好几十G音乐的人来说，换用其它音乐网站的迁移成本未免过大了些。而随着现在iDevice增加，曲库的同步管理慢慢成了一个问题。平时iPod/iPhone/iPad用Mac来同步虽然稍有些麻烦但也还凑合，不过在公司的话就没法听家里的音乐了。于是本着外事不解问谷歌的原则，发现了iTunes Match这一个好东西。</p>
-<h2 id="iTunes_Match">iTunes Match</h2><p>虽然iTunes Match已经推出了好一阵子，但周围使用的用户似乎并不多。简单来 说这是个将自己的本地音乐「洗白」的服务，它可以将本地的音乐文件进行匹配，同时将整个曲库的信息放到云端，这样使用着相同帐户的所有iDevice都可以共享曲库。无论是在住宅或者公司，只要登陆之后，听歌+评级都可以无缝整合！写到这里，我不禁对乔布斯的最后一个“One More Thing”致以崇高的敬意！</p>
-<p>不过当我试着去使用这服务的时候，还是悲剧滴失败了。理由很简单，这个服务仅对部分国家开放，而岛国并不在其中。而就算我使用着美区的iTunes账号，在付款时还需要提供美国的信用卡信息才能通过认证……唉，这果然是万恶的资本主义人民才能享受到的服务。</p>
-<h2 id="Google_Music_Play">Google Music Play</h2><p>苹果不给力，只好转向了Google。作为刚起步没多久的竞争对手，Google所拥有的曲库自然不如苹果。于是Google玩起了众包手段，让用户自行上传MP3，上传的数量最多为20000首。</p>
-<p>在上传时，需要下载Google提供的Music Manager应用。它支持读取iTunes的目录信息，并可以通过选择音乐列表来实现部分上传，同时还可以将Podcast单独剔除（毕竟这本来就是通过网络下载来的嘛）。当然，对于我这样还打算继续使用iTunes的用户来说，自动上传新增歌曲这个选项是一定要勾上的。</p>
-<p>上传完毕后，便可以在自己的Google Music Play页面看到自己的曲库了，可可以通过相应的App来进行收听。基本上是以演唱者来划分，如果是音乐列表的话点进去还能看到该列表的详细曲目。唯一可惜的是它没有将Audiobook给划分出来，听着歌的时候突然听到一段语音书的感觉还是有些违和感。</p>
-<p>当然，叛逃到Google服务的话，原先的评分系统自然是没法继续使用的了。</p>
-<h2 id="Home_Sharing">Home Sharing</h2><p>其实如果iPad只是经常在住所使用的话，还可以使用iTunes的Home Sharing功能。其功能就是通过将Mac上的iTunes进行共享，使得在同一局域网内的其它设备也能够播放。</p>
-<p>开启的方式很简单，首先在iTunes的设置的共享项里先将其打开，然后在菜单File-&gt;Home Sharing里将其启用即可。</p>
-<p>接着在使用着相同ID的iDevice上打开Music，在More-&gt;Library选择共享出来的曲库即可。然后就可以看到相应的歌曲并播放了。</p>
-<p>不过虽然可以选择通过Home Sharing更新播放次数，但是似乎没法共享评分。而且，不在同个网域，或者在iTunes里将共享关掉后，其它设置也会立即停止播放Orz</p>
-<h2 id="总结">总结</h2><p>经比较，从方便性而言，iTunes Match &gt; iTunes Home Sharing &gt;= Google Music Play。</p>
-<p>只可惜iTunes Match现在是想付款也没法用的状态，实在是遗憾。</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>你还在听保存在电脑上的音乐吗？</p>
-<p>在这网络便利的年代，通过网络在线听歌的方式似乎已经慢慢成为大家的首选方式了。国外流行的有Pandora，国内则有豆瓣FM、虾米等等。在线的方式除了可以随时随地播放之外，还可以将自己喜爱的曲目收藏下来，并在此基础上打造出自己的动听电台。<br>]]>
-    
-    </summary>
-    
-      <category term="Diary" scheme="http://imcoddy.github.io/tags/diary/"/>
-    
-      <category term="Mac" scheme="http://imcoddy.github.io/tags/mac/"/>
-    
-      <category term="Music" scheme="http://imcoddy.github.io/tags/music/"/>
-    
-      <category term="iTunes" scheme="http://imcoddy.github.io/tags/itunes/"/>
-    
-      <category term="Tech" scheme="http://imcoddy.github.io/categories/tech/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Remapping My HHKB]]></title>
-    <link href="http://imcoddy.github.io/2013/10/20/remapping-my-hhkb/"/>
-    <id>http://imcoddy.github.io/2013/10/20/remapping-my-hhkb/</id>
-    <published>2013-10-20T01:31:44.000Z</published>
-    <updated>2015-07-05T11:58:18.000Z</updated>
-    <content type="html"><![CDATA[<p>入手HHKB Lite for Mac已经好几个月了，不过一直没准备为它写点什么。哈，毕竟一块薄膜键盘，和Pro2版的手感相比的确相去甚远，而为了适应这新的键盘布局也费了不少折腾。不过，配合着Mac下的必备软件KeyRemap4MacBook，经过配置一番后，终于可以和公司的Macbook Pro的键盘键位做到无痛切换了XD<br><a id="more"></a></p>
-<h2 id="HHKB">HHKB</h2><p>HHKB，全称是Happy Hacking Keyboard。它优异的操作手感以及独特（且合理）的键位安排，实在是居家码字的必备良品，在资深码农界可谓是无人不晓。相比市面上常见的键盘布局，HHKB其主要的特点在于以下几点：</p>
-<ol>
-<li>将F1至F12的功能键与数字键放置在一起，通过配合Fn键来调用。</li>
-<li>将Control键放在Cap键的位置，通过Fn+Tab来实现大小切换。</li>
-<li>将Esc键放到数字1的旁边，将~键放到了删除键的位置，同时删除键直接在回车键的上方。</li>
-<li>只有Lite版有方向键，而其它版本通过Fn+;[‘/来实现上面左右的移动</li>
-</ol>
-<p>从上面可以看出，正是由于这样紧凑的设计，以及对许多键的组合利用，使得这块只有60多个键的键盘，不仅足以担任码字的需求，而且实现得更优雅！</p>
-<h2 id="Movement_In_OSX">Movement In OSX</h2><p>虽然HHKB没有直接的方向键，不过由于其将Ctrl放在了Cap的位置，使得按Ctrl组合键方便了许多，只需要左手小指向左轻轻一按即可。因此，对于常用的文本编辑处理时，是完全不需要用所谓的方向键来实现移动的，具体的实现功能如下：</p>
-<ul>
-<li>按Ctrl+a/e可以实行移动到行首/行尾</li>
-<li>按Ctrl+f/b实现单字符的左右移动</li>
-<li>按Ctrl+h/d实现向前删除/向后删除</li>
-<li>按Ctrl+p/n实现移动至上一行/下一行</li>
-<li>按Ctrl+t实现前后字符交换</li>
-<li>按Ctrl+k实现删除至行尾</li>
-</ul>
-<p>另外，在部分模式下</p>
-<ul>
-<li>按Ctrl+m可以实现回车换行</li>
-<li>按Ctrl+w可以实现向前删除一个单词</li>
-</ul>
-<p>上面的快捷键可能适应需要一点时间，不过习惯之后，编辑时移动光标就可以不需要将手指移开主键盘区了。可惜没有找到按词移动光标的方式，要不操作就更方便了。</p>
-<h2 id="KeyRemap4MacBook">KeyRemap4MacBook</h2><p>HHKB的键位安排如此紧凑，在一定程度上也使得HHKB不容易上手。比如在苹果系统下，原本的F1~F12上对应的快捷功能键就无法享受了，Esc与~时常容易混淆导致切换到用户目录不便，删除键虽然变得近了点，但偶尔会习惯性地将手指上移导致按错。</p>
-<p>这个时候，就是KeyRemap4MacBook大显神威的时候了。实际上，HHKB自家也有提供了修改映射的驱动程序，不过可选的设置实在太少了，而前者提供的选项多得吓人，所以还是直接用前者就好哈哈。我开启以下几个选项:</p>
-<ol>
-<li>单独按左Ctrl键时映射到Esc上。这样Ctrl在单击时是退出，组合使用时不变，对于VI党来说这个功能真的很贴心。</li>
-<li>Shift+Esc映射到~上。这样主要是为了与用公司的电脑时兼容，毕竟在Terminal里用~返回用户根目录还是很常用的。</li>
-<li>单按右Shift时切换大小写。因为用左手来按Fn+Tab还是稍有点不顺。</li>
-<li>左Option+hjkl来当上下左右。虽然想用Fn+hijk来着的，可惜lite版里hj两个键无法配合Fn发送信号，因此换用Option键这是个折中的做法吧。</li>
-</ol>
-<p>在启用了这几项设置后，感觉这款HHKB Lite键盘真是用得相当顺手，让我有了再入一款静音版的冲动。唉，果然上次一括刷卡刷了40w后再看Type-S或者MRD-1RBT也不觉得贵了。嗯，这是病，得治~！</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>入手HHKB Lite for Mac已经好几个月了，不过一直没准备为它写点什么。哈，毕竟一块薄膜键盘，和Pro2版的手感相比的确相去甚远，而为了适应这新的键盘布局也费了不少折腾。不过，配合着Mac下的必备软件KeyRemap4MacBook，经过配置一番后，终于可以和公司的Macbook Pro的键盘键位做到无痛切换了XD<br>]]>
-    
-    </summary>
-    
-      <category term="Config" scheme="http://imcoddy.github.io/tags/config/"/>
-    
-      <category term="Diary" scheme="http://imcoddy.github.io/tags/diary/"/>
-    
-      <category term="HHKB" scheme="http://imcoddy.github.io/tags/hhkb/"/>
-    
-      <category term="Software" scheme="http://imcoddy.github.io/tags/software/"/>
-    
-      <category term="Unix" scheme="http://imcoddy.github.io/tags/unix/"/>
-    
-      <category term="Tech" scheme="http://imcoddy.github.io/categories/tech/"/>
     
   </entry>
   

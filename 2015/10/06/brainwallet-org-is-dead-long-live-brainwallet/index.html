@@ -1,0 +1,724 @@
+<!doctype html>
+<html class="theme-next use-motion theme-next-mist">
+<head>
+  
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+
+  <link href='//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.1"/>
+
+
+    <meta name="description" content="用只言片语，来记录下那些折腾过的岁月。I am here, therefore I go Z-turn." />
+
+
+
+  <meta name="keywords" content="Bitcoin,Blog,Brainwallet,Dairy," />
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Q小帝的折腾笔记" type="application/atom+xml" />
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
+
+
+<meta name="description" content="这其实是一份姗姗来迟的文章，阐述了笔者个人对脑钱包的一些看法。尽管原作者因安全原因将 Brainwallet.org 关闭，但笔者认为脑钱包有其存在的意义和研究价值，是以又搭建了一个镜像放到网上。内容较长，将分成几部分发表，欢迎大家围观并讨论。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Brainwallet.org Is Dead, Long Live Brainwallet">
+<meta property="og:url" content="http://imcoddy.github.io/2015/10/06/brainwallet-org-is-dead-long-live-brainwallet/index.html">
+<meta property="og:site_name" content="Q小帝的折腾笔记">
+<meta property="og:description" content="这其实是一份姗姗来迟的文章，阐述了笔者个人对脑钱包的一些看法。尽管原作者因安全原因将 Brainwallet.org 关闭，但笔者认为脑钱包有其存在的意义和研究价值，是以又搭建了一个镜像放到网上。内容较长，将分成几部分发表，欢迎大家围观并讨论。">
+<meta property="og:image" content="http://i1375.photobucket.com/albums/ag455/imcoddy/Blog/brain-wallets_zpsfabntddg.png">
+<meta property="og:image" content="http://i1375.photobucket.com/albums/ag455/imcoddy/Blog/brainwallet-org-first-public-release_zpsnahqghbf.png">
+<meta property="og:image" content="http://i1375.photobucket.com/albums/ag455/imcoddy/Blog/brainwallet-org-closed-down_zpsdgq6ee9m.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Brainwallet.org Is Dead, Long Live Brainwallet">
+<meta name="twitter:description" content="这其实是一份姗姗来迟的文章，阐述了笔者个人对脑钱包的一些看法。尽管原作者因安全原因将 Brainwallet.org 关闭，但笔者认为脑钱包有其存在的意义和研究价值，是以又搭建了一个镜像放到网上。内容较长，将分成几部分发表，欢迎大家围观并讨论。">
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: 'hide'
+  };
+</script>
+
+  <title> Brainwallet.org Is Dead, Long Live Brainwallet | Q小帝的折腾笔记 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-41226530-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand" rel="start">
+      <span class="logo">
+        <i class="icon-next-logo"></i>
+      </span>
+      <span class="site-title">Q小帝的折腾笔记</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu menu-left">
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            <i class="menu-item-icon icon-next-categories"></i> <br />
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon icon-next-archives"></i> <br />
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            <i class="menu-item-icon icon-next-tags"></i> <br />
+            Tags
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <form class="site-search-form">
+    <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+  </form>
+
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', '9i_t1xRXxu3ezvVDPFut','2.0.0');
+</script>
+
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content"> 
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              Brainwallet.org Is Dead, Long Live Brainwallet
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on
+          <time itemprop="dateCreated" datetime="2015-10-06T18:16:00+09:00" content="2015-10-06">
+            2015-10-06
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; In
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/bitcoin/" itemprop="url" rel="index">
+                  <span itemprop="name">Bitcoin</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+            <a href="/2015/10/06/brainwallet-org-is-dead-long-live-brainwallet/#comments" itemprop="discussionUrl">
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/10/06/brainwallet-org-is-dead-long-live-brainwallet/" itemprop="commentsCount"></span>
+            </a>
+          </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><p><img src="http://i1375.photobucket.com/albums/ag455/imcoddy/Blog/brain-wallets_zpsfabntddg.png" alt="brainwallet"></p>
+<p>这其实是一份姗姗来迟的文章，阐述了笔者个人对脑钱包的一些看法。尽管原作者因安全原因将 Brainwallet.org 关闭，但笔者认为脑钱包有其存在的意义和研究价值，是以又搭建了一个<a href="http://brainwallet.herokuapp.com/" target="_blank" rel="external">镜像</a>放到网上。内容较长，将分成几部分发表，欢迎大家围观并讨论。</p>
+<a id="more"></a>
+<h2 id="脑钱包是什么">脑钱包是什么</h2><p>顾名思义，脑钱包即存在于脑海中的比特币钱包。它其实是一种比特币私钥的生成方式，通过对用户的输入进行计算生成相应的比特币地址。让你只需要记住一个密码，便可以用这个密码在脑钱包程序中恢复比特币地址和私钥。</p>
+<p>基于这个思想，一个名叫 Brainwallet.org 的网站于 2012 年 4 月出现了 。这是一个基于网页的 JavaScript 比特币地址生成器，通过对用户输入的内容进行运算后生成对应的比特币私钥和地址。</p>
+<p>它带来的好处是十分明显的：1，用户不需要去安装 Bitcoin Core （当时还叫 Bitcoin ）软件，不需要下载庞大的区块链数据，只需要打开一个网址便可方便地生成比特币地址并接收；2，用户不要去学习如何定期备份 wallet.dat 文件，只需要记住自己所设置的密码，就能在需要的时候通过计算得到相应私钥。</p>
+<p><img src="http://i1375.photobucket.com/albums/ag455/imcoddy/Blog/brainwallet-org-first-public-release_zpsnahqghbf.png" alt="brainwallet-org-first-public-release"></p>
+<p>脑钱包的出现在当时比特币应用贫瘠、对用户电脑水平要求较高的情况下，犹如一阵清新的拂面春风，给比特币社区带来不少活力。Electrum 的作者 Vitalik Buterin，就曾经在 Bitcoin Magazine 上写过一篇脑钱包的指南《<a href="https://bitcoinmagazine.com/articles/brain-wallets-the-what-and-the-how-1333845334" target="_blank" rel="external">Brain Wallets: The What and the How</a>》。在随后的几年里，Brainwallet.org 亦是更新不断，但这个核心的功能，直至 2015 年 8 月关闭为止，都几乎没有太大的变化。</p>
+<h2 id="Brainwallet-org_之殇">Brainwallet.org 之殇</h2><p>尽管 Brainwallet.org 给大家带来了不少便利，不过由于其实现的机制，时常被业内人士所诟病。例如 Gavin 就曾经在个人的 <a href="https://gist.github.com/gavinandresen/3840286" target="_blank" rel="external">Github Gist</a> 上就写过一篇针对脑钱包的檄文《<a href="http://imcoddy.github.io/2014/01/18/do-not-use-a-brainwallet/" target="_blank" rel="external">Do Not Use A Brainwallet! You Are Likely To Lose Your Coins!</a>》，甚至做过这样的<a href="https://bitcointalk.org/index.php?topic=102349.10;" target="_blank" rel="external">表态</a>：</p>
+<blockquote>
+<p>Every time I look at the academic literature on passwords/passphrases, I get more depressed about the feasibility of either giving users a secure passphrase that they will remember or getting a secure passphrase from them. I fear there will be a lot of lost coins if “brain wallets” get popular.　　　</p>
+</blockquote>
+<p>这样的担忧绝非杞人忧天。实际上，这是由比特币的原理决定的。作为一款基于 P2P 网络的虚拟货币，比特币的存储实际上贯穿于整个网络，而非具体的实物媒介。尽管用户可以在离线的环境下保证使用脑钱包生成的私钥不会被木马盗取，但对于黑客而言，其可以采用暴力穷举的方式不断进行尝试，从而在发现存有币的地址时将其盗取。</p>
+<p>实际上，每一个（存有币）的比特币地址都有可能被碰撞出来，因为每一个私钥不过是一串特别的字符串。而脑钱包的出现，虽然给了人们通过单词语句来生成比特币地址的便利，同时也让比特币地址被猜出来的概率大大增加了。</p>
+<p>这催生部分以此为乐的掘金猎人，例如部分黑客就在 《<a href="http://www.morxploit.com/morxpapers/smashingbitcoins.pdf" target="_blank" rel="external">Smashing Bitcoin BrainWallets, for fun and profit! </a> 》一文里给出了详尽的代码，用户只需要设置好自己词汇表并运行便可。这样的攻击在 Brainwallet.org 出现初期非常有效，因为有不少用户仅使用很简单的诸如“password1”这样的短语生成的地址，而要暴力破解这样的脑钱包不需超过十秒。</p>
+<p>这其中最让人著名的莫过于用”bitcoin is awesome”生成的脑钱包地址 <a href="https://blockchain.info/address/14NWDXkQwcGN1Pd9fboL8npVynD5SfyJAE" target="_blank" rel="external">14NWDXkQwcGN1Pd9fboL8npVynD5SfyJAE</a> ，因为有人在 2012 年用这个短语生成该地址后，向里面转入 500 枚比特币后，随后在不到一分钟的时间内，这上面的币就被全部转走。另一个著名的脑钱包地址为“correct horse battery staple”生成的地址 <a href="https://blockchain.info/address/1JwSSubhmg6iPtRjtyqhUYYH7bZg3Lfy1T" target="_blank" rel="external">1JwSSubhmg6iPtRjtyqhUYYH7bZg3Lfy1T</a>，由于这是 Brainwallet.org 初期的默认地址，陆陆续续不断有用户直接拿来使用向里面发币，到网站关闭为止居然积累了 15.4 个币，实在算是现代版的守株待兔。</p>
+<p>这就是脑钱包的特点：如果你能确保生成一个独一无二的输入，你就基本上可以认为它是安全的。但一旦他人能构建出相同的输入，对方也将获得该地址的掌控权。而对于大量使用 Brainwallet.org 来存储比特币的用户而言，他们当中的大部分远远没有驾驭好这个工具所需的能力。</p>
+<p>尽管社区里抵制脑钱包的呼声一直不断，最终导致 Brainwallet.org 关闭的，是数字反欺诈公司 White Ops 的安全研究员 Ryan Castellucci 于 2015 年 8 月 7 日在 DEF CON 23 大会公布的一项<a href="https://rya.nc/cracking_cryptocurrency_brainwallets.pdf" target="_blank" rel="external">研究</a>。</p>
+<p>在该研究中，Ryan 编写了一个叫 Brainflayer 的程序，它能够每秒猜测 130,000 个密码，相比其早期版本性能足足提升了十余倍。如果该软件在强大的计算机上进行运算，花费 1 美元的成本就可以核对 5.6 亿个短语密码(<a href="https://bitcointalk.org/index.php?topic=1147035.0" target="_blank" rel="external">相关资料</a>）。Ryan 称，他用这个程序找到了超过 730 个比特币，其中有一个脑钱包是由“<a href="https://blockchain.info/address/1GjjGLYR7UhtM1n6z7QDpQskBicgmsHW9k" target="_blank" rel="external">how much wood could a woodchuck chuck if a woodchuck could chuck wood</a>”生成的，里面包含了 250 个比特币。</p>
+<p>这使得以往被认为是足够安全的脑钱包短语被证明事实上十分脆弱。在这项研究被公布之后，Brainwallet.org 立即在 Twitter 上 <a href="https://twitter.com/brainwallet/status/629759260004630528" target="_blank" rel="external">宣布将永久关闭</a>，并清空了其在 Github 的源代码。</p>
+<p><img src="http://i1375.photobucket.com/albums/ag455/imcoddy/Blog/brainwallet-org-closed-down_zpsdgq6ee9m.png" alt="brainwallet-org-shut-down"></p>
+<p>事已至令，Brainwallet.org 就算是从此落下了帷幕。但这是否就算是给脑钱包下了死刑呢？脑钱包的安全性是否如此不济？这一切，还需要从脑钱包的详细原理说起。在下一篇文章里，笔者将对此进行阐述，并分析讨论脑钱包的安全性。</p>
+<p>打赏地址：1873PE9v17hZcAHPmBVufTAWVEhkunLoV3</p>
+<p>本文同步</p>
+</span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/bitcoin/" rel="tag">#Bitcoin</a>
+          
+            <a href="/tags/blog/" rel="tag">#Blog</a>
+          
+            <a href="/tags/brainwallet/" rel="tag">#Brainwallet</a>
+          
+            <a href="/tags/dairy/" rel="tag">#Dairy</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/10/09/brainwallet-org-is-dead-long-live-brainwallet-ii/" rel="prev">Brainwallet.org Is Dead, Long Live Brainwallet II</a>
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/10/05/host-static-html-on-heroku/" rel="next">Host Static Html On Heroku</a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+ </div>
+
+        
+
+        
+          <div class="comments" id="comments">
+            
+              <div id="disqus_thread">
+                <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+              </div>
+            
+          </div>
+        
+      </div>
+
+      
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table Of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="https://avatars2.githubusercontent.com/u/622780?v=3&s=460" alt="Qiu Di" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">Qiu Di</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">用只言片语，来记录下那些折腾过的岁月。I am here, therefore I go Z-turn.</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">30</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-name">categories</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">54</span>
+              <span class="site-state-item-name">tags</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="menu-item-icon icon-next-feed"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/imcoddy" target="_blank">GitHub</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/imcoddy" target="_blank">Twitter</a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#脑钱包是什么"><span class="nav-number">1.</span> <span class="nav-text">脑钱包是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Brainwallet-org_之殇"><span class="nav-number">2.</span> <span class="nav-text">Brainwallet.org 之殇</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner"> <div class="copyright" >
+  
+  &copy; &nbsp;  2013 - 
+  <span itemprop="copyrightYear">2015</span>
+  <span class="with-love">
+    <i class="icon-next-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Qiu Di</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+ </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+    
+    
+
+  
+
+    <script type="text/javascript">
+      var disqus_shortname = 'imcoddy';
+      var disqus_identifier = '2015/10/06/brainwallet-org-is-dead-long-live-brainwallet/';
+      var disqus_title = 'Brainwallet.org Is Dead, Long Live Brainwallet';
+      var disqus_url = 'http://imcoddy.github.io/2015/10/06/brainwallet-org-is-dead-long-live-brainwallet/';
+
+      function run_disqus_script(disqus_script){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }
+
+      run_disqus_script('count.js');
+      
+        run_disqus_script('embed.js');
+      
+    </script>
+  
+
+
+  
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.1"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.1"></script>
+  
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('#st-search-input').focus(function(){
+        $(this).animate({ width:"260px"}, 800); // enlarge width
+      }).blur(function(){
+        $(this).animate({ width:"140px"}, 800); // return to original value
+      });
+    });
+  </script>
+
+
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.1" id="motion.global"></script>
+
+
+
+
+  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.1"></script>
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.1" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 0.4 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    var $tocContent = $('.post-toc-content');
+    if (isDesktop() && CONFIG.sidebar === 'post') {
+      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+        displaySidebar();
+      }
+    }
+  });
+</script>
+
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if (CONFIG.sidebar === 'always') {
+        displaySidebar();
+      }
+      if (isMobile()) {
+        FastClick.attach(document.body);
+      }
+    });
+  </script>
+
+  
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/lazyload.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $("#posts").find('img').lazyload({
+        placeholder: "/images/loading.gif",
+        effect: "fadeIn"
+      });
+    });
+  </script>
+</body>
+</html>

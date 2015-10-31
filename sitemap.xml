@@ -2,6 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://imcoddy.github.io/2015/10/13/brainwallet-org-is-dead-long-live-brainwallet-iv/</loc>
+    <lastmod>2015-10-31T01:43:01.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://imcoddy.github.io/2015/10/10/brainwallet-org-is-dead-long-live-brainwallet-iii/</loc>
+    <lastmod>2015-10-12T03:03:31.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://imcoddy.github.io/2015/10/09/brainwallet-org-is-dead-long-live-brainwallet-ii/</loc>
+    <lastmod>2015-10-09T23:37:40.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://imcoddy.github.io/2015/10/06/brainwallet-org-is-dead-long-live-brainwallet/</loc>
+    <lastmod>2015-10-09T07:24:49.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://imcoddy.github.io/2015/10/05/host-static-html-on-heroku/</loc>
     <lastmod>2015-10-05T14:19:24.000Z</lastmod>
   </url>
@@ -27,32 +47,7 @@
   </url>
   
   <url>
-    <loc>http://imcoddy.github.io/2015/06/19/link-it-in-the-hard-way/</loc>
-    <lastmod>2015-07-05T11:58:18.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://imcoddy.github.io/2013/06/15/tabbed-finder-in-osx-mountian-lion/</loc>
-    <lastmod>2015-07-05T11:58:18.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://imcoddy.github.io/2013/10/20/remapping-my-hhkb/</loc>
-    <lastmod>2015-07-05T11:58:18.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://imcoddy.github.io/2013/10/06/powered-up-from-screen-to-tmux/</loc>
-    <lastmod>2015-07-05T11:58:18.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://imcoddy.github.io/categories/index.html</loc>
-    <lastmod>2015-07-05T11:58:18.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://imcoddy.github.io/2015/05/17/upgrade-to-hexo-3/</loc>
+    <loc>http://imcoddy.github.io/tags/index.html</loc>
     <lastmod>2015-07-05T11:58:18.000Z</lastmod>
   </url>
   
@@ -67,12 +62,12 @@
   </url>
   
   <url>
-    <loc>http://imcoddy.github.io/tags/index.html</loc>
+    <loc>http://imcoddy.github.io/2014/06/21/their-bit-zone/</loc>
     <lastmod>2015-07-05T11:58:18.000Z</lastmod>
   </url>
   
   <url>
-    <loc>http://imcoddy.github.io/2014/06/21/their-bit-zone/</loc>
+    <loc>http://imcoddy.github.io/2015/06/19/link-it-in-the-hard-way/</loc>
     <lastmod>2015-07-05T11:58:18.000Z</lastmod>
   </url>
   
@@ -87,7 +82,7 @@
   </url>
   
   <url>
-    <loc>http://imcoddy.github.io/2013/06/01/how-time-flies-in-database/</loc>
+    <loc>http://imcoddy.github.io/2015/05/17/upgrade-to-hexo-3/</loc>
     <lastmod>2015-07-05T11:58:18.000Z</lastmod>
   </url>
   
@@ -97,7 +92,12 @@
   </url>
   
   <url>
-    <loc>http://imcoddy.github.io/2013/09/23/at-hometown-as-a-guest/</loc>
+    <loc>http://imcoddy.github.io/2013/06/15/tabbed-finder-in-osx-mountian-lion/</loc>
+    <lastmod>2015-07-05T11:58:18.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://imcoddy.github.io/2013/10/20/remapping-my-hhkb/</loc>
     <lastmod>2015-07-05T11:58:18.000Z</lastmod>
   </url>
   
@@ -107,12 +107,32 @@
   </url>
   
   <url>
-    <loc>http://imcoddy.github.io/2015/06/26/atom-the-hacking-editor-of-your-choice/</loc>
+    <loc>http://imcoddy.github.io/2013/10/06/powered-up-from-screen-to-tmux/</loc>
     <lastmod>2015-07-05T11:58:18.000Z</lastmod>
   </url>
   
   <url>
     <loc>http://imcoddy.github.io/2013/12/16/backup-and-restore-your-nook-on-the-mac/</loc>
+    <lastmod>2015-07-05T11:58:18.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://imcoddy.github.io/2015/06/26/atom-the-hacking-editor-of-your-choice/</loc>
+    <lastmod>2015-07-05T11:58:18.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://imcoddy.github.io/2013/09/23/at-hometown-as-a-guest/</loc>
+    <lastmod>2015-07-05T11:58:18.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://imcoddy.github.io/categories/index.html</loc>
+    <lastmod>2015-07-05T11:58:18.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://imcoddy.github.io/2013/06/01/how-time-flies-in-database/</loc>
     <lastmod>2015-07-05T11:58:18.000Z</lastmod>
   </url>
   
