@@ -4,7 +4,7 @@
   <subtitle><![CDATA[记录下那些折腾过的岁月。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://imcoddy.github.io/"/>
-  <updated>2015-11-01T01:50:47.000Z</updated>
+  <updated>2015-11-14T00:20:47.000Z</updated>
   <id>http://imcoddy.github.io/</id>
   
   <author>
@@ -15,12 +15,118 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[Install f.lux On Unjailbreak iDevices]]></title>
+    <link href="http://imcoddy.github.io/2015/11/12/install-flux-on-unjailbreak-idevices/"/>
+    <id>http://imcoddy.github.io/2015/11/12/install-flux-on-unjailbreak-idevices/</id>
+    <published>2015-11-12T04:24:00.000Z</published>
+    <updated>2015-11-14T00:20:47.000Z</updated>
+    <content type="html"><![CDATA[<p><img src="http://i1375.photobucket.com/albums/ag455/imcoddy/sleep-better-use-flux_zps4iyen9cp.jpg" alt="sleep-better-using-flux"></p>
+<p>作为一个每天长时间面对各类电子屏幕的人，有一个软件是必须安装的：<a href="https://justgetflux.com/" target="_blank" rel="external">f.lux</a>。安装之后，它会自动调节屏幕的色调，使得在晚上看电子屏幕不再这么刺眼。</p>
+<a id="more"></a>
+<p>由于 iOS 的系统限制，很长一段时间里 f.lux 只能在越狱后才能通过 Cydia 安装。这对于那些不想越狱但经常晚上刷手机的夜猫子来说，实在是非常痛苦。好在最近作者公开了一个方法，让用户可以自行编译，然后将 f.lux 安装到自己的手机里。</p>
+<h2 id="准备">准备</h2><p>要想安装 f.lux 到自己的 iPhone/iPad 上，首先需要做如下准备：</p>
+<ol>
+<li>Mac OSX 10.10 系统并安装好 XCode 7 （Windows 用户可以直接把篇文章关了）。</li>
+<li>注册成苹果的开发者（只需要免费注册一下就可以了，并不需要付费）。</li>
+<li>下载 f.lux 的<a href="https://justgetflux.com/sideload/f.lux-xcode-master.zip" target="_blank" rel="external">代码</a>。</li>
+</ol>
+<h2 id="操作">操作</h2><ol>
+<li>用 XCode 打开 iflux.xcodeproj</li>
+<li>XCode &gt; Preferences &gt; Accounts 里添加自己的 iCloud 或开发者账号</li>
+<li>在 Targets &gt; iflux &gt; General &gt; Identity 里面改一下 Bundle Identifier 以避免相同</li>
+<li>在同一页面中，将 Identity &gt; Team 设置成自己的帐户</li>
+</ol>
+<p>完成上面的步骤后，就可以将 f.lux 安装到自己的设备上了</p>
+<ol>
+<li>接上要安装的设备，将 Build Target 设置为真机</li>
+<li>按 Cmd+R 开始安装</li>
+<li>如果是第一次安装的话，需要在设备上的 Settings &gt; General &gt; Profile 里面信任该应用</li>
+<li>Open f.lux, and enjoy.</li>
+</ol>
+<p>最后不得不说，早上将其设置为 Darkroom 模式真是爽，再也不觉得刺眼了~</p>
+<p>原文：<a href="https://justgetflux.com/sideload/" target="_blank" rel="external">https://justgetflux.com/sideload/</a> （貌似作者被苹果投诉而下线了……）</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><img src="http://i1375.photobucket.com/albums/ag455/imcoddy/sleep-better-use-flux_zps4iyen9cp.jpg" alt="sleep-better-using-flux"></p>
+<p>作为一个每天长时间面对各类电子屏幕的人，有一个软件是必须安装的：<a href="https://justgetflux.com/">f.lux</a>。安装之后，它会自动调节屏幕的色调，使得在晚上看电子屏幕不再这么刺眼。</p>]]>
+    
+    </summary>
+    
+      <category term="Dairy" scheme="http://imcoddy.github.io/tags/dairy/"/>
+    
+      <category term="Hack" scheme="http://imcoddy.github.io/tags/hack/"/>
+    
+      <category term="Health" scheme="http://imcoddy.github.io/tags/health/"/>
+    
+      <category term="XCode" scheme="http://imcoddy.github.io/tags/xcode/"/>
+    
+      <category term="iOS" scheme="http://imcoddy.github.io/tags/ios/"/>
+    
+      <category term="Tech" scheme="http://imcoddy.github.io/categories/tech/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[我有21个比特币，这是我的故事]]></title>
+    <link href="http://imcoddy.github.io/2015/11/07/my-bitcoin-story/"/>
+    <id>http://imcoddy.github.io/2015/11/07/my-bitcoin-story/</id>
+    <published>2015-11-07T08:41:00.000Z</published>
+    <updated>2015-11-14T00:27:26.000Z</updated>
+    <content type="html"><![CDATA[<p><img src="http://ieet.org/archive/bitcoin-225080_640.png" alt="bitcoin"><br>币价上涨，人气回暖。前阵子看到 @ahr999 组织的征文活动，想来距离自己接触比特币已经有两年之久，也借此时机，回顾一下这两年来自己的感受。</p>
+<a id="more"></a>
+<h2 id="初见">初见</h2><p>2013 年，对许多比特币玩家来说是一个又恨又爱的一年。在这一年里，比特币的价格一度超过 1000 美元，疯狂的涨幅在媒体的推波助澜下，也吸引了许多场外观众的眼球。而我，亦是其中的一员。</p>
+<p>尽管印象中在此之前就曾经听说过比特币，但现在回想起来，当时完全没有放在心 。如果说早期比特币的发展源自于自由主义者对政府垄断货币的抵制，那么每一次暴涨的币价，将是比特币走向大众的最好广告。</p>
+<p>幸运的是，比特币并非徒有虚表的泡沫产物，当你对她了解得越多，就越容易被其精妙的设计所折服。</p>
+<h2 id="倾情">倾情</h2><p>我不知道有多少人也像我一样，在阅读完比特币的创世论文《<a href="http://www.8btc.com/wiki/bitcoin-a-peer-to-peer-electronic-cash-system" target="_blank" rel="external">比特币白皮书：一种点对点的电子现金系统</a>》后，就义无反顾地喜欢上她的。对于我而言，在静心读完这篇文章了解了比特币的设计后，第一感觉只有两个字：震撼。</p>
+<p>这样的感受，或许很大程度上也是和自己的专业背景有关。作为一个软件工程师，看到这样的设计难免感叹此乃天人之作。而中本聪的神秘背景，又为这个去中心化的自治系统增添了传奇的色彩。</p>
+<p>但不得不说，比特币在那个时候，离大众其实还很远很远。毕竟这个新事物，有着太多的东西需要去学习和理解。我当时把<a href="http://p2pbucks.com/" target="_blank" rel="external">比巴克</a>和<a href="http://www.8btc.com/" target="_blank" rel="external">巴比特</a>的所有技术文章全翻了一遍，也试着自己去折腾各种比特币钱包。</p>
+<p>尽管在《<a href="http://wap.miit.gov.cn/n11293472/n11293832/n12843926/n13917012/15754627.html" target="_blank" rel="external">人民银行等五部委发布关于防范比特币风险的通知</a>》之后币价一下子暴跌，在我觉得对比特币有足够的了解时，比特币的价格已经重回到了 700 美元之上。在当时交易所并不多的情况下，要获取比特币其实并不是一件轻而易举的事情。</p>
+<p>是以，特别感谢巴比特的《<a href="http://8btc.com/thread-507-1-1.html" target="_blank" rel="external">“沙之书”开放翻译计划</a>》，提供了一个特别的平台，让更多人更方便地去了解比特币的点点滴滴。第一次在巴比特发帖《<a href="http://8btc.com/thread-2603-1-1.html" target="_blank" rel="external">比特币的五上历程</a>》便被编辑采用，获得了人生中<a href="https://blockchain.info/tx/a5321f53de1c70198c9d8d2604248533ae24441953c6e1cf8acaabbcd2b1fdfb" target="_blank" rel="external">第一笔比特币稿费</a>。0.04BTC 在当时看起来着实是不小的一笔，更重要的是，双方都认可其所代表的价值，这不正是比特币这种不需要政府信用背书的货币系统的意义所在么？</p>
+<p>后来，也陆陆续续在巴比特上发一些翻译文章，正如我在专栏作者简介里面写的：比特币初心者。 致力于比特币文化搬砖中。 目前的小小目标是在这攒够一枚比特币:) <a href="https://blockchain.info/address/1MzziGBa7tNNzMwVJMPEjAfM1wRcvSGZu5" target="_blank" rel="external">https://blockchain.info/address/1MzziGBa7tNNzMwVJMPEjAfM1wRcvSGZu5</a> 。</p>
+<p>只可惜，到现在还没有达成，今后还需要努力:)</p>
+<h2 id="东瀛">东瀛</h2><p>由于现在身在岛国，虽然一直从国内网站关注着比特币的情况，但是对于国内币圈的发展，一直是熟悉而又陌生的。相比之上，对岛国比特币的发展了解得更多一些。虽然当年我也在 MtGox 注册了账号，但因为汇款（入金）不畅，侥幸逃过 MtGox 倒闭一劫。但岛国，或许是许多比特币老玩家的心头之痛。</p>
+<p>与当年国内交易所送 iMac 送轿车的高大上相比，比特币在日本其实要低调得多。即使 MtGox 在业内造成了如此大的影响，但就算当时有不少人直接过来游行示威，周围的大部分群众还是不明所然。关于比特币在岛国的发展情况，可以参看以前写的文章《<a href="http://www.8btc.com/bitcoin-in-tokyo" target="_blank" rel="external">比特币在东瀛</a>》。</p>
+<p>而对于我这种在海外工作的人来说，海外换汇其实还是一个不小的需求。如果从银行向国内汇款的话，手续费一次就需要 5000~6000 日元（折合近 300 人民币）。只可惜受安倍的宽松政策影响日元汇率一直走低，加上日本的比特币交易所大部分时候的折合价格比国内贵，用比特币来实现向国内汇款的想法，我基本没有进行实践。</p>
+<p>话说回来。尽管比特币的价格从 2013 的高峰一直下跌，算上日元汇率持续走低的情况，从 2014 年至今用日元换比特币基本达到了持平的程度。面对这样的比特币保值结果，真感觉有一些哭笑不得。</p>
+<h2 id="炒币">炒币</h2><p>比特币天生就是一个良好的炒作对象：数量有限，概念时尚，波动巨大，随时交易。既然当初是被币价高涨所吸引进来的，或许大部分都难免经历这样一个炒币的阶段。最初在火币上开了帐户，为了操作方便，还写了一些辅助脚本，方便下单并计算盈利额度。虽然现在再看其实这都是然并卵的事，不过在后来币价阴跌的一年多里，与一直持有相比也算是挽回了一些成本。</p>
+<p>但这的确不是一种良好的心态，有一阵子每天关注币价起伏，甚至到了食无味寝难安、影响生活质量的地步。比特币这种常年无休的东西，要时刻盯盘实在是太累人了。后来币价波动平缓后心态调整得好了一些，也慢慢也开始了每个月不定期购买一点，一直至今。</p>
+<p>如果要问从这段炒币经历当中学到了什么，或许更多的是开始对理财有了更深刻的理解。把比特币当作一只优质的股票来看的话，期望每次高抛低吸都能成功的机率是非常低的，而在抛早之后看着币价上涨，又往往容易抄底抄在山顶上。幻想着一夜暴富的人太多，而这样的心态去做短线其实无异于给别人送钱。非常佩服 @弦理论 和 @英英 这样从大势着眼的做法，看好只需要买入持有就是了。而要把这当作投资而非投机，着实需要交不少学费。</p>
+<h2 id="币圈">币圈</h2><p>有人的地方有就江湖，比特币这样与钱直接挂钩的圈子，用鱼龙混杂来形容其实十分贴切。交易所倒闭，存钱罐被黑，烤猫跑路，山寨圈钱……每一个坑，都造成了一批又一批人的伤心离去。而在比特币这种容易受消息影响的环境下，每一次利好与利空，又成为收割韭菜的工具。而比特币的高门槛的学习曲线，也阻挡了它真正走向大众。</p>
+<p>因此，尽管 2014 年里风投涌进，但比特币的相关发展，在我看来还是没有取得太大的进步。不过资金的进入，也着实让比特币的研究开发有了更大的发展。HD Wallet，Multisig，OpenBazzar，Sidechain，Smart Contract，这些都可能极大增强比特币的应用场景。</p>
+<p>当眼光不再局限于币价之后，其实你反而更容易找到对比特币的信心。记得比太钱包开发团队有次在 QQ 群里说道，每一个使用比特币、支持比特币的人，都是在为这个行业贡献着力量。尽管这个冬天很长很长，但依然有着许许多多相关从业者在努力筹划着，积极应对不远的春天。</p>
+<p>向一直坚持至今并未离去的同行者致敬 :)</p>
+<h2 id="轮回">轮回</h2><p>人有悲欢离合，月有阴晴圆缺。两年过去了，有人离开了这个圈子，也有人在不断进入这个圈子。</p>
+<p>随着币价稍稍回暧，以及 MMM 的传销推动，最近的一个多星期可以明显地感觉得到，沉寂已久的 QQ 群也开始变得活跃起来，不时有新人加入，并焦急地询问今天是跌是涨。</p>
+<p>我开始觉得淡然了，就像我一般都不向周围的人推荐比特币一样，因为我理解 @ahr999 所说的，对不了解比特币就直接进入的人而言，不让他们接触比特币就是对他们最好的保护。</p>
+<p>如今，新的韭菜已经养成，他们能有多少人《<a href="http://www.cybtc.com/thread-8549-1-1.html" target="_blank" rel="external">跨过 Bitzone，成为比特忠</a>》呢？</p>
+<p>I don’t know.</p>
+<p>What I know is, I am already one in the million, and I wish to see you on this side :)</p>
+<p><img src="http://i1375.photobucket.com/albums/ag455/imcoddy/21-bitcoins_zpstjfnvgn5.png" alt="one-in-the-million"></p>
+<p>把比特币当作一只优质的股票来看的话，从中</p>
+<p><a href="http://8btc.com/thread-2603-1-1.html" target="_blank" rel="external">比特币的五年历程</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><img src="http://ieet.org/archive/bitcoin-225080_640.png" alt="bitcoin"><br>币价上涨，人气回暖。前阵子看到 @ahr999 组织的征文活动，想来距离自己接触比特币已经有两年之久，也借此时机，回顾一下这两年来自己的感受。</p>]]>
+    
+    </summary>
+    
+      <category term="Bitcoin" scheme="http://imcoddy.github.io/tags/bitcoin/"/>
+    
+      <category term="Blog" scheme="http://imcoddy.github.io/tags/blog/"/>
+    
+      <category term="Dairy" scheme="http://imcoddy.github.io/tags/dairy/"/>
+    
+      <category term="Diary" scheme="http://imcoddy.github.io/categories/diary/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[One Year Anniversary of Haobtc]]></title>
     <link href="http://imcoddy.github.io/2015/10/20/one-year-anniversary-of-haobtc/"/>
     <id>http://imcoddy.github.io/2015/10/20/one-year-anniversary-of-haobtc/</id>
     <published>2015-10-20T07:07:00.000Z</published>
-    <updated>2015-11-01T01:50:47.000Z</updated>
-    <content type="html"><![CDATA[<p>本文参与好比特币一周年征文，备记于此。</p>
+    <updated>2015-11-14T00:28:33.000Z</updated>
+    <content type="html"><![CDATA[<p><img src="http://bittrust.s3.amazonaws.com/1437116509.png" alt="haobtc"><br>本文参与好比特币一周年征文，备记于此。</p>
 <p>与好比特币相识，需要从《<a href="http://www.8btc.com/bitcoin-gandalf" target="_blank" rel="external">比特币甘道夫</a>》一文说起。最开始接触比特币时便被这种数量限定的机制深深吸引，十万刀的口号更是让自己坚定了囤币的信念。对于死忠而言，这两年以来的币价低迷其实是件让人痛并快乐着的事情。一方面看着价格走低又忍不住有种买买买的冲动，另一方面，币屯多了虽然心中会觉得踏实，但屯而不用，终非生财之道。是以看到坑王星空的这个新项目恰合我意，便随之一跳，一直至今。如今转眼一年将过，不禁回想起不少风月往事，以此为记。</p>
 <a id="more"></a>
 <h1 id="盈利模式">盈利模式</h1><p>最初的好比特币，其商业模式大概是这样：做一个 offchain 的钱包，鼓励人们存币进去。大家所存入的币被用来购矿机部署挖矿，再用挖矿所得来支付利息，每天总利息固定。</p>
@@ -91,7 +197,7 @@
 <p>PS: 对了，今天我的好比特币利息又到账啦～<br><img src="http://i1375.photobucket.com/albums/ag455/imcoddy/bitcoin/haobtc-monthly-record_zpsxptfwsvc.jpg" alt="haobtc-monthly-record"></p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>本文参与好比特币一周年征文，备记于此。</p>
+    <![CDATA[<p><img src="http://bittrust.s3.amazonaws.com/1437116509.png" alt="haobtc"><br>本文参与好比特币一周年征文，备记于此。</p>
 <p>与好比特币相识，需要从《<a href="http://www.8btc.com/bitcoin-gandalf">比特币甘道夫</a>》一文说起。最开始接触比特币时便被这种数量限定的机制深深吸引，十万刀的口号更是让自己坚定了囤币的信念。对于死忠而言，这两年以来的币价低迷其实是件让人痛并快乐着的事情。一方面看着价格走低又忍不住有种买买买的冲动，另一方面，币屯多了虽然心中会觉得踏实，但屯而不用，终非生财之道。是以看到坑王星空的这个新项目恰合我意，便随之一跳，一直至今。如今转眼一年将过，不禁回想起不少风月往事，以此为记。</p>]]>
     
     </summary>
@@ -1161,132 +1267,6 @@ nSubsidy &gt;&gt;= (nHeight / <span class="number">210000</span>);`
     </summary>
     
       <category term="Bitcoin" scheme="http://imcoddy.github.io/tags/bitcoin/"/>
-    
-      <category term="Translation" scheme="http://imcoddy.github.io/tags/translation/"/>
-    
-      <category term="Bitcoin" scheme="http://imcoddy.github.io/categories/bitcoin/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Network/Miner Fee Policy Migration Plan]]></title>
-    <link href="http://imcoddy.github.io/2014/01/25/network-miner-fee-policy-migration-plan/"/>
-    <id>http://imcoddy.github.io/2014/01/25/network-miner-fee-policy-migration-plan/</id>
-    <published>2014-01-25T02:38:35.000Z</published>
-    <updated>2015-06-19T12:38:59.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="译者前言：">译者前言：</h2><p>据比特币核心开发人员 Mike Hearn 透露，比特币协议在<a href="http://www.8btc.com/4-new-bitcoin-features" target="_blank" rel="external">今年将会迎来四大改动</a>，其中一项就是转账所需要的交易费（transaction fee）将会浮动。实际上，Gavin Andresen 在几个月前就在一篇笔记中为大家勾画了交易费的变更计划。下面就让我们来看看它的详细情况吧。<br><a id="more"></a></p>
-<h1 id="网络/矿工收费政策的迁移计划">网络/矿工收费政策的迁移计划</h1><p>要想改变交易在网络中传递以及矿工将其保存到区块链中所需的交易费用，是需要花一些心思的。政策不匹配可能会导致用户的交易无法得到确认，这要么是交易无法到达矿工那里（它们没有被传递过去），要么就是交易被矿工直接拒绝了。</p>
-<p>我一直在努力简化 0.9 版本的交易费规则。这篇帖子的目的是说明所有使这一转变尽可能顺利执行所需要的细节。</p>
-<p>总体的思路是，交易生成部分的代码将会比较保守，从而保证生成与以前版本的规则相一致的交易。 而交易传递和挖矿确认的代码被会变得更加主动，以满足未来可能发生的变化。</p>
-<h2 id="0-8-5_版规则">0.8.5 版规则</h2><h3 id="0-8-5_传递规则">0.8.5 传递规则</h3><p>基本费用：每 1000 字节 10000 聪（satoshis），交易的大小将向上取整至最接近的 1000 字节（例如 1001 字节的交易需要 20000 聪）。这个值可以通过 minrelaytxfee 参数来进行更改。</p>
-<p>如果交易符合下列条件的话：</p>
-<ul>
-<li>支付的成本低于收费的基本费用</li>
-<li>小于 10000 字节</li>
-<li>没有任何一个输出小于0.01 XBT</li>
-</ul>
-<p>那么它们将被认为是“免费交易”。他们将会被限速，然后（在合适的时候）传递出去。</p>
-<p>这里还有另一个相关的规则：如果交易的输出非常小的话（大概在 5000 聪左右，我们称为“尘土交易”）将被认为是不合标准的从而不会被转发。</p>
-<h3 id="0-8-5_纳入规则">0.8.5 纳入规则</h3><p>所有的传递规则依然适用，因为节点不会去挖掘交易，除非他们将其传递出去（以及接受并纳入自己的内存池里）。</p>
-<p>包含着大量免费交易、大小为 27000 字节的块（通过 blockprioritysize 参数可以改变）所具有的优先级大于 57600000 的块（这等于一个 250 个字节的交易其输入为 1XBT，并且超过了一天时间）。</p>
-<p>块（默认 blockmaxsize：250000 字节）的其余部分则包含着至少 10000 聪每 1000 字节的交易（可以通过 mintxfee 参数改变）。注意，这里没有对字节数进行取整。</p>
-<h2 id="0-8-6_版规则变更提议">0.8.6 版规则变更提议</h2><h3 id="0-8-6_传递规则">0.8.6 传递规则</h3><p>除去了“所有输出必须大于 100 聪”的规则。（这是为了简化事务创建/处理逻辑。）</p>
-<h3 id="0-8-6_纳入规则">0.8.6 纳入规则</h3><p>将默认的 maxblocksize 增加至 350000 字节。 将高优先级事务的默认空间增加至 30000 字节。（这是为了适应更高的交易量，并用来衡量默认的算力占了多大的比例。）</p>
-<h3 id="0-8-6_钱包">0.8.6 钱包</h3><p>超过 1000 字节的交易必须支持交易费。（这是为了给免费交易预留空间。）</p>
-<h2 id="0-9_版规则变更提议">0.9 版规则变更提议</h2><p>优先级计算方式将被修改，使得花费中额外的输入不会降低优先级。（这是为了鼓励清理灰尘交易造成的 UTXO 设置。）</p>
-<h3 id="0-9_传递规则">0.9 传递规则</h3><p>当计算传递所需的最小交易费时，不再四舍五入到下一个 1000 字节。 （这是为了与控矿代码匹配）</p>
-<p>新的“拒绝”消息将被实现，告诉其它结点他们的交易由于费用不足而不会被传递下去。（这只是一个临时的解决办法，我们会努力想出一个对 SPV 更友好的解决方案。）</p>
-<h3 id="0-9_纳入规则">0.9 纳入规则</h3><p>要求矿工必须设置 mintxfee 和 minblocksize 等参数，如果他们不这样做将被拒绝开采。 （这是为了让交易费/块大小等在评估时决策非中心化。​​）</p>
-<h3 id="0-9_钱包">0.9 钱包</h3><p>使用新的“聪明费用（smartfee）​​”代码，来确定交易是否具有足够高的优先级将在不久的几个块区块中得到开采。 如果优先级够高，并且旧规则下的优先级也大于旧阈值，则传递时不需要交易费。</p>
-<p>如果交易被判定为不应该免费：将按 0.8.6 的传递规则计算最低费用，并与使用新的“聪明费用”代码计算出来的费用比较，选择二者中较大的数值来当作交易费。</p>
-<h2 id="0-9_版后期的变更">0.9 版后期的变更</h2><p>长远的目标是摆脱计算交易费的相关常数的所有的硬编码，让矿工来决定他们要处理的交易，并让钱包找出矿工以及矿工所处理的内容。</p>
-<h3 id="0-9+_传递规则">0.9+ 传递规则</h3><p>剔除 minrelaytxfee 参数，实现一个有优先级，内存有限的内存池。传递过来的交易如果适用的话将马上放入池中，不合适的将被拒绝。（具体实现还有待决定，也许会拒绝那些虽然具有优先级但权值小于当前池中最小权值的交易，并驱逐时间最长的交易以保持池的空余容量。）</p>
-<h3 id="0-9+_钱包">0.9+ 钱包</h3><p>剔除旧规则下的计算代码，只需使用新的交易费估算代码。（因为完整性检查的原因，将拒绝我们的内存池不会传递的交易。）</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h2 id="译者前言：">译者前言：</h2><p>据比特币核心开发人员 Mike Hearn 透露，比特币协议在<a href="http://www.8btc.com/4-new-bitcoin-features">今年将会迎来四大改动</a>，其中一项就是转账所需要的交易费（transaction fee）将会浮动。实际上，Gavin Andresen 在几个月前就在一篇笔记中为大家勾画了交易费的变更计划。下面就让我们来看看它的详细情况吧。<br>]]>
-    
-    </summary>
-    
-      <category term="Bitcoin" scheme="http://imcoddy.github.io/tags/bitcoin/"/>
-    
-      <category term="Translation" scheme="http://imcoddy.github.io/tags/translation/"/>
-    
-      <category term="Bitcoin" scheme="http://imcoddy.github.io/categories/bitcoin/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Do Not Use A Brainwallet! You Are Likely To Lose Your Coins!]]></title>
-    <link href="http://imcoddy.github.io/2014/01/18/do-not-use-a-brainwallet/"/>
-    <id>http://imcoddy.github.io/2014/01/18/do-not-use-a-brainwallet/</id>
-    <published>2014-01-18T00:55:31.000Z</published>
-    <updated>2015-06-19T12:38:59.000Z</updated>
-    <content type="html"><![CDATA[<p><img src="http://1.bp.blogspot.com/-CMGT-QTUSdM/UQW0_xXLM5I/AAAAAAAAAgk/EEVWxus9XTw/s320/brain_money_2.jpg" alt="brain-wallet"></p>
-<p>好吧，这个有些标题党了。不过作者原意就是如此。不同意这观点的话，可以先把文章看完再来反驳:)<br><a id="more"></a></p>
-<p>本文翻译自 <a href="http://en.wikipedia.org/wiki/Gavin_Andresen" target="_blank" rel="external">Gavin Andresen</a> 几个月前的一篇笔记（玩比特币只听说过中本聪却不知道 Nakamoto Satoshi 和 Gavin Andresen 的话，说明还得加强学习一下比特币知识:P）。比特币脑钱包因其使用方便成为不少初学者的选择，不过在设置脑钱包口令（passphrases）时经常出现过于简单以至被人将币转走的情况。因此，虽然已是旧文，不过现在看来，这篇文章依旧具有不少教育意义。如果觉得这篇文章对您有帮助的话，欢迎往文章末尾的地址打赏;)</p>
-<h1 id="脑钱包的脑风暴">脑钱包的脑风暴</h1><h2 id="脑钱包的风险">脑钱包的风险</h2><p>人类其实并不擅长原创，更不善于选择与众不同。而且我们在理解数量级这一方面非常的糟糕。 </p>
-<p>所以，如果你让一个人创建一个安全的口令，他们很可能会选出一个会被拥有强大计算能力的“死嗑攻击者”破解的密码。 </p>
-<p>如果你要保护的东西是像你的非死不可（Facebook，原谅我这样翻译吧:P）帐户之类的玩意的话，这并不是什么大问题，因为一个典型的非死不可帐户大概也就只值得这么几毛钱（当然，如果你是明星的话那么你的账号会更值钱一些，你也应该在它的安全性上操心多一点）。而攻击者必须首先以某种方式获取你的非死不可密码的数据库，然后才能开始试图猜测你的密码。 </p>
-<p>但使用比特币脑钱包的麻烦是，他们是有（不菲）价值的，而攻击者已经拥有了破解专用的“密码数据库”。</p>
-<h2 id="脑钱包的破解步骤">脑钱包的破解步骤</h2><p>要想破解一个脑钱包口令，攻击者会：</p>
-<ol>
-<li>找出所有金额不为零的比特币地址并创建一个列表保存下来。</li>
-<li>通过重复猜测可能的脑钱包口令来生成地址，并看是否能与以上列表中所得到的地址对上号。</li>
-</ol>
-<p>第一步非常简单，而且攻击者正在对第二步操作越来越熟练。他们可能有每秒能猜上亿次的硬件，而且也有用来处理设置密码时常用的例如「I &lt;3 butterflies and rainbows」这类模式的软件。</p>
-<p>我们在理解庞大的数字时真的非常糟糕，我们低估了密码被破解的可能性，并不了解攻击者在能以每秒尝试数亿次猜测的情况下，它可以多么轻而易举地就猜到我们的密码。</p>
-<p>而在使用了脑钱包之后，我们就像是成了明星一样，即使你只有半个比特币放在你的脑钱包里面，如果你用的是一个弱口令，攻击者将会得到它（里面的比特币），因为他们的口令猜测算法会对每个人的脑钱包进行检查。 </p>
-<p>所以，人们有可能创造一个安全的脑钱包吗？密码/口令其实是没有用的，因为我们分享了这么多（例如流行文化，语言，教育）的内容，即使当别人说“我想到的东西没有其它人会想到”时，很可能他们想的东西与其他很多人所选的类似。</p>
-<h2 id="一个可行的脑钱包模式">一个可行的脑钱包模式</h2><p>以下是一个我认为可能安全的脑钱包设计模式提案。</p>
-<p>将以下的几项组合起来建一个安全的脑钱包：</p>
-<ul>
-<li>你的全名</li>
-<li>口令1</li>
-<li>口令2</li>
-</ul>
-<p>所以，我的口令可能是这个样子： “Gavin Anthony Andresen I have eleven hovercraft full of eels! Okey dokey: patches welcome.”。</p>
-<p>这个模式的安全性取决于它究竟有多难猜。如果可以花钱让别人来告诉我们是不是选择了一个差的口令，而又不必告诉他们真实的口令是什么就好了。</p>
-<p>好吧，其实这是可以实现的！</p>
-<p>首先用上面的口令创建仅由口令生成的两个“哨兵” 脑钱包，并用上面的组合生成一个安全的脑钱包，然后将大部分的比特币存放到安全的脑钱包上，并将一些零钱存到“哨兵” 脑钱包里面。 </p>
-<p>如果某天我发现在“哨兵”钱包里的比特币被转走了，我就知道在某个地方有黑客成功地猜出我的口令，这时我就应该选择一个新的口令，创建新的“哨兵”和安全脑钱包并将我的比特币转移过去。</p>
-<h2 id="以上模式的破解难度">以上模式的破解难度</h2><p>有没有可能攻击者对我一点也不了解，但他知道我的口令生成模式（全名/口令1/口令2）并可以破解我的安全钱包？</p>
-<p>我们可以算算这大约有多少组合的可能：</p>
-<ul>
-<li>名字：攻击者试图在1000万个最常见的名字中尝试。</li>
-<li>口令：假设攻击者需要尝试10亿次后才碰巧猜对你的口令。</li>
-</ul>
-<p>我们假设攻击者在提高算力上投资了不少，可以尝试每秒十亿次组合（一块高端的显卡可以做到这样的事情） 。</p>
-<p>算了一下，它平均需要超过1000万年才能破解，听起来绝对足够安全了！</p>
-<p>但是，如果攻击者知道你有1000个比特币安静地待在脑钱包里，并且决定只是针对你进行攻击的时候，这将变得容易了1000万倍（译者注：因为名字已经确定，不再需要盲目地猜测），所以要得到你的1000枚比特币平均需要一年多的时间。这其实并不值得，因为这样的话他们需要在破解的硬件上花费更多，并且还要花上一年的时间，仅仅只是为了破解你的钱包而已。（译者注：要知道这文章可是写在九个月前，按现在的价格来看，这1000枚比特币可是要比硬件投入值钱得多:P）</p>
-<h2 id="解决方案">解决方案</h2><p>支持创建脑钱包的软件应该花一些时间尝试让你的口令稍有差异，并且在blockchain检查一下，看看他们目前是否正在被用来存储着比特币（或在过去任何时间里曾被用来存储过比特币）。如果有的话，就应该提醒你去选择另一个口令。</p>
-<p>如果某个口令生成的地址里有未使用比特币，你也应该立即发送这些比特币至你的钱包里。这是你让其他人知道他们选择了一个糟糕的口令的方式以至给你的奖励，（哈哈，大牛居然也支持转账！）同时让他们知道他们需要将比特币放到他们的主要的脑钱包里。</p>
-<p>随着使用脑钱包（或其它类似的）的人越多，我们就越应该注意选择一个安全的口令。</p>
-<p>致技术人员们：我刚才掩饰一个极大的秘密信息。设置哨兵钱包其实应该是超级简单快捷的，如下：</p>
-<blockquote>
-<p>private key = SHA256(passphrase) //（作者这是在向SHA256致敬吧:P）</p>
-</blockquote>
-<h2 id="译者总结">译者总结</h2><ol>
-<li>脑钱包的破解难度取决于口令的复杂程度，在设置时个性化很有必要（降低被猜中的概率），即使如此，由于人们在选择时词汇量时会受文化限制集中于某个固定的范围里，所以不要对其强度过于自信。</li>
-<li>如果黑客采取针对性的暴力穷举的方式的话，破解所需时间远比预想的要短（例如文中的10万年到一年的差距）。</li>
-<li>采取“哨兵”模式来监测自己口令是否被猜出来了（这是我从这文章学到的方法，以及将其翻译出来的原因@_@），使得在主钱包沦陷前有机会转移至新的安全地址上。（呵呵，如果主钱包直接沦陷，说明你在设置脑钱包前没有加口令用SHA256加密XD）</li>
-</ol>
-<p>文中所引用图片版权归原作者所有。如果这篇文章对您有帮助，请捐献若干比特币，谢谢。</p>
-<p>捐助比特币地址：1MzziGBa7tNNzMwVJMPEjAfM1wRcvSGZu5<br>与君共勉。</p>
-<p>原文地址：<a href="https://gist.github.com/gavinandresen/3840286" target="_blank" rel="external">https://gist.github.com/gavinandresen/3840286</a></p>
-<p>PS：如果读者有兴趣的话，或许我还可以总结一下因弱口令造成的脑钱包沦陷的趣事，例如因“<a href="https://blockchain.info/tx/d1c4b02330effab49599a67f03b4816e02d9a253746a66444277de10202c7499" target="_blank" rel="external">bitcoin is awesome</a>”而损失的那 500 枚:P</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p><img src="http://1.bp.blogspot.com/-CMGT-QTUSdM/UQW0_xXLM5I/AAAAAAAAAgk/EEVWxus9XTw/s320/brain_money_2.jpg" alt="brain-wallet"></p>
-<p>好吧，这个有些标题党了。不过作者原意就是如此。不同意这观点的话，可以先把文章看完再来反驳:)<br>]]>
-    
-    </summary>
-    
-      <category term="Bitcoin" scheme="http://imcoddy.github.io/tags/bitcoin/"/>
-    
-      <category term="Brainwallet" scheme="http://imcoddy.github.io/tags/brainwallet/"/>
-    
-      <category term="Security" scheme="http://imcoddy.github.io/tags/security/"/>
     
       <category term="Translation" scheme="http://imcoddy.github.io/tags/translation/"/>
     
