@@ -219,7 +219,7 @@
     <link href="http://imcoddy.github.io/2015/10/13/brainwallet-org-is-dead-long-live-brainwallet-iv/"/>
     <id>http://imcoddy.github.io/2015/10/13/brainwallet-org-is-dead-long-live-brainwallet-iv/</id>
     <published>2015-10-13T12:36:00.000Z</published>
-    <updated>2015-10-31T02:10:41.000Z</updated>
+    <updated>2015-11-01T01:07:27.000Z</updated>
     <content type="html"><![CDATA[<p><img src="http://i1375.photobucket.com/albums/ag455/imcoddy/Blog/brain-wallets_zpsfabntddg.png" alt="brainwallet"><br>币圈里过的时间总是很快，两周前写的关于脑钱包的帖子因为个人原因耽搁了一下，估计大家也都忘记得差不多了。尽管如此，还是将这篇文章发在这里，一方面提醒大家不要因为币价稍涨就忘记了买买提，另一方面，提币到自己的钱包里面也请注意不要忘记了经常检查一下，因为从某种意义上来说，所有的比特币钱包都是脑钱包。</p>
 <a id="more"></a>
 <p>如果还没有看过《Brainwallet.org 已死，脑钱包将永生!》这一系列帖子的同学，可以先回顾一下。<br><a href="http://www.8btc.com/long-live-brainwallet" target="_blank" rel="external">http://www.8btc.com/long-live-brainwallet</a><br><a href="http://www.8btc.com/long-live-brainwallet-ii" target="_blank" rel="external">http://www.8btc.com/long-live-brainwallet-ii</a><br><a href="http://www.8btc.com/long-live-brainwallet-iii" target="_blank" rel="external">http://www.8btc.com/long-live-brainwallet-iii</a></p>
@@ -403,7 +403,7 @@
     <link href="http://imcoddy.github.io/2015/10/09/brainwallet-org-is-dead-long-live-brainwallet-ii/"/>
     <id>http://imcoddy.github.io/2015/10/09/brainwallet-org-is-dead-long-live-brainwallet-ii/</id>
     <published>2015-10-09T12:16:00.000Z</published>
-    <updated>2015-10-31T01:46:47.000Z</updated>
+    <updated>2015-11-01T01:07:27.000Z</updated>
     <content type="html"><![CDATA[<p><img src="http://i1375.photobucket.com/albums/ag455/imcoddy/Blog/brain-wallets_zpsfabntddg.png" alt="brainwallet"></p>
 <p>这其实是一份姗姗来迟的文章，阐述了笔者个人对脑钱包的一些看法。尽管原作者因安全原因将 brainwallet.org 关闭，但笔者认为脑钱包有其存在的意义和研究价值。在<a href="http://www.8btc.com/long-live-brainwallet" target="_blank" rel="external">上一篇文章</a>里面介绍了脑钱包的相关知识以及 Brainwallet.org 从诞生到关闭的过程。在本篇里，将从原理上分析脑钱包的安全性。</p>
 <a id="more"></a>
@@ -452,7 +452,7 @@
     <link href="http://imcoddy.github.io/2015/10/06/brainwallet-org-is-dead-long-live-brainwallet/"/>
     <id>http://imcoddy.github.io/2015/10/06/brainwallet-org-is-dead-long-live-brainwallet/</id>
     <published>2015-10-06T09:16:00.000Z</published>
-    <updated>2015-10-31T01:46:47.000Z</updated>
+    <updated>2015-11-01T01:07:27.000Z</updated>
     <content type="html"><![CDATA[<p><img src="http://i1375.photobucket.com/albums/ag455/imcoddy/Blog/brain-wallets_zpsfabntddg.png" alt="brainwallet"></p>
 <p>这其实是一份姗姗来迟的文章，阐述了笔者个人对脑钱包的一些看法。尽管原作者因安全原因将 Brainwallet.org 关闭，但笔者认为脑钱包有其存在的意义和研究价值，是以又搭建了一个<a href="http://brainwallet.herokuapp.com/" target="_blank" rel="external">镜像</a>放到网上。内容较长，将分成几部分发表，欢迎大家围观并讨论。</p>
 <a id="more"></a>
@@ -501,7 +501,7 @@
     <link href="http://imcoddy.github.io/2015/10/05/host-static-html-on-heroku/"/>
     <id>http://imcoddy.github.io/2015/10/05/host-static-html-on-heroku/</id>
     <published>2015-10-05T13:34:00.000Z</published>
-    <updated>2015-10-05T14:19:24.000Z</updated>
+    <updated>2015-11-01T01:07:27.000Z</updated>
     <content type="html"><![CDATA[<p><img src="http://photos.prnewswire.com/prn/20110712/SF33967LOGO" alt="heroku"><br>前阵子脑钱包的作者因为安全性的原因，将脑钱包网站彻底关闭，而且还将代码也清空了。确实，从安全性的角度而言，脑钱包的确容易出现被人撞库而造成损失，以至于 <a href="http://imcoddy.github.io/2014/01/18/do-not-use-a-brainwallet/" target="_blank" rel="external">Gavin 都强烈警告过不要用它</a>。但平心而论，脑钱包其实还是一个非常不错的在线工具，这样关闭未免有些矫枉过正了。因此，我打算在 Heroku 上重新开一个镜像。<br><a id="more"></a></p>
 <p>由于之前 fork 过代码，将最近一些小修改合并到了 master 分支后，设置了一下 heroku 的配置，轻车熟路地就将代码部署上去了。不过当我打开了 <a href="http://brainwallet.herokuapp.com/" target="_blank" rel="external">http://brainwallet.herokuapp.com/</a> 之后，却提示应用没有正常配置。搜索一番后发现，原来结果居然是 Heroku 不支持直接部署静态的 HTML 网页！</p>
 <p>发现这个原因后觉得有点哭笑不得。不过在知道原因后，解决起来也就容易多了：只需要让 Heroku 能正常识别出文件类型就好。这一般是通过设置 Procfile 来实现，不过人懒如偶，当然不会为了折腾一个静态页面去配置各种 Ruby 插件。当我知道 Heroku 对 PHP 支持不错时，新建一个叫 index.php 的文件，在里面加入以下一行代码即可。</p>
@@ -533,7 +533,7 @@
     <link href="http://imcoddy.github.io/2015/10/05/alias-your-git-branches/"/>
     <id>http://imcoddy.github.io/2015/10/05/alias-your-git-branches/</id>
     <published>2015-10-05T12:23:00.000Z</published>
-    <updated>2015-10-05T13:01:17.000Z</updated>
+    <updated>2015-11-01T01:07:27.000Z</updated>
     <content type="html"><![CDATA[<p><img src="http://i1375.photobucket.com/albums/ag455/imcoddy/Blog/git-branch_zps9p0s7kro.jpg" alt="git-branch"> </p>
 <p>今天手头上工作的项目终于从 SVN 迁移到 Git 上了。其实这事本身对我来说没有什么太大影响，因为在此之前就直接用 git-svn 一直开发着，现在只不过换了一下提交的方式而已，所以当同事在推进的时候基本也没有怎么关心。直到项目迁移完了，才发现遇到了一个问题。</p>
 <a id="more"></a>
@@ -566,7 +566,7 @@
     <link href="http://imcoddy.github.io/2015/07/25/passwork-a-little-work-over-your-password/"/>
     <id>http://imcoddy.github.io/2015/07/25/passwork-a-little-work-over-your-password/</id>
     <published>2015-07-25T07:10:02.000Z</published>
-    <updated>2015-07-26T02:49:02.000Z</updated>
+    <updated>2015-11-01T01:07:27.000Z</updated>
     <content type="html"><![CDATA[<p><img src="https://passwork.herokuapp.com/assets/images/64aa250e.passwork-256x256.png" alt=""></p>
 <p>很早之前就打算写一个密码生成工具来辅助生成密码了。趁着最近 Lastpass Premium 到期，终于将它实现出来。网址为<a href="https://passwork.herokuapp.com/" target="_blank" rel="external">https://passwork.herokuapp.com/</a>，欢迎大家使用。</p>
 <a id="more"></a>
@@ -632,8 +632,8 @@ Private <span class="string">Key:</span> <span class="number">5</span>KfCb5ADZh2
     <title><![CDATA[Map Filco Minila Air To HHKB]]></title>
     <link href="http://imcoddy.github.io/2015/07/18/map-filco-minila-air-to-hhkb/"/>
     <id>http://imcoddy.github.io/2015/07/18/map-filco-minila-air-to-hhkb/</id>
-    <published>2015-07-18T00:22:45.000Z</published>
-    <updated>2015-07-15T12:48:54.000Z</updated>
+    <published>2015-07-18T13:11:51.000Z</published>
+    <updated>2015-12-23T05:46:58.000Z</updated>
     <content type="html"><![CDATA[<p><img src="http://i1375.photobucket.com/albums/ag455/imcoddy/Blog/FFKB67MEB_01_zpsxutue3it.jpg" alt=""><br>两年前买了 Mac Mini 的时候入手了 HHKB 的 lite 版，用到现在其实都挺顺手的。不过毕竟是薄膜版，一时兴起忽然想换台机械键盘试试。网上看了一下推荐，觉得 60 多键的小键盘对于自己来说已经够用。于是经过网上查阅一阵后，目光定在了 Filco 不久前出来的 Minila 蓝牙版。上个月父亲节的时候到 BicCamera 试用了一下之后，当场便花了 14000 日元捧了一台回家。到现在用了一个多月，是时候记录一下使用的感受了。</p>
 <a id="more"></a>
 <p>之所以选择这款键盘，是觉得桌上的东西实在有点多，想换一台感受一下无线的快感。至于键盘的轴，店里其实青茶赤黑轴都有现货，当时试的时候也的确觉得青轴的使用感觉最爽，不过最终选择的是 67 键的 US 红轴版。而经过这一个月的使用后，真心觉得当时的选择是十分明智，因为现在再用 HHKB 的键盘都觉得很费力气:)</p>
@@ -671,7 +671,7 @@ Private <span class="string">Key:</span> <span class="number">5</span>KfCb5ADZh2
     <link href="http://imcoddy.github.io/2015/06/26/atom-the-hacking-editor-of-your-choice/"/>
     <id>http://imcoddy.github.io/2015/06/26/atom-the-hacking-editor-of-your-choice/</id>
     <published>2015-06-26T13:04:41.000Z</published>
-    <updated>2015-07-05T11:58:18.000Z</updated>
+    <updated>2015-11-01T01:07:27.000Z</updated>
     <content type="html"><![CDATA[<p><img src="http://i1375.photobucket.com/albums/ag455/imcoddy/Blog/github-s-atom-editor-reaches-1-0-maturity_zpshmfxfpbo.jpg" alt=""><br>经过了长达一年的 Beta 公众测试之后，Atom，这个号称可 Hack 的面向 21 世纪的文本编辑器，正式更新到了 1.0 版。虽然没有在其推出之初就用上（以前还是需要邀请码才能用的呢），但在最近刷 Leetcode 的时候，深感这款编辑器的可定制性和方便程度远超其它。而前阵子微软推出的新 IDE 和 Facebook 推出的 Nuclide 都基于 Atom，颇让人有种天下编辑器苦人久矣之感。是以在这个特别的日子里，有必要为其记上一笔。<br><a id="more"></a></p>
 <h2 id="巨人的肩膀">巨人的肩膀</h2><p>对于程序员而言，世界上的编辑器只有三种：Vim，Emacs，和其它。而对于我这样的 Vim 党而言，虽然 Vim 和 Emacs 的学习成本稍有些高，但在经历了一段磨合期之后，的确深感到其设计的优越性，让你的手在最小的移动范围内能高效实现各种操作。而且两者的定制程度都很高，配合着各种插件，可以将输入体验提高到一个的新的层次。</p>
 <p>可是，这两个 70 年代里诞生的软件，现在看来，终究还是显得有些过时了。除了界面经常让一些习惯用鼠标点来点去的用户觉得难以上手之外，其架构也使得在它上面进行功能扩展并不方便（无论是插件的编写语法还是兼容维护）。虽然对于程序员而言了解基本的 Vim 用法还是非常有必要，但对于非 Linux/Unix 的用户而言，更多人选择了”界面更友好”的其它编辑器。</p>
@@ -846,7 +846,7 @@ done &lt; packages.txt
     <link href="http://imcoddy.github.io/2015/06/19/link-it-in-the-hard-way/"/>
     <id>http://imcoddy.github.io/2015/06/19/link-it-in-the-hard-way/</id>
     <published>2015-06-19T13:01:51.000Z</published>
-    <updated>2015-07-05T11:58:18.000Z</updated>
+    <updated>2015-12-23T05:42:25.000Z</updated>
     <content type="html"><![CDATA[<p>又一阵子没有写博客了。最近晚上回到家打开电脑后，基本都是在上 Leetcode 刷题。其实最近有好几件事都可以写写，不过认真想想，从启动电脑到输入 Hexo 命令再打开 Atom 编辑器码字，实在是有些显得繁琐不堪。今天一时心血来潮，购买了 iPad 上传说中的编辑神器 <a href="https://itunes.apple.com/us/app/editorial/id673907758?mt=8" target="_blank" rel="external">Editorial</a>，然后又有了一个折腾的想法，将博客的撰写转移到 iPad 上。<br><a id="more"></a><br>这个想法其实并不新鲜，毕竟有了 Dropbox 之类的同步软件之后，只要有网络，基本上可以实现设备之间的无缝切换。因此，只需要在灵感来临之时掏出 iPhone 或者 iPad 上随时随地记录一下，然后等打开电脑时再发布即可。</p>
 <p>不过在这之前，还是遇到了一点小麻烦。</p>
 <h2 id="情况说明">情况说明</h2><p>现在这个博客是用 Hexo 生成的，目录放在 <code>/Users/imcoddy/Blog/</code> 下面，代码和网页都托管在 Github 上。现在要做的，只需要将 Blog 下的 <code>_posts</code> 链接到 Dropbox 里面即可。</p>
@@ -895,6 +895,7 @@ Also, remember the binary is named <span class="code">`hln`</span> due to a nami
 ==&gt; Summary
 🍺  /usr/local/Cellar/hardlink-osx/0.1.1: 3 files, 20K
 <span class="blockquote">&gt; hln /Users/imcoddy/Blog/source/_posts /Users/imcoddy/Dropbox/Apps/Editorial/Blog/Posts</span>
+<span class="blockquote">&gt; hln /Users/imcoddy/Blog/source/_drafts /Users/imcoddy/Dropbox/Apps/Editorial/Blog/Drafts</span>
 </code></pre><p>然后，在 Hexo 里面新建这篇博客，打开 Atom，看着菜单栏里的 Dropbox 不时地自动同步，心情真是舒畅。</p>
 <p>不过这篇文章还是在电脑上记录的，Editorial 的使用心得，就留着以后慢慢体会吧。</p>
 ]]></content>
@@ -922,7 +923,7 @@ Also, remember the binary is named <span class="code">`hln`</span> due to a nami
     <link href="http://imcoddy.github.io/2015/05/28/mastering-bitcoin-chapter-10-bitcoin-security/"/>
     <id>http://imcoddy.github.io/2015/05/28/mastering-bitcoin-chapter-10-bitcoin-security/</id>
     <published>2015-05-28T14:09:48.000Z</published>
-    <updated>2015-07-05T11:58:18.000Z</updated>
+    <updated>2015-11-01T01:07:27.000Z</updated>
     <content type="html"><![CDATA[<p>前阵子李笑来老师在网上招人合译《Mastering Bitcoin》一书，受巴比特之邀自己也参与其中。由于当时时间有限，只翻译了最后的第十章。如今此书<a href="http://zhibimo.com/explore/Mastering-Bitcoin" target="_blank" rel="external">初稿</a>已经公布于众，自己也在此整理一下留个备份。从此，我也算是出过书的人了哈哈。<br><a id="more"></a></p>
 <h1 id="比特币安全">比特币安全</h1><p>保护比特币件很具有挑战性的事情，因为比特币不是价值的抽象体现，就像银行账户里的余额那样。比特币其实更像数字现金或黄金。你可能听过这样的说法，“现实持有，败一胜九。”（译者注：这句谚语是指拥有实际所有权能在法律纠纷中占有很大的胜算优势）好吧，在比特币的世界里，这样的持有只能让你有一成胜率。而拥有用于解锁比特币的密钥才相当于持有现金或一块贵重金属。你可能会将其丢失，会放错地方，会被盗或者不小心支付错了数额。无论是哪种场景，用户都没有办法撤回，因为这就像是将现金丢在了车水马龙的大街上。</p>
 <p>不过，与现金、黄金或者银行账户相比，比特币有着一个其它东西没有的优势。你不能“备份”现金、黄金或者银行账户，但包含着你的密钥的比特币钱包，可以像其它文件一样备份。它可以被复制多份分别保存起来，甚至能打印到纸上进行实物备份。比特币与至今为止的事物是如此不同，以致于我们需要以一种全新的思路来思考比特币的安全性。</p>
@@ -973,7 +974,7 @@ Also, remember the binary is named <span class="code">`hln`</span> due to a nami
     <link href="http://imcoddy.github.io/2015/05/19/the-leetcode-challenge/"/>
     <id>http://imcoddy.github.io/2015/05/19/the-leetcode-challenge/</id>
     <published>2015-05-19T12:06:28.000Z</published>
-    <updated>2015-07-05T11:58:18.000Z</updated>
+    <updated>2015-11-01T01:07:27.000Z</updated>
     <content type="html"><![CDATA[<p>最近开始试着刷 <a href="https://leetcode.com/" target="_blank" rel="external">Leetcode</a> 了。倒也没有想太多，只是最近写的代码太多是查 API 调用，让人有了种沦为纯码农做体力活之感。虽然以前也曾有过算法无用论的想法，不过在工作了这一阵子之后，也慢慢开始体会到了数据结构和算法在实际生活中的实用。现在翻看一些相关文章，也不觉得算法像以前上课时那般枯燥了，偶尔居然有种拍案叫绝的感想。加上最近发现 Leetcode 支持的答题语言多了不少，还能支持用 Javascript。至此，还能有什么不去刷题的理由呢？</p>
 <a id="more"></a>
 <p>如果还有人不知道不知道 Leetcode 的大名，在这里引用<a href="http://coolshell.cn/articles/12052.html" target="_blank" rel="external">酷壳的文章</a>简单地介绍一下：“Leetcode 这个网站上的题都是一些经典的公司用来面试应聘者的面试题，很多人通过刷这些题来应聘一些喜欢面试算法的公司，比如：Google、微软、Facebook、Amazon 之类的这些公司，基本上是应试教育的功利主义。”</p>
@@ -1014,7 +1015,7 @@ Also, remember the binary is named <span class="code">`hln`</span> due to a nami
     <link href="http://imcoddy.github.io/2015/05/17/upgrade-to-hexo-3/"/>
     <id>http://imcoddy.github.io/2015/05/17/upgrade-to-hexo-3/</id>
     <published>2015-05-17T00:45:42.000Z</published>
-    <updated>2015-07-05T11:58:18.000Z</updated>
+    <updated>2015-11-01T01:07:28.000Z</updated>
     <content type="html"><![CDATA[<p>转眼之间，又一晃半年多都没有打理博客了。 前一阵子，似乎进入了一个低潮。倒不是没有了感触，只是有时却又不知道如何说起。这样的状态的确不太好，是时候把这里重新拾起来了。</p>
 <a id="more"></a>
 <p>最近重新翻了一下李笑来的<a href="http://zhibimo.com/explore/ba-shi-jian-dang-zuo-peng-you" target="_blank" rel="external">《把时间当朋友》</a>，原因是看到他在推荐斯坦福公开课<a href="https://startupclass.co/courses/how-to-start-a-startup" target="_blank" rel="external">《How To Start A Startup》</a>之余，还几乎每天坚持更新自己的学习笔记整理成文并分享出来。有意思的是，这份学习笔记名为<a href="http://zhibimo.com/explore/growth" target="_blank" rel="external">《成长》</a>，而这种学习的成长心态，与《把时间当朋友》是一脉相承的。</p>
@@ -1043,7 +1044,7 @@ Also, remember the binary is named <span class="code">`hln`</span> due to a nami
     <link href="http://imcoddy.github.io/2015/01/10/what-sarutobi-app-means-to-bitcoin/"/>
     <id>http://imcoddy.github.io/2015/01/10/what-sarutobi-app-means-to-bitcoin/</id>
     <published>2015-01-10T00:46:43.000Z</published>
-    <updated>2015-07-12T06:11:39.000Z</updated>
+    <updated>2015-11-01T01:07:28.000Z</updated>
     <content type="html"><![CDATA[<p><img src="http://media.coindesk.com/2015/01/sarutobi-630x263.png" alt="SaruTori" title="SaruTori"></p>
 <h2 id="背景">背景</h2><p>不久前的圣诞节前夕，苹果公司通过了一款名为「<a href="https://itunes.apple.com/us/app/sarutobi/id932194840?ls=1&amp;mt=8" target="_blank" rel="external">SaruTobi</a>」的游戏应用。这个名字来源于日语的「さるとび（猿飛）」，在此笔者将其译为「顽猴狂舞」。游戏的玩法很简单，玩家通过晃动一只在树上荡秋千的猴子，收集游戏中的道具和金币，并让猴子尽可能的飞得更远。<br><a id="more"></a></p>
 <p>在上线的短短两周，这款游戏受到了比特币社区的热烈关注。不仅 Coindesk 专门为其<a href="https://www.coindesk.com/apple-approves-ios-game-tips-players-bitcoin/" target="_blank" rel="external">撰文</a>，Reddit 社区里大家也是<a href="http://www.reddit.com/r/Bitcoin/comments/2rqlj6/apple_approves_ios_game_that_tips_players_in/" target="_blank" rel="external">纷纷点赞</a>。原因很简单，1、游戏里采用的虚拟货币的名称就叫比特币，对还没有接触过比特币的用户而言是一个不错的宣传方式；2、刚进入游戏时会提示玩家输入自己的真实比特币地址，当玩家累计游戏时间达到一定数量时，将会得到这款游戏所赠送的实实在在的比特币！（还没有下载这款游戏的 iOS 用户还在等什么？快去点上面的链接下载再回来看文章吧！）</p>
@@ -1096,7 +1097,7 @@ Also, remember the binary is named <span class="code">`hln`</span> due to a nami
     <link href="http://imcoddy.github.io/2014/08/22/bitcoin-in-tokyo/"/>
     <id>http://imcoddy.github.io/2014/08/22/bitcoin-in-tokyo/</id>
     <published>2014-08-22T12:35:14.000Z</published>
-    <updated>2015-07-05T11:58:18.000Z</updated>
+    <updated>2015-11-01T01:07:27.000Z</updated>
     <content type="html"><![CDATA[<h1 id="比特币在东瀛">比特币在东瀛</h1><h2 id="引子">引子</h2><p><img src="http://i1375.photobucket.com/albums/ag455/imcoddy/bitcoin/customized-bitcoin-necklace_zps958a1d39.jpg" alt="customized-bitcoin-necklace"></p>
 <blockquote>
 <p>“このネックレス、カッコイイ！！(这条项链好赞耶！)”</p>
@@ -1180,7 +1181,7 @@ Also, remember the binary is named <span class="code">`hln`</span> due to a nami
     <link href="http://imcoddy.github.io/2014/06/21/their-bit-zone/"/>
     <id>http://imcoddy.github.io/2014/06/21/their-bit-zone/</id>
     <published>2014-06-21T00:28:35.000Z</published>
-    <updated>2015-07-05T11:58:18.000Z</updated>
+    <updated>2015-11-01T01:07:28.000Z</updated>
     <content type="html"><![CDATA[<p>我已经很久很久没有写关于比特币的文字了。准确的说，距离上一篇文章已经有 35 天 7 时 21 分。这段时间看起来的确不长，不过要知道，在比特币这个 7＊24 不间断的世界里，这已经足以让你有恍然隔世之感。</p>
 <p>事实的确如此，在比特币的圈子里，每一天都不会平淡无奇令人乏味。不过，当我将自己抽身于外后，试图将周围的人发展成下线时，我忽然发现这居然是如此艰难。因为在一个人诚心接纳比特币变成一个意志坚定的比特忠之前，他需要先越过一大片遍布荆棘的Bitzone。</p>
 <a id="more"></a>
@@ -1226,7 +1227,7 @@ Also, remember the binary is named <span class="code">`hln`</span> due to a nami
     <link href="http://imcoddy.github.io/2014/04/07/a-finite-monetary-supply-for-bitcoin/"/>
     <id>http://imcoddy.github.io/2014/04/07/a-finite-monetary-supply-for-bitcoin/</id>
     <published>2014-04-07T13:03:26.000Z</published>
-    <updated>2015-07-05T11:58:17.000Z</updated>
+    <updated>2015-11-01T01:07:26.000Z</updated>
     <content type="html"><![CDATA[<blockquote>
 <p>BIP: 42<br>    标题: 比特币无限量供应修正案<br>    作者: Pieter Wuille<br>    状态: 草案<br>    类型: 常规跟踪<br>    创建于: 2014 年 4 月 1 日</p>
 </blockquote>
