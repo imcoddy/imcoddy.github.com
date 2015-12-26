@@ -1,0 +1,751 @@
+<!doctype html>
+<html class="theme-next   use-motion ">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Bitcoin,Blog,Dairy," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Q小帝的折腾笔记" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
+
+
+
+
+
+
+<meta name="description" content="序章巴比特有一个叫「沙之书」的开放翻译计划，其介绍是这样的：本项目取名“沙之书”，意在组织流动的信息，开放式的积累知识之细沙，经自组织汇成巍然沙丘，无穷无尽、不间断地汇编成比特币《沙之书》……">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ant Miner">
+<meta property="og:url" content="http://imcoddy.github.io/2015/12/23/my-ant-miner-story/index.html">
+<meta property="og:site_name" content="Q小帝的折腾笔记">
+<meta property="og:description" content="序章巴比特有一个叫「沙之书」的开放翻译计划，其介绍是这样的：本项目取名“沙之书”，意在组织流动的信息，开放式的积累知识之细沙，经自组织汇成巍然沙丘，无穷无尽、不间断地汇编成比特币《沙之书》……">
+<meta property="og:image" content="http://i1375.photobucket.com/albums/ag455/imcoddy/hashnest-happy-new-yeah_zpssg8tvg31.png">
+<meta property="og:image" content="http://i1375.photobucket.com/albums/ag455/imcoddy/Blog/hashnest-s4-gift_zpsnxkzirfb.png">
+<meta property="og:image" content="http://i1375.photobucket.com/albums/ag455/imcoddy/Blog/hashnest-contract_zpshgxibcxm.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Ant Miner">
+<meta name="twitter:description" content="序章巴比特有一个叫「沙之书」的开放翻译计划，其介绍是这样的：本项目取名“沙之书”，意在组织流动的信息，开放式的积累知识之细沙，经自组织汇成巍然沙丘，无穷无尽、不间断地汇编成比特币《沙之书》……">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: 'hide',
+    motion: true
+  };
+</script>
+
+  <title> Ant Miner | Q小帝的折腾笔记 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-41226530-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Q小帝的折腾笔记</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">记录下那些折腾过的岁月。</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu menu-left">
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <form class="site-search-form">
+    <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+  </form>
+
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', '9i_t1xRXxu3ezvVDPFut','2.0.0');
+</script>
+
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content">
+          
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Ant Miner
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            Posted on
+            <time itemprop="dateCreated" datetime="2015-12-23T17:27:00+09:00" content="2015-12-23">
+              2015-12-23
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; In
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/blog/" itemprop="url" rel="index">
+                    <span itemprop="name">Blog</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2015/12/23/my-ant-miner-story/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/12/23/my-ant-miner-story/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><p><img src="http://i1375.photobucket.com/albums/ag455/imcoddy/hashnest-happy-new-yeah_zpssg8tvg31.png" alt="ant-happy-new-year"></p>
+<h2 id="序章">序章</h2><p>巴比特有一个叫「沙之书」的开放翻译计划，其介绍是这样的：本项目取名“沙之书”，意在组织流动的信息，开放式的积累知识之细沙，经自组织汇成巍然沙丘，无穷无尽、不间断地汇编成比特币《沙之书》……<br><a id="more"></a><br>在很长一段时间里面，每当说起蚂蚁矿机的时候，我都会想起上面这一段话。虽然两者可谓是风牛马不相及，不过仔细琢磨一番，二者又似乎有着千丝万缕的关联。一方面《沙之书》算是我接触比特币的入门指导，而 Ant miner 则给了我尝试挖矿的机会。沙粒和蚂蚁，都是如此渺小而平凡，但当它们凝聚在一起时，却能发挥出巨大的能量。</p>
+<h2 id="偶遇">偶遇</h2><p>对于一个 2013 年末尾才接触到比特币的人来说，用个人计算机来挖矿已经是一件遥不可及的事情了。飞涨的币价使得一大堆人涌进矿机行业，让这个原本就竞争激烈的市场变得更加狂热。但在 2014 年的长年阴跌里，挖矿行业的生态也有了巨大的变化。除了各大矿主积极寻找便宜电之外，云挖矿的宣传也在这时候流行起来。而我最开始与蚂蚁矿机的邂逅，则是收到 Hashnest 赠送的 1000G S4 算力。</p>
+<p><img src="http://i1375.photobucket.com/albums/ag455/imcoddy/Blog/hashnest-s4-gift_zpsnxkzirfb.png" alt="hashnest-s4-gift"></p>
+<p>说实话，在比特币的世界里面，云挖矿是有着受人诟病的原罪的：如果能保证收益，服务商自己直接挖不就好了？如果不能保证收益，用户又为何将比特币投入进去？</p>
+<p>所幸对于我而言，没必要经历这样的思想：反正是礼物，收下就好。就这样过了一阵子，结果发现真的能挖到币，便在空闲之时又给为数不多的算力加上几 G。不过，我一直没有向里面充币，因为存钱罐的影响让人一直觉得心有余悸。</p>
+<h2 id="合约">合约</h2><p>随着 Hashnest 的不断成熟，在 2015 年 3 月时，Hashnest 推出了新的加速回本云算力合约，其介绍如下：</p>
+<blockquote>
+<p>加速回本云算力合约（PACMiC）是HASHNEST推出的全新云算力产品。加速回本云算力（PACMiC）不需支付维护费，而维护费都由BITMAIN 承担。在买家回本之前，未偿还的本金还会收到利润。本金在回本完毕之后，矿机重新归BITMAIN所有，合同结束。因为加速回本云算力（PACMiC）是 不需要支付维护费的，因此回本周期将大大加速。与此同时，还能收获较高的利润。</p>
+</blockquote>
+<p>当时正值新矿机 S5 如火如荼，推出这样的合约，也充分体现了蚂蚁矿机对自己产品的信心。虽然之前我一起都只是用所得的算力进行操作，但经过这两个多月的使用，对 Hashnest 跑路的担忧少了不少。于是这次充了 1BTC 进去，在一个月后，觉得收益还算不错，又再加投了一个币。</p>
+<p><img src="http://i1375.photobucket.com/albums/ag455/imcoddy/Blog/hashnest-contract_zpshgxibcxm.png" alt="hashnest-contract"></p>
+<p>当然，收益率最高的还当属 V3 合约。在推出没多久就被一扫而空。现在想想，后悔当时没多买一点。</p>
+<h2 id="感触">感触</h2><p>挖矿可以算是比特币的安全根基。而由于比特币的自身原理，也吸引了诸多爱好者将资金投入进来。想想当时 S7 未出、S5 涨价还能热卖的情况下，挖矿行业有多赚钱可见一斑(在这里再次赞同一下李老师的说法：比特币就是钱)。</p>
+<p>而经历过 2014、2015 这在这两年里，这个行业几乎又完成了一次进化。除了硬件的更新换代之外，整个行业也开始向专业化、节能化发展。用超级君的话来说：挖矿是一件专业的事情，应该让专业的人来做。</p>
+<p>这是事物发展的趋势，也带来了众人对比特币矿工中心化的担忧。毕竟作为一种分布式的加密货币，过于集中会有不少隐患。而在这时候，看到蚂蚁推出<a href="http://tech.sina.com.cn/zl/post/detail/i/2015-10-09/pid_8492829.htm" target="_blank" rel="external">蚂蚁路由器矿机 R1</a>，忽然有种眼前一亮的感觉。正如本文开头所说的那样，虽然只是一点一滴，却又好似涓涓细水，源远流长。</p>
+<p>这或许就是我作为一个比特币后来者对挖矿的期望：某天坐在屋子里面上网，忽然又收到一条通知：Your R1 has just mined 168 satoshi.</p>
+<p>也许这一天，很快就会到来吧:)</p>
+</span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/bitcoin/" rel="tag">#Bitcoin</a>
+          
+            <a href="/tags/blog/" rel="tag">#Blog</a>
+          
+            <a href="/tags/dairy/" rel="tag">#Dairy</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/11/12/install-flux-on-unjailbreak-idevices/" rel="next" title="Install f.lux On Unjailbreak iDevices">
+                <i class="fa fa-chevron-left"></i> Install f.lux On Unjailbreak iDevices
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/12/26/some-memories-on-reading/" rel="prev" title="Some Memories On Reading">
+                Some Memories On Reading <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+        </div>
+
+        
+
+
+        
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      </div>
+    
+  </div>
+
+
+      </div>
+
+      
+        
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table Of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="https://avatars2.githubusercontent.com/u/622780?v=3&s=460" alt="Qiu Di" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">Qiu Di</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">用只言片语，来记录下那些折腾过的岁月。I am here, therefore I go Z-turn.</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">35</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-name">categories</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">57</span>
+              <span class="site-state-item-name">tags</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/imcoddy" target="_blank">
+                  
+                    <i class="fa fa-github"></i> GitHub
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/imcoddy" target="_blank">
+                  
+                    <i class="fa fa-twitter"></i> Twitter
+                  
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#序章"><span class="nav-number">1.</span> <span class="nav-text">序章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#偶遇"><span class="nav-number">2.</span> <span class="nav-text">偶遇</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#合约"><span class="nav-number">3.</span> <span class="nav-text">合约</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#感触"><span class="nav-number">4.</span> <span class="nav-text">感触</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+      
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2013 - 
+  <span itemprop="copyrightYear">2015</span>
+  <span class="with-love">
+    <i class="icon-next-heart fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Qiu Di</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+
+  
+    
+    
+
+  
+
+    <script type="text/javascript">
+      var disqus_shortname = 'imcoddy';
+      var disqus_identifier = '2015/12/23/my-ant-miner-story/';
+      var disqus_title = 'Ant Miner';
+      var disqus_url = 'http://imcoddy.github.io/2015/12/23/my-ant-miner-story/';
+
+      function run_disqus_script(disqus_script){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }
+
+      run_disqus_script('count.js');
+      
+        run_disqus_script('embed.js');
+      
+    </script>
+  
+
+
+  
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.2"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.2"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+<script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+<script type="text/javascript" src="/js/motion.js?v=0.4.5.2" id="motion.global"></script>
+
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.2" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    motionMiddleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+      if (CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+
+  <script type="text/javascript" src="/js/bootstrap.js"></script>
+
+  
+  
+
+  
+  
+
+</body>
+</html>
