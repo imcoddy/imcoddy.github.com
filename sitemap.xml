@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://imcoddy.github.io/2015/12/26/some-memories-on-reading/</loc>
+    <lastmod>2015-12-26T02:13:50.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://imcoddy.github.io/2015/07/18/map-filco-minila-air-to-hhkb/</loc>
     <lastmod>2015-12-23T05:46:58.000Z</lastmod>
   </url>
@@ -32,11 +37,6 @@
   </url>
   
   <url>
-    <loc>http://imcoddy.github.io/tags/index.html</loc>
-    <lastmod>2015-11-01T01:07:28.000Z</lastmod>
-  </url>
-  
-  <url>
     <loc>http://imcoddy.github.io/2014/06/21/their-bit-zone/</loc>
     <lastmod>2015-11-01T01:07:28.000Z</lastmod>
   </url>
@@ -48,6 +48,11 @@
   
   <url>
     <loc>http://imcoddy.github.io/2015/05/17/upgrade-to-hexo-3/</loc>
+    <lastmod>2015-11-01T01:07:28.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://imcoddy.github.io/tags/index.html</loc>
     <lastmod>2015-11-01T01:07:28.000Z</lastmod>
   </url>
   
