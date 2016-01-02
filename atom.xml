@@ -4,7 +4,7 @@
   <subtitle><![CDATA[记录下那些折腾过的岁月。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://imcoddy.github.io/"/>
-  <updated>2015-12-26T02:13:50.000Z</updated>
+  <updated>2016-01-02T07:46:01.000Z</updated>
   <id>http://imcoddy.github.io/</id>
   
   <author>
@@ -13,6 +13,61 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[International Trade With Bitcoin]]></title>
+    <link href="http://imcoddy.github.io/2016/01/02/international-trade-with-bitcoin/"/>
+    <id>http://imcoddy.github.io/2016/01/02/international-trade-with-bitcoin/</id>
+    <published>2016-01-02T05:56:00.000Z</published>
+    <updated>2016-01-02T07:46:01.000Z</updated>
+    <content type="html"><![CDATA[<p><img src="https://s3.amazonaws.com/main-newsbtc-images/2015/04/ACCEPTING-BITCOIN-101.png" alt="bitcoin-accept"></p>
+<p>在自己的眼中，2015 年的比特币的表现显得平淡了许多。的确，经历过了币价从 8000 跳到 900 的日子后，后边的这种小波动基本都看不入眼里了。而随着币价低迷，整个圈子都处于行业寒冬，尽管最近稍有了些春天的气息。<br><a id="more"></a></p>
+<p><img src="http://i1375.photobucket.com/albums/ag455/imcoddy/spring-coming_zpss80a9qvg.png" alt="spring-coming"></p>
+<p>在这样的日子里面，除了定期的买买提之外，仿佛能提的东西也不多了。毕竟，比特币离现实的生活还是太远了，直到最近，忽然想买一件东西的时候，让我想着尝试用比特币去实践一把。</p>
+<h2 id="起因">起因</h2><p>事情是这样的：2015 年 10 月底，Barnes &amp; Noble 推出了新款的 Nook Glowlight Plus。作为一个喜欢读书而不喜欢 Kindle 的 Nook 爱好者，这样的消息对我而言是让人十分动心的：新设备不仅带来了硬件上的提升，系统也采用了 Android 4.4，从而可以安装更丰富的应用。同时，新设备可以达到生活防水级别，这意味着平时泡澡的时候也可以享受阅读的愉悦了！</p>
+<p><img src="http://cdn.tokyotimes.com/wp-content/uploads/2014/08/you-bumi-reading-book-cover-bath-bag-1.jpg" alt="bath-reading"></p>
+<p>唯一的问题是：这货只在美国地区发售。</p>
+<p>在确认了近期没有人要去美帝之后，海淘则成为了剩下的最后选择。于是便自己动手，开始折腾起来。</p>
+<p><img src="http://www.haitaoshen.com/uploads/allimg/150611/144320I39-0.jpg" alt="haitao"></p>
+<h2 id="Newegg/TigerDirect">Newegg/TigerDirect</h2><p>Newegg 和 TigerDirect 作为早期接受比特币支付的电商，当年引起了一阵不小的轰动。既然要想用比特币购物，自然先想到的是到这两个网站上看看。</p>
+<p>不过现实是非常骨感的。或许是读书本来就是一项小资运动，又或许是 Nook 的名气远远不及 Kindle，再或许是新品刚宣布厂商还没有进货。总之结果只有两个字：没货。</p>
+<p><img src="http://www.tupian1.com/uploads/allimg/140624/1-140624011041.jpg" alt="no-stock-in"></p>
+<p>看起来，除了官网就只有 Amazon 和 eBay 上有卖了。没办法，只好转战 Amazon。</p>
+<h2 id="Gyft">Gyft</h2><p>因为在美帝的 Amazon 里面有些 Gift Cards，我便想起了 Gyft 网站。Gyft 顾名思义，就是一个提供各种 Gift Card 的兑换网站。而且对于每个新注册的用户，它还将赠送 $5 的礼品卡。</p>
+<p><img src="https://h2savecom.files.wordpress.com/2015/02/screen-shot-2015-02-12-at-6-08-33-am.png?w=585&amp;h=239" alt="gyft-new-user-promo"></p>
+<p>各位看到有免费的钱拿是不是很心动呀？是不是屁颠屁颠地跑去注册啦？事实证明这钱并不是这么容易拿滴！当你注册后并想使用它赠送的五美刀时，总是会提示失败。因为它需要对用户进行实名认证，如果你不提交自己的护照进行证明的话，就没有办法正常使用它的服务！</p>
+<p>在折腾了一阵子还是没有结果之外，在 Gyft 上换点卡的打算就这样彻底打消了。</p>
+<h2 id="Purse-io">Purse.io</h2><p><img src="https://shapeshift.io/site/sites/default/files/styles/blog_thumb/public/Purse.io%20integration.png?itok=GmTGbP5F" alt="purse-io"></p>
+<p>Purse.io 的模式其实是一个很不错的尝试：你有 Gift Card 想换现金，我有比特币想换物品。Purse.io 则在中间进行撮和，然后从中提取部分差额当作手续费。</p>
+<p>客观地说，这个商业模式是非常聪明的。就像我有着 Amazon Gift Card 却无法使用一样，确实会有人愿意以相对低廉一些的价格来将手中的 Gift Card 出售，以换取现金直接使用。</p>
+<p>不过认真看一下它的价格之后，发现坑也还是不少的。按 50000 日元来算的话，这价格差居然超过 20%！我终于明白为什么这货之前能给出 20% off 的折扣了……<br><img src="http://i1375.photobucket.com/albums/ag455/imcoddy/purse-io-bidding_zps2ka4h4hk.png" alt="purse-io-bidding"></p>
+<p>更关键的是，一个多月前币价虽然刚稍有起色，但里面的配单速度很慢。在经历了一阵子没能成交之后，Purse.io 也被我放弃了。</p>
+<h2 id="Barnes_&amp;_Noble">Barnes &amp; Noble</h2><p>正所谓峰回路转，柳暗花明。在这时候黑五来临，官网居然降价了！</p>
+<p><img src="http://img1.imagesbn.com/pImages/nook/landing/2015-cybermonday/LP_cy-mo_sale_99_topPod_M_c.png" alt="ngp-sale"></p>
+<p>相对前面的尝试的各种坑，直接在官网上购买要显得便利多了。于是怪止注册，下单，在填写住址时发现支持直邮，便兴冲冲地填写了现在的地址，结果在最后确认的页面里面，它突然跳出来一句：我们不支持邮寄下列物品到您所填写的地址，请修正后再重新下单。</p>
+<p>这时候我的表情和心情是这样的：</p>
+<p><img src="http://www.fangeming.com/images/p228173244.jpg" alt="wtf"></p>
+<p>后来与其它书友交流过了下，发现这是只能填写美国境内地址的问题。而且有的更惨，因为直接用了国内的信用卡然后不幸被砍单。</p>
+<p>于是最后用了 Viabox 搞到一个美国转运地址，重新下单，成功将货物发到了 Viabox。只是在填写信用卡的时候，忽然非常地怀念用比特币一扫即支付的日子。</p>
+<h2 id="Viabox">Viabox</h2><p><img src="http://mccarleyfitness.com/images/viabox_header_1.jpg" alt="viabox"></p>
+<p>收货的日子是漫长的，而收两件货物的日子更加漫长。因为 Viabox 支持并箱，在此期间便顺便将 Amazon 里面的点卡全购物也邮寄到 Viabox 来了。在这里不得不感叹一下美帝的效率之慢，除了邮寄包裹花了近十天之外，合箱又足足花了一星期。或许是黑五期间，业务量真的很大吧。</p>
+<p>而选择使用 Viabox 的原因，一方面是大部分国内代购网站都只支持邮寄到大陆，另一方面，Viabox 除了支持信用卡，Paypal 等常规支付方式之外，还支持用比特币付款！于是打开比太钱包，扫码付款，在这一刻，不禁感叹比特币的使用之艰辛。不过想想也是十分合理，毕竟比特币在这种场合里，才最有使用意义。</p>
+<h2 id="总结">总结</h2><p>海淘是一个能充分体现比特币优势的实用场景，但距离大众实用阶段还是有着不小的距离。期望在新的一年里，比特币能够真正的实用起来。</p>
+<p><img src="http://media.coindesk.com/2014/03/Extremely_Volatile_Bitcoin.jpg" alt="bitcoin"></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><img src="https://s3.amazonaws.com/main-newsbtc-images/2015/04/ACCEPTING-BITCOIN-101.png" alt="bitcoin-accept"></p>
+<p>在自己的眼中，2015 年的比特币的表现显得平淡了许多。的确，经历过了币价从 8000 跳到 900 的日子后，后边的这种小波动基本都看不入眼里了。而随着币价低迷，整个圈子都处于行业寒冬，尽管最近稍有了些春天的气息。<br>]]>
+    
+    </summary>
+    
+      <category term="Bitcoin" scheme="http://imcoddy.github.io/tags/bitcoin/"/>
+    
+      <category term="Dairy" scheme="http://imcoddy.github.io/tags/dairy/"/>
+    
+      <category term="Blog" scheme="http://imcoddy.github.io/categories/blog/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Some Memories On Reading]]></title>
@@ -48,11 +103,11 @@
   </entry>
   
   <entry>
-    <title><![CDATA[Ant Miner]]></title>
+    <title><![CDATA[My Ant Miner Story]]></title>
     <link href="http://imcoddy.github.io/2015/12/23/my-ant-miner-story/"/>
     <id>http://imcoddy.github.io/2015/12/23/my-ant-miner-story/</id>
     <published>2015-12-23T08:27:00.000Z</published>
-    <updated>2015-12-26T08:26:46.000Z</updated>
+    <updated>2015-12-29T11:41:18.000Z</updated>
     <content type="html"><![CDATA[<p><img src="http://i1375.photobucket.com/albums/ag455/imcoddy/hashnest-happy-new-yeah_zpssg8tvg31.png" alt="ant-happy-new-year"></p>
 <h2 id="序章">序章</h2><p>巴比特有一个叫「沙之书」的开放翻译计划，其介绍是这样的：本项目取名“沙之书”，意在组织流动的信息，开放式的积累知识之细沙，经自组织汇成巍然沙丘，无穷无尽、不间断地汇编成比特币《沙之书》……<br><a id="more"></a><br>在很长一段时间里面，每当说起蚂蚁矿机的时候，我都会想起上面这一段话。虽然两者可谓是风牛马不相及，不过仔细琢磨一番，二者又似乎有着千丝万缕的关联。一方面《沙之书》算是我接触比特币的入门指导，而 Ant miner 则给了我尝试挖矿的机会。沙粒和蚂蚁，都是如此渺小而平凡，但当它们凝聚在一起时，却能发挥出巨大的能量。</p>
 <h2 id="偶遇">偶遇</h2><p>对于一个 2013 年末尾才接触到比特币的人来说，用个人计算机来挖矿已经是一件遥不可及的事情了。飞涨的币价使得一大堆人涌进矿机行业，让这个原本就竞争激烈的市场变得更加狂热。但在 2014 年的长年阴跌里，挖矿行业的生态也有了巨大的变化。除了各大矿主积极寻找便宜电之外，云挖矿的宣传也在这时候流行起来。而我最开始与蚂蚁矿机的邂逅，则是收到 Hashnest 赠送的 1000G S4 算力。</p>
@@ -66,6 +121,13 @@
 <p>当时正值新矿机 S5 如火如荼，推出这样的合约，也充分体现了蚂蚁矿机对自己产品的信心。虽然之前我一起都只是用所得的算力进行操作，但经过这两个多月的使用，对 Hashnest 跑路的担忧少了不少。于是这次充了 1BTC 进去，在一个月后，觉得收益还算不错，又再加投了一个币。</p>
 <p><img src="http://i1375.photobucket.com/albums/ag455/imcoddy/Blog/hashnest-contract_zpshgxibcxm.png" alt="hashnest-contract"></p>
 <p>当然，收益率最高的还当属 V3 合约。在推出没多久就被一扫而空。现在想想，后悔当时没多买一点。</p>
+<h2 id="布局">布局</h2><p>如果说生产矿机是比特大陆的立足点的话，推出 Hashnest 云挖矿以及合约则可以算是比特币金融业的拓展。</p>
+<p>事实上，Hashnest 是我使用过的比特币相关网站中数据最透明的。除了页面上清楚明了地显示当前的营收情况之外，每一笔挖矿或交易记录都有迹可寻之外，用户甚至可以非常方便地以 csv 格式下载所有的历史数据，以便轻松地导入到 Excel 进行计算。同时，为了方便随时查看收益，用户还可以下载 Hashnest 应用到手机上。</p>
+<p>而比特大陆远远没有止步于此。</p>
+<p>除了在阿拉伯国家博览会上向中东土豪积极推广新矿机 S7 之外，九月的比特大陆也是重磅消息不断：在 <a href="http://www.8btc.com/bitmain-btc-wallet" target="_blank" rel="external">正式推出比特币钱包产品</a>没几天，就宣布 <a href="http://www.8btc.com/chain-btc" target="_blank" rel="external">上线新产品BTC区块浏览器，并启用百万美元级域名btc.com</a>。从生产到应用，逐渐形成一个闭环。这自然也是出于对比特币前景的看好，从寒总的话对前阵子的大阴线的评价便可以感受 :P</p>
+<blockquote>
+<p>看上去是哪位空头控盘大哥想要背水一战啊。彷佛就跟项羽的垓下之战一样，“今日固决死，愿为诸君快战，必三胜之，为诸君溃围，斩将，刈旗，令诸君知天亡我，非战之罪也。”等这位大哥倒下，币价不知已经多高了。</p>
+</blockquote>
 <h2 id="感触">感触</h2><p>挖矿可以算是比特币的安全根基。而由于比特币的自身原理，也吸引了诸多爱好者将资金投入进来。想想当时 S7 未出、S5 涨价还能热卖的情况下，挖矿行业有多赚钱可见一斑(在这里再次赞同一下李老师的说法：比特币就是钱)。</p>
 <p>而经历过 2014、2015 这在这两年里，这个行业几乎又完成了一次进化。除了硬件的更新换代之外，整个行业也开始向专业化、节能化发展。用超级君的话来说：挖矿是一件专业的事情，应该让专业的人来做。</p>
 <p>这是事物发展的趋势，也带来了众人对比特币矿工中心化的担忧。毕竟作为一种分布式的加密货币，过于集中会有不少隐患。而在这时候，看到蚂蚁推出<a href="http://tech.sina.com.cn/zl/post/detail/i/2015-10-09/pid_8492829.htm" target="_blank" rel="external">蚂蚁路由器矿机 R1</a>，忽然有种眼前一亮的感觉。正如本文开头所说的那样，虽然只是一点一滴，却又好似涓涓细水，源远流长。</p>
@@ -1161,90 +1223,6 @@ Also, remember the binary is named <span class="code">`hln`</span> due to a nami
       <category term="Game" scheme="http://imcoddy.github.io/tags/game/"/>
     
       <category term="iOS" scheme="http://imcoddy.github.io/tags/ios/"/>
-    
-      <category term="Bitcoin" scheme="http://imcoddy.github.io/categories/bitcoin/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Bitcoin In Tokyo]]></title>
-    <link href="http://imcoddy.github.io/2014/08/22/bitcoin-in-tokyo/"/>
-    <id>http://imcoddy.github.io/2014/08/22/bitcoin-in-tokyo/</id>
-    <published>2014-08-22T12:35:14.000Z</published>
-    <updated>2015-11-01T01:07:27.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="比特币在东瀛">比特币在东瀛</h1><h2 id="引子">引子</h2><p><img src="http://i1375.photobucket.com/albums/ag455/imcoddy/bitcoin/customized-bitcoin-necklace_zps958a1d39.jpg" alt="customized-bitcoin-necklace"></p>
-<blockquote>
-<p>“このネックレス、カッコイイ！！(这条项链好赞耶！)”</p>
-<p>“でしょう？僕もそうと思う！そう言えば、お前、本当にビットコインを知っている？(对吧？我也这样觉得呢！不过话说回来，妳真的知道比特币？)”</p>
-<p>“うん！それは最近禁止されたじゃない？だからカッコイイと思ってる！(嗯，那不是最近刚被禁掉了嘛？所以我才觉得它好酷！)”</p>
-<p>“ま～、お前は本当不良少女なんだ……(什么嘛，妳果然是个不良少女嘛……)”</p>
-</blockquote>
-<p>比特币创始人中本聪这个日式名字，或许会让初接触比特币的人认为它与日本有着千丝万缕。开在东京的曾为世界上最大的比特币交易平台 MtGox，也的确为比特币的流通起了不少促进作用。而随着媒体对 MtGox 破产事件的推波助澜，着实让更多的日本人有机会听说到这个虚拟货币。那么，在与中国一衣带水的日本，比特币的发展情况究竟如何呢？本文就从笔者自身的体会出发，记录下此时比特币在东瀛的发展情况。</p>
-<p>个人己见，仅供考虑。</p>
-<h2 id="MtGox_之殇">MtGox 之殇</h2><p>对于 MtGox 而言，其真是成也比特币，败也比特币。</p>
-<p><img src="http://blogs-images.forbes.com/kashmirhill/files/2014/02/Mark-Karpeles-Mt-Gox.jpg" alt="mtgox-bankruptcy"><br>(MtGox CEO 为 MtGox 破产事件举办发布会 via forbes.com)</p>
-<p>MtGox 网站由电驴创始人 Jed McCaleb 所创设，原是是一个魔法风云会线上买卖交易平台，后来被改成一个比特币交易平台，并在 2011年时 Mark Karpeles 将其买下，并在其管理下，Mt.Gox 一度成长为世界上最大的比特币交易所，承担全球超过 70% 的比特币交易。</p>
-<p>笔者刚接触比特币的时候已经是 2014 的新年伊始。这个时候 MtGox 的价格实际上已经由于提现不畅而出现了虚高。尽管这个价格差吸引了不少搬砖工为趋之若鹜，但由于 MtGox 后来开始要求用户认证，进一步造成了资金周转的难度加大。这样的情况持续至 MtGox 的关闭。在 2014 年 2 月 25 日深夜，MtGox 官方网站张贴最新讯息“决定暂时关闭所有交易”，并于 2014 年 2 月 28 日，正式申请了破产保护。笔者侥幸躲过了门头坑，不过对于那些未能将财产从中提取出来的人而言，这一场噩梦至今还远远没有结束。</p>
-<p><img src="http://altcoinpress.com/wp-content/uploads/2014/02/money-660x406.jpg" alt="where-is-our-money"><br>(MtGox 事件受伤者在其办公室门前抗议 via altcoinpress.com)</p>
-<p>尽管 MtGox 的办公室在东京，不过有好事者曾经对其泄露出来的用户数据库文件进行分析，得到的结论是注册的用户绝大部分都是非日籍人士。实际上，如果不是因为其破产丑闻，MtGox 或许还是只在比特币爱好者中被人知晓，以致于出现当人们聚集到其涉谷办公楼游行抗议时，楼下的保安都不知道这是一家什么样的公司竟会引起这样的骚动。</p>
-<p>而随着媒体的大肆报道，听说过比特币的民众其实也逐渐增加。而相对而言，这边的新闻报导也更客观一些。不过由于近期较多的都是比特币负面新闻，认为比特币是经济泡沫或者应被禁止的其实也大有人在。至于有多少人会像笔者这样通过媒体知晓后自行研究并投身其中的就不得而知了，至少，我是还没有遇到。</p>
-<h1 id="东京比特币聚会">东京比特币聚会</h1><p>有人的地方就有江湖，有江湖的地方就有 Meetup。</p>
-<p>东京比特币聚会(<a href="http://www.meetup.com/Tokyo-Bitcoin-Meetup-Group/" target="_blank" rel="external">Tokyo Bitcoin Meetup</a>)由比特币耶稣 Roger Ver 创立于 2011 年 8 月 28 日(很快就要满三年了)，至今为止登记用户有 467 人。现在除了每周四晚上七点半起有一个比特币爱好者例会之外，有时周末也会不定期举行一些其它的聚会活动。</p>
-<p>每周参加聚会的人通常在 40 人左右，他们的背景也大不相同。即有现在还在冰岛部署矿场的矿工，也有 CoinDesk 的在日编辑，还有希望投资相关项目的 VC。大家见面后会互相交流近期比特币界的新鲜事，或者进行场外交易。偶尔也会来一些刚接触比特币的新人，不过不必担心，在这里的氛围很轻松即可融入。</p>
-<p><img src="http://www.wired.com/wiredenterprise/wp-content/uploads/2014/10/20131017-JAPAN-0498_edit-660x440.jpg" alt="tokyo-bitcoin-meetup-scene"><br>(东京比特币聚会场景 via wired.com)</p>
-<p>东京比特币聚会，实际上起了一个很好的沟通作用。在 MtGox 倒闭期间，它让许多国外比特币爱好者在这边能避免语言不通的障碍。也有电视台会来这里采访取景，让大众更好了解这个不一样的圈子。聚会参与者大多也都是比特币的积极推动者，在日本政府处理 MtGox 案件定性比特币性质期间，他们也通过各种方式表达了自己的意见和建议。这个聚会至今依然能够持续，自然与他们的辛勤努力分不开。</p>
-<h1 id="比特币流通">比特币流通</h1><p>尽管在聚会里曾遇到某比特币壕发出如下感叹：“We need more places to use Bitoin!(我们需要有更多地方能使用比特币！)”，不过对于笔者这种只有屈指可数的比特币屌丝而言，有更多的地方能够方便购买比特币才更实在。</p>
-<p>相比半年前 MtGox 送金不能，现在在日本要想购买比特币稍稍方便了一些。除了 Kraken 这类希望打入日本市场的比特币交易所之外，更本土化的 Paybit、Btcbox 也颇有人气。受制于日本金融厅的严格管理，在使用这些比特币交易所时需要实名认证(提供身份证明以及电气单之类的住址证明)。同时由于交易过程需要交手续费，整体算下来价格要比国内的略高。这也使得笔者原本计划用比特币给家人汇款的计划一直只存在理论阶段而没实践。</p>
-<p><img src="http://i1375.photobucket.com/albums/ag455/imcoddy/pay-bit-website_zps69798f9b.png" alt="pay-bit-website"><br>(Paybit 比特币交易所首页截图)</p>
-<p>除了交易所之外，东京几个月前还引入了比特币自动贩卖 BTM 机。一台位于港区六本木的 PinkCow 餐厅，另一台则在西麻布的 Veranda 餐厅。BTM 使用起来也非常方便，设置好要购买的金额，扫描 QR 地址，投币，然后不过一会比特币就会发送到你的账号上。不过由于 BTM 机需要从中赚取手续费，使得比特币单价会比市面价格高出不少，甚至单枚比特币的买入卖出有时差价可能达到 10000 日元(约 600 人民币)，这也使得大部分人仅是尝鲜式的试用一下而已。</p>
-<p><img src="http://si.wsj.net/public/resources/images/BN-DI126_jbitco_G_20140619065222.jpg" alt="btm-in-pink-cow"><br>(客户在 试用 PinkCow 里面的 BTM 机 via wsj.net)</p>
-<p>上面的两家餐厅也会接受比特币付款。由于距离办公地点不远，有时下班后会去里面坐坐。不过除了在 PinkCow 举办比特币聚会之外，很少能看到有人使用比特币进行支付。这或许一定程度上也反应了比特币在这边的普及依然任重道远。</p>
-<p><img src="http://www.wired.com/wiredenterprise/wp-content/uploads/2014/10/20131017-JAPAN-0490_edit-660x440.jpg" alt="using-bitcoin-in-pink-cow"><br>(PinkCow 里面客户用比特币支付 via wired.com)</p>
-<h1 id="本土萌乃币">本土萌乃币</h1><p><img src="http://bitcoinfansite.com/wp-content/uploads/2014/08/mona.png" alt="monacoin-logo"></p>
-<p>与“低迷”的比特币相比，一款名叫萌乃币(Monacoin)的竞争币在岛国的人气要旺盛不少。萌乃币从莱特币衍生而来，作者是一位末满 18 岁的腼腆男生。其打着日本第一款加密货币的口号，社区氛围也很好的适应本土文化。虽然较少被外界所知，不过相关的爱好者在其中倒是玩得不亦乐乎。</p>
-<p><img src="http://i1375.photobucket.com/albums/ag455/imcoddy/bitcoin-chan_zps98b65be9.png" alt="bitcoin-chan"><br>(比特酱乱入！其实在岛国将各种动漫化是很常见的事情，这一点在萌乃币社区里面体现也很明显)</p>
-<p>如果说莱特币给了那些错过用平民计算机挖比特币机会的人一个感受挖矿的机会，那么萌乃币则满足了岛国那些因英文欠佳而与比特币失之交臂的人一个自己动手挖矿的愿望。由于它刚出来不久总体算力并不高，使用普通的电脑也能挖矿，于是还出现了某些好事者将学校的机房的用来挖萌乃币的事迹。部分岛国比特币矿工也会用淘汰的矿机挖上一把。</p>
-<p>加密货币需要在流通上体现其价值传递，否则就只是硬盘上的一串数字而已。而在流通方式，萌乃币的表现实在是可圈可点。除了爱好者们会积极制作文化衫纸钱包等周边进行宣传派发之外，在一些岛国人气社区里也会用萌乃币进行打赏或者物品购买，其中包括一些同人作品甚至 18 禁成人游戏漫画。由于这些作品颇有一些地下交易的味道，或许一定程度上也反向促进了萌乃币的推广。</p>
-<p><img src="http://i1375.photobucket.com/albums/ag455/imcoddy/monacoin-jinsya_zpsd2f4a50a.png" alt="monacoin-jinsya"><br>(相比“成熟稳重”的比特酱，萌乃酱们显得更加幼齿化呀……)</p>
-<p>就在最近刚落幕的日本同人展第 86 届Comic Market 活动中，萌奈币社区依靠大家捐款获得 18025 枚萌乃币，不仅制作了相关的<a href="http://monacomi.net/" target="_blank" rel="external">宣传网站</a>，还募集了十七名画师进行同人创作，印制了 300 本 44 页的萌奈币同人漫画册子，并在会场进行免费发放。笔者虽然没有参加这场聚会， 不过从网络上的反馈来看，这场萌奈币宣传活动还是非常地成功。</p>
-<p><img src="http://i1375.photobucket.com/albums/ag455/imcoddy/bitcoin/MONACOIN5408540C8A8C_-_MONACOMI_NET_zps7b30cb39.png" alt="monacoin-manga"><br>(Monacomi 网站对所有支持者表示感谢)</p>
-<p>总之，萌乃币给笔者的感觉就是狗币的即视感(其实萌乃币的 Logo 是一只猫 囧)。但在良好的社区文化推动下，萌乃币的发展在这边还是显得蓬勃而有生机。至少人家已经有人尝试只靠萌乃币来生活了，虽然结果还是有些拮据XD</p>
-<h1 id="岛国不爱加密货币？">岛国不爱加密货币？</h1><p>尽管媒体的报道让许多人听说了比特币，尽管有着萌乃币这样的本土加密货币消除了语言障碍，不过笔者还是觉得，在日本对加密货币有兴趣并了解的人依然只是很小的一部分。这一点上，日本与其它国家相比并没有明显优势。</p>
-<p>造成这样的原因或许很多，个人认为有以下几点：</p>
-<h2 id="均富社会">均富社会</h2><p>得益于相对健全的保障制度，日本是一个橄榄球型的均富社会。日本在上世纪 70 年代中期达到人均 GDP 4000 美元，而它在工业化和城市化发展的过程中大幅降低贫富差距，并一直维持至今。这边即使是远离都市的乡村，居民基本上都有房有车，衣食无忧。在这样的社会里生活，只要兢兢业业工作，即使积蓄不多，但也不会为生活所困。虽然这边不是没有投机者，不过对于比特币这样价格波动无常高风险的东西，一定程度上其实就不符合一般日本人的生活品性。</p>
-<h2 id="通胀温和">通胀温和</h2><p>与国内这二十年里飞涨的物价相比，日本的通货膨胀率要显得温和得多。实际上，日本从 1997 年以来就陷入了长期的通缩状态。虽然在 2007 年 1 月至 2008 年 10 月日本曾一度改变了持续通缩的局面，但在之后又再次进入了核心物价指数持续下滑的局面。</p>
-<p>更直观的感受是，即使到了一顿饭钱可按一千日元来估计的今天，日常生活中还是会不时出现找零时有用个位日元的情况。所以，国人刚来日本时通常都会很不习惯，以至不得不准备一个零钱袋来装这一堆硬币(日元现行纸币中最小面额是 1000 日元，硬币的最小面额为 1 日元，最大面额为 500 日元)。相对的，国内现在使用角币的都不常见了，更不必说分币了吧？</p>
-<p>正由于这样经济稳定的情况，大部分日本人都没有将金钱换为抗通胀资产的意识，对比特币鲜有兴趣自然也很容易理解。虽然这一点上，很可能随着今年四月开始的个人消费税上涨而慢慢改变。</p>
-<h2 id="支付便利">支付便利</h2><p>总体而言，日本人是很信任并习惯于现有的支付系统的。</p>
-<p>现金支付的适用范围之广就不用多说了，但在日本用现金时那种普遍存在的信任感实在是让人佩服。虽然经常会出现找回一堆零硬币的情况，不过大部分店里都是配了自动找零机，收银员投入纸币输入支付金额然后硬币就唰唰唰地出来，然后支付方基本上也不会清点就直接放入钱包拿着东西走人。而且，日本银行里基本是没有防弹玻璃隔开的，通常到里面办业务时与工作人员就只有一桌之隔。(的确这会让抢银行的成本低了许多，不过居然会有想对里边漂亮的美眉动粗的想法，想想都觉得这真 TMD 混蛋啊&gt;_&lt;)另外，来日至今笔者没有看到过一台验钞机，每每看到国内又出现“M3S7百元假钞骗过银行取款机”新闻时想到这点就不禁汗颜。</p>
-<p>至于网上支付，日本的网银不像国内那般需要 ActiveX 控件，在网上汇款什么的虽然稍显繁琐，不过一般的需要也基本能凑合。而网上购物大家通常都会选择信用卡，在与 Amazon 账户等绑定后，基本上都是购物一键下单然后就把账单发邮箱了(淘宝剁手党在岛国切记自重……)。信用卡最容易申请的当属乐天，而且在日本使用时还能返点供乐天集市购物时使用。实在不想在网上支付的，还可以在网上下好订单，然后在附近的便利店里支付即可。</p>
-<p>相比之下，用比特币支持时，得先拿出手机解锁，扫描 QR 码，确定金额后输入消费密码……还是稍显得有些繁琐了啦。或许在乐天集市真正支持比特币支付后，这样的情况可能会得到改变:P</p>
-<h1 id="日本发展虚拟货币的优势">日本发展虚拟货币的优势</h1><p>即使现在比特币在日本使用得还不是太广泛，但相比国内而言，笔者认为比特币在这边发展会有更多的优势。</p>
-<h2 id="时刻在线">时刻在线</h2><p>作为存活在互联网的比特币，网络连接是其必不可少的一部分。随着近几年智能手机时代的兴起，日本的运营商在网络基础建设的投入也是不遗余力。除了手机上网提供的基础套餐不限流量之外(弱弱吐槽一句流量用多了会限速)，市区内数量繁多的 WiFi 热点基本上可覆盖主要的公共场所。</p>
-<p><img src="http://i1375.photobucket.com/albums/ag455/imcoddy/bitcoin/softbank-wifi_zps0fe107e5.png" alt="softbank-wifi-hotspot"><br>(软银在公共场所推进免费 WiFi 热点部署)</p>
-<h2 id="扫码习惯">扫码习惯</h2><p>微信在让国人习惯扫码这一点在着实立下了汗马功劳，而日本人使用 QR 码则可追溯到上个世纪。1994 年时日本 Toyota 子公司发明了 QR 码用于汽车制造过程中的零件追踪，后来被广泛地用到了生活各处。举个例子，某天当我想着把某段文字发送到手机上时，我会想着给手机邮箱发一封邮件，而日本同事则是直接把这文字变成 QR 码然后手机直接扫描……</p>
-<p><img src="http://i1375.photobucket.com/albums/ag455/imcoddy/bitcoin/IMG_4307_zpsb0f2bed3.jpg" alt="reality-enhance-bikini-girl"><br>(看到有码的妹子怎么办？马上扫啊……扫描上图中的 QR 码后会提示下载一个应用，安装后再到秋叶原对上图拍摄就能看到美眉换上了清爽的比基尼装。嗯，在乱点科技树的 11 区，现实增强 AR 技术就是这样被玩坏的@_@)</p>
-<h2 id="学术自由">学术自由</h2><p>与国内科研机构热衷于研究三个代表和谐社会不同，日本的学术研究要显得自由得多。实际上，在日本的大学里，已有相关教授对比特币展开研究分析。上个月时，就有部分学者聚集到一起就<a href="http://risingbitcoin.jp/?p=263" target="_blank" rel="external">比特币展开了分享讨论</a>。关于学术自由，或许大家还可以从上个月的《<a href="http://news.ifeng.com/a/20140706/41037877_0.shtml" target="_blank" rel="external">东京大学拒绝参与日本防卫省新型运输机研究</a>》这一新闻中管中窥豹。<br><img src="http://getnews.jp/img/archives/2012y09m19d_182212010.jpg" alt="is-this-the-real-satoshi"><br>(不知道还有多少人记得曾有人以为望月教授是中本聪的真身呢? via getnews.jp)</p>
-<h2 id="奥运契机">奥运契机</h2><p>2020 年夏季奥运会将在东京举办，这对于推广比特币的广泛使用或许是个不错的契机。实际上，东京比特币聚会的爱好者们也正在为这个目标而与政府人员积极进行沟通。届时实际成果如何，让我们拭目以待。<br><img src="http://www.beinsports.tv/di/library/bein_us/7e/dd/tokyo-2020_1qy1r8b06pmhd1k079qy2gb91w.jpg?t=-98471208&amp;w=640&amp;h=360&amp;quality=97&amp;cropTo=top" alt="tokyo-2020-olympics"></p>
-<ul>
-<li>作者：@imcoddy <a href="http://www.weibo.com/imcoddy" target="_blank" rel="external">(http://www.weibo.com/imcoddy)</a></li>
-<li>稿源：巴比特资讯（www.8btc.com）</li>
-<li>捐赠地址：码字不易，求打赏 1MCoddYCZe8jwNkBp42dscC9ELfvha3ALL</li>
-<li>版权声明：本文在中华人民共和国著作权法的基础上，使用署名-非商业性使用-相同方式共享（BY-NC-SA 2.5 CN）。非商业使用定义为慈善或非盈利机构使用以及个人非盈利目之使用。除此之外，如欲转载，请联系作者并付费。</li>
-</ul>
-]]></content>
-    <summary type="html">
-    <![CDATA[比特币创始人中本聪这个日式名字，或许会让初接触比特币的人认为它与日本有着千丝万缕。开在东京的曾为世界上最大的比特币交易平台 MtGox，也的确为比特币的流通起了不少促进作用。而随着媒体对 MtGox 破产事件的推波助澜，着实让更多的日本人有机会听说到这个虚拟货币。那么，在与中国一衣带水的日本，比特币的发展情况究竟如何呢？本文就从笔者自身的体会出发，记录下此时比特币在东瀛的发展情况。]]>
-    
-    </summary>
-    
-      <category term="Bitcoin" scheme="http://imcoddy.github.io/tags/bitcoin/"/>
-    
-      <category term="Japan" scheme="http://imcoddy.github.io/tags/japan/"/>
-    
-      <category term="Life" scheme="http://imcoddy.github.io/tags/life/"/>
-    
-      <category term="Thinking" scheme="http://imcoddy.github.io/tags/thinking/"/>
     
       <category term="Bitcoin" scheme="http://imcoddy.github.io/categories/bitcoin/"/>
     
