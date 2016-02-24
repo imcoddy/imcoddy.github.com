@@ -4,7 +4,7 @@
   <subtitle><![CDATA[记录下那些折腾过的岁月。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://imcoddy.github.io/"/>
-  <updated>2016-02-01T13:24:45.000Z</updated>
+  <updated>2016-02-24T00:33:35.000Z</updated>
   <id>http://imcoddy.github.io/</id>
   
   <author>
@@ -15,11 +15,59 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[Japanese Macbook Keymapping Memo]]></title>
+    <link href="http://imcoddy.github.io/2016/02/04/japanese-macbook-keymapping-guide/"/>
+    <id>http://imcoddy.github.io/2016/02/04/japanese-macbook-keymapping-guide/</id>
+    <published>2016-02-04T08:45:00.000Z</published>
+    <updated>2016-02-24T00:33:35.000Z</updated>
+    <content type="html"><![CDATA[<p><img src="" alt="http://g01.a.alicdn.com/kf/HTB1NuHOIpXXXXaFXVXXq6xXFXXXH/Laptop-Palmrest-With-JA-JP-Japanese-font-b-Layout-b-font-font-b-Keyboard-b-font.jpg"><br>过年之前撸了一台 2014 出的日版的 Macbook Pro Retina。之所以没有选 2015 的新款，是觉得多出来的 Force Touch 触摸板以及那小幅度提升的性能不值得那近两万日元的差价，而选择日版也是因为英文键盘版的只能在苹果里买而没有优惠。虽然事前也担心了一下日文键盘是否能适应，不过实践证明其实这反而更加方便。事前如果还有有人顾虑的话，只需要参照本文所说的配置就可毫无压力地用日文键盘输入了。<br><a id="more"></a></p>
+<p>首先，普及一下背景知识。由于日文输入特殊性，日本的大部分电脑都是配着带片假名的日文键盘。平心而论，它本身还是有一定的便利性的，例如空格左右的「英数」和「かな」键可以方便地快速切换输入法，对于经常要输入日文的同学来说很有必要。而它的缺点也同样明显，数字区和右手边的符号基本和普通的英式键盘完全不一致，需要记住另外一套指法，而且如果要经常换键盘来回切换的话容易得精神分裂症:P</p>
+<p>日本键盘和英文键盘的具体差异如下：<br><img src="" alt="http://blog-imgs-71-origin.fc2.com/g/o/k/gokexn/20110715_ss04.png"></p>
+<p>当然，由于有了 Karabiner 这样的神器，日文键盘上完美模拟英文键盘的输入快感也不是难事。具体的步骤如下（安装过程略过）：</p>
+<p>一、开启内置映射</p>
+<p>Karabiner 本身其实对日文键盘有做了对应，因此把「Use Japanese Keyboard as US Keyboard」这一项勾选上以后，已经基本能够达成模拟英文键盘输入的效果。</p>
+<p>在小写的模式下：<br><figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1234567890</span>-=<span class="escape">`</span><br><span class="line"></span>qwertyuiop[]</span><br><span class="line">asdfghjkl<span class="comment">;’¥</span></span><br><span class="line">zxcvbnm,./`</span><br></pre></td></tr></table></figure></p>
+<p>在 Shift 组合模式下：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">!<span class="at_rule">@<span class="keyword">#$%^&amp;*()_+~</span></span><br><span class="line">QWERTYUIOP</span>&#123;&#125;</span><br><span class="line"><span class="rule"><span class="attribute">ASDFGHJKL</span>:<span class="value">”|</span><br><span class="line">ZXCVBNM&lt;&gt;?~</span></span></span><br></pre></td></tr></table></figure></p>
+<p>二、微调</p>
+<p>虽然上面的模式已经没太大的问题，不过出于个人习惯，为了把它配置得和 Filco Minila 一致，我还进行了以下的改动：</p>
+<ol>
+<li>将右 Command 当成切换输入法</li>
+<li>Ro → \</li>
+<li>Shift+Ro → |</li>
+<li>Shift+Yen → |</li>
+<li>Mu → Return</li>
+</ol>
+<p>具体的代码如下：</p>
+<figure class="highlight pf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">&lt;item&gt;</span></span><br><span class="line">  <span class="variable">&lt;name&gt;</span>Japanese<span class="variable">&lt;/name&gt;</span></span><br><span class="line">  <span class="variable">&lt;item&gt;</span></span><br><span class="line">    <span class="variable">&lt;name&gt;</span>[JPN]Command_R <span class="keyword">to</span> Switch Input Source<span class="variable">&lt;/name&gt;</span></span><br><span class="line">    <span class="variable">&lt;identifier&gt;</span>private.japanese.command_r_to_space_command_l<span class="variable">&lt;/identifier&gt;</span></span><br><span class="line">    <span class="variable">&lt;autogen&gt;</span></span><br><span class="line">      __KeyToKey__ KeyCode::COMMAND_R, KeyCode::SPACE, ModifierFlag::COMMAND_L</span><br><span class="line">    <span class="variable">&lt;/autogen&gt;</span></span><br><span class="line">  <span class="variable">&lt;/item&gt;</span></span><br><span class="line">  <span class="variable">&lt;item&gt;</span></span><br><span class="line">    <span class="variable">&lt;name&gt;</span>[JPN]Underscore(Ro) <span class="keyword">to</span> Backslash(\)<span class="variable">&lt;/name&gt;</span></span><br><span class="line">    <span class="variable">&lt;identifier&gt;</span>private.japanese.underscore_ro_to_backslash<span class="variable">&lt;/identifier&gt;</span></span><br><span class="line">    <span class="variable">&lt;autogen&gt;</span></span><br><span class="line">      __KeyToKey__ KeyCode::JIS_UNDERSCORE, KeyCode::BACKSLASH</span><br><span class="line">    <span class="variable">&lt;/autogen&gt;</span></span><br><span class="line">  <span class="variable">&lt;/item&gt;</span></span><br><span class="line">  <span class="variable">&lt;item&gt;</span></span><br><span class="line">    <span class="variable">&lt;name&gt;</span>[JPN]Shift + Underscore(Ro) <span class="keyword">to</span> Shift + Backslash(\)<span class="variable">&lt;/name&gt;</span></span><br><span class="line">    <span class="variable">&lt;identifier&gt;</span>private.japanese.shift_underscore_ro_to_shift_backslash<span class="variable">&lt;/identifier&gt;</span></span><br><span class="line">    <span class="variable">&lt;autogen&gt;</span></span><br><span class="line">      __KeyToKey__ KeyCode::JIS_UNDERSCORE, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT, KeyCode::BACKSLASH, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT,</span><br><span class="line">    <span class="variable">&lt;/autogen&gt;</span></span><br><span class="line">  <span class="variable">&lt;/item&gt;</span></span><br><span class="line">  <span class="variable">&lt;item&gt;</span></span><br><span class="line">    <span class="variable">&lt;name&gt;</span>[JPN]Shift + Japanese Yen <span class="keyword">to</span> Pipe(|)<span class="variable">&lt;/name&gt;</span></span><br><span class="line">    <span class="variable">&lt;identifier&gt;</span>private.japanese.shift_jis_yen_to_pipe<span class="variable">&lt;/identifier&gt;</span></span><br><span class="line">    <span class="variable">&lt;autogen&gt;</span></span><br><span class="line">      __KeyToKey__ KeyCode::JIS_YEN, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT, KeyCode::BACKSLASH, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT,</span><br><span class="line">    <span class="variable">&lt;/autogen&gt;</span></span><br><span class="line">  <span class="variable">&lt;/item&gt;</span></span><br><span class="line">  <span class="variable">&lt;item&gt;</span></span><br><span class="line">    <span class="variable">&lt;name&gt;</span>[JPN]EISUU <span class="keyword">to</span> Command_L<span class="variable">&lt;/name&gt;</span></span><br><span class="line">    <span class="variable">&lt;appendix&gt;</span>(+ When you press EISUU only send Space)<span class="variable">&lt;/appendix&gt;</span></span><br><span class="line">    <span class="variable">&lt;identifier&gt;</span>private.japanese.jis_eisuu_to_command_l_space<span class="variable">&lt;/identifier&gt;</span></span><br><span class="line">    <span class="variable">&lt;autogen&gt;</span>__KeyOverlaidModifier__ KeyCode::JIS_EISUU, KeyCode::COMMAND_L, KeyCode::SPACE<span class="variable">&lt;/autogen&gt;</span></span><br><span class="line">  <span class="variable">&lt;/item&gt;</span></span><br><span class="line"><span class="variable">&lt;/item&gt;</span></span><br></pre></td></tr></table></figure>
+<p>这样一来，基本上使用的体验就和之前映射成 HHKB 的 Filco Minila 完全一致了。</p>
+<p>最后打字的效果如下：</p>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1234567890</span>-=`</span><br><span class="line">qwertyuiop[]</span><br><span class="line">asdfghjkl;'</span><br><span class="line">zxcvbnm,./\</span><br><span class="line"></span><br><span class="line">!@<span class="preprocessor">#$%^&amp;*()_+|~</span></span><br><span class="line">QWERTYUIOP&#123;&#125;</span><br><span class="line">ASDFGHJKL:<span class="string">"</span></span><br><span class="line">ZXCVBNM&lt;&gt;?<span class="string">|</span></span><br></pre></td></tr></table></figure>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><img src="" alt="http://g01.a.alicdn.com/kf/HTB1NuHOIpXXXXaFXVXXq6xXFXXXH/Laptop-Palmrest-With-JA-JP-Japanese-font-b-Layout-b-font-font-b-Keyboard-b-font.jpg"><br>过年之前撸了一台 2014 出的日版的 Macbook Pro Retina。之所以没有选 2015 的新款，是觉得多出来的 Force Touch 触摸板以及那小幅度提升的性能不值得那近两万日元的差价，而选择日版也是因为英文键盘版的只能在苹果里买而没有优惠。虽然事前也担心了一下日文键盘是否能适应，不过实践证明其实这反而更加方便。事前如果还有有人顾虑的话，只需要参照本文所说的配置就可毫无压力地用日文键盘输入了。<br>]]>
+    
+    </summary>
+    
+      <category term="Dairy" scheme="http://imcoddy.github.io/tags/dairy/"/>
+    
+      <category term="Hack" scheme="http://imcoddy.github.io/tags/hack/"/>
+    
+      <category term="Keyboard" scheme="http://imcoddy.github.io/tags/keyboard/"/>
+    
+      <category term="Mac" scheme="http://imcoddy.github.io/tags/mac/"/>
+    
+      <category term="Tip" scheme="http://imcoddy.github.io/tags/tip/"/>
+    
+      <category term="Tech" scheme="http://imcoddy.github.io/categories/tech/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[Japanese Goods Guide For Parents]]></title>
     <link href="http://imcoddy.github.io/2016/02/01/japanese-goods-guide-for-parents/"/>
     <id>http://imcoddy.github.io/2016/02/01/japanese-goods-guide-for-parents/</id>
     <published>2016-02-01T09:29:00.000Z</published>
-    <updated>2016-02-01T13:24:45.000Z</updated>
+    <updated>2016-02-02T00:24:19.000Z</updated>
     <content type="html"><![CDATA[<h1 id="岛国回家购物指南">岛国回家购物指南</h1><p><img src="http://ntdimg.com/pic/2013/8-16/p3770162a632161382.jpg" alt="japanese-gifts"></p>
 <p>说起来，好几年没有和家人一起过年了。由于最近有年假要消化，加上发现过年回家的机票还很便宜，于是临时决定回家陪陪父母。由于决定仓促，加上之前几次回国也陆续买过不少岛国产品。这次在朋友圈里随口一问，倒也得到不少新启发，现整理成文，以飨读者。</p>
 <a id="more"></a>
@@ -33,7 +81,7 @@
 <li>空气净化器</li>
 <li>马桶盖</li>
 <li>扫地机器人</li>
-<li>各类厨房清洁用品（百元店时找灵感）</li>
+<li>各类厨房清洁用品（百元店里找灵感）</li>
 </ul>
 <h3 id="数码产品">数码产品</h3><ul>
 <li>iPad (Wifi 版）</li>
@@ -63,6 +111,7 @@
 <li>鱼油</li>
 <li>降压茶/大麦茶</li>
 <li>护膝</li>
+<li>润喉糖</li>
 </ul>
 <h3 id="食品类">食品类</h3><ul>
 <li>巧克力</li>
@@ -89,15 +138,16 @@
 </ul>
 <h3 id="化妆品类">化妆品类</h3><ul>
 <li>面膜</li>
-<li>雪肌精</li>
 <li>爽肤水</li>
 <li>洗面奶</li>
 <li>染发剂</li>
 <li>发腊</li>
+<li>雪肌精</li>
 </ul>
 <h3 id="其它">其它</h3><p>最近人民币贬值，带日元回去可以显得值钱一点了……</p>
 <p>岛国也是一个有着自己独特文化的国家，相关的周边产品也是数不胜数。不过像 AKB48 CD 写真或者动漫手办神马的，由于各人品味不同差异太大，这里就不展开了。</p>
 <p>还有很多人回复应该带个男/女朋友或者是孙子回去，这或许是父母对于我们这样身处他乡的人最关心的事情了吧。其实除了大淘宝有租友回家过年的服务之外，在晚婚化严重的岛国也有「彼氏レンタル」这样的类似服务。不过这篇既然写的是购物指南，贩人的事情就不在这提了。总之，缘分的事情勉强不来，不过自己也的确需要努力一点了 &gt;_&lt;</p>
+<p>也许，父母最喜欢的礼物是自己的孩子又回到身边吧。</p>
 <h2 id="注意事项">注意事项</h2><ol>
 <li>购买电脑的时候需要注意是否是英文键盘，要不回去后容易抓狂。</li>
 <li>购买电器的时候，需要注意电压是否是宽频的，如果只是针对岛国的 110v 电压的话回去接上电源就要悲剧啦。</li>
@@ -1251,35 +1301,6 @@ Also, remember the binary is named <span class="code">`hln`</span> due to a nami
       <category term="Leetcode" scheme="http://imcoddy.github.io/tags/leetcode/"/>
     
       <category term="Programming" scheme="http://imcoddy.github.io/tags/programming/"/>
-    
-      <category term="Diary" scheme="http://imcoddy.github.io/categories/diary/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Upgrade to Hexo 3]]></title>
-    <link href="http://imcoddy.github.io/2015/05/17/upgrade-to-hexo-3/"/>
-    <id>http://imcoddy.github.io/2015/05/17/upgrade-to-hexo-3/</id>
-    <published>2015-05-17T00:45:42.000Z</published>
-    <updated>2015-11-01T01:07:28.000Z</updated>
-    <content type="html"><![CDATA[<p>转眼之间，又一晃半年多都没有打理博客了。 前一阵子，似乎进入了一个低潮。倒不是没有了感触，只是有时却又不知道如何说起。这样的状态的确不太好，是时候把这里重新拾起来了。</p>
-<a id="more"></a>
-<p>最近重新翻了一下李笑来的<a href="http://zhibimo.com/explore/ba-shi-jian-dang-zuo-peng-you" target="_blank" rel="external">《把时间当朋友》</a>，原因是看到他在推荐斯坦福公开课<a href="https://startupclass.co/courses/how-to-start-a-startup" target="_blank" rel="external">《How To Start A Startup》</a>之余，还几乎每天坚持更新自己的学习笔记整理成文并分享出来。有意思的是，这份学习笔记名为<a href="http://zhibimo.com/explore/growth" target="_blank" rel="external">《成长》</a>，而这种学习的成长心态，与《把时间当朋友》是一脉相承的。</p>
-<p>是以再看这本书时，深深地感受到，坚持是多么的不容易。正如书中所说：</p>
-<blockquote>
-<p>在 ClipMine上，2015年3月18日，这套课程中的第一课，数字是这样的：<br>324K views | 2.4K likes<br>而第二十课的数字是这样的：<br>19.1K views | 113 likes<br>也就是说，仅有百分之六不到的人看完所有课程……要是用最终第二十课点赞的人数作为分子，用最初看第一课的人数作为分母，得出来的比例是万分之三……<br>想起来我过去讲课时常说的话，每期班第一课我都会说：<br>我看到你们目光炯炯，我知道你们刚刚决心重新做人……我倒是想知道你们能坚持多久？</p>
-</blockquote>
-<p>因此，空谈误国，实干兴邦。雄心壮志的话还是少说，静心做事才是王道。今天趁着把 Hexo 更新到 3 ，今后也坚持把自己的所思所想多用文字记录下来吧。</p>
-<p>更新的方法其实没有太多好说的，参考<a href="https://github.com/hexojs/hexo/wiki/Migrating-from-2.x-to-3.0" target="_blank" rel="external">官方文档</a>就好了。比较可惜的是之前用的主题不能用了，现在默认的 langscape 主题不是太符合自己的口味。不过这个，改天再换了。</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>转眼之间，又一晃半年多都没有打理博客了。 前一阵子，似乎进入了一个低潮。倒不是没有了感触，只是有时却又不知道如何说起。这样的状态的确不太好，是时候把这里重新拾起来了。</p>]]>
-    
-    </summary>
-    
-      <category term="Blog" scheme="http://imcoddy.github.io/tags/blog/"/>
-    
-      <category term="Hexo" scheme="http://imcoddy.github.io/tags/hexo/"/>
     
       <category term="Diary" scheme="http://imcoddy.github.io/categories/diary/"/>
     
